@@ -11,14 +11,13 @@
 
 ### User Stories
 
-
-- As a user I want to register and sign in, So i can go and create new Occasion
-- As a user I want to create occasion, So i can go and Find new clothes
-- As a user I want to select costume, So i can go and Try-on them using AR
+- As a user I want to register and sign in, So i can create new Occasion
+- As a user I want to create occasion, So i can Find new clothes
+- As a user I want to select costume, So i can Try-on them using AR
 - As a user I want to Select the place, So i can go and buy the chosen clothes
 
-- As a admin I want to see all user So i can go manage them
-- As a admin I want to see all occasions, So i can manage them
+- As a admin I want to see all user So i can manage them users
+- As a admin I want to see all occasions, So i can manage them occasions
 
 <br><br>
 
