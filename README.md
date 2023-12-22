@@ -11,9 +11,14 @@
 
 ### User Stories
 
-- As a user, I want to browse the menu, so I can find my favorite coffee drinks.
-- As a user, I want to customize my order, so I can add or remove ingredients according to my preferences.
-- As a user, I want to pay for my order through the app, so I can avoid waiting in line at the store.
+
+- As a user I want to register and sign in, So i can go and create new Occasion
+- As a user I want to create occasion, So i can go and Find new clothes
+- As a user I want to select costume, So i can go and Try-on them using AR
+- As a user I want to Select the place, So i can go and buy the chosen clothes
+
+- As a admin I want to see all user So i can go manage them
+- As a admin I want to see all occasions, So i can manage them
 
 <br><br>
 
