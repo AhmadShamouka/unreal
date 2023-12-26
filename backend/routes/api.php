@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClothesController;
 use App\Http\Controllers\OccasionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,7 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::controller(OccasionController::class)->group(function () {
     Route::post('occasion', 'createOccasion');
-  
-
+});
+Route::controller(ClothesController::class)->group(function () {
+    Route::post('add-clothes', 'createItem');
 });
