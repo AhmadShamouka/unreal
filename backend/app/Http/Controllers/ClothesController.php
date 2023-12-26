@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Clothes;
+use App\Models\Artryon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\QueryException;
@@ -33,11 +34,18 @@ class ClothesController extends Controller
 
                 $request->file('image')->storeAs('public/images/', $imageName);
 
+                
+                $ARtryOn=Artryon::create([
+                    'user_id'=>$user->id,
+                    'clothes_id'=>$clothesItem->id,
+                ]);
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Created successfully',
-                    'clothes_item' => $clothesItem,
+                    'clothes_item' => $clothesItem,$ARtryOn
                 ]);
+
+
             }
 
             return response()->json([
