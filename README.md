@@ -4,10 +4,7 @@
 
 <!-- project philosophy -->
 <img src="./Readme/title2.svg"/>
-
-> A mobile app for ordering coffee on-the-go, making it easier for coffee lovers to get their favorite beverages without waiting in line.
->
-> Coffee Express aims to streamline the coffee-ordering process by providing a user-friendly platform for customers to place orders and pick up their coffee at their convenience. We believe in enhancing the coffee experience by saving time and ensuring customer satisfaction.
+UnrealFit is a web-based wardrobe assistance platform that utilizes augmented reality (AR) technology to redefine how users choose their outfits. The website offers a seamless and immersive experience for users to explore, try on, and select their clothing items and help them find the places to get them.
 
 ### User Stories
 
@@ -24,8 +21,6 @@
 <!-- Prototyping -->
 <img src="./Readme/title3.svg"/>
 
-> We designed Coffee Express using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
-
 ### Wireframes
 
 | Login screen                            | Register screen                       | Landing screen                        |
@@ -34,7 +29,7 @@
 
 ### Mockups
 
-| Home screen                             | Menu Screen                           | Order Screen                          |
+| Home screen                             | Occasion Screen                       | Virtual try-on Screen                 |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
 | ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
 
