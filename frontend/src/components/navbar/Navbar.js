@@ -1,53 +1,54 @@
-import React from "react";
+// Navbar.jsx
+import React, { useState } from "react";
+import "./styleNavbar.css";
 import Button from "../../common/base/Button";
+import logo from "../../common/base/logo/image/logo.png";
 
-const Navbar = ({ bgColor }) => {
-  const handlePost = () => {};
+function Navbar() {
+  const [active, setActive] = useState("nav__menu");
+  const [icon, setIcon] = useState("nav__toggler");
+  const navToggle = () => {
+    if (active === "nav__menu") {
+      setActive("nav__menu nav__active");
+    } else setActive("nav__menu");
+
+    if (icon === "nav__toggler") {
+      setIcon("nav__toggler toggle");
+    } else setIcon("nav__toggler");
+  };
   return (
-    <div>
-      <header className="header">
-        <nav className="navbar-container">
-          <a href="/" className="logo">
-            Brand
-          </a>
-          <div className="burger" id="burger">
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-          </div>
-          <div className="menu" id="menu">
-            <ul className="menu-inner">
-              <li className="menu-item">
-                <a href="/" className="menu-link">
-                  Home
-                </a>
-              </li>
-              <li className="menu-item">
-                <a href="/" className="menu-link">
-                  Feature
-                </a>
-              </li>
-              <li className="menu-item">
-                <a href="/" className="menu-link">
-                  Product
-                </a>
-              </li>
-              <li className="menu-item">
-                <a href="/" className="menu-link">
-                  Support
-                </a>
-              </li>
-            </ul>
-          </div>
-          <Button
-            text="Sign In"
-            bgColor="blue"
-            onClicked={() => handlePost()}
-          />
-        </nav>
-      </header>
-    </div>
+    <nav className="nav">
+      <div className={active}>
+        <img src={logo} alt="logo" className="nav__brand" />
+        <ul className="links">
+          <li className="nav__item">
+            <a href="/" className="nav__link">
+              Home
+            </a>
+          </li>
+          <li className="nav__item">
+            <a href="/" className="nav__link">
+              About
+            </a>
+          </li>
+          <li className="nav__item">
+            <a href="/" className="nav__link">
+              Template
+            </a>
+          </li>
+        </ul>
+        <div className="buttons">
+          <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
+          <Button text="Sign Up" />
+        </div>
+      </div>
+      <div onClick={navToggle} className={icon}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+    </nav>
   );
-};
+}
 
 export default Navbar;

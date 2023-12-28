@@ -9,7 +9,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`flex center full-width rounded-small ${bgColor} ${textColor} base-button`}
+      className={`flex center  ${bgColor} ${textColor} base-button`}
       onClick={() => onClicked()}
     >
       {text}

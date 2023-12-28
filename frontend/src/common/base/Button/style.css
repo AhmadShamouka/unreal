@@ -1,4 +1,10 @@
 .base-button {
-  height: 30px;
   font-size: 14px;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  border: 2px solid #1789c9;
+}
+button:hover {
+  box-shadow: 0 0 20px #408fbd;
 }
