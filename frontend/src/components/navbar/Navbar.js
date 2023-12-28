@@ -1,10 +1,9 @@
-// Navbar.jsx
 import React, { useState } from "react";
-import "./styleNavbar.css";
+import "./stylesNavbar.css";
 import Button from "../../common/base/Button";
 import logo from "../../common/base/logo/image/logo.png";
 
-function Navbar() {
+const Navbar = () => {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
   const navToggle = () => {
@@ -49,6 +48,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

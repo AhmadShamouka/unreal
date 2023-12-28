@@ -27,6 +27,8 @@ li {
   gap: 3rem;
 }
 .nav__toggler {
+  position: absolute;
+  right: 0;
   display: none;
 }
 .nav__toggler div {
@@ -45,9 +47,9 @@ li {
   .nav__menu {
     position: fixed;
     top: 0;
-    left: 0;
+
     height: 90vh;
-    width: 100vw;
+    width: 90vw;
     background: rgb(255, 255, 255);
     flex-direction: column;
     transform: translateX(100%);
