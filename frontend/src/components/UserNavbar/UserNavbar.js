@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./stylesNavbar.css";
-import Button from "../../common/base/button";
+import "../navbar/stylesNavbar.css";
+
 import logo from "../../common/base/logo/image/logo.png";
 
-const Navbar = () => {
+const UserNavbar = () => {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
   const navToggle = () => {
@@ -36,10 +36,6 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <div className="buttons">
-          <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
-          <Button text="Sign Up" />
-        </div>
       </div>
       <div onClick={navToggle} className={icon}>
         <div className="line1"></div>
@@ -50,4 +46,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default UserNavbar;
