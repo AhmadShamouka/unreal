@@ -47,8 +47,8 @@ const Footer = () => {
       <div className="company">
         <p className="copyright">copyright © 2024 unrealfit.com</p>
         <div>
-          <a> Terms of Use</a>
-          <a> Privacy Policy</a>
+          <a href="/"> Terms of Use</a>
+          <a href="/"> Privacy Policy</a>
         </div>
       </div>
     </div>

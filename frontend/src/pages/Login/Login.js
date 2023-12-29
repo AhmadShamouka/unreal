@@ -1,32 +1,40 @@
 import React from "react";
+import logo from "../../common/base/logo/image/logo.png";
 import Input from "../../common/base/inputs/Input";
 import Button from "../../common/base/button/Button";
 import "./styles.css";
-import UserNavbar from "../../components/UserNavbar/UserNavbar";
+
 const Login = () => {
   return (
-    <>
-      <UserNavbar />
-      <div className="login flex center">
-        <div className="container flex center">
-          <div className="login-img flex center"></div>
-          <div className="login-inputs">
-            <Input
-              text="Passowrd"
-              type="passowrd"
-              bgColor="bg-blue"
-              textColor="text-white"
-            />
-            <Input
-              text="Username"
-              type="text"
-              bgColor="bg-blue"
-              textColor="text-white"
-            />
+    <div className="login">
+      <div className="container flex">
+        <div className="child-img"></div>
+        <div className="child-inputs flex center">
+          <div className="child-logo">
+            <img href="/" src={logo} alt="logo" />
           </div>
+          <Input
+            text="Email"
+            type="text"
+            bgColor="bg-blue"
+            textColor="text-white"
+            placeholder="Enter your Email"
+            required
+          />
+          <Input
+            text="Passowrd"
+            type="passowrd"
+            bgColor="bg-blue"
+            textColor="text-white"
+            placeholder="Enter your Password"
+          />
+
+          <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
+
+          <a href="/login">Don't have Account!Create New?</a>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
