@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./stylesNavbar.css";
-import Button from "../../common/base/button";
+import Button from "../../common/base/button/Button";
 import logo from "../../common/base/logo/image/logo.png";
 
 const Navbar = () => {

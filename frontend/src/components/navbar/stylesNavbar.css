@@ -27,12 +27,12 @@ li {
   gap: 3rem;
 }
 .nav__toggler {
-  position: absolute;
+  position: fixed;
   right: 0;
   display: none;
 }
 .nav__toggler div {
-  width: 2.5rem;
+  width: 2rem;
   height: 0.2rem;
   margin: 0.4rem;
   background: #1789c9;
@@ -42,14 +42,15 @@ li {
 @media screen and (max-width: 768px) {
   .nav__toggler {
     display: block;
+
     cursor: pointer;
   }
   .nav__menu {
     position: fixed;
     top: 0;
-
-    height: 90vh;
-    width: 90vw;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
     background: rgb(255, 255, 255);
     flex-direction: column;
     transform: translateX(100%);
@@ -62,6 +63,11 @@ li {
     margin-top: 10px;
   }
 }
+@media screen and (max-width: 568px) {
+  .nav__toggler {
+    background-color: white;
+  }
+}
 .buttons {
   display: flex;
   gap: 5%;
@@ -69,14 +75,4 @@ li {
 
 .nav__active {
   transform: translateX(0%);
-}
-
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-4px, 5px);
-}
-.toggle .line2 {
-  opacity: 0;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-4px, -5px);
 }

@@ -9,8 +9,14 @@ const Login = () => {
       <UserNavbar />
       <div className="login flex center">
         <div className="container flex center">
-          <div className="login-img"></div>
-          <div className="login-inputs ">
+          <div className="login-img flex center"></div>
+          <div className="login-inputs">
+            <Input
+              text="Passowrd"
+              type="passowrd"
+              bgColor="bg-blue"
+              textColor="text-white"
+            />
             <Input
               text="Username"
               type="text"
