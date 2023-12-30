@@ -3,11 +3,12 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  z-index: -1;
 }
 
 .footer {
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  z-index: -1;
   background-color: #007bb5;
   height: 300px;
   width: 100%;
