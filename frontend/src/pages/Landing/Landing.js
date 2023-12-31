@@ -9,10 +9,12 @@ const Landing = () => {
   return (
     <div className="container-landing">
       <NavBar />
-      <div className="landing flex center">
-        <h1>DIGITAL FASHION IS THE NEW CHAPTER</h1>
-        <Button text="Register" bgColor="white-bg" textColor="blue-text" />
-      </div>
+      <section>
+        <div className="landing flex center">
+          <h1>DIGITAL FASHION IS THE NEW CHAPTER</h1>
+          <Button text="Register" bgColor="white-bg" textColor="blue-text" />
+        </div>
+      </section>
       <div className="about-container">
         <h1> ABOUT US</h1>
         <hr className="hr-line" />

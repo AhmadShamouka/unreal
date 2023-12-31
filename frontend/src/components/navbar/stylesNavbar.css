@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
   z-index: 4;
 }
 li {
@@ -95,8 +95,8 @@ button {
 
 .nav__active {
   transform: translateX(0%);
-}
-/*
+} */
+
 .nav {
   background-color: #ffffff;
   border-radius: 100px 100px 100px 100px;
@@ -112,7 +112,7 @@ button {
 li {
   list-style: none;
 }
- 
+
 .logo-nav {
   cursor: pointer;
 }
@@ -203,4 +203,4 @@ button {
 
 .nav__active {
   transform: translateX(0%);
-} */
+}
