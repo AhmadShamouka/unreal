@@ -15,7 +15,7 @@ const Landing = () => {
           <Button text="Register" bgColor="white-bg" textColor="blue-text" />
         </div>
       </section>
-      <div className="about-container">
+      {/* <div className="about-container">
         <h1> ABOUT US</h1>
         <hr className="hr-line" />
         <div className="about-landing flex center">
@@ -36,7 +36,7 @@ const Landing = () => {
             </h4>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="container flex center">
         <div className="card-column column-0">
           <div className="card card-color-0">

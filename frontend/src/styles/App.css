@@ -3,7 +3,6 @@
   height: 100vh;
   overflow-y: scroll;
 }
-
 .flex {
   display: flex;
 }

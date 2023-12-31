@@ -1,21 +1,46 @@
 .landing {
-  flex-direction: column;
-  gap: 120px;
-  height: 100vh;
-  color: white;
   width: 100%;
-  background-image: url("../../common/images/landing-bg.jpg");
+  position: relative;
+  min-height: 700px;
+  top: 0;
+  background-position: top center;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../common/images/landing-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+}
+.landing > h1 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+.landing > button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.landing > h1 {
+  top: 50%;
+  margin-top: -20.5px;
+}
+
+.landing > button {
+  top: 70%;
+  margin-top: -20.5px;
 }
 
 @media screen and (max-width: 1268px) {
   .landing {
-    padding-top: 120px;
-    height: 70vh;
-    background-size: 100% 70vh;
+    position: relative;
+    background-size: 100% 100vh;
     text-align: center;
     display: flex;
     align-items: center;
@@ -108,7 +133,7 @@ p {
 }
 
 .card > img {
-  height: 40%;
+  height: 60%;
   width: 90%;
   position: absolute;
   top: -6%;

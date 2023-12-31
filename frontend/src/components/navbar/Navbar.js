@@ -15,8 +15,9 @@ const Navbar = () => {
       setIcon("nav__toggler toggle");
     } else setIcon("nav__toggler");
   };
+
   return (
-    <nav className="nav">
+    <nav>
       <div className={active}>
         <div className="logo-nav">
           <img src={logo} alt="logo" href="/" className="nav__brand" />
