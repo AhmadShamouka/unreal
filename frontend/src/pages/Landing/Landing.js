@@ -4,7 +4,16 @@ import Footer from "../../components/footer/Footer";
 import Button from "../../common/base/button/Button";
 import about from "../../common/images/about.jpg";
 import mission from "../../common/images/mission.jpeg";
-import { Link as ScrollLink } from "react-scroll";
+import formal from "../../common/images/aa.jpeg";
+import dress from "../../common/images/dress1.jpg";
+import wedding from "../../common/images/dress2.jpeg";
+import swim from "../../common/images/swim.jpeg";
+import sleepover from "../../common/images/pijamas.webp";
+import coat from "../../common/images/coats.jpg";
+import traditional from "../../common/images/tradi.jpeg";
+import sport from "../../common/images/sp.webp";
+import casual from "../../common/images/casual.jpeg";
+
 import "./styleLanding.css";
 
 const Landing = () => {
@@ -110,37 +119,52 @@ const Landing = () => {
           <div className="card-column column-0">
             <div className="card card-color-0">
               <div className="border"></div>
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg"
-                alt="Card 1"
-              />
-              <h1>Hey now, you're an allstar</h1>
+              <img src={coat} alt="Card 1" />
+              <h1>OUTERWEAR</h1>
             </div>
             <div className="card card-color-2">
               <div className="border"></div>
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg"
-                alt="Card 2"
-              />
-              <h1>Hey now, you're a rock star</h1>
-            </div>
-          </div>
-          <div className="card-column column-1">
-            <div className="card card-color-1">
-              <div className="border"></div>
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg"
-                alt="Card 3"
-              />
-              <h1>Get your game on, go play</h1>
+              <img src={casual} alt="Card 1" />
+              <h1>CASUAL WEAR</h1>
             </div>
             <div className="card card-color-3">
               <div className="border"></div>
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg"
-                alt="Card 4"
-              />
-              <h1>Get the show on, get paid</h1>
+              <img src={sport} alt="Card 1" />
+              <h1>SPORTS WEAR</h1>
+            </div>
+          </div>
+          <div className="card-column column-1">
+            <div className="card card-color-0">
+              <div className="border"></div>
+              <img src={sleepover} alt="Card 1" />
+              <h1>SLEEPOVER</h1>
+            </div>
+            <div className="card card-color-2">
+              <div className="border"></div>
+              <img src={wedding} alt="Card 1" />
+              <h1>WEDDING EVENTS</h1>
+            </div>
+            <div className="card card-color-3">
+              <div className="border"></div>
+              <img src={dress} alt="Card 1" />
+              <h1>DRESS</h1>
+            </div>
+          </div>
+          <div className="card-column column-0">
+            <div className="card card-color-0">
+              <div className="border"></div>
+              <img src={traditional} alt="Card 1" />
+              <h1>TRADITIONALS</h1>
+            </div>
+            <div className="card card-color-2">
+              <div className="border"></div>
+              <img src={swim} alt="Card 1" />
+              <h1>SWIMWEAR</h1>
+            </div>
+            <div className="card card-color-3">
+              <div className="border"></div>
+              <img src={formal} alt="Card 1" />
+              <h1>FORMAL WEAR</h1>
             </div>
           </div>
         </div>
