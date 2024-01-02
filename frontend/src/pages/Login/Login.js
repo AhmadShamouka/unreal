@@ -3,15 +3,17 @@ import logo from "../../common/base/logo/image/logo.png";
 import Input from "../../common/base/inputs/Input";
 import Button from "../../common/base/button/Button";
 import "./styles.css";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="login">
-      <div className="container flex">
+      <div className="container-login flex">
         <div className="child-img"></div>
         <div className="child-inputs flex center">
           <div className="child-logo">
-            <img href="/" src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
           <Input
             text="Email"
@@ -31,7 +33,7 @@ const Login = () => {
 
           <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
 
-          <a href="/login">Don't have Account!Create New?</a>
+          <a href="/Register">Don't have Account?Create One!</a>
         </div>
       </div>
     </div>

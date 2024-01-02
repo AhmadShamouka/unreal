@@ -7,6 +7,7 @@ import "./styles/colors.css";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/Signup";
 import Landing from "./pages/Landing/Landing";
+import Occasion from "./pages/Occasion/Occasion";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<SignUp />} />
+          <Route path="/occasion" element={<Occasion />} />
         </Routes>
       </BrowserRouter>
     </div>

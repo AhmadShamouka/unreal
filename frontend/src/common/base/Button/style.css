@@ -3,8 +3,10 @@
   font-size: 14px;
   height: 40px;
   width: 80px;
+  margin: 10px;
   border-radius: 10px;
   border: 2px solid #1789c9;
+  font-weight: bold;
 }
 button:hover {
   box-shadow: 0 0 20px #408fbd;

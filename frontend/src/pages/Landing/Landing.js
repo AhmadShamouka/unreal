@@ -25,7 +25,6 @@ const Landing = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
       const revealElement = document.getElementById("revealElement");
 
       if (revealElement) {
@@ -50,7 +49,6 @@ const Landing = () => {
 
   useEffect(() => {
     const ScrollHIW = () => {
-      const scrollPosition1 = window.scrollY;
       const howItWorksElement = document.getElementById("howItWorksElement");
 
       if (howItWorksElement) {
@@ -84,7 +82,7 @@ const Landing = () => {
             <div className="about-landing flex center">
               <div className="landing-text">
                 <h2>Is the world of fashion calling your name?</h2>
-                <h4>
+                <p>
                   UnrealFit is not just a fashion platform; it's a revolution in
                   the way we experience clothing. Born out of a passion for
                   blending technology with style, we've embarked on a journey to
@@ -97,20 +95,20 @@ const Landing = () => {
                   in the digital realm. At UnrealFit, we aim to make the online
                   shopping experience more immersive, enjoyable, and tailored to
                   each user's unique preferences.
-                </h4>
+                </p>
               </div>
               <div className="landing-img">
                 <img src={about} alt="About Us" />
               </div>
             </div>
-            <hr className="hr-line-div" />
+            <hr className="hr-line" />
             <div className="about-landing flex center">
               <div className="landing-img">
                 <img src={mission} alt="Mission" />
               </div>
               <div className="landing-text">
                 <h2>Empowering individuals through digital fashion</h2>
-                <h4>
+                <p>
                   At UnrealFit, our mission is to revolutionize the way people
                   perceive and interact with fashion in the digital age. We are
                   committed to providing a platform where users can not only
@@ -121,7 +119,7 @@ const Landing = () => {
                   preferences. Join us on this journey of redefining fashion and
                   making digital shopping a delightful and personalized
                   experience for everyone.
-                </h4>
+                </p>
               </div>
             </div>
           </div>
@@ -133,83 +131,86 @@ const Landing = () => {
         className={`how-it-works-container ${fadeIn ? "fade-in" : ""}`}
       >
         <h1>HOW IT WORKS</h1>
-        <hr className="hr-line" />
-        <div className="process-flow">
+
+        <div className="process-flow flex center">
           <div className="process-step">
-            <img src={arrow1} />
+            <img src={arrow1} alt="" />
             <p>Sign Up and Add your info</p>
           </div>
           <div className="process-step">
-            <img src={arrow2} />
+            <img src={arrow2} alt="" />
             <p>Choose Your Occasion</p>
           </div>
           <div className="process-step">
-            <img src={arrow3} />
+            <img src={arrow3} alt="" />
             <p>Choose what you like the most in the suggested items</p>
           </div>
-
+          <div className="arrow">&rarr;</div>
           <div className="process-step">
-            <img src={arrow4} />
+            <img src={arrow4} alt="" />
             <p>Try them out!</p>
           </div>
         </div>
       </section>
 
       <section>
-        <h1>HOW IT WORKS</h1>
+        <h1>TEMPLATES</h1>
         <hr className="hr-line" />
         <div className="container-temp flex center">
           <div className="card-column column-0">
             <div className="card card-color-0">
               <div className="border"></div>
               <img src={coat} alt="Card 1" />
-              <h1>OUTERWEAR</h1>
+              <h2>OUTERWEAR</h2>
             </div>
             <div className="card card-color-2">
               <div className="border"></div>
               <img src={casual} alt="Card 1" />
-              <h1>CASUAL WEAR</h1>
+              <h2>CASUAL WEAR</h2>
             </div>
             <div className="card card-color-3">
               <div className="border"></div>
               <img src={sport} alt="Card 1" />
-              <h1>SPORTS WEAR</h1>
+              <h2>SPORTS WEAR</h2>
             </div>
           </div>
           <div className="card-column column-1">
             <div className="card card-color-0">
               <div className="border"></div>
               <img src={sleepover} alt="Card 1" />
-              <h1>SLEEPOVER</h1>
+              <h2>SLEEPOVER</h2>
             </div>
             <div className="card card-color-2">
               <div className="border"></div>
               <img src={wedding} alt="Card 1" />
-              <h1>WEDDING EVENTS</h1>
+              <h2>WEDDING EVENTS</h2>
             </div>
             <div className="card card-color-3">
               <div className="border"></div>
               <img src={dress} alt="Card 1" />
-              <h1>DRESS</h1>
+              <h2>DRESS</h2>
             </div>
           </div>
           <div className="card-column column-0">
             <div className="card card-color-0">
               <div className="border"></div>
               <img src={traditional} alt="Card 1" />
-              <h1>TRADITIONALS</h1>
+              <h2>TRADITIONALS</h2>
             </div>
             <div className="card card-color-2">
               <div className="border"></div>
               <img src={swim} alt="Card 1" />
-              <h1>SWIMWEAR</h1>
+              <h2>SWIMWEAR</h2>
             </div>
             <div className="card card-color-3">
               <div className="border"></div>
               <img src={formal} alt="Card 1" />
-              <h1>FORMAL WEAR</h1>
+              <h2>FORMAL WEAR</h2>
             </div>
           </div>
+        </div>
+        <div className="button-temp flex center">
+          <Button text="See MORE!" bgColor="white-bg" textColor="blue-text" />
         </div>
       </section>
       <Footer />

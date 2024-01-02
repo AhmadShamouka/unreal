@@ -3,13 +3,14 @@
   overflow: hidden;
   height: 100vh;
 }
-.container {
+.container-login {
   padding: 20px;
-  gap: 20px;
 }
-
+img {
+  cursor: pointer;
+}
 .child-img {
-  border-radius: 20px;
+  border-radius: 10px 0 0 10px;
   background: url("../../common/images/login.jpeg");
   background-position: center;
   background-size: cover;
@@ -19,8 +20,8 @@
 }
 .child-inputs {
   background-image: linear-gradient(to top, #1789c9, #eeeeee);
-  border-radius: 20px;
-  gap: 10px;
+  border-radius: 0 10px 10px 0;
+
   height: 90vh;
   width: 50%;
   flex-direction: column;

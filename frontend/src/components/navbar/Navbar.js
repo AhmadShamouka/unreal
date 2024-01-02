@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./stylesNavbar.css";
 import Button from "../../common/base/button/Button";
 import logo from "../../common/base/logo/image/logo.png";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
   const navToggle = () => {
@@ -15,7 +16,12 @@ const Navbar = () => {
       setIcon("nav__toggler toggle");
     } else setIcon("nav__toggler");
   };
-
+  const navigateToSignin = () => {
+    navigate("/Login");
+  };
+  const navigateToSignup = () => {
+    navigate("/Register");
+  };
   return (
     <nav>
       <div className={active}>
@@ -40,8 +46,13 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="buttons">
-          <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
-          <Button text="Sign Up" />
+          <Button
+            text="Sign In"
+            bgColor="white-bg"
+            textColor="blue-text"
+            onClicked={navigateToSignin}
+          />
+          <Button text="Sign Up" onClicked={navigateToSignup} />
         </div>
       </div>
       <div onClick={navToggle} className={icon}>

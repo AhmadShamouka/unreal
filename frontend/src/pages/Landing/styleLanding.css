@@ -11,7 +11,11 @@
 
   background-repeat: no-repeat;
 }
-
+section h1 {
+  padding: 2rem 0 0 0;
+  text-align: center;
+  color: #1789c9;
+}
 .landing > h1 {
   color: #fff;
   text-transform: uppercase;
@@ -86,11 +90,7 @@ h2 {
   height: 2px;
   margin: 1rem 5rem;
 }
-.hr-line-div {
-  background-color: #1789c9;
-  height: 1px;
-  margin: 1rem 7rem;
-}
+
 .about-container h1 {
   margin-top: 50px;
   padding: 2rem 0 0 0;
@@ -109,13 +109,16 @@ h2 {
   width: 50%;
 }
 .landing-text h2 {
+  font-size: 28px;
+  font-weight: bolder;
   margin-bottom: 30px;
 }
 .landing-img {
   width: 50%;
 }
 .landing-img img {
-  height: 100%;
+  border-radius: 10px;
+  height: 300px;
   width: 100%;
 }
 
@@ -139,9 +142,12 @@ p {
   padding: 0 10%;
   max-width: 100%;
 }
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   .container-temp {
     display: block;
+  }
+  .card h1 {
+    font-size: 22px;
   }
 }
 .card-column {
@@ -152,6 +158,7 @@ p {
 }
 
 .card {
+  border-radius: 10px;
   width: 72%;
   max-width: 340px;
   margin-left: auto;
@@ -164,6 +171,7 @@ p {
 }
 
 .border {
+  border-radius: 10px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -174,13 +182,16 @@ p {
   top: -6px;
 }
 
-.card h1 {
+.card h2 {
+  text-align: center;
+  color: white;
   position: relative;
   padding: 220px 0px 100px 10px;
   width: 90%;
 }
 
 .card > img {
+  border-radius: 10px;
   height: 80%;
   width: 90%;
   position: absolute;
@@ -203,6 +214,11 @@ p {
 .card-color-3 {
   background-color: #5a8fad;
 }
+.button-temp button {
+  height: 60px;
+  width: 10%;
+  margin: 10px 0 30px 0px;
+}
 @keyframes move_wave {
   0% {
     transform: translateX(0) translateZ(0) scaleY(1);
@@ -219,39 +235,43 @@ p {
   opacity: 1;
 }
 .how-it-works-container {
-  height: 300px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   background-color: #1789c9;
-  padding: 40px;
-  margin-top: 20px;
+  padding: 20px;
   text-align: center;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .how-it-works-container h1 {
+  margin-bottom: 70px;
   color: #ffffff;
 }
 .process-flow {
   height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
-
+.arrow {
+  font-size: 24px;
+  color: #ffffff;
+}
 .process-step {
-  height: 80%;
+  min-height: 200px;
+  height: 100%;
   text-align: center;
   color: #fff;
   background-color: #1789c9;
   padding: 20px;
   border-radius: 8px;
-  width: 15%;
+  width: 100%;
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .process-step img {
   height: 80px;
   width: 80px;
+}
+@media screen and (max-width: 868px) {
+  .process-flow {
+    display: block;
+  }
 }
