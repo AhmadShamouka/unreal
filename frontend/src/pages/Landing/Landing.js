@@ -115,7 +115,7 @@ const Landing = () => {
       </section>
 
       <section>
-        <div className="container flex center">
+        <div className="container-temp flex center">
           <div className="card-column column-0">
             <div className="card card-color-0">
               <div className="border"></div>
