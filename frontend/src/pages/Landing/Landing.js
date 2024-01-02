@@ -13,25 +13,27 @@ import coat from "../../common/images/coats.jpg";
 import traditional from "../../common/images/tradi.jpeg";
 import sport from "../../common/images/sp.webp";
 import casual from "../../common/images/casual.jpeg";
-
+import arrow1 from "../../common/images/arrow.png";
+import arrow2 from "../../common/images/arrow2.png";
+import arrow3 from "../../common/images/arrow3.png";
+import arrow4 from "../../common/images/arrow4.png";
 import "./styleLanding.css";
 
 const Landing = () => {
   const [reveal, setReveal] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-
       const revealElement = document.getElementById("revealElement");
 
       if (revealElement) {
         const elementTop = revealElement.getBoundingClientRect().top;
 
-        const windowHeight = window.innerHeight;
-        const triggerPoint = windowHeight / 2;
+        const triggerPoint = window.innerHeight;
 
-        if (elementTop < windowHeight - triggerPoint) {
+        if (elementTop < triggerPoint) {
           setReveal(true);
         } else {
           setReveal(false);
@@ -40,11 +42,30 @@ const Landing = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  useEffect(() => {
+    const ScrollHIW = () => {
+      const scrollPosition1 = window.scrollY;
+      const howItWorksElement = document.getElementById("howItWorksElement");
+
+      if (howItWorksElement) {
+        const elementTop = howItWorksElement.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight;
+
+        if (elementTop < triggerPoint) {
+          setFadeIn(true);
+        } else {
+          setFadeIn(false);
+        }
+      }
+    };
+    window.addEventListener("scroll", ScrollHIW);
+  }, []);
   return (
     <div className="container-landing">
       <NavBar />
@@ -58,7 +79,7 @@ const Landing = () => {
       <section className="reveal-div">
         <div id="revealElement" className={`reveal ${reveal ? "active" : ""}`}>
           <div className="about-container">
-            <h1> ABOUT US</h1>
+            <h1> ABOUT US & OUR MISSION</h1>
             <hr className="hr-line" />
             <div className="about-landing flex center">
               <div className="landing-text">
@@ -79,20 +100,13 @@ const Landing = () => {
                 </h4>
               </div>
               <div className="landing-img">
-                <img src={about} />
+                <img src={about} alt="About Us" />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="reveal-div">
-        <div id="revealElement" className={`reveal ${reveal ? "active" : ""}`}>
-          <div className="about-container">
-            <h1> OUR MISSION</h1>
-            <hr className="hr-line" />
+            <hr className="hr-line-div" />
             <div className="about-landing flex center">
               <div className="landing-img">
-                <img src={mission} />
+                <img src={mission} alt="Mission" />
               </div>
               <div className="landing-text">
                 <h2>Empowering individuals through digital fashion</h2>
@@ -114,7 +128,36 @@ const Landing = () => {
         </div>
       </section>
 
+      <section
+        id="howItWorksElement"
+        className={`how-it-works-container ${fadeIn ? "fade-in" : ""}`}
+      >
+        <h1>HOW IT WORKS</h1>
+        <hr className="hr-line" />
+        <div className="process-flow">
+          <div className="process-step">
+            <img src={arrow1} />
+            <p>Sign Up and Add your info</p>
+          </div>
+          <div className="process-step">
+            <img src={arrow2} />
+            <p>Choose Your Occasion</p>
+          </div>
+          <div className="process-step">
+            <img src={arrow3} />
+            <p>Choose what you like the most in the suggested items</p>
+          </div>
+
+          <div className="process-step">
+            <img src={arrow4} />
+            <p>Try them out!</p>
+          </div>
+        </div>
+      </section>
+
       <section>
+        <h1>HOW IT WORKS</h1>
+        <hr className="hr-line" />
         <div className="container-temp flex center">
           <div className="card-column column-0">
             <div className="card card-color-0">
