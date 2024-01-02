@@ -1,0 +1,98 @@
+h1 {
+  font-size: 4em;
+  font-weight: 300;
+  text-align: center;
+  margin: 100px 10px 0 10px;
+}
+
+body {
+  background: #fff;
+}
+
+section {
+  margin: 0 auto;
+  text-align: center;
+  width: 960px;
+}
+
+.hex_row_even {
+  display: inline-block;
+  margin: 0 auto -275px auto;
+  overflow: hidden;
+}
+
+.hex_row_odd {
+  display: inline-block;
+  margin: 0 auto -275px auto;
+  overflow: hidden;
+}
+
+.center {
+  float: left;
+  margin: 20px 10px;
+  width: 220px;
+}
+
+.hexagon {
+  cursor: pointer;
+  height: 440px;
+  overflow: hidden;
+  visibility: hidden;
+  width: 220px;
+  transform: rotate(120deg);
+}
+
+.hex1 {
+  transform: rotate(-60deg);
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hex2 {
+  height: 100%;
+  transform: rotate(-60deg);
+  position: relative;
+  visibility: visible;
+  width: 100%;
+}
+.hex2 .backgroundImage {
+  background-repeat: no-repeat;
+}
+.desc {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 300;
+  height: 440px;
+  line-height: 1.5em;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  visibility: visible;
+  width: 220px;
+}
+
+.desc.base {
+  background: rgba(230, 0, 100, 0);
+}
+
+.desc.one {
+  background: rgba(252, 171, 55, 0.75);
+}
+
+.desc.two {
+  background: rgba(169, 160, 50, 0.75);
+}
+
+.desc.three {
+  background: rgba(83, 70, 54, 0.75);
+}
+
+.desc h2 {
+  margin: 200px 20px 0 20px;
+}
+
+.desc p {
+  font-size: 0.5em;
+  text-transform: lowercase;
+}
