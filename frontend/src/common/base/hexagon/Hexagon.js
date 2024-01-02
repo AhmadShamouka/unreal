@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "./styleHexagon.css";
 
 const Hexagon = ({ bgImage }) => {
-  const [color, setColor] = useState("base");
+  const [color, setColor] = useState("hidden");
   const [counter, setCounter] = useState(0);
 
   const handleHover = () => {
     setCounter((prevCounter) => prevCounter + 1);
-
     if (counter === 0) {
       setColor("base");
     } else if (counter === 1) {
@@ -23,12 +22,12 @@ const Hexagon = ({ bgImage }) => {
   };
 
   const handleHoverOut = () => {
-    setColor("base");
+    setColor("hidden");
   };
 
   return (
     <div className="hex_row_odd">
-      <div className="center">
+      <div className="center-hexagon">
         <div
           className="hexagon"
           onMouseEnter={handleHover}

@@ -5,16 +5,6 @@ h1 {
   margin: 100px 10px 0 10px;
 }
 
-body {
-  background: #fff;
-}
-
-section {
-  margin: 0 auto;
-  text-align: center;
-  width: 960px;
-}
-
 .hex_row_even {
   display: inline-block;
   margin: 0 auto -275px auto;
@@ -27,7 +17,7 @@ section {
   overflow: hidden;
 }
 
-.center {
+.center-hexagon {
   float: left;
   margin: 20px 10px;
   width: 220px;
@@ -71,11 +61,12 @@ section {
   visibility: visible;
   width: 220px;
 }
-
-.desc.base {
-  background: rgba(230, 0, 100, 0);
+.desc.hidden {
+  display: none;
 }
-
+.desc.base {
+  background: rgba(211, 18, 102, 0.651);
+}
 .desc.one {
   background: rgba(252, 171, 55, 0.75);
 }

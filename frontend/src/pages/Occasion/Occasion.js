@@ -6,10 +6,23 @@ const Occasion = () => {
   return (
     <div>
       <h1>Occasion</h1>
-      <section flex center>
-        <Hexagon bgImage={swim} />
-
-        <Hexagon bgImage={swim} /
+      <section>
+        <div className="flex ">
+          <Hexagon bgImage={swim} />
+          <Hexagon bgImage={swim} />
+          <Hexagon bgImage={swim} />
+        </div>
+        <div className="flex ">
+          <Hexagon bgImage={swim} />
+          <Hexagon bgImage={swim} />
+          <Hexagon bgImage={swim} />
+          <Hexagon bgImage={swim} />
+        </div>
+        <div className="flex ">
+          <Hexagon bgImage={swim} />
+          <Hexagon bgImage={swim} />
+          <Hexagon bgImage={swim} />
+        </div>
       </section>
     </div>
   );
