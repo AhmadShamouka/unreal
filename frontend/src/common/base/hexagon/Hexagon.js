@@ -40,6 +40,7 @@ const Hexagon = ({ bgImage, hexaText }) => {
                 backgroundImage: `url(${bgImage})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
+                backgroundSize: "cover",
               }}
             >
               <div className={`desc ${color}`}>

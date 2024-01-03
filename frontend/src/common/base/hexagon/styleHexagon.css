@@ -1,6 +1,6 @@
 .center-hexagon {
   float: left;
-  margin: 0;
+  margin: -25px 5px;
   width: 100%;
 }
 
@@ -33,13 +33,13 @@
   font-size: 1.5em;
   font-weight: 300;
   height: 340px;
-  margin: -20px 10px;
+  margin: -50px 0;
   line-height: 1.5em;
   position: absolute;
   text-align: center;
   text-transform: uppercase;
   visibility: visible;
-  width: 200px;
+  width: 220px;
 }
 .desc h2 {
   color: white;
