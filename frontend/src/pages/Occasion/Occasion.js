@@ -12,7 +12,8 @@ import party from "../../common/images/party.jpeg";
 import wedding from "../../common/images/wedding.jpeg";
 import Graduation from "../../common/images/graduation.jpeg";
 import classic from "../../common/images/classic.jpeg";
-import Graduation from "../../common/images/Athleisure Style.jpeg";
+import stylish from "../../common/images/Athleisure-Style.jpeg";
+import formal from "../../common/images/aa.jpeg";
 import NavBar from "../../components/navbar/Navbar";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
@@ -55,7 +56,7 @@ const Occasion = () => {
             }`}
             onClick={() => handleSwitch(1)}
           >
-            <img src={beach} alt="" />
+            <img src={stylish} alt="" />
             <h3>Casual</h3>
           </div>
           <div
@@ -68,7 +69,7 @@ const Occasion = () => {
             }`}
             onClick={() => handleSwitch(2)}
           >
-            <img src={casual} alt="" />
+            <img src={formal} alt="" />
           </div>
           <div
             className={`switchable-div ${
@@ -80,7 +81,7 @@ const Occasion = () => {
             }`}
             onClick={() => handleSwitch(3)}
           >
-            <img src={casual} alt="" />
+            <img src={classic} alt="" />
           </div>
         </div>
       </section>
