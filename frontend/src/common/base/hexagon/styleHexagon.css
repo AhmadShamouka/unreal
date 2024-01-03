@@ -34,25 +34,26 @@
   font-size: 1.5em;
   font-weight: 300;
   height: 340px;
+  margin: 0 10px;
   line-height: 1.5em;
   position: absolute;
   text-align: center;
   text-transform: uppercase;
   visibility: visible;
-  width: 220px;
+  width: 200px;
 }
 .desc.hidden {
   display: none;
 }
 .desc.base {
-  background: rgba(211, 18, 102, 0.651);
+  background: #17c95b98;
 }
 .desc.one {
-  background: rgba(252, 171, 55, 0.75);
+  background: #4a227e98;
 }
 
 .desc.two {
-  background: rgba(169, 160, 50, 0.75);
+  background: #00a2ffc7;
 }
 
 .desc.three {
