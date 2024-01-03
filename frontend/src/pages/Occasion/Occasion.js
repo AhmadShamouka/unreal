@@ -38,7 +38,16 @@ const Occasion = () => {
       <section>
         <h1>Choose Your Style </h1>
         <div className="switchable-container">
-          <div>
+          <div
+            className={`switchable-div ${
+              activeDiv === 0
+                ? "active"
+                : activeDiv === 1
+                ? "active"
+                : "blurred"
+            }`}
+            onClick={() => handleSwitch(1)}
+          >
             <p>Div 1</p>
           </div>
         </div>
