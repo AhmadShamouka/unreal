@@ -13,10 +13,10 @@ import wedding from "../../common/images/wedding.jpeg";
 import NavBar from "../../components/navbar/Navbar";
 const Occasion = () => {
   return (
-    <div>
+    <div className="occasion">
       <NavBar />
-      <h1>Occasion</h1>
       <section className="hexagons-temp">
+        <h1>Occasion</h1>
         <div className="hexa3 flex center">
           <Hexagon bgImage={Outdoor} hexaText="OutDoor Activity" />
           <Hexagon bgImage={beach} hexaText="Beach Vacation" />
@@ -31,8 +31,11 @@ const Occasion = () => {
         <div className="hexa3 flex center">
           <Hexagon bgImage={casual} hexaText="Casual Outing" />
           <Hexagon bgImage={party} hexaText="party" />
-          <Hexagon bgImage={Athletic} hexaText="Athletic Activity" />
+          <Hexagon bgImage={Graduation} hexaText="Graduation Ceremony" />
         </div>
+      </section>
+      <section>
+        <h1>Choose Your Style </h1>
       </section>
     </div>
   );
