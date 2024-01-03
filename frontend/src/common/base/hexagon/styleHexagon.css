@@ -1,20 +1,9 @@
-h1 {
-  font-size: 4em;
-  font-weight: 300;
-  text-align: center;
-  margin: 100px 10px 0 10px;
-}
-
 .hex_row_even {
   display: inline-block;
-  margin: 0 auto -275px auto;
-  overflow: hidden;
 }
 
 .hex_row_odd {
   display: inline-block;
-  margin: 0 auto -275px auto;
-  overflow: hidden;
 }
 
 .center-hexagon {
@@ -25,7 +14,7 @@ h1 {
 
 .hexagon {
   cursor: pointer;
-  height: 440px;
+  height: 250px;
   overflow: hidden;
   visibility: hidden;
   width: 220px;

@@ -7,18 +7,18 @@ const Occasion = () => {
     <div>
       <h1>Occasion</h1>
       <section>
-        <div className="flex ">
+        <div className="hexa3 flex center">
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
         </div>
-        <div className="flex ">
+        <div className="hexa4 flex center">
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
         </div>
-        <div className="flex ">
+        <div className="hexa3 flex center">
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
