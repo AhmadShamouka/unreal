@@ -11,6 +11,8 @@ import Traditional from "../../common/images/Traditional-Celebration.jpeg";
 import party from "../../common/images/party.jpeg";
 import wedding from "../../common/images/wedding.jpeg";
 import Graduation from "../../common/images/graduation.jpeg";
+import classic from "../../common/images/classic.jpeg";
+import Graduation from "../../common/images/Athleisure Style.jpeg";
 import NavBar from "../../components/navbar/Navbar";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
@@ -42,7 +44,7 @@ const Occasion = () => {
       </section>
       <section>
         <h1>Choose Your Style </h1>
-        <div className="switchable-container">
+        <div className="switchable-container flex center">
           <div
             className={`switchable-div ${
               activeDiv === 0
@@ -53,7 +55,8 @@ const Occasion = () => {
             }`}
             onClick={() => handleSwitch(1)}
           >
-            <p>Div 1</p>
+            <img src={beach} alt="" />
+            <h3>Casual</h3>
           </div>
           <div
             className={`switchable-div ${
@@ -65,7 +68,7 @@ const Occasion = () => {
             }`}
             onClick={() => handleSwitch(2)}
           >
-            <p>Div 2</p>
+            <img src={casual} alt="" />
           </div>
           <div
             className={`switchable-div ${
@@ -77,7 +80,7 @@ const Occasion = () => {
             }`}
             onClick={() => handleSwitch(3)}
           >
-            <p>Div 3</p>
+            <img src={casual} alt="" />
           </div>
         </div>
       </section>
