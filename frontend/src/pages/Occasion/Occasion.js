@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styleOccasion.css";
 import Hexagon from "../../common/base/hexagon/Hexagon";
 import Outdoor from "../../common/images/Outdoor-Adventure.jpeg";
@@ -10,6 +10,7 @@ import sleepover from "../../common/images/Sleepover.jpeg";
 import Traditional from "../../common/images/Traditional-Celebration.jpeg";
 import party from "../../common/images/party.jpeg";
 import wedding from "../../common/images/wedding.jpeg";
+import Graduation from "../../common/images/graduation.jpeg";
 import NavBar from "../../components/navbar/Navbar";
 const Occasion = () => {
   return (
@@ -36,6 +37,11 @@ const Occasion = () => {
       </section>
       <section>
         <h1>Choose Your Style </h1>
+        <div className="switchable-container">
+          <div>
+            <p>Div 1</p>
+          </div>
+        </div>
       </section>
     </div>
   );
