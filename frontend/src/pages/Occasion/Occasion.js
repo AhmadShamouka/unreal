@@ -6,7 +6,7 @@ const Occasion = () => {
   return (
     <div>
       <h1>Occasion</h1>
-      <section>
+      <section className="hexagons-temp">
         <div className="hexa3 flex center">
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
