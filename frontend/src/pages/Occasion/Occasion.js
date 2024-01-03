@@ -8,10 +8,13 @@ import casual from "../../common/images/Casual-Outing.jpg";
 import meeting from "../../common/images/Business-Meeting.jpeg";
 import sleepover from "../../common/images/Sleepover.jpeg";
 import Traditional from "../../common/images/Traditional-Celebration.jpeg";
+import party from "../../common/images/party.jpeg";
 import wedding from "../../common/images/wedding.jpeg";
+import NavBar from "../../components/navbar/Navbar";
 const Occasion = () => {
   return (
     <div>
+      <NavBar />
       <h1>Occasion</h1>
       <section className="hexagons-temp">
         <div className="hexa3 flex center">
@@ -20,14 +23,14 @@ const Occasion = () => {
           <Hexagon bgImage={Athletic} hexaText="Athletic Activity" />
         </div>
         <div className="hexa4 flex center">
-          <Hexagon bgImage={meeting} hexaText="OutDoor Activity" />
-          <Hexagon bgImage={sleepover} hexaText="Beach Vacation" />
-          <Hexagon bgImage={Traditional} hexaText="Athletic Activity" />
-          <Hexagon bgImage={wedding} hexaText="OutDoor Activity" />
+          <Hexagon bgImage={meeting} hexaText=" business meeting" />
+          <Hexagon bgImage={sleepover} hexaText="sleepover" />
+          <Hexagon bgImage={Traditional} hexaText="Traditional occastion" />
+          <Hexagon bgImage={wedding} hexaText="wedding events" />
         </div>
         <div className="hexa3 flex center">
-          <Hexagon bgImage={casual} hexaText="OutDoor Activity" />
-          <Hexagon bgImage={beach} hexaText="Beach Vacation" />
+          <Hexagon bgImage={casual} hexaText="Casual Outing" />
+          <Hexagon bgImage={party} hexaText="party" />
           <Hexagon bgImage={Athletic} hexaText="Athletic Activity" />
         </div>
       </section>
