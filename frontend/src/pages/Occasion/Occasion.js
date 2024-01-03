@@ -13,6 +13,11 @@ import wedding from "../../common/images/wedding.jpeg";
 import Graduation from "../../common/images/graduation.jpeg";
 import NavBar from "../../components/navbar/Navbar";
 const Occasion = () => {
+  const [activeDiv, setActiveDiv] = useState(0);
+
+  const handleSwitch = (divNumber) => {
+    setActiveDiv(divNumber);
+  };
   return (
     <div className="occasion">
       <NavBar />
@@ -49,6 +54,30 @@ const Occasion = () => {
             onClick={() => handleSwitch(1)}
           >
             <p>Div 1</p>
+          </div>
+          <div
+            className={`switchable-div ${
+              activeDiv === 0
+                ? "active"
+                : activeDiv === 2
+                ? "active"
+                : "blurred"
+            }`}
+            onClick={() => handleSwitch(2)}
+          >
+            <p>Div 2</p>
+          </div>
+          <div
+            className={`switchable-div ${
+              activeDiv === 0
+                ? "active"
+                : activeDiv === 3
+                ? "active"
+                : "blurred"
+            }`}
+            onClick={() => handleSwitch(3)}
+          >
+            <p>Div 3</p>
           </div>
         </div>
       </section>
