@@ -10,7 +10,7 @@ const Occasion = () => {
         <div className="hexa3 flex center">
           <Hexagon bgImage={swim} />
           <Hexagon bgImage={swim} />
-          <Hexagon bgImage={swim} />
+          <Hexagon bgImage={swim} hexaText="Beachparty" />
         </div>
         <div className="hexa4 flex center">
           <Hexagon bgImage={swim} />
