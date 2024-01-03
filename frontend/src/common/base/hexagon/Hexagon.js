@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styleHexagon.css";
 
-const Hexagon = ({ bgImage }) => {
+const Hexagon = ({ bgImage, hexaText }) => {
   const [color, setColor] = useState("hidden");
   const [counter, setCounter] = useState(0);
 
@@ -43,7 +43,7 @@ const Hexagon = ({ bgImage }) => {
               }}
             >
               <div className={`desc ${color}`}>
-                <h2>Party</h2>
+                <h2>{hexaText}</h2>
               </div>
             </div>
           </div>
