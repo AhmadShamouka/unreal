@@ -14,7 +14,7 @@ import Graduation from "../../common/images/graduation.jpeg";
 import classic from "../../common/images/classic.jpeg";
 import stylish from "../../common/images/Athleisure-Style.jpeg";
 import formal from "../../common/images/aa.jpeg";
-import NavBar from "../../components/navbar/Navbar";
+import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
@@ -24,7 +24,7 @@ const Occasion = () => {
   };
   return (
     <div className="occasion">
-      <NavBar />
+      <UserNavbar />
 
       <section className="hexagons-temp">
         <h1>Occasion</h1>
@@ -87,6 +87,7 @@ const Occasion = () => {
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );
