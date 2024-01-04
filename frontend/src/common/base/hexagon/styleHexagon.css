@@ -78,7 +78,6 @@
 
   .hexagon {
     height: 125px;
-
     width: 110px;
     transform: rotate(120deg);
   }
@@ -97,5 +96,10 @@
     margin: -30px 0;
     line-height: 1em;
     width: 110px;
+  }
+  .desc h2 {
+    font-weight: 700;
+    font-size: 12px;
+    margin: 90px 0;
   }
 }
