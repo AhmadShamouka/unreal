@@ -49,9 +49,9 @@ const Occasion = () => {
           <div
             className={`switchable-div ${
               activeDiv === 0
-                ? "active"
+                ? "active-switch"
                 : activeDiv === 1
-                ? "active"
+                ? "active-switch"
                 : "blurred"
             }`}
             onClick={() => handleSwitch(1)}
@@ -62,9 +62,9 @@ const Occasion = () => {
           <div
             className={`switchable-div ${
               activeDiv === 0
-                ? "active"
+                ? "active-switch"
                 : activeDiv === 2
-                ? "active"
+                ? "active-switch"
                 : "blurred"
             }`}
             onClick={() => handleSwitch(2)}
@@ -74,9 +74,9 @@ const Occasion = () => {
           <div
             className={`switchable-div ${
               activeDiv === 0
-                ? "active"
+                ? "active-switch"
                 : activeDiv === 3
-                ? "active"
+                ? "active-switch"
                 : "blurred"
             }`}
             onClick={() => handleSwitch(3)}
