@@ -15,6 +15,7 @@ import classic from "../../common/images/classic.jpeg";
 import stylish from "../../common/images/Athleisure-Style.jpeg";
 import formal from "../../common/images/aa.jpeg";
 import NavBar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
 
@@ -24,6 +25,7 @@ const Occasion = () => {
   return (
     <div className="occasion">
       <NavBar />
+
       <section className="hexagons-temp">
         <h1>Occasion</h1>
         <div className="hexa3 flex center">
@@ -43,7 +45,7 @@ const Occasion = () => {
           <Hexagon bgImage={Graduation} hexaText="Graduation Ceremony" />
         </div>
       </section>
-      <section>
+      <section className="switchable">
         <h1>Choose Your Style </h1>
         <div className="switchable-container flex center">
           <div
@@ -85,6 +87,7 @@ const Occasion = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
