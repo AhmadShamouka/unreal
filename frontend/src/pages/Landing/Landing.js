@@ -145,7 +145,7 @@ const Landing = () => {
             <img src={arrow3} alt="" />
             <p>Choose what you like the most in the suggested items</p>
           </div>
-          <div className="arrow">&rarr;</div>
+
           <div className="process-step">
             <img src={arrow4} alt="" />
             <p>Try them out!</p>
