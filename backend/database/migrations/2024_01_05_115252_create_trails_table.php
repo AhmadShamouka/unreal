@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('artryons', function (Blueprint $table) {
+        Schema::create('trails', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('choosen')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('clothes_id');
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('artryons');
+        Schema::dropIfExists('trails');
     }
 };
