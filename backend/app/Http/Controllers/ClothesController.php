@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Clothes;
-use App\Models\Artryon;
+use App\Models\Trail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\QueryException;
@@ -35,7 +35,7 @@ class ClothesController extends Controller
                 $request->file('image')->storeAs('public/images/', $imageName);
 
                 
-                $ARtryOn=Artryon::create([
+                $ARtryOn=Trail::create([
                     'user_id'=>$user->id,
                     'clothes_id'=>$clothesItem->id,
                 ]);
