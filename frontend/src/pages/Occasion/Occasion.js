@@ -72,6 +72,7 @@ const Occasion = () => {
               onClick={() => handleSwitch(2)}
             >
               <img src={formal} alt="" />
+              <h3>formal</h3>
             </div>
             <div
               className={`switchable-div ${
@@ -84,6 +85,7 @@ const Occasion = () => {
               onClick={() => handleSwitch(3)}
             >
               <img src={classic} alt="" />
+              <h3>classic</h3>
             </div>
           </div>
         </section>
