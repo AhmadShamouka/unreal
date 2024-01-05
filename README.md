@@ -11,22 +11,35 @@ UnrealFit is a web-based wardrobe assistance platform that utilizes augmented re
 User:
 
 -As a user, I want to easily register for an account, providing necessary details such as username, email, and password.
+
 -As a user, I want a secure sign-in process to access my account.
+
 -As a user, I want to create new occasions, providing details such as the type of occasion, date, and location.
+
 -As a user, I want to add descriptions or notes to my occasions, helping me remember specific details or requirements.
+
 -As a user, I want to browse and select costumes associated with each occasion.
+
 -As a user, I want the ability to view costume details, including images, sizes, and prices.
+
 -As a user, I want to use augmented reality (AR) to virtually try on selected costumes.
+
 -As a user, I want the option to share my virtual try-on images with friends for feedback.
+
 -As a user, I want to choose a location to purchase the selected costumes.
+
 -As a user, I want information about nearby stores or online options where I can buy the chosen costumes.
 
 Admin:
 
 -As an admin, I want a comprehensive dashboard overview displaying key metrics, user statistics, and recent activities.
+
 -As an admin, I want to view a list of all users, including their registration details and activity history.
+
 -As an admin, I want to search for specific users and filter user data based on criteria such as registration date.
+
 -As an admin, I want to see a list of all occasions created by users, including details like occasion type, date, and associated costumes.
+
 -As an admin, I want the ability to edit or remove occasions if needed.
 
 <br><br>
