@@ -43,13 +43,13 @@ class OccasionController extends Controller
                 'message' => 'You need permission',
             ]);
         } catch (QueryException $e) {
-            // Handle database-related errors
+          
             return response()->json([
                 'status' => 'failed',
                 'message' => 'Database error: ' . $e->getMessage(),
             ]);
         } catch (\Exception $e) {
-            // Handle other general errors
+      
             return response()->json([
                 'status' => 'failed',
                 'message' => 'An error occurred: ' . $e->getMessage(),
