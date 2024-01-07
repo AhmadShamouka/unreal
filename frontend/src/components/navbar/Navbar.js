@@ -17,10 +17,10 @@ const Navbar = () => {
     } else setIcon("nav__toggler");
   };
   const navigateToSignin = () => {
-    navigate("/Login");
+    navigate("/signin");
   };
   const navigateToSignup = () => {
-    navigate("/Register");
+    navigate("/signup");
   };
   return (
     <nav>

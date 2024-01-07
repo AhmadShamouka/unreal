@@ -33,7 +33,6 @@ const Occasion = () => {
       <div className="occasion-container">
         <section className="hexagons-temp">
           <h1>Occasion</h1>
-
           <div className="hexa3 flex center">
             <Hexagon
               bgImage={Outdoor}
@@ -101,6 +100,7 @@ const Occasion = () => {
             />
           </div>
         </section>
+
         <section className="switchable">
           <h1>Choose Your Style </h1>
           <div className="switchable-container flex center">

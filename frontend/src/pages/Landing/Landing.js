@@ -18,8 +18,9 @@ import arrow2 from "../../common/images/arrow2.png";
 import arrow3 from "../../common/images/arrow3.png";
 import arrow4 from "../../common/images/arrow4.png";
 import "./styleLanding.css";
-
+import { useNavigate } from "react-router-dom";
 const Landing = () => {
+  const navigate = useNavigate();
   const [reveal, setReveal] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
 
@@ -64,13 +65,22 @@ const Landing = () => {
     };
     window.addEventListener("scroll", ScrollHIW);
   }, []);
+  const handelRegister = () => {
+    navigate("/signup");
+  };
+
   return (
     <div className="container-landing">
       <NavBar />
       <section>
         <div className="landing flex center">
           <h1>DIGITAL FASHION IS THE NEW CHAPTER</h1>
-          <Button text="Register" bgColor="white-bg" textColor="blue-text" />
+          <Button
+            text="Register"
+            bgColor="white-bg"
+            textColor="blue-text"
+            onClicked={handelRegister}
+          />
         </div>
       </section>
 
