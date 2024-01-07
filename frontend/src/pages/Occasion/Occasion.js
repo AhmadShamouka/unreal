@@ -16,7 +16,7 @@ import stylish from "../../common/images/Athleisure-Style.jpeg";
 import formal from "../../common/images/aa.jpeg";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
-import Input from "../../common/base/inputs/Input";
+import SelectOption from "../../common/base/select/SelectOption";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
   const [blurredHexagon, setBlurredHexagon] = useState(null);
@@ -148,11 +148,7 @@ const Occasion = () => {
         </section>
         <section className="personal-info">
           <h1>Personal Information</h1>
-          <div className="personal-info-container flex center">
-            <Input />
-            <Input />
-            <Input />
-          </div>
+          <div className="personal-info-container flex center"></div>
         </section>
       </div>
       <Footer />
