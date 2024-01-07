@@ -1,10 +1,12 @@
+// Hexagon.jsx
+
 import React, { useState } from "react";
 import "./styleHexagon.css";
 
-const Hexagon = ({ bgImage, hexaText }) => {
+const Hexagon = ({ bgImage, hexaText, onClick, isBlurred }) => {
   const [color, setColor] = useState("hidden");
   const [counter, setCounter] = useState(0);
-  const [blur, setBlur] = useState("");
+
   const handleHover = () => {
     setCounter((prevCounter) => prevCounter + 1);
     if (counter === 0) {
@@ -24,19 +26,17 @@ const Hexagon = ({ bgImage, hexaText }) => {
   const handleHoverOut = () => {
     setColor("hidden");
   };
-  const handleBlur = () => {
-    setBlur("blur");
-  };
+
   return (
-    <div className="hex_row_odd">
+    <div className={`hex_row_odd ${isBlurred ? "blur" : ""}`}>
       <div className="center-hexagon">
         <div
           className="hexagon"
           onMouseEnter={handleHover}
           onMouseLeave={handleHoverOut}
-          onClick={handleBlur}
+          onClick={onClick}
         >
-          <div className={`hex1 ${blur}`}>
+          <div className={`hex1`}>
             <div
               className="hex2"
               style={{

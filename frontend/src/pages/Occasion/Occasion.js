@@ -18,8 +18,11 @@ import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
-  const [activeHexagon, setActiveHexagon] = useState(0);
+  const [blurredHexagon, setBlurredHexagon] = useState(null);
 
+  const handleHexagonClick = (hexagonNumber) => {
+    setBlurredHexagon(hexagonNumber);
+  };
   const handleSwitch = (divNumber) => {
     setActiveDiv(divNumber);
   };
@@ -32,20 +35,70 @@ const Occasion = () => {
           <h1>Occasion</h1>
 
           <div className="hexa3 flex center">
-            <Hexagon bgImage={Outdoor} hexaText="OutDoor Activity" />
-            <Hexagon bgImage={beach} hexaText="Beach Vacation" />
-            <Hexagon bgImage={Athletic} hexaText="Athletic Activity" />
+            <Hexagon
+              bgImage={Outdoor}
+              hexaText="OutDoor Activity"
+              onClick={() => handleHexagonClick(1)}
+              isBlurred={blurredHexagon !== 1}
+            />
+            <Hexagon
+              bgImage={beach}
+              hexaText="Beach Vacation"
+              onClick={() => handleHexagonClick(2)}
+              isBlurred={blurredHexagon !== 2}
+            />
+            <Hexagon
+              bgImage={Athletic}
+              hexaText="Athletic Activity"
+              onClick={() => handleHexagonClick(3)}
+              isBlurred={blurredHexagon !== 3}
+            />
           </div>
           <div className="hexa4 flex center">
-            <Hexagon bgImage={meeting} hexaText=" business meeting" />
-            <Hexagon bgImage={sleepover} hexaText="sleepover" />
-            <Hexagon bgImage={Traditional} hexaText="Traditional occastion" />
-            <Hexagon bgImage={wedding} hexaText="wedding events" />
+            <Hexagon
+              bgImage={meeting}
+              hexaText=" business meeting"
+              onClick={() => handleHexagonClick(4)}
+              isBlurred={blurredHexagon !== 4}
+            />
+            <Hexagon
+              bgImage={sleepover}
+              hexaText="sleepover"
+              onClick={() => handleHexagonClick(5)}
+              isBlurred={blurredHexagon !== 5}
+            />
+            <Hexagon
+              bgImage={Traditional}
+              hexaText="Traditional occastion"
+              onClick={() => handleHexagonClick(6)}
+              isBlurred={blurredHexagon !== 6}
+            />
+            <Hexagon
+              bgImage={wedding}
+              hexaText="wedding events"
+              onClick={() => handleHexagonClick(7)}
+              isBlurred={blurredHexagon !== 7}
+            />
           </div>
           <div className="hexa3 flex center">
-            <Hexagon bgImage={casual} hexaText="Casual Outing" />
-            <Hexagon bgImage={party} hexaText="party" />
-            <Hexagon bgImage={Graduation} hexaText="Graduation Ceremony" />
+            <Hexagon
+              bgImage={casual}
+              hexaText="Casual Outing"
+              onClick={() => handleHexagonClick(8)}
+              isBlurred={blurredHexagon !== 8}
+            />
+            <Hexagon
+              bgImage={party}
+              hexaText="party"
+              onClick={() => handleHexagonClick(9)}
+              isBlurred={blurredHexagon !== 9}
+            />
+            <Hexagon
+              bgImage={Graduation}
+              hexaText="Graduation Ceremony"
+              onClick={() => handleHexagonClick(10)}
+              isBlurred={blurredHexagon !== 10}
+            />
           </div>
         </section>
         <section className="switchable">
