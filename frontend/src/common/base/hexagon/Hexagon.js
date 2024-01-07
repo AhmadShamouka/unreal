@@ -4,7 +4,7 @@ import "./styleHexagon.css";
 const Hexagon = ({ bgImage, hexaText }) => {
   const [color, setColor] = useState("hidden");
   const [counter, setCounter] = useState(0);
-
+  const [blur, setBlur] = useState("");
   const handleHover = () => {
     setCounter((prevCounter) => prevCounter + 1);
     if (counter === 0) {
@@ -24,7 +24,9 @@ const Hexagon = ({ bgImage, hexaText }) => {
   const handleHoverOut = () => {
     setColor("hidden");
   };
-
+  const handleBlur = () => {
+    setBlur("blur");
+  };
   return (
     <div className="hex_row_odd">
       <div className="center-hexagon">
@@ -32,8 +34,9 @@ const Hexagon = ({ bgImage, hexaText }) => {
           className="hexagon"
           onMouseEnter={handleHover}
           onMouseLeave={handleHoverOut}
+          onClick={handleBlur}
         >
-          <div className="hex1">
+          <div className={`hex1 ${blur}`}>
             <div
               className="hex2"
               style={{

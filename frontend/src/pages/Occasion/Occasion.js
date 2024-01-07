@@ -24,9 +24,6 @@ const Occasion = () => {
     setActiveDiv(divNumber);
   };
 
-  const handleHexagonClick = (hexagonNumber) => {
-    setActiveHexagon(hexagonNumber);
-  };
   return (
     <div className="occasion">
       <UserNavbar />
@@ -35,24 +32,9 @@ const Occasion = () => {
           <h1>Occasion</h1>
 
           <div className="hexa3 flex center">
-            <Hexagon
-              bgImage={Outdoor}
-              hexaText="OutDoor Activity"
-              onClick={() => handleHexagonClick(1)}
-              isActive={activeHexagon === 1}
-            />
-            <Hexagon
-              bgImage={beach}
-              hexaText="Beach Vacation"
-              onClick={() => handleHexagonClick(2)}
-              isActive={activeHexagon === 2}
-            />
-            <Hexagon
-              bgImage={Athletic}
-              hexaText="Athletic Activity"
-              onClick={() => handleHexagonClick(3)}
-              isActive={activeHexagon === 3}
-            />
+            <Hexagon bgImage={Outdoor} hexaText="OutDoor Activity" />
+            <Hexagon bgImage={beach} hexaText="Beach Vacation" />
+            <Hexagon bgImage={Athletic} hexaText="Athletic Activity" />
           </div>
           <div className="hexa4 flex center">
             <Hexagon bgImage={meeting} hexaText=" business meeting" />
