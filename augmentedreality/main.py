@@ -6,4 +6,7 @@ shirtFolderPath = os.path.join(script_dir, 'Resources', 'Shirts')
 
 from cvzone.PoseModule import PoseDetector
 cap = cv2.VideoCapture(0)
-print("hello")
+while True:
+    success, img = cap.read()
+    img = detector.findPose(img)
+    lmList, bboxInfo = detector.findPosition(img, draw=False, bboxWithHands=False)
