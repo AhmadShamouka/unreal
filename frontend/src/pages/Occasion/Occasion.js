@@ -148,7 +148,23 @@ const Occasion = () => {
         </section>
         <section className="personal-info">
           <h1>Personal Information</h1>
-          <div className="personal-info-container flex center"></div>
+          <div className="personal-info-container flex center">
+            <select name="Season">
+              <SelectOption value="winter" text="Winter" />
+              <SelectOption value="spring" text="Spring" />
+              <SelectOption value="summer" text="Summer" />
+              <SelectOption value="fall" text="Fall" />
+            </select>
+            <select name="Hijab">
+              <SelectOption value="True" text="With Hijab" />
+              <SelectOption value="False" text="Without Hijab" />
+            </select>
+            <select name="Budget-range">
+              <SelectOption value="Low" text="Low (Under 200$)" />
+              <SelectOption value="Medium" text="Low (Between 200$  1500$)" />
+              <SelectOption value="High" text="Low (Over 1500$)" />
+            </select>
+          </div>
         </section>
       </div>
       <Footer />
