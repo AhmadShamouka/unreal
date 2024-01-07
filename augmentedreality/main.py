@@ -25,7 +25,7 @@ while True:
     currentScale=(lm11[0] - lm12[0])/190  
     
     offset=int(44*currentScale),int(48*currentScale)
-
+    imgShirt = cv2.resize(imgShirt, (widthOfShirt, heightOfShirt))
     img = cvzone.overlayPNG(img, imgShirt, (lm12[0]-offset[0],lm12[1]-offset[1]))
 
         
