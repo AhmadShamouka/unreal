@@ -10,3 +10,4 @@ while True:
     success, img = cap.read()
     img = detector.findPose(img)
     lmList, bboxInfo = detector.findPosition(img, draw=False, bboxWithHands=False)
+    imgShirt = cv2.imread(os.path.join(shirtFolderPath, listShirts[1]), cv2.IMREAD_UNCHANGED)
