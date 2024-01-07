@@ -148,7 +148,11 @@ const Occasion = () => {
         </section>
         <section className="personal-info">
           <h1>Personal Information</h1>
-          <div className="personal-info-container flex center"></div>
+          <div className="personal-info-container flex center">
+            <Input />
+            <Input />
+            <Input />
+          </div>
         </section>
       </div>
       <Footer />
