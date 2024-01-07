@@ -18,9 +18,14 @@ import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
+  const [activeHexagon, setActiveHexagon] = useState(0);
 
   const handleSwitch = (divNumber) => {
     setActiveDiv(divNumber);
+  };
+
+  const handleHexagonClick = (hexagonNumber) => {
+    setActiveHexagon(hexagonNumber);
   };
   return (
     <div className="occasion">
@@ -28,10 +33,26 @@ const Occasion = () => {
       <div className="occasion-container">
         <section className="hexagons-temp">
           <h1>Occasion</h1>
+
           <div className="hexa3 flex center">
-            <Hexagon bgImage={Outdoor} hexaText="OutDoor Activity" />
-            <Hexagon bgImage={beach} hexaText="Beach Vacation" />
-            <Hexagon bgImage={Athletic} hexaText="Athletic Activity" />
+            <Hexagon
+              bgImage={Outdoor}
+              hexaText="OutDoor Activity"
+              onClick={() => handleHexagonClick(1)}
+              isActive={activeHexagon === 1}
+            />
+            <Hexagon
+              bgImage={beach}
+              hexaText="Beach Vacation"
+              onClick={() => handleHexagonClick(2)}
+              isActive={activeHexagon === 2}
+            />
+            <Hexagon
+              bgImage={Athletic}
+              hexaText="Athletic Activity"
+              onClick={() => handleHexagonClick(3)}
+              isActive={activeHexagon === 3}
+            />
           </div>
           <div className="hexa4 flex center">
             <Hexagon bgImage={meeting} hexaText=" business meeting" />
