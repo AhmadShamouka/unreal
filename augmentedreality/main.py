@@ -12,7 +12,10 @@ while True:
     success, img = cap.read()
     img = detector.findPose(img)
     lmList, bboxInfo = detector.findPosition(img, draw=False, bboxWithHands=False)
-   
+    if lmList:
+        lm11 = lmList[11][0:2]
+        lm12 = lmList[12][0:2]
+        
     imgShirt = cv2.imread(os.path.join(shirtFolderPath, listShirts[1]), cv2.IMREAD_UNCHANGED)
     
         
