@@ -17,7 +17,8 @@ while True:
         lm12 = lmList[12][0:2]
         
     imgShirt = cv2.imread(os.path.join(shirtFolderPath, listShirts[1]), cv2.IMREAD_UNCHANGED)
-    
+    img = cvzone.overlayPNG(img, imgShirt, (lm12[0]))
+
         
     cv2.imshow("image", img)
     cv2.waitKey(1)
