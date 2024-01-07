@@ -9,3 +9,4 @@ cap = cv2.VideoCapture(0)
 while True:
     success, img = cap.read()
     img = detector.findPose(img)
+    lmList, bboxInfo = detector.findPosition(img, draw=False, bboxWithHands=False)
