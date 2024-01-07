@@ -1,10 +1,12 @@
 import os
 import cvzone
 import cv2
-script_dir = os.path.dirname(os.path.abspath(__file__))
-shirtFolderPath = os.path.join(script_dir, 'Resources', 'Shirts')
-detector = PoseDetector()
 from cvzone.PoseModule import PoseDetector
+shirtFolderPath = 'Resources/Shirts'
+listShirts = os.listdir(shirtFolderPath)
+
+detector = PoseDetector()
+
 cap = cv2.VideoCapture(0)
 while True:
     success, img = cap.read()
@@ -13,6 +15,6 @@ while True:
    
     imgShirt = cv2.imread(os.path.join(shirtFolderPath, listShirts[1]), cv2.IMREAD_UNCHANGED)
     
-    
-cv2.imshow("image", img)
-cv2.waitKey(1)
+        
+    cv2.imshow("image", img)
+    cv2.waitKey(1)
