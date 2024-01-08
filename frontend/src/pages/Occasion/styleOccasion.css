@@ -1,6 +1,6 @@
 .occasion-container {
   overflow: hidden;
-  background-color: #68b1db;
+  background-color: #ffffff;
 }
 .occasion-container h1 {
   padding: 80px 0;
@@ -44,4 +44,12 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
+}
+.personal-info {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+.personal-info-container {
+  justify-content: space-evenly;
 }
