@@ -28,13 +28,11 @@ const Occasion = () => {
   const handleSwitch = (divNumber) => {
     setActiveDiv(divNumber);
   };
-const handelFindItems=()={
-
-}
+  const handelFindItems = () => {};
   return (
     <div className="occasion">
       <UserNavbar />
-      <form  onSubmit={handelFindItems} className="occasion-container">
+      <form onSubmit={handelFindItems} className="occasion-container">
         <section className="hexagons-temp">
           <h1>Occasion</h1>
           <div className="hexa3 flex center">
@@ -177,9 +175,15 @@ const handelFindItems=()={
               </select>
             </div>
           </div>
-          <Button type="submit"/>
         </section>
-
+        <div className="find-btn flex center">
+          <Button
+            type="submit"
+            text="FIND NOW!"
+            bgColor="white-bg"
+            textColor="blue-text"
+          />
+        </div>
       </form>
       <Footer />
     </div>
