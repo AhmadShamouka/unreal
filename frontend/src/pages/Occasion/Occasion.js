@@ -148,7 +148,7 @@ const Occasion = () => {
         </section>
         <section className="personal-info">
           <h1>Personal Information</h1>
-          <div className="personal-info-container flex center">
+          <form className="personal-info-container flex center">
             <div className="label-select">
               <h4>Enter The Season of Your Occasion</h4>
               <select name="Season">
@@ -173,7 +173,7 @@ const Occasion = () => {
                 <SelectOption value="High" text="Low (Over 1500$)" />
               </select>
             </div>
-          </div>
+          </form>
         </section>
       </div>
       <Footer />
