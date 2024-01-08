@@ -8,6 +8,7 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/Signup";
 import Landing from "./pages/Landing/Landing";
 import Occasion from "./pages/Occasion/Occasion";
+import ChooseItem from "./pages/ChooseItem/ChooseItem";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/signin" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-
+          <Route path="/find" element={<ChooseItem />} />
           <Route path="/occasion" element={<Occasion />} />
         </Routes>
       </BrowserRouter>
