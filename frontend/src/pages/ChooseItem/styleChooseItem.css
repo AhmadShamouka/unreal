@@ -1,0 +1,11 @@
+.choose-item-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.swiper-image {
+  width: 80%;
+  height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
