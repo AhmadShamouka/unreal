@@ -17,6 +17,7 @@ import formal from "../../common/images/aa.jpeg";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
 import SelectOption from "../../common/base/select/SelectOption";
+import Button from "../../common/base/button/Button";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
   const [blurredHexagon, setBlurredHexagon] = useState(null);
@@ -28,7 +29,7 @@ const Occasion = () => {
     setActiveDiv(divNumber);
   };
 const handelFindItems=()={
-  
+
 }
   return (
     <div className="occasion">
@@ -176,7 +177,9 @@ const handelFindItems=()={
               </select>
             </div>
           </div>
+          <Button type="submit"/>
         </section>
+
       </form>
       <Footer />
     </div>
