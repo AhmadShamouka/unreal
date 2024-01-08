@@ -47,8 +47,6 @@
 }
 .personal-info {
   position: relative;
-  height: 300px;
-  width: 100%;
 }
 .personal-info-container {
   justify-content: space-evenly;
@@ -62,7 +60,6 @@
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-
   outline: none;
   background-color: #fff;
 }
@@ -85,4 +82,20 @@ select option {
 select option:checked {
   background-color: #007bff;
   color: #fff;
+}
+.find-btn {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .personal-info-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .switchable-container {
+    gap: 40px;
+    padding: 0 40px;
+  }
+  .label-select {
+    width: 80%;
+  }
 }

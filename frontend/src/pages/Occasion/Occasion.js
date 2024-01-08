@@ -175,15 +175,15 @@ const Occasion = () => {
               </select>
             </div>
           </div>
+          <div className="find-btn flex center">
+            <Button
+              type="submit"
+              text="FIND NOW!"
+              bgColor="white-bg"
+              textColor="blue-text"
+            />
+          </div>
         </section>
-        <div className="find-btn flex center">
-          <Button
-            type="submit"
-            text="FIND NOW!"
-            bgColor="white-bg"
-            textColor="blue-text"
-          />
-        </div>
       </form>
       <Footer />
     </div>
