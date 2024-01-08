@@ -65,6 +65,7 @@
 }
 .label-select {
   gap: 10px;
+  margin: 10px 0;
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -96,6 +97,7 @@ select option:checked {
     padding: 0 40px;
   }
   .label-select {
+    margin: 10px 0;
     width: 80%;
   }
 }
