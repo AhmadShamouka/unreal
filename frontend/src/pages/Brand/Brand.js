@@ -1,5 +1,6 @@
 import React from "react";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";
+import Footer from "../../components/footer/Footer";
 import "./styleBrand.css";
 
 const Brand = () => {
@@ -17,8 +18,8 @@ const Brand = () => {
             className="card-img-brand"
           />
           <span className="card-footer-brand">
-            <span>Awesome speedy card</span>
-            <span>2 minutes!</span>
+            <span>Zara</span>
+            <span></span>
           </span>
         </div>
         <div className="card-brand">
@@ -44,6 +45,7 @@ const Brand = () => {
           </span>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
