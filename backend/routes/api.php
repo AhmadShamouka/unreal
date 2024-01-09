@@ -15,9 +15,10 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 
-Route::controller(OccasionController::class)->group(function () {
-    Route::post('occasion', 'createOccasion');
+Route::middleware(['admin'])->group(function () {
+    Route::post('occasion', [OccasionController::class, 'createOccasion']);
 });
+
 Route::controller(ClothesController::class)->group(function () {
     Route::post('add-clothes', 'createItem');
 });
