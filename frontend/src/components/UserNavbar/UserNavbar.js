@@ -35,6 +35,7 @@ const UserNavbar = () => {
             </a>
           </li>
         </ul>
+        <h3>UserName</h3>
       </div>
       <div onClick={navToggle} className={icon}>
         <div className="line1"></div>

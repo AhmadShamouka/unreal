@@ -9,6 +9,9 @@
   position: absolute;
   padding: 0.3rem 4rem;
 }
+.nav__menu h3 {
+  color: #1789c9;
+}
 
 li {
   list-style: none;
