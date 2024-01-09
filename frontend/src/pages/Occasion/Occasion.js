@@ -34,7 +34,7 @@ const Occasion = () => {
       <UserNavbar />
       <form onSubmit={handelFindItems} className="occasion-container">
         <section className="hexagons-temp">
-          <h1>Occasion</h1>
+          <h1>Choose Your Occasion</h1>
           <div className="hexa3 flex center">
             <Hexagon
               bgImage={Outdoor}

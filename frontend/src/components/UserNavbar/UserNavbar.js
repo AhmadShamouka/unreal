@@ -18,19 +18,19 @@ const UserNavbar = () => {
     <nav className="nav">
       <div className={active}>
         <img src={logo} alt="logo" className="nav__brand" />
-        <ul className="links">
+        <ul className="links_user flex center">
           <li className="nav__item">
-            <a href="/" className="nav__link">
+            <a href="/" className="nav__link_user">
               Home
             </a>
           </li>
           <li className="nav__item">
-            <a href="/" className="nav__link">
+            <a href="/" className="nav__link_user">
               About
             </a>
           </li>
           <li className="nav__item">
-            <a href="/" className="nav__link">
+            <a href="/" className="nav__link_user">
               Template
             </a>
           </li>

@@ -2,8 +2,8 @@
   overflow: hidden;
   background-color: #ffffff;
 }
-.occasion-container h1 {
-  padding: 80px 0;
+.hexagons-temp h1 {
+  padding: 7rem 0;
 }
 .switchable {
   margin-bottom: 5%;
@@ -47,9 +47,8 @@
 }
 .personal-info {
   position: relative;
-  background-color: #007bff;
-  margin-bottom: 30px;
-  padding: 100px 0;
+
+  padding: 20px 0;
 }
 .personal-info-container {
   justify-content: space-evenly;

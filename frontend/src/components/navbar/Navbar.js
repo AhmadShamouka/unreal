@@ -26,9 +26,9 @@ const Navbar = () => {
     <nav>
       <div className={active}>
         <div className="logo-nav">
-          <img src={logo} alt="logo" href="/" className="nav__brand" />
+          <h3 className="nav__brand"> UNREALFIT</h3>
         </div>
-        <ul className="links">
+        <ul className="links flex center">
           <li className="nav__item">
             <a href="/" className="nav__link">
               Home

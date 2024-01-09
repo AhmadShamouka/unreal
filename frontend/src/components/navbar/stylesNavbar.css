@@ -9,9 +9,6 @@
   position: absolute;
   padding: 0.3rem 4rem;
 }
-.nav__menu h3 {
-  color: #ffffff;
-}
 
 li {
   list-style: none;
@@ -19,12 +16,6 @@ li {
 
 .logo-nav {
   cursor: pointer;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .links a {
