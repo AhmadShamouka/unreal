@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 import logo from "../../common/base/logo/image/logo.png";
-
+import "./styleUserNavbar.css";
 const UserNavbar = () => {
-  const [active, setActive] = useState("nav__menu");
+  const [active, setActive] = useState("nav__menu_user");
   const [icon, setIcon] = useState("nav__toggler");
   const navToggle = () => {
-    if (active === "nav__menu") {
-      setActive("nav__menu nav__active");
-    } else setActive("nav__menu");
+    if (active === "nav__menu_user") {
+      setActive("nav__menu_user nav__active");
+    } else setActive("nav__menu_user");
 
     if (icon === "nav__toggler") {
       setIcon("nav__toggler toggle");
