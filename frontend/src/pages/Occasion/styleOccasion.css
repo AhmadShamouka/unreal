@@ -47,11 +47,16 @@
 }
 .personal-info {
   position: relative;
+  background-color: #007bff;
+  margin-bottom: 30px;
+  padding: 100px 0;
 }
 .personal-info-container {
   justify-content: space-evenly;
 }
-
+.personal-info h1 {
+  color: white;
+}
 .personal-info-container select {
   height: 40px;
   width: 100%;
@@ -86,6 +91,15 @@ select option:checked {
 }
 .find-btn {
   position: relative;
+}
+.find-btn button {
+  font-size: 18px;
+  font-weight: 700;
+  width: 150px;
+  height: 50px;
+}
+.find-btn button:hover {
+  box-shadow: 0 0 20px #ffffff;
 }
 @media screen and (max-width: 768px) {
   .personal-info-container {
