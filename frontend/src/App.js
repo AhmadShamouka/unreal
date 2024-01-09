@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp/Signup";
 import Landing from "./pages/Landing/Landing";
 import Occasion from "./pages/Occasion/Occasion";
 import ChooseItem from "./pages/ChooseItem/ChooseItem";
+import Brand from "./pages/Brand/Brand";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/signin" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/find" element={<ChooseItem />} />
+          <Route path="/brand" element={<Brand />} />
           <Route path="/occasion" element={<Occasion />} />
         </Routes>
       </BrowserRouter>
