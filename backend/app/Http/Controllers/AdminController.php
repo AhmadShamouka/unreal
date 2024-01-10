@@ -89,5 +89,9 @@ class AdminController extends Controller
                 'response' => $getallClothes,
             ]);
         }
-    }
+        return response()->json([
+            'status' => 'failed',
+            'response' =>"Not Signed In",
+        ]);
+        }
 }
