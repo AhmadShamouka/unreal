@@ -42,7 +42,8 @@ class ClothesController extends Controller
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Created successfully',
-                    'clothes_item' => $clothesItem,$ARtryOn
+                    'clothes_item' => $clothesItem,
+                    'Trails' =>$ARtryOn
                 ]);
 
 
