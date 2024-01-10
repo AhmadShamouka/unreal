@@ -63,4 +63,19 @@ class AdminController extends Controller
                 'response' =>"Not Signed In",
             ]);
             }
+        
+    public function getOneOccasion(Request $request){
+        if (Auth::check()) {
+           
+            $user = Occasion::find($request->id);
+    
+
+            if ($user) {
+                return response()->json([
+                    'status' => 'success',
+                    'response' => $user,
+                ]);
+            }
+        }
     }
+}
