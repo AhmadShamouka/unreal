@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Clothes;
 use App\Models\Occasion;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -66,10 +67,7 @@ class AdminController extends Controller
         
     public function getOneOccasion(Request $request){
         if (Auth::check()) {
-           
             $user = Occasion::find($request->id);
-    
-
             if ($user) {
                 return response()->json([
                     'status' => 'success',
@@ -81,6 +79,15 @@ class AdminController extends Controller
                     'response' => 'User not found',
                 ], 404); 
             }
+        }
+    }
+    public function getClothes(){
+        if(Auth::Check()){
+            $getallClothes = Clothes::all();
+            return response()->json([
+                'status' => 'success',
+                'response' => $getallClothes,
+            ]);
         }
     }
 }
