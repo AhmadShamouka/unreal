@@ -24,4 +24,5 @@ Route::controller(ClothesController::class)->group(function () {
 });
 Route::middleware(['auth:api'])->group(function () {
     Route::get('/admin/getUser', [AdminController::class, 'getUser']);
+    Route::get('/admin/getsingleuser', [AdminController::class, 'getOneUser']);
 });
