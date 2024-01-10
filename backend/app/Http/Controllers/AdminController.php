@@ -28,4 +28,15 @@ class AdminController extends Controller
         'response' =>"Not Signed In",
     ]);
     }
+
+    public function getOneUser(Request $request){
+        if(Auth::Check()){
+            $getall = User::all($request->id);
+            return response()->json([
+                'status' => 'success',
+                'response' => $getall,
+            ]);
+        }
+   
+        }
 }
