@@ -26,7 +26,13 @@ const Navbar = () => {
     <nav>
       <div className={active}>
         <div className="logo-nav">
-          <img src={logo} alt="logo" href="/" className="nav__brand" />
+          <img
+            src={logo}
+            alt="logo"
+            href="/"
+            className="nav__brand"
+            loading="lazy"
+          />
         </div>
         <ul className="links flex center">
           <li className="nav__item">

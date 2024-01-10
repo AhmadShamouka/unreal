@@ -10,8 +10,8 @@
   position: absolute;
   padding: 0.3rem 4rem;
 }
-.links li:hover,
-.links li:focus {
+.links_user li:hover,
+.links_user li:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.25em);
 }
@@ -40,9 +40,79 @@
     right: 0;
     height: 100vh;
     width: 50%;
-    background: rgb(255, 255, 255);
+    background: #1789c9;
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
   }
+}
+
+.logo-nav {
+  cursor: pointer;
+}
+
+.nav__brand {
+  height: 50px;
+  width: 50px;
+}
+
+.nav__toggler {
+  position: fixed;
+  right: 0;
+  display: none;
+}
+
+.nav__toggler div {
+  width: 2rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #68b1db;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__active {
+    border-radius: 0;
+    width: 100vh;
+  }
+
+  .nav__toggler {
+    z-index: 332;
+    display: block;
+    cursor: pointer;
+  }
+
+  .links {
+    display: block;
+  }
+
+  .links li {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .nav__toggler {
+    background-color: #acd9f3;
+  }
+
+  .links li {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 5%;
+}
+
+.nav__active {
+  transform: translateX(0%);
 }

@@ -3,7 +3,13 @@
   background-color: #ffffff;
 }
 .hexagons-temp h1 {
-  padding: 7rem 0;
+  padding: 7rem 0 0 0;
+}
+.hexagons-temp hr,
+.switchable hr {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 7rem;
 }
 .switchable {
   margin-bottom: 5%;
@@ -34,7 +40,9 @@
   filter: blur(5px);
   opacity: 0.7;
 }
-
+.switchable h1 {
+  padding: 7rem 0 0 0;
+}
 @media screen and (max-width: 768px) {
   .switchable-div {
     width: 30%;
@@ -47,21 +55,20 @@
 }
 .personal-info {
   position: relative;
-
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 .personal-info-container {
   justify-content: space-evenly;
 }
 .personal-info h1 {
-  color: white;
+  color: #007bff;
 }
 .personal-info-container select {
   height: 40px;
   width: 100%;
   background-color: white;
   border-radius: 10px;
-  padding: 10px;
+
   font-size: 16px;
   border: 1px solid #ccc;
   outline: none;
@@ -113,4 +120,10 @@ select option:checked {
     margin: 10px 0;
     width: 80%;
   }
+}
+.personal-info hr {
+  width: 70%;
+  margin: 0 auto;
+  height: 3px;
+  margin-bottom: 5rem;
 }

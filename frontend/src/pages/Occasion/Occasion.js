@@ -34,7 +34,8 @@ const Occasion = () => {
       <UserNavbar />
       <form onSubmit={handelFindItems} className="occasion-container">
         <section className="hexagons-temp">
-          <h1>Choose Your Occasion</h1>
+          <h1>Click to Choose Your Occasion</h1>
+          <hr className="hr-line" />
           <div className="hexa3 flex center">
             <Hexagon
               bgImage={Outdoor}
@@ -104,7 +105,8 @@ const Occasion = () => {
         </section>
 
         <section className="switchable">
-          <h1>Choose Your Style </h1>
+          <h1>Click to Choose Your Style </h1>
+          <hr className="hr-line" />
           <div className="switchable-container flex center">
             <div
               className={`switchable-div ${
@@ -149,6 +151,7 @@ const Occasion = () => {
         </section>
         <section className="personal-info">
           <h1>Personal Information</h1>
+          <hr className="hr-line" />
           <div className="personal-info-container flex center">
             <div className="label-select">
               <h4>Enter The Season of Your Occasion</h4>

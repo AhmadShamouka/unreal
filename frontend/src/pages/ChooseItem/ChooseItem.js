@@ -30,16 +30,36 @@ const ChooseItem = () => {
             onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
-              <img src={wedding} alt="Wedding" className="swiper-image" />
+              <img
+                src={wedding}
+                alt="Wedding"
+                className="swiper-image"
+                loading="lazy"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={sp} alt="Swim" className="swiper-image" />
+              <img
+                src={sp}
+                alt="Swim"
+                className="swiper-image"
+                loading="lazy"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={wedding} alt="Wedding" className="swiper-image" />
+              <img
+                src={wedding}
+                alt="Wedding"
+                className="swiper-image"
+                loading="lazy"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={sp} alt="Swim" className="swiper-image" />
+              <img
+                src={sp}
+                alt="Swim"
+                className="swiper-image"
+                loading="lazy"
+              />
             </SwiperSlide>
           </Swiper>
         </div>

@@ -18,6 +18,7 @@ const Brand = () => {
             src={Zara}
             alt="balloon with an emoji face"
             className="card-img-brand"
+            loading="lazy"
           />
           <span className="card-footer-brand">
             <span>Zara</span>
@@ -29,6 +30,7 @@ const Brand = () => {
             src={HM}
             alt="balloon with an emoji face"
             className="card-img-brand"
+            loading="lazy"
           />
           <span className="card-footer-brand">
             <span>H & M</span>
