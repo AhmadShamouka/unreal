@@ -23,6 +23,6 @@ Route::controller(ClothesController::class)->group(function () {
     Route::post('add-clothes', 'createItem');
 });
 Route::middleware(['auth:api'])->group(function () {
-    Route::get('/admin/getUser', [AdminController::class, 'getUser']);
+    Route::get('/admin/getusers', [AdminController::class, 'getUser']);
     Route::get('/admin/getsingleuser', [AdminController::class, 'getOneUser']);
 });
