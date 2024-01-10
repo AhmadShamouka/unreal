@@ -126,4 +126,20 @@ class AdminController extends Controller
                 'response' =>"Not Signed In",
             ]);
             }
+            public function getOneTrail(Request $request){
+                if (Auth::check()) {
+                    $getSingleTrail = Trail::find($request->id);
+                    if ($getSingleTrail) {
+                        return response()->json([
+                            'status' => 'success',
+                            'response' => $getSingleTrail,
+                        ]);
+                    } else {
+                        return response()->json([
+                            'status' => 'failed',
+                            'response' => 'User not found',
+                        ], 404); 
+                    }
+                }
+            }
 }
