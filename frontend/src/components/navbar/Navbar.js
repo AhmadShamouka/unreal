@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./stylesNavbar.css";
 import Button from "../../common/base/button/Button";
 import logo from "../../common/base/logo/image/logo.png";
+import logo2 from "../../common/base/logo/image/logo-text.png";
 import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
@@ -25,15 +26,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className={active}>
-        <div className="logo-nav">
-          <img
-            src={logo}
-            alt="logo"
-            href="/"
-            className="nav__brand"
-            loading="lazy"
-          />
-        </div>
+        <div className="logo-nav" href="/"></div>
         <ul className="links flex center">
           <li className="nav__item">
             <a href="/" className="nav__link">

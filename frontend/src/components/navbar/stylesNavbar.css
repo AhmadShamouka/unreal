@@ -2,6 +2,7 @@
   background-color: #ffffff;
   border-radius: 100px 100px 100px 100px;
   width: 80%;
+  height: 80px;
   z-index: 4;
   transform: translateX(-50%);
   top: 10px;
@@ -24,7 +25,6 @@ li {
   font-weight: 700;
   color: #1776ad;
   margin-left: 1rem;
-
   padding: 7px 19px;
 }
 
@@ -34,15 +34,18 @@ li {
   transform: translateY(-0.25em);
 }
 
-.nav__brand {
-  height: 50px;
-  width: 50px;
+.logo-nav {
+  background-image: url("../../common/base/logo/image/logo-text.png");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 90px;
 }
 
 .nav__menu {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .nav__toggler {

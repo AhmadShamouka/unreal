@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import logo2 from "../../common/base/logo/image/logo-text.png";
 import logo from "../../common/base/logo/image/logo.png";
 import "./styleUserNavbar.css";
 const UserNavbar = () => {
@@ -17,7 +17,7 @@ const UserNavbar = () => {
   return (
     <nav className="nav">
       <div className={active}>
-        <img src={logo} alt="logo" className="nav__brand" />
+        <img src={logo2} alt="logo" className="nav__brand" />
         <ul className="links_user flex center">
           <li className="nav__item">
             <a href="/" className="nav__link_user">
