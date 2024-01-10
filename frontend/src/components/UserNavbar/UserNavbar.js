@@ -17,7 +17,7 @@ const UserNavbar = () => {
   return (
     <nav className="nav">
       <div className={active}>
-        <img src={logo2} alt="logo" className="nav__brand" />
+        <div className="logo-nav" href="/"></div>
         <ul className="links_user flex center">
           <li className="nav__item">
             <a href="/" className="nav__link_user">
