@@ -204,17 +204,17 @@ const Landing = () => {
           <div className="card-column column-0">
             <div className="card card-color-0">
               <div className="border"></div>
-              <img src={traditional} alt="Card 1" />
+              <img src={traditional} alt="Card 1" loading="lazy" />
               <h2>TRADITIONALS</h2>
             </div>
             <div className="card card-color-2">
               <div className="border"></div>
-              <img src={swim} alt="Card 1" />
+              <img src={swim} alt="Card 1" loading="lazy" />
               <h2>SWIMWEAR</h2>
             </div>
             <div className="card card-color-3">
               <div className="border"></div>
-              <img src={formal} alt="Card 1" />
+              <img src={formal} alt="Card 1" loading="lazy" />
               <h2>FORMAL WEAR</h2>
             </div>
           </div>

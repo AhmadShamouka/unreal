@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./stylesNavbar.css";
 import Button from "../../common/base/button/Button";
 import logo from "../../common/base/logo/image/logo.png";
-import logo1 from "../../common/base/logo/image/UNREAL (2).png";
 import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
