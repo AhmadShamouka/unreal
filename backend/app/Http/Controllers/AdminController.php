@@ -94,4 +94,22 @@ class AdminController extends Controller
             'response' =>"Not Signed In",
         ]);
         }
+
+
+        public function getOneClothes(Request $request){
+            if (Auth::check()) {
+                $getSingleItem = Clothes::find($request->id);
+                if ($getSingleItem) {
+                    return response()->json([
+                        'status' => 'success',
+                        'response' => $getSingleItem,
+                    ]);
+                } else {
+                    return response()->json([
+                        'status' => 'failed',
+                        'response' => 'User not found',
+                    ], 404); 
+                }
+            }
+        }
 }
