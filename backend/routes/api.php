@@ -33,5 +33,5 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('/admin/getsingleitem', [AdminController::class, 'getOneItem']);
 
     Route::get('/admin/gettrails', [AdminController::class, 'getTrails']);
- 
+    Route::post('/admin/getsingletrail', [AdminController::class, 'getOneTrail']);
 });
