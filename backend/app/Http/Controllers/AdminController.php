@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Clothes;
 use App\Models\Occasion;
+use App\Models\Trail;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -112,4 +113,17 @@ class AdminController extends Controller
                 }
             }
         }
+        public function getTrails(){
+            if(Auth::Check()){
+                $getallTrails = Trail::all();
+                return response()->json([
+                    'status' => 'success',
+                    'response' => $getallTrails,
+                ]);
+            }
+            return response()->json([
+                'status' => 'failed',
+                'response' =>"Not Signed In",
+            ]);
+            }
 }
