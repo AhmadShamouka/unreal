@@ -3,6 +3,20 @@ import "./styleUserNavbar.css";
 const UserNavbar = () => {
   const [active, setActive] = useState("nav__menu_user");
   const [icon, setIcon] = useState("nav__toggler");
+  const closeMenuOnResize = () => {
+    if (window.innerWidth > 768) {
+      setActive("nav__menu_user");
+      setIcon("nav__toggler");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", closeMenuOnResize);
+
+    return () => {
+      window.removeEventListener("resize", closeMenuOnResize);
+    };
+  }, []);
 
   const navToggle = () => {
     if (active === "nav__menu_user") {
