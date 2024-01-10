@@ -28,4 +28,5 @@ Route::middleware(['auth:api'])->group(function () {
     Route::get('/admin/getoccasions', [AdminController::class, 'getOccasions']);
     Route::post('/admin/getsingleoccasion', [AdminController::class, 'getOneOccasion']);
     Route::get('/admin/getclothes', [AdminController::class, 'getClothes']);
+    Route::post('/admin/getsingleitem', [AdminController::class, 'getOneItem']);
 });

@@ -96,7 +96,7 @@ class AdminController extends Controller
         }
 
 
-        public function getOneClothes(Request $request){
+        public function getOneItem(Request $request){
             if (Auth::check()) {
                 $getSingleItem = Clothes::find($request->id);
                 if ($getSingleItem) {
