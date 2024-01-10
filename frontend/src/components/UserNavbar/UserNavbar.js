@@ -17,7 +17,7 @@ const UserNavbar = () => {
   return (
     <nav className="nav">
       <div className={active}>
-        <div className="logo-nav" href="/"></div>
+        <div className="logo-nav-user" href="/"></div>
         <ul className="links_user flex center">
           <li className="nav__item">
             <a href="/" className="nav__link_user">
@@ -35,7 +35,9 @@ const UserNavbar = () => {
             </a>
           </li>
         </ul>
-        <h3>UserName</h3>
+        <div>
+          <h3>UserName</h3>
+        </div>
       </div>
       <div onClick={navToggle} className={icon}>
         <div className="line1"></div>

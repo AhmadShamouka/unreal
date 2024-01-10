@@ -79,13 +79,23 @@ button {
     cursor: pointer;
   }
 
+  .logo-nav {
+    cursor: pointer;
+    background-image: url("../../common/base/logo/image/logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 90px;
+  }
+
   .nav__menu {
     position: fixed;
     top: 0;
     z-index: 332;
     right: 0;
+    width: 50vh;
     height: 100vh;
-    width: 50%;
     background: rgb(255, 255, 255);
     flex-direction: column;
     transform: translateX(100%);
