@@ -15,6 +15,7 @@ class AdminController extends Controller
 
     public function getUser()
     {
+    
     if(Auth::Check()){
         $getall = User::all();
         return response()->json([
@@ -26,5 +27,5 @@ class AdminController extends Controller
         'status' => 'failed',
         'response' =>"Not Signed In",
     ]);
-}
+    }
 }
