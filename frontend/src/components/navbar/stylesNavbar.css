@@ -80,6 +80,7 @@ button {
   }
 
   .logo-nav {
+    margin-right: 16rem;
     cursor: pointer;
     background-image: url("../../common/base/logo/image/logo.png");
     background-position: center;
@@ -94,7 +95,7 @@ button {
     top: 0;
     z-index: 332;
     right: 0;
-    width: 50vh;
+    width: 90vh;
     height: 100vh;
     background: rgb(255, 255, 255);
     flex-direction: column;
@@ -108,18 +109,12 @@ button {
 
   .links li {
     display: flex;
+    margin-right: 15rem;
     margin-top: 20px;
   }
-}
-
-@media screen and (max-width: 568px) {
-  .nav__toggler {
-    background-color: #acd9f3;
-  }
-
-  .links li {
-    display: flex;
-    margin-top: 20px;
+  .buttons {
+    flex-direction: column;
+    margin-right: 15rem;
   }
 }
 

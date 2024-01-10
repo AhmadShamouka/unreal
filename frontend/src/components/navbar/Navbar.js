@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./stylesNavbar.css";
 import Button from "../../common/base/button/Button";
-import logo from "../../common/base/logo/image/logo.png";
-import logo2 from "../../common/base/logo/image/logo-text.png";
+
 import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
+
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
@@ -17,12 +18,15 @@ const Navbar = () => {
       setIcon("nav__toggler toggle");
     } else setIcon("nav__toggler");
   };
+
   const navigateToSignin = () => {
     navigate("/signin");
   };
+
   const navigateToSignup = () => {
     navigate("/signup");
   };
+
   return (
     <nav>
       <div className={active}>
