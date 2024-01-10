@@ -75,6 +75,11 @@ class AdminController extends Controller
                     'status' => 'success',
                     'response' => $user,
                 ]);
+            } else {
+                return response()->json([
+                    'status' => 'failed',
+                    'response' => 'User not found',
+                ], 404); 
             }
         }
     }
