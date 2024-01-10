@@ -37,6 +37,9 @@ class AdminController extends Controller
                 'response' => $getall,
             ]);
         }
-   
+        return response()->json([
+            'status' => 'failed',
+            'response' =>"Not Signed In",
+        ]);
         }
 }
