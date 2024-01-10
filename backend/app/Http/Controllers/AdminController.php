@@ -32,7 +32,7 @@ class AdminController extends Controller
 
     public function getOneUser(Request $request){
         if (Auth::check()) {
-          
+           
             $user = User::find($request->id);
     
 
@@ -49,5 +49,18 @@ class AdminController extends Controller
             }
         }
 
+        }
+    public function getOccasions(){
+            if(Auth::Check()){
+                $getallOccasions = Occasion::all();
+                return response()->json([
+                    'status' => 'success',
+                    'response' => $getallOccasions,
+                ]);
+            }
+            return response()->json([
+                'status' => 'failed',
+                'response' =>"Not Signed In",
+            ]);
+            }
     }
-}
