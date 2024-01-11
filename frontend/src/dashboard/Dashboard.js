@@ -52,7 +52,7 @@ const Dashboard = () => {
     <div className="dashboard flex">
       <div className="side-nav flex center">
         <div className="side-title">
-          <h1>Admin Dashboard</h1>
+          <h1>Dashboard</h1>
         </div>
         <div className="side-links flex center">
           <a onClick={() => handlePageChange("home")}>Home</a>

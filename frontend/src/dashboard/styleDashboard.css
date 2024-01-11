@@ -3,7 +3,7 @@
   margin: 30px 10px;
   height: 90vh;
   box-shadow: 0 0 10px 5px #1789c9;
-  width: 35%;
+  width: 15%;
   display: flex;
   flex-direction: column;
 }
@@ -28,12 +28,12 @@
 }
 .dashboard-container {
   gap: 10px;
-  width: 65%;
+  width: 90%;
   border-radius: 20px;
   margin: 30px 10px;
   height: 90vh;
   background-color: #1789c9;
-  box-shadow: 0 0 10px 5px #ffffff;
+  box-shadow: 0 10px 10px 5px #ffffff;
   display: flex;
   flex-direction: column;
 }
