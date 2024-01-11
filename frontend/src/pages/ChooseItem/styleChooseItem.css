@@ -17,3 +17,12 @@
 .swiper-pagination-bullet {
   background-color: white;
 }
+.choose-label {
+  margin: 10px 0;
+  color: #1789c9;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 100px;
+  color: #1789c9;
+}

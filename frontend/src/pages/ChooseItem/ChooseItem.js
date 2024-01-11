@@ -17,7 +17,7 @@ const ChooseItem = () => {
       <UserNavbar />
       <div className="choose-container flex center">
         <div className="choose-label">
-          <h1>Choose Wisley</h1>
+          <h1>Choose Your Item to Try Them On Camera</h1>
         </div>
         <div className="choose-items">
           <Swiper
