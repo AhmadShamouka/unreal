@@ -3,14 +3,19 @@
   margin: 30px 10px;
   height: 90vh;
   box-shadow: 0 0 10px 5px #1789c9;
-  width: 30%;
+  width: 35%;
   display: flex;
   flex-direction: column;
 }
 .side-links {
-  gap: 100px;
+  color: #1789c9;
+  height: 80%;
+  gap: 50px;
   cursor: pointer;
   flex-direction: column;
+}
+.side-title h1 {
+  color: #1789c9;
 }
 .side-links a {
   text-align: center;
@@ -22,7 +27,7 @@
   color: white;
 }
 .dashboard-container {
-  width: 70%;
+  width: 65%;
   border-radius: 20px;
   margin: 30px 10px;
   height: 90vh;
@@ -37,6 +42,7 @@
   justify-content: space-evenly;
 }
 .home-users {
+  box-shadow: 0 0 10px 1px #f5f5f5;
   height: 100px;
   width: 20%;
   background-color: white;
