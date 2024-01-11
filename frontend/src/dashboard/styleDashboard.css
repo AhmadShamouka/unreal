@@ -36,3 +36,9 @@
   width: 100%;
   justify-content: space-evenly;
 }
+.home-users {
+  height: 100px;
+  width: 20%;
+  background-color: white;
+  border-radius: 20px;
+}
