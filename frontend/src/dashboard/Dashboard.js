@@ -68,9 +68,9 @@ const Dashboard = () => {
       <div className="dashboard-container flex center">
         <h2>Welcome to the Admin Dashboard!</h2>
         <div className="home-container flex center">
-          <div className="home-users"></div>
-          <div className="home-users"></div>
-          <div className="home-users"></div>
+          <div className="home-users flex center">432 User</div>
+          <div className="home-users flex center">5000 Occasion</div>
+          <div className="home-users flex center">1323 Trails</div>
         </div>
         <div className="charts-container flex center">
           <div className="BarChart">{renderBarChart()}</div>
