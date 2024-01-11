@@ -1,5 +1,6 @@
 .card-brand {
-  margin: 50px 0;
+  box-shadow: 0 0 10px 1px #0074cc;
+  margin: 100px 0;
   --blur: 16px;
   --size: clamp(300px, 50vmin, 600px);
   width: var(--size);
@@ -15,7 +16,7 @@
 }
 .brand-label {
   color: #1789c9;
-  margin-top: 100px;
+  margin: 150px 0 0 0;
 }
 .card-img-brand {
   width: 100%;
