@@ -3,6 +3,7 @@
   margin: 0 auto;
 }
 .swiper-image {
+  border-radius: 30px;
   width: 60%;
   height: 80vh;
   display: block;
@@ -10,5 +11,9 @@
 }
 .choose-container {
   flex-direction: column;
-  margin: 100px 0 0 0;
+  margin: 100px 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
 }
