@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, PureComponent } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
+import { PieChart, Pie, Legend, ResponsiveContainer } from "recharts";
 
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -9,15 +10,44 @@ const Dashboard = () => {
     setCurrentPage(page);
   };
 
-  const data = [{ name: "Page A", uv: 400, pv: 2400, amt: 2400 }];
+  const barChartData = [
+    { name: "Page A", uv: 400, pv: 2400, amt: 2400 },
+    { name: "Page B", uv: 300, pv: 2200, amt: 400 },
+    { name: "Page c", uv: 100, pv: 200, amt: 2400 },
+  ];
+  const PieData = [
+    { name: "Group A", value: 400 },
+    { name: "Group B", value: 300 },
+    { name: "Group C", value: 300 },
+    { name: "Group D", value: 200 },
+    { name: "Group E", value: 278 },
+    { name: "Group F", value: 189 },
+  ];
+  const renderPieChart = () => {
+    <ResponsiveContainer width="100%" height="100%">
+      <PieChart width={400} height={400}>
+        <Pie
+          dataKey="value"
+          isAnimationActive={false}
+          data={PieData}
+          cx="50%"
+          cy="50%"
+          outerRadius={80}
+          fill="#8884d8"
+          label
+        />
 
+        <Tooltip />
+      </PieChart>
+    </ResponsiveContainer>;
+  };
   const renderBarChart = () => (
-    <BarChart width={600} height={300} data={data}>
+    <BarChart width={500} height={300} data={barChartData}>
       <XAxis dataKey="name" stroke="#8884d8" />
       <YAxis />
       <Tooltip />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <Bar dataKey="uv" fill="#8884d8" barSize={30} />
+      <Bar dataKey="uv" fill="#884d8" barSize={30} />
     </BarChart>
   );
 
@@ -42,10 +72,9 @@ const Dashboard = () => {
           <div className="home-users"></div>
           <div className="home-users"></div>
         </div>
-        <div className="chart">{renderBarChart()}</div>
-        <p>
-          {currentPage === "home" ? "the home page" : `Page ${currentPage}`}
-        </p>
+        <div className="charts-container flex center">
+          <div className="BarChart">{renderBarChart()}</div>
+        </div>
       </div>
     </div>
   );
