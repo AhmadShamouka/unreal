@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "./styleDashboard.css";
 const Dashboard = () => {
+  const [currentPage, setCurrentPage] = useState("home");
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className="dashboard flex">
       <div className="side-nav flex center">
@@ -17,7 +23,10 @@ const Dashboard = () => {
 
       <div className="dashboard-container">
         <h2>Welcome to the Admin Dashboard!</h2>
-        <p></p>
+        <p>
+          You are on{" "}
+          {currentPage === "home" ? "the home page" : `Page ${currentPage}`}
+        </p>
       </div>
     </div>
   );
