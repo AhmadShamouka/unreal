@@ -173,8 +173,11 @@ const Occasion = () => {
               <h4>Please Enter your Budget Range</h4>
               <select name="Budget-range">
                 <SelectOption value="Low" text="Low (Under 200$)" />
-                <SelectOption value="Medium" text="Low (Between 200$  1500$)" />
-                <SelectOption value="High" text="Low (Over 1500$)" />
+                <SelectOption
+                  value="Medium"
+                  text="Medium (Between 200$  1500$)"
+                />
+                <SelectOption value="High" text="High (Over 1500$)" />
               </select>
             </div>
           </div>
