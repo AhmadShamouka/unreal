@@ -21,3 +21,13 @@
   background-color: #1789c9;
   color: white;
 }
+.dashboard-container {
+  width: 70%;
+  border-radius: 20px;
+  margin: 30px 10px;
+  height: 90vh;
+  background-color: #1789c9;
+  box-shadow: 0 0 10px 5px #ffffff;
+  display: flex;
+  flex-direction: column;
+}

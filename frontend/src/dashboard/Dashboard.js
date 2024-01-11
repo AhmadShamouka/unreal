@@ -28,7 +28,7 @@ const Dashboard = () => {
           <div className="home-users"></div>
           <div className="home-users"></div>
         </div>
-
+        <div></div>
         <p>
           {currentPage === "home" ? "the home page" : `Page ${currentPage}`}
         </p>
