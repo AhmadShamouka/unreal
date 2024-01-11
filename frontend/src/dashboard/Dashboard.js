@@ -65,17 +65,17 @@ const Dashboard = () => {
       <div className="dashboard-container flex center">
         <h2>Welcome to the Admin Dashboard!</h2>
         <div className="home-container flex center">
-          <div>
-            <label>Users</label>
+          <div className="home-users-container">
+            <label className="home-label flex center">Users</label>
             <div className="home-users flex center">432 User</div>
           </div>
-          <div>
-            <label>Users</label>
-            <div className="home-users flex center">432 User</div>
+          <div className="home-users-container">
+            <label className="home-label flex center">Occasions</label>
+            <div className="home-users flex center">432 Occasions</div>
           </div>
-          <div>
-            <label>Users</label>
-            <div className="home-users flex center">432 User</div>
+          <div className="home-users-container">
+            <label className="home-label flex center">Trails</label>
+            <div className="home-users flex center">432 Trails</div>
           </div>
         </div>
         <div className="charts-container flex center">
