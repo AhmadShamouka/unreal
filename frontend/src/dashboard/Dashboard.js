@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import "./styleDashboard.css";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
+
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  const data = [{ name: "Page A", uv: 400, pv: 2400, amt: 2400 }];
+
+  const renderBarChart = () => (
+    <BarChart width={600} height={300} data={data}>
+      <XAxis dataKey="name" stroke="#8884d8" />
+      <YAxis />
+      <Tooltip />
+      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+      <Bar dataKey="uv" fill="#8884d8" barSize={30} />
+    </BarChart>
+  );
 
   return (
     <div className="dashboard flex">
@@ -28,7 +42,7 @@ const Dashboard = () => {
           <div className="home-users"></div>
           <div className="home-users"></div>
         </div>
-        <div className="chart"></div>
+        <div className="chart">{renderBarChart()}</div>
         <p>
           {currentPage === "home" ? "the home page" : `Page ${currentPage}`}
         </p>
