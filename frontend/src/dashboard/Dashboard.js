@@ -74,6 +74,7 @@ const Dashboard = () => {
         </div>
         <div className="charts-container flex center">
           <div className="BarChart">{renderBarChart()}</div>
+          <div className="PieChart">{renderPieChart()}</div>
         </div>
       </div>
     </div>
