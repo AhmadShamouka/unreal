@@ -33,7 +33,7 @@ class ClothesController extends Controller
                 ]);
 
                 $request->file('image')->storeAs('public/images/', $imageName);
-
+                
                 
                 $ARtryOn=Trail::create([
                     'user_id'=>$user->id,
@@ -48,7 +48,7 @@ class ClothesController extends Controller
 
 
             }
-
+            
             return response()->json([
                 'status' => 'failed',
                 'message' => 'You need permission',
