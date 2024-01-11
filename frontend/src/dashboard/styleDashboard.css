@@ -31,3 +31,8 @@
   display: flex;
   flex-direction: column;
 }
+.home-container {
+  height: 120px;
+  width: 100%;
+  justify-content: space-evenly;
+}
