@@ -21,10 +21,15 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="dashboard-container">
+      <div className="dashboard-container flex center">
         <h2>Welcome to the Admin Dashboard!</h2>
+        <div className="home-container flex center">
+          <div className="home-users"></div>
+          <div className="home-users"></div>
+          <div className="home-users"></div>
+        </div>
+
         <p>
-          You are on{" "}
           {currentPage === "home" ? "the home page" : `Page ${currentPage}`}
         </p>
       </div>
