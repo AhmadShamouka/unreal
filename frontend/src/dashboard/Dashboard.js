@@ -24,27 +24,29 @@ const Dashboard = () => {
     { name: "Group F", value: 189 },
   ];
   const renderPieChart = () => (
-    <PieChart width={400} height={400}>
-      <Pie
-        dataKey="value"
-        isAnimationActive={true}
-        data={PieData}
-        cx="50%"
-        cy="50%"
-        outerRadius={80}
-        fill="#884d8"
-        label
-      />
-      <Tooltip />
-    </PieChart>
+    <ResponsiveContainer width="100%" height={400}>
+      <PieChart>
+        <Pie
+          dataKey="value"
+          isAnimationActive={false}
+          data={PieData}
+          cx="50%"
+          cy="50%"
+          outerRadius={80}
+          fill="#ffff"
+          label
+        />
+        <Tooltip />
+      </PieChart>
+    </ResponsiveContainer>
   );
   const renderBarChart = () => (
     <BarChart width={500} height={300} data={barChartData}>
-      <XAxis dataKey="name" stroke="#84d8" />
-      <YAxis />
+      <XAxis dataKey="name" stroke="#ffff" />
+      <YAxis stroke="#ffff" />
       <Tooltip />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <Bar dataKey="uv" fill="#884d8" barSize={30} />
+      <CartesianGrid stroke="#ffff" strokeDasharray="5 5" />
+      <Bar dataKey="uv" fill="#ffff" barSize={30} />
     </BarChart>
   );
 
@@ -79,8 +81,8 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="charts-container flex center">
-          <div className="BarChart">{renderBarChart()}</div>
-          <div className="PieChart">{renderPieChart()}</div>
+          <div className="BarChart flex center">{renderBarChart()}</div>
+          <div className="PieChart flex center">{renderPieChart()}</div>
         </div>
       </div>
     </div>
