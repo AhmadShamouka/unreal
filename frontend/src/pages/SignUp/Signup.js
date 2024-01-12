@@ -31,6 +31,19 @@ const SignUp = () => {
   const handleSelectChange = (name, selectedOption) => {
     setFormData({ ...formData, [name]: selectedOption.value });
   };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formData);
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/register",
+        formData
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="signup">
