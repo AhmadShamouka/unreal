@@ -1,7 +1,7 @@
-import React, { useState, PureComponent } from "react";
+import React, { useState } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
-import { PieChart, Pie, Legend, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, ResponsiveContainer } from "recharts";
 
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -59,8 +59,8 @@ const Dashboard = () => {
         <div className="side-links flex center">
           <a onClick={() => handlePageChange("home")}>Home</a>
           <a onClick={() => handlePageChange("page1")}>Users</a>
-          <a onClick={() => handlePageChange("page2")}>Clothes</a>
-          <a onClick={() => handlePageChange("page3")}>Trails</a>
+          <button onClick={() => handlePageChange("page2")}>Clothes</button>
+          <button onClick={() => handlePageChange("page3")}>Trails</button>
         </div>
       </div>
 

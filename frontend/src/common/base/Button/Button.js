@@ -11,7 +11,6 @@ const Button = ({
   return (
     <button
       className={`flex center  ${bgColor} ${textColor} base-button`}
-      onClick={() => onClicked()}
       type={type}
     >
       {text}
