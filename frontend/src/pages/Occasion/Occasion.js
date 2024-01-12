@@ -21,13 +21,14 @@ import Button from "../../common/base/button/Button";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
   const [blurredHexagon, setBlurredHexagon] = useState(null);
-
+  const [formData, setFormData] = useState({});
   const handleHexagonClick = (hexagonNumber) => {
     setBlurredHexagon(hexagonNumber);
   };
   const handleSwitch = (divNumber) => {
     setActiveDiv(divNumber);
   };
+
   const handelFindItems = () => {};
   return (
     <div className="occasion">
@@ -38,6 +39,7 @@ const Occasion = () => {
           <hr className="hr-line" />
           <div className="hexa3 flex center">
             <Hexagon
+              value="outdoor activity"
               bgImage={Outdoor}
               hexaText="OutDoor Activity"
               onClick={() => handleHexagonClick(1)}
@@ -45,11 +47,13 @@ const Occasion = () => {
             />
             <Hexagon
               bgImage={beach}
+              value="beach vacation"
               hexaText="Beach Vacation"
               onClick={() => handleHexagonClick(2)}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 2}
             />
             <Hexagon
+              value="sport"
               bgImage={Athletic}
               hexaText="Athletic Activity"
               onClick={() => handleHexagonClick(3)}
@@ -58,24 +62,28 @@ const Occasion = () => {
           </div>
           <div className="hexa4 flex center">
             <Hexagon
+              value="meeting"
               bgImage={meeting}
               hexaText=" business meeting"
               onClick={() => handleHexagonClick(4)}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 4}
             />
             <Hexagon
+              value="sleepover"
               bgImage={sleepover}
               hexaText="sleepover"
               onClick={() => handleHexagonClick(5)}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 5}
             />
             <Hexagon
+              value="traditional"
               bgImage={Traditional}
               hexaText="Traditional occastion"
               onClick={() => handleHexagonClick(6)}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 6}
             />
             <Hexagon
+              value="wedding"
               bgImage={wedding}
               hexaText="wedding events"
               onClick={() => handleHexagonClick(7)}
@@ -84,18 +92,21 @@ const Occasion = () => {
           </div>
           <div className="hexa3 flex center">
             <Hexagon
+              value="casual outing"
               bgImage={casual}
               hexaText="Casual Outing"
               onClick={() => handleHexagonClick(8)}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 8}
             />
             <Hexagon
+              value="party"
               bgImage={party}
               hexaText="party"
               onClick={() => handleHexagonClick(9)}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 9}
             />
             <Hexagon
+              value="graduation cermony"
               bgImage={Graduation}
               hexaText="Graduation Ceremony"
               onClick={() => handleHexagonClick(10)}
