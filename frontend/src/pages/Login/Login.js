@@ -13,6 +13,20 @@ const Login = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/login",
+        formData
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error during form submission:", error);
+    }
+  };
   return (
     <div className="login">
       <div className="container-login flex">
