@@ -13,7 +13,7 @@ const Login = () => {
     <div className="login">
       <div className="container-login flex">
         <div className="child-img"></div>
-        <div className="child-inputs flex center">
+        <form onSubmit={handleSubmit} className="child-inputs flex center">
           <div className="child-logo">
             <Link to="/">
               <img src={logo} alt="logo" />
@@ -43,7 +43,7 @@ const Login = () => {
           <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
 
           <a href="/Register">Don't have Account?Create One!</a>
-        </div>
+        </form>
       </div>
     </div>
   );
