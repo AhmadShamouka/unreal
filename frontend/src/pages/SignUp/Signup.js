@@ -4,7 +4,11 @@ import Input from "../../common/base/inputs/Input";
 import Button from "../../common/base/button/Button";
 import logo from "../../common/base/logo/image/logo.png";
 import { Link } from "react-router-dom";
+import Select from "react-select";
+import countryList from "react-select-country-list";
 const SignUp = () => {
+  const handleChange = () => {};
+  const handleSubmit = () => {};
   return (
     <div className="signup">
       <div className="container-login flex">
@@ -52,15 +56,7 @@ const SignUp = () => {
             textColor="text-white"
             placeholder="Enter your Age"
           />
-          <Input
-            onChange={handleChange}
-            text="Country"
-            type="text"
-            name="country"
-            bgColor="bg-blue"
-            textColor="text-white"
-            placeholder="Enter your Country"
-          />
+          <Select options={options} value={value} onChange={handleChange} />
           <div className="select-input flex">
             <label>Gender</label>
             <select name="sex" onChange={handleChange}>
