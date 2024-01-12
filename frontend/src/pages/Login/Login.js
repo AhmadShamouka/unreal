@@ -20,21 +20,26 @@ const Login = () => {
             </Link>
           </div>
           <Input
+            required
+            onChange={handleChange}
             text="Email"
-            type="text"
+            name="email"
+            type="email"
             bgColor="bg-blue"
             textColor="text-white"
             placeholder="Enter your Email"
-            required
           />
           <Input
-            text="Passowrd"
-            type="passowrd"
+            required
+            onChange={handleChange}
+            text="Password"
+            name="password"
+            type="password"
+            placeholder="Enter your Password (min. 6 characters)"
+            pattern=".{6,}"
             bgColor="bg-blue"
             textColor="text-white"
-            placeholder="Enter your Password"
           />
-
           <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
 
           <a href="/Register">Don't have Account?Create One!</a>
