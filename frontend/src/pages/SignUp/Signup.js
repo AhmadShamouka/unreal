@@ -1,11 +1,12 @@
 import React, { useState, useMemo } from "react";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Input from "../../common/base/inputs/Input";
 import Button from "../../common/base/button/Button";
 import logo from "../../common/base/logo/image/logo.png";
 import { Link } from "react-router-dom";
 import Select from "react-select";
 import countryList from "react-select-country-list";
-
+import axios from "axios";
 const SignUp = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -29,10 +30,6 @@ const SignUp = () => {
   };
   const handleSelectChange = (name, selectedOption) => {
     setFormData({ ...formData, [name]: selectedOption.value });
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
   };
 
   return (
