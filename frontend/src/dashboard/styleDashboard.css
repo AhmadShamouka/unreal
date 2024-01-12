@@ -27,12 +27,11 @@
 }
 .side-links a {
   text-align: center;
-  height: 40px;
-  width: 100px;
+  height: 2.5rem;
+  width: 100%;
   border-radius: 20px;
   padding: 10px 20px;
-  background-color: #1789c9;
-  color: white;
+  color: #1789c9;
 }
 .dashboard-container {
   gap: 10px;
@@ -71,4 +70,13 @@
 .home-label {
   text-align: center;
   color: #ffffff;
+}
+@media screen and (max-width: 1200px) {
+  .side-title h1 {
+    color: #1789c9;
+    font-size: medium;
+  }
+  .side-links a {
+    width: 60px;
+  }
 }
