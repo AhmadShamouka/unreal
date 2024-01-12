@@ -220,7 +220,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="button-temp flex center">
-          <Button text="See MORE!" bgColor="white-bg" textColor="blue-text" />
+          <Button text="See More" bgColor="white-bg" textColor="blue-text" />
         </div>
       </section>
       <Footer />
