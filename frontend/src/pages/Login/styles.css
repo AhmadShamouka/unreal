@@ -19,6 +19,29 @@ img {
   height: 95vh;
   width: 50%;
 }
+.child-inputs label {
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+  margin-left: 5px;
+  text-align: start;
+}
+.select-input {
+  flex-direction: column;
+}
+.select-input option {
+  font-size: medium;
+  color: rgb(109, 100, 100);
+  margin-left: 5px;
+}
+.child-inputs select {
+  height: 2.6rem;
+  padding: 8px;
+  width: 20rem;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 .child-inputs {
   background-image: linear-gradient(to top, #1789c9, #eeeeee);
   border-radius: 0 10px 10px 0;
