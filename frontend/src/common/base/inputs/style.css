@@ -1,8 +1,9 @@
 .input-common {
+  font-size: 16px;
   height: 2.6rem;
   padding: 8px;
   width: 20rem;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
