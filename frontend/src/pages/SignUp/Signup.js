@@ -5,17 +5,36 @@ import logo from "../../common/base/logo/image/logo.png";
 import { Link } from "react-router-dom";
 import Select from "react-select";
 import countryList from "react-select-country-list";
-const SignUp = () => {
-  const [value, setValue] = useState("");
-  const options = useMemo(() => countryList().getData(), []);
 
-  const handleChange = (value) => {
-    setValue(value);
+const SignUp = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    sex: "",
+    age: "",
+    country: "",
+  });
+
+  const options = useMemo(() => {
+    const countryOptions = countryList().getData();
+    return countryOptions.map((country) => ({
+      value: country.label,
+      label: country.label,
+    }));
+  }, []);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSelectChange = (name, selectedOption) => {
+    setFormData({ ...formData, [name]: selectedOption.value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(value);
+    console.log(formData);
   };
+
   return (
     <div className="signup">
       <div className="container-login flex">
@@ -26,34 +45,34 @@ const SignUp = () => {
               <img src={logo} alt="logo" />
             </Link>
           </div>
+
           <Input
             onChange={handleChange}
             text="Username"
             name="username"
-            placeholder="Enter your Username"
             type="text"
             bgColor="bg-blue"
             textColor="text-white"
+            placeholder="Enter your Username"
           />
           <Input
             onChange={handleChange}
             text="Email"
-            type="text"
             name="email"
+            type="text"
             bgColor="bg-blue"
             textColor="text-white"
             placeholder="Enter your Email"
           />
           <Input
             onChange={handleChange}
-            text="Passowrd"
-            type="password"
+            text="Password"
             name="password"
+            type="password"
             bgColor="bg-blue"
             textColor="text-white"
             placeholder="Enter your Password"
           />
-
           <Input
             onChange={handleChange}
             text="Age"
@@ -63,6 +82,7 @@ const SignUp = () => {
             textColor="text-white"
             placeholder="Enter your Age"
           />
+
           <div className="select-input flex">
             <label>Country</label>
             <Select
@@ -70,7 +90,9 @@ const SignUp = () => {
               options={options}
               name="country"
               className="select-country"
-              onChange={handleChange}
+              onChange={(selectedOption) =>
+                handleSelectChange("country", selectedOption)
+              }
             />
           </div>
           <div className="select-input flex">
@@ -83,17 +105,19 @@ const SignUp = () => {
                 { value: "female", label: "Female" },
                 { value: "male", label: "Male" },
               ]}
-              onChange={handleChange}
+              onChange={(selectedOption) =>
+                handleSelectChange("sex", selectedOption)
+              }
             />
           </div>
 
           <Button
-            type="submit "
+            type="submit"
             text="Sign Up"
             bgColor="white-bg"
             textColor="blue-text"
           />
-          <a href="/login">Already Have account? Log In</a>
+          <a href="/login">Already Have an account? Log In</a>
         </form>
       </div>
     </div>
