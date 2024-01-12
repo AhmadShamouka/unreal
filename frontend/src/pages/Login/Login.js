@@ -40,7 +40,12 @@ const Login = () => {
             bgColor="bg-blue"
             textColor="text-white"
           />
-          <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
+          <Button
+            type="submit"
+            text="Sign In"
+            bgColor="white-bg"
+            textColor="blue-text"
+          />
 
           <a href="/Register">Don't have Account?Create One!</a>
         </form>
