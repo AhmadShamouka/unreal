@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from "react";
-import SelectOption from "../../common/base/select/SelectOption";
 import Input from "../../common/base/inputs/Input";
 import Button from "../../common/base/button/Button";
 import logo from "../../common/base/logo/image/logo.png";
@@ -7,8 +6,16 @@ import { Link } from "react-router-dom";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 const SignUp = () => {
-  const handleChange = () => {};
-  const handleSubmit = () => {};
+  const [value, setValue] = useState("");
+  const options = useMemo(() => countryList().getData(), []);
+
+  const handleChange = (value) => {
+    setValue(value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(value);
+  };
   return (
     <div className="signup">
       <div className="container-login flex">
@@ -56,16 +63,28 @@ const SignUp = () => {
             textColor="text-white"
             placeholder="Enter your Age"
           />
-          <Select options={options} value={value} onChange={handleChange} />
           <div className="select-input flex">
-            <label>Gender</label>
-            <select name="sex" onChange={handleChange}>
-              <option value="" disabled selected hidden>
-                Gender
-              </option>
-              <SelectOption value="female" text="Female" />
-              <SelectOption value="male" text="Male" />
-            </select>
+            <label>Country</label>
+            <Select
+              placeholder="Country"
+              options={options}
+              name="country"
+              className="select-country"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="select-input flex">
+            <label className="common-label">Gender</label>
+            <Select
+              placeholder="Gender"
+              className="select-country"
+              name="sex"
+              options={[
+                { value: "female", label: "Female" },
+                { value: "male", label: "Male" },
+              ]}
+              onChange={handleChange}
+            />
           </div>
 
           <Button
