@@ -5,6 +5,10 @@ import Button from "../../common/base/button/Button";
 import "./styles.css";
 import { Link } from "react-router-dom";
 const Login = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
   return (
     <div className="login">
       <div className="container-login flex">

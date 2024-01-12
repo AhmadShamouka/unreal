@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 const Input = ({
+  required,
   text,
   value,
   name,
@@ -14,6 +15,7 @@ const Input = ({
     <div className="container-common-input">
       <label className="label-common">{text}</label>
       <input
+        required
         id={text}
         className={`flex center ${type} ${bgColor} ${textColor} input-common`}
         type={type}

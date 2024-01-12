@@ -57,6 +57,7 @@ const SignUp = () => {
           </div>
 
           <Input
+            required
             onChange={handleChange}
             text="Username"
             name="username"
@@ -66,28 +67,32 @@ const SignUp = () => {
             placeholder="Enter your Username"
           />
           <Input
+            required
             onChange={handleChange}
             text="Email"
             name="email"
-            type="text"
+            type="email"
             bgColor="bg-blue"
             textColor="text-white"
             placeholder="Enter your Email"
           />
           <Input
+            required
             onChange={handleChange}
             text="Password"
             name="password"
             type="password"
+            placeholder="Enter your Password (min. 6 characters)"
+            pattern=".{6,}"
             bgColor="bg-blue"
             textColor="text-white"
-            placeholder="Enter your Password"
           />
           <Input
+            required
             onChange={handleChange}
             text="Age"
             name="age"
-            type="text"
+            type="number"
             bgColor="bg-blue"
             textColor="text-white"
             placeholder="Enter your Age"
@@ -96,6 +101,7 @@ const SignUp = () => {
           <div className="select-input flex">
             <label>Country</label>
             <Select
+              required
               placeholder="Country"
               options={options}
               name="country"
@@ -108,6 +114,7 @@ const SignUp = () => {
           <div className="select-input flex">
             <label className="common-label">Gender</label>
             <Select
+              required
               placeholder="Gender"
               className="select-country"
               name="sex"
