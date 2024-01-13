@@ -18,7 +18,10 @@ import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
 import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
+import axios from "axios";
 const Occasion = () => {
+  const token = localStorage.getItem("jwtToken");
+  const authorization = "Bearer " + token;
   const [activeDiv, setActiveDiv] = useState(0);
   const [blurredHexagon, setBlurredHexagon] = useState(null);
   const [formData, setFormData] = useState({
@@ -40,13 +43,18 @@ const Occasion = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const handelFindItems = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/occasion",
-        formData
+        formData,
+        {
+          headers: {
+            Authorization: authorization,
+          },
+        }
       );
       console.log(response.data);
     } catch (error) {
@@ -56,7 +64,7 @@ const Occasion = () => {
   return (
     <div className="occasion">
       <UserNavbar />
-      <form onSubmit={handelFindItems} className="occasion-container">
+      <form onSubmit={handleSubmit} className="occasion-container">
         <section className="hexagons-temp">
           <h1>Click to Choose Your Occasion</h1>
           <hr className="hr-line" />
