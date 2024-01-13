@@ -53,7 +53,7 @@ const Occasion = () => {
               value="outdoor activity"
               bgImage={Outdoor}
               hexaText="OutDoor Activity"
-              onClick={(e) => handleHexagonClick(1, "outdoor activity", e)}
+              onClick={(e) => handleHexagonClick(1, "outdoor activity")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 1}
             />
             <Hexagon
@@ -67,7 +67,7 @@ const Occasion = () => {
               value="sport"
               bgImage={Athletic}
               hexaText="Athletic Activity"
-              onClick={() => handleHexagonClick(3)}
+              onClick={() => handleHexagonClick(3, "beach vacation")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 3}
             />
           </div>
@@ -76,28 +76,28 @@ const Occasion = () => {
               value="meeting"
               bgImage={meeting}
               hexaText=" business meeting"
-              onClick={() => handleHexagonClick(4)}
+              onClick={() => handleHexagonClick(4, "meeting")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 4}
             />
             <Hexagon
               value="sleepover"
               bgImage={sleepover}
               hexaText="sleepover"
-              onClick={() => handleHexagonClick(5)}
+              onClick={() => handleHexagonClick(5, "sleepover")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 5}
             />
             <Hexagon
               value="traditional"
               bgImage={Traditional}
               hexaText="Traditional occastion"
-              onClick={() => handleHexagonClick(6)}
+              onClick={() => handleHexagonClick(6, "traditional")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 6}
             />
             <Hexagon
               value="wedding"
               bgImage={wedding}
               hexaText="wedding events"
-              onClick={() => handleHexagonClick(7)}
+              onClick={() => handleHexagonClick(7, "wedding")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 7}
             />
           </div>
@@ -106,21 +106,21 @@ const Occasion = () => {
               value="casual outing"
               bgImage={casual}
               hexaText="Casual Outing"
-              onClick={() => handleHexagonClick(8)}
+              onClick={() => handleHexagonClick(8, "casual outing")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 8}
             />
             <Hexagon
               value="party"
               bgImage={party}
               hexaText="party"
-              onClick={() => handleHexagonClick(9)}
+              onClick={() => handleHexagonClick(9, "party")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 9}
             />
             <Hexagon
               value="graduation cermony"
               bgImage={Graduation}
               hexaText="Graduation Ceremony"
-              onClick={() => handleHexagonClick(10)}
+              onClick={() => handleHexagonClick(10, "graduation cermony")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 10}
             />
           </div>
