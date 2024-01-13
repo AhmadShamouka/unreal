@@ -40,9 +40,18 @@ const Occasion = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const handelFindItems = (e) => {
+  const handelFindItems = async (e) => {
     e.preventDefault();
     console.log(formData);
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/occasion",
+        formData
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <div className="occasion">
