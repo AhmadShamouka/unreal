@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('occasions', function (Blueprint $table) {
             $table->id();
-            $table->enum('occasion_type', ['party', 'meeting', 'traditional', 'swimvacation', 'sport', 'wedding', 'outingwithfriends', 'sleepover', 'work-party']);
+            $table->enum('occasion_type', ['party', 'meeting', 'traditional', 'beach vacation', 'sport', 'wedding', 'casual outing', 'sleepover', 'outdoor activity','graduation cermony']);
             $table->enum('style',['formal','casual','stylish']);
             $table->boolean('hijab')->default(false);
             $table->enum('season',['autumn ','spring','summer ','winter']);
