@@ -41,6 +41,18 @@ img {
   border-radius: 30px;
   margin-bottom: 10px;
 }
+.errorMsg-signup {
+  margin: 5px;
+  background-color: #eeeeee;
+}
+.errorMsg-signup h5 {
+  padding: 10px;
+
+  border: 2px #d39191;
+  box-shadow: 0 0 10px 2px red;
+  color: red;
+}
+
 .child-inputs select {
   height: 2.6rem;
   padding: 8px;
