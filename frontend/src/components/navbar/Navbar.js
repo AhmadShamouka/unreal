@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./stylesNavbar.css";
 import Button from "../../common/base/button/Button";
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
 
@@ -33,14 +32,6 @@ const Navbar = () => {
     } else setIcon("nav__toggler");
   };
 
-  const navigateToSignin = () => {
-    navigate("/signin");
-  };
-
-  const navigateToSignup = () => {
-    navigate("/signup");
-  };
-
   return (
     <nav>
       <div className={active}>
@@ -63,13 +54,12 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="buttons">
-          <Button
-            text="Sign In"
-            bgColor="white-bg"
-            textColor="blue-text"
-            onClicked={navigateToSignin}
-          />
-          <Button text="Sign Up" onClicked={navigateToSignup} />
+          <Link to="/signin">
+            <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
+          </Link>
+          <Link to="/signup">
+            <Button text="Sign Up" />
+          </Link>
         </div>
       </div>
       <div onClick={navToggle} className={icon}>

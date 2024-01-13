@@ -23,9 +23,10 @@ const Login = () => {
         "http://127.0.0.1:8000/api/login",
         formData
       );
-      const header = response.data.token;
+      const header = response.data.authorisation.token;
       localStorage.setItem("jwtToken", header);
       console.log(response.data);
+      console.log(header);
     } catch (error) {
       console.error("Error during form submission:", error);
     }
@@ -68,7 +69,7 @@ const Login = () => {
             textColor="blue-text"
           />
 
-          <a href="/Register">Don't have Account?Create One!</a>
+          <a href="/signup">Don't have Account?Create One!</a>
         </form>
       </div>
     </div>

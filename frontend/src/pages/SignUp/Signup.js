@@ -134,7 +134,7 @@ const SignUp = () => {
             bgColor="white-bg"
             textColor="blue-text"
           />
-          <a href="/login">Already Have an account? Log In</a>
+          <a href="/signin">Already Have an account? Log In</a>
         </form>
       </div>
     </div>

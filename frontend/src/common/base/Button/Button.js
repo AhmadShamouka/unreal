@@ -4,7 +4,7 @@ import "./style.css";
 const Button = ({
   type,
   text,
-  onClicked,
+
   bgColor = "blue-bg",
   textColor = "white-text",
 }) => {
