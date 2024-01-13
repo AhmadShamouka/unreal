@@ -37,7 +37,9 @@ const Occasion = () => {
     setActiveDiv(divNumber);
     setFormData({ ...formData, style: value });
   };
-
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   const handelFindItems = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -179,6 +181,7 @@ const Occasion = () => {
             <div className="label-select">
               <h4>Enter The Season of Your Occasion</h4>
               <select name="season" required onChange={handleChange}>
+                <SelectOption value="" text="Which Season?" hidden />
                 <SelectOption value="winter" text="Winter" />
                 <SelectOption value="spring" text="Spring" />
                 <SelectOption value="summer" text="Summer" />
@@ -188,6 +191,7 @@ const Occasion = () => {
             <div className="label-select">
               <h4>Do you Wear Hijab?</h4>
               <select name="hijab" required onChange={handleChange}>
+                <SelectOption value="" text="Do you Wear Hijab?" hidden />
                 <SelectOption value="True" text="With Hijab" />
                 <SelectOption value="False" text="Without Hijab" />
               </select>
@@ -195,6 +199,7 @@ const Occasion = () => {
             <div className="label-select">
               <h4>Please Enter your Budget Range</h4>
               <select name="budget_range" required onChange={handleChange}>
+                <SelectOption value="" text="Budget Range" hidden />
                 <SelectOption value="low" text="Low (Under 200$)" />
                 <SelectOption
                   value="medium"
