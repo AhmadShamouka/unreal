@@ -88,11 +88,17 @@
 .errorMsg {
   display: none;
 }
+
 .errorMsg-display {
+  align-items: center;
+  justify-content: center;
   display: flex;
 }
-.errorMsg-display h1 {
-  display: none;
+.errorMsg-display h5 {
+  padding: 20px;
+
+  border: 2px #d39191;
+  box-shadow: 0 0 10px 2px red;
   color: red;
 }
 select option {

@@ -21,7 +21,7 @@ import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
 const Occasion = () => {
- 
+  const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
@@ -57,24 +57,26 @@ const Occasion = () => {
     e.preventDefault();
     console.log(formData);
     if (formData.occasion_type == "" || formData.style == "") {
-      setDivStyle({ display: "none" ? "flex" : "none" });
-    }else{
-    try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/occasion",
-        formData,
-        {
-          headers: {
-            Authorization: authorization,
-          },
+      setActive("errorMsg-display");
+    } else {
+      try {
+        const response = await axios.post(
+          "http://127.0.0.1:8000/api/occasion",
+          formData,
+          {
+            headers: {
+              Authorization: authorization,
+            },
+          }
+        );
+        console.log(response.data);
+        if (response.data.status == "success") {
+          navigate("/find");
         }
-      );
-      console.log(response.data);
-      navigate("/find");
-    } catch (error) {
-      console.error(error);
+      } catch (error) {
+        console.error(error);
+      }
     }
-    
   };
   return (
     <div className="occasion">
@@ -249,7 +251,9 @@ const Occasion = () => {
               textColor="blue-text"
             />
           </div>
-     
+          <div className={active}>
+            <h5>Please Select Occasion and Style!</h5>
+          </div>
         </section>
       </form>
       <Footer />
