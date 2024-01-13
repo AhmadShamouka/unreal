@@ -178,7 +178,7 @@ const Occasion = () => {
           <div className="personal-info-container flex center">
             <div className="label-select">
               <h4>Enter The Season of Your Occasion</h4>
-              <select name="Season">
+              <select name="season" required onChange={handleChange}>
                 <SelectOption value="winter" text="Winter" />
                 <SelectOption value="spring" text="Spring" />
                 <SelectOption value="summer" text="Summer" />
@@ -187,20 +187,20 @@ const Occasion = () => {
             </div>
             <div className="label-select">
               <h4>Do you Wear Hijab?</h4>
-              <select name="Hijab">
+              <select name="hijab" required onChange={handleChange}>
                 <SelectOption value="True" text="With Hijab" />
                 <SelectOption value="False" text="Without Hijab" />
               </select>
             </div>
             <div className="label-select">
               <h4>Please Enter your Budget Range</h4>
-              <select name="Budget-range">
-                <SelectOption value="Low" text="Low (Under 200$)" />
+              <select name="budget_range" required onChange={handleChange}>
+                <SelectOption value="low" text="Low (Under 200$)" />
                 <SelectOption
-                  value="Medium"
+                  value="medium"
                   text="Medium (Between 200$  1500$)"
                 />
-                <SelectOption value="High" text="High (Over 1500$)" />
+                <SelectOption value="high" text="High (Over 1500$)" />
               </select>
             </div>
           </div>
