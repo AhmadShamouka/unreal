@@ -85,6 +85,16 @@
 .label-select h4 {
   margin-left: 5px;
 }
+.errorMsg {
+  display: none;
+}
+.errorMsg-display {
+  display: flex;
+}
+.errorMsg-display h1 {
+  display: none;
+  color: red;
+}
 select option {
   border-radius: 100px;
   background-color: #ffffff;

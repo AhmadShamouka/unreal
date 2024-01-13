@@ -21,6 +21,7 @@ import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
 const Occasion = () => {
+ 
   const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
@@ -51,9 +52,13 @@ const Occasion = () => {
       setFormData({ ...formData, [name]: value });
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
+    if (formData.occasion_type == "" || formData.style == "") {
+      setDivStyle({ display: "none" ? "flex" : "none" });
+    }else{
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/occasion",
@@ -69,6 +74,7 @@ const Occasion = () => {
     } catch (error) {
       console.error(error);
     }
+    
   };
   return (
     <div className="occasion">
@@ -243,6 +249,7 @@ const Occasion = () => {
               textColor="blue-text"
             />
           </div>
+     
         </section>
       </form>
       <Footer />
