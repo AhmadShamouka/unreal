@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styleOccasion.css";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Hexagon from "../../common/base/hexagon/Hexagon";
 import Outdoor from "../../common/images/Outdoor-Adventure.jpeg";
 import beach from "../../common/images/Beach-Vacation.jpeg";
@@ -20,6 +21,7 @@ import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
 const Occasion = () => {
+  const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   const [activeDiv, setActiveDiv] = useState(0);
@@ -63,6 +65,7 @@ const Occasion = () => {
         }
       );
       console.log(response.data);
+      navigate("/find");
     } catch (error) {
       console.error(error);
     }
