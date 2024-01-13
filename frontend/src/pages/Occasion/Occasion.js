@@ -42,14 +42,13 @@ const Occasion = () => {
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const hijabValue = name === "hijab" ? value === "true" : value;
+    const newValue = e.target.value === "true";
     if (name === "hijab") {
-      setFormData({ ...formData, [name]: hijabValue });
+      setFormData({ ...formData, [name]: newValue });
     } else {
       setFormData({ ...formData, [name]: value });
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
