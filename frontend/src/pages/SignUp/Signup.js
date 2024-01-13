@@ -8,6 +8,7 @@ import Select from "react-select";
 import countryList from "react-select-country-list";
 import axios from "axios";
 const SignUp = () => {
+  const [active, setActive] = useState("errorMsg");
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -40,8 +41,15 @@ const SignUp = () => {
         formData
       );
       console.log(response.data);
+
+      if (response.data.message === "The email has already been taken.") {
+        setActive("errorMsg-signup");
+      }
     } catch (error) {
-      console.error(error);
+      console.error(error.message);
+      if (error.message == "Request failed with status code 422") {
+        setActive("errorMsg-signup");
+      }
     }
   };
 
@@ -134,6 +142,9 @@ const SignUp = () => {
             bgColor="white-bg"
             textColor="blue-text"
           />
+          <div className={active}>
+            <h5>Email address already exists!</h5>
+          </div>
           <a href="/signin">Already Have an account? Log In</a>
         </form>
       </div>
