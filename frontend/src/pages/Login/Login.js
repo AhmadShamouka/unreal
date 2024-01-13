@@ -23,6 +23,8 @@ const Login = () => {
         "http://127.0.0.1:8000/api/login",
         formData
       );
+      const header = response.data.token;
+      localStorage.setItem("jwtToken", header);
       console.log(response.data);
     } catch (error) {
       console.error("Error during form submission:", error);
