@@ -27,7 +27,7 @@ const Occasion = () => {
   const [formData, setFormData] = useState({
     occasion_type: "",
     style: "",
-    hijab: ``,
+    hijab: null,
     season: "",
     budget_range: "",
   });
@@ -43,7 +43,6 @@ const Occasion = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     const hijabValue = name === "hijab" ? value === "true" : value;
-
     if (name === "hijab") {
       setFormData({ ...formData, [name]: hijabValue });
     } else {
@@ -88,14 +87,14 @@ const Occasion = () => {
               bgImage={beach}
               value="beach vacation"
               hexaText="Beach Vacation"
-              onClick={() => handleHexagonClick(2)}
+              onClick={() => handleHexagonClick(2, "beach vacation")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 2}
             />
             <Hexagon
               value="sport"
               bgImage={Athletic}
               hexaText="Athletic Activity"
-              onClick={() => handleHexagonClick(3, "beach vacation")}
+              onClick={() => handleHexagonClick(3, "sport")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 3}
             />
           </div>
@@ -219,7 +218,6 @@ const Occasion = () => {
                 <SelectOption value="" text="Do you Wear Hijab?" hidden />
                 <SelectOption value="true" text="With Hijab" />
                 <SelectOption value="false" text="Without Hijab" />
-                1q
               </select>
             </div>
             <div className="label-select">
