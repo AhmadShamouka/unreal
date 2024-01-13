@@ -21,15 +21,26 @@ import Button from "../../common/base/button/Button";
 const Occasion = () => {
   const [activeDiv, setActiveDiv] = useState(0);
   const [blurredHexagon, setBlurredHexagon] = useState(null);
-  const [formData, setFormData] = useState({});
-  const handleHexagonClick = (hexagonNumber) => {
+  const [formData, setFormData] = useState({
+    occasion_type: "",
+    style: "",
+    hijab: "",
+    season: "",
+    budget_range: "",
+  });
+  const handleHexagonClick = (hexagonNumber, value) => {
     setBlurredHexagon(hexagonNumber);
+    setFormData({ ...formData, occasion_type: value });
   };
+
   const handleSwitch = (divNumber) => {
     setActiveDiv(divNumber);
   };
 
-  const handelFindItems = () => {};
+  const handelFindItems = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
   return (
     <div className="occasion">
       <UserNavbar />
@@ -37,12 +48,12 @@ const Occasion = () => {
         <section className="hexagons-temp">
           <h1>Click to Choose Your Occasion</h1>
           <hr className="hr-line" />
-          <div className="hexa3 flex center">
+          <div name="occasion_type" className="hexa3 flex center">
             <Hexagon
               value="outdoor activity"
               bgImage={Outdoor}
               hexaText="OutDoor Activity"
-              onClick={() => handleHexagonClick(1)}
+              onClick={(e) => handleHexagonClick(1, "outdoor activity", e)}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 1}
             />
             <Hexagon
