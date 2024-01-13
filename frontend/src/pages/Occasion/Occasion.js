@@ -138,7 +138,7 @@ const Occasion = () => {
                   ? "active-switch"
                   : "blurred"
               }`}
-              onClick={() => handleSwitch(1)}
+              onClick={() => handleSwitch(1, "casual")}
             >
               <img src={stylish} alt="" />
               <h3>Casual</h3>
@@ -151,10 +151,10 @@ const Occasion = () => {
                   ? "active-switch"
                   : "blurred"
               }`}
-              onClick={() => handleSwitch(2)}
+              onClick={() => handleSwitch(2, "formal")}
             >
               <img src={formal} alt="" />
-              <h3>formal</h3>
+              <h3>Formal</h3>
             </div>
             <div
               className={`switchable-div ${
@@ -164,10 +164,10 @@ const Occasion = () => {
                   ? "active-switch"
                   : "blurred"
               }`}
-              onClick={() => handleSwitch(3)}
+              onClick={() => handleSwitch(3, "classic")}
             >
               <img src={classic} alt="" />
-              <h3>classic</h3>
+              <h3>Classic</h3>
             </div>
           </div>
         </section>
