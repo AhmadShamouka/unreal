@@ -53,6 +53,14 @@ class AuthController extends Controller
             'sex' => 'required|string'
         ]);
     
+     
+        if (User::where('email', $request->email)->exists()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Email is already registered',
+            ], 400);
+        }
+    else{
         $user = User::create([
             'username' => $request->username,
             'admin' => $request->input('admin', 0),
@@ -62,7 +70,7 @@ class AuthController extends Controller
             'country' => $request->country,
             'sex' => $request->sex,
         ]);
-    
+    }
         $token = Auth::login($user);
     
         return response()->json([
@@ -75,6 +83,7 @@ class AuthController extends Controller
             ]
         ]);
     }
+    
     
     public function logout()
     {
