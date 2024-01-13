@@ -33,8 +33,9 @@ const Occasion = () => {
     setFormData({ ...formData, occasion_type: value });
   };
 
-  const handleSwitch = (divNumber) => {
+  const handleSwitch = (divNumber, value) => {
     setActiveDiv(divNumber);
+    setFormData({ ...formData, style: value });
   };
 
   const handelFindItems = (e) => {
