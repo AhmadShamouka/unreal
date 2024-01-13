@@ -70,7 +70,9 @@ const Login = () => {
             bgColor="white-bg"
             textColor="blue-text"
           />
-
+          <div className={active}>
+            <h5>Email address Does not exists!</h5>
+          </div>
           <a href="/signup">Don't have Account?Create One!</a>
         </form>
       </div>
