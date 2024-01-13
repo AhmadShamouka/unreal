@@ -4,8 +4,9 @@ import Input from "../../common/base/inputs/Input";
 import Button from "../../common/base/button/Button";
 import "./styles.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -27,6 +28,7 @@ const Login = () => {
       localStorage.setItem("jwtToken", header);
       console.log(response.data);
       console.log(header);
+      navigate("/occasion");
     } catch (error) {
       console.error("Error during form submission:", error);
     }
