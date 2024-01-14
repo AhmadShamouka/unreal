@@ -12,6 +12,7 @@ import sp from "../../common/images/sp.webp";
 import "./styleChooseItem.css";
 
 const ChooseItem = () => {
+  const handleSubmit = () => {};
   return (
     <div>
       <UserNavbar />
