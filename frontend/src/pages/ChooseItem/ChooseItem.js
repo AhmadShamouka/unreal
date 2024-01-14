@@ -14,15 +14,15 @@ import sp from "../../common/images/sp.webp";
 import "./styleChooseItem.css";
 
 const ChooseItem = () => {
-  const navigate = useNavigate({
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
     name: "wedding",
     price: "2992",
     image: null,
   });
-
-  const [formData, setFormData] = useState();
   const handleSubmit = async (e) => {
-    const file = e.target.files[0];
+    const file = e.target.files;
     setFormData((prevData) => ({
       ...prevData,
       image: file,
@@ -36,7 +36,7 @@ const ChooseItem = () => {
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/add-clothes",
-        formData
+        formDataToSend
       );
       const header = response.data.authorisation.token;
       localStorage.setItem("jwtToken", header);
@@ -60,8 +60,10 @@ const ChooseItem = () => {
             navigation
             pagination={{ clickable: true }}
           >
-            <SwiperSlide onClick={handleSubmit} type="file" id="imageInput">
+            <SwiperSlide onClick={handleSubmit}>
               <img
+                type="file"
+                id="imageInput"
                 src={wedding}
                 alt="Wedding"
                 className="swiper-image"
