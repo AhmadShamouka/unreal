@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,11 +14,19 @@ import sp from "../../common/images/sp.webp";
 import "./styleChooseItem.css";
 
 const ChooseItem = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState();
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData);
     try {
-    } catch (error) {}
+      const response = await axios.post("http://127.0.0.1:8000/api/", formData);
+      const header = response.data.authorisation.token;
+      localStorage.setItem("jwtToken", header);
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <div>
