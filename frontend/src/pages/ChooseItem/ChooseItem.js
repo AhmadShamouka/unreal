@@ -29,7 +29,7 @@ const ChooseItem = () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
-            <SwiperSlide>
+            <SwiperSlide onClick={handleSubmit}>
               <img
                 src={wedding}
                 alt="Wedding"
