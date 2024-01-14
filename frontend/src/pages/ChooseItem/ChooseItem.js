@@ -45,37 +45,11 @@ const ChooseItem = () => {
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide onClick={handleSubmit}>
               <img
                 src={wedding}
                 alt="Wedding"
-                className="swiper-image"
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={sp}
-                alt="Swim"
-                className="swiper-image"
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={wedding}
-                alt="Wedding"
-                className="swiper-image"
-                loading="lazy"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={sp}
-                alt="Swim"
                 className="swiper-image"
                 loading="lazy"
               />
