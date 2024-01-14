@@ -31,6 +31,9 @@ const Login = () => {
       navigate("/occasion");
     } catch (error) {
       console.error("Error during form submission:", error);
+      if (error.message == "Request failed with status code 422") {
+        setActive("errorMsg-signup");
+      }
     }
   };
   return (
