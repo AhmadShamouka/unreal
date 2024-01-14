@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,7 +12,12 @@ import sp from "../../common/images/sp.webp";
 import "./styleChooseItem.css";
 
 const ChooseItem = () => {
-  const handleSubmit = () => {};
+  const [formData, setFormData] = useState();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    try {
+    } catch (error) {}
+  };
   return (
     <div>
       <UserNavbar />
