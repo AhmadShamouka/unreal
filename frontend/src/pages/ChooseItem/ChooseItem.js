@@ -14,7 +14,11 @@ import sp from "../../common/images/sp.webp";
 import "./styleChooseItem.css";
 
 const ChooseItem = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate({
+    name: "",
+    price: "",
+    image: "",
+  });
   const [formData, setFormData] = useState();
   const handleSubmit = async (e) => {
     e.preventDefault();
