@@ -56,7 +56,7 @@ const Occasion = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    if (formData.occasion_type == "" || formData.style == "") {
+    if (formData.occasion_type === "" || formData.style === "") {
       setActive("errorMsg-display");
     } else {
       try {
@@ -70,7 +70,7 @@ const Occasion = () => {
           }
         );
         console.log(response.data);
-        if (response.data.status == "success") {
+        if (response.data.status === "success") {
           navigate("/find");
         }
       } catch (error) {
