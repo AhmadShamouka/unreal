@@ -6,6 +6,7 @@ import "./styles.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
+  const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
