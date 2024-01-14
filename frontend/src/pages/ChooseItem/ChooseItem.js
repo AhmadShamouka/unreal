@@ -20,7 +20,10 @@ const ChooseItem = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/", formData);
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/add-clothes",
+        formData
+      );
       const header = response.data.authorisation.token;
       localStorage.setItem("jwtToken", header);
       navigate("/");
