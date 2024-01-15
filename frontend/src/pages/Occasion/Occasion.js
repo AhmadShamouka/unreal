@@ -23,6 +23,10 @@ import axios from "axios";
 import OpenAI from "openai";
 
 const Occasion = () => {
+  const openai = new OpenAI({
+    apiKey: "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",
+    dangerouslyAllowBrowser: true,
+  });
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
@@ -58,6 +62,7 @@ const Occasion = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
+
     if (formData.occasion_type === "" || formData.style === "") {
       setActive("errorMsg-display");
     } else {
@@ -71,6 +76,7 @@ const Occasion = () => {
             },
           }
         );
+
         if (response.data.status === "success") {
           navigate("/find");
         }
