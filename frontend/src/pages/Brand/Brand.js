@@ -12,6 +12,7 @@ const Brand = () => {
       <div className="brand-label flex center">
         <h1>Choose Your Brand</h1>
       </div>
+      <hr className="hr-line" />
       <div className="card-brand-container flex center">
         <div className="card-brand">
           <img

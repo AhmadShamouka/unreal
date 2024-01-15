@@ -16,7 +16,12 @@
 }
 .brand-label {
   color: #1789c9;
-  margin: 150px 0 0 0;
+  margin: 110px 0 0 0;
+}
+.hr-line {
+  background-color: #1789c9;
+  height: 2px;
+  margin: 0 14rem;
 }
 .card-img-brand {
   width: 100%;
