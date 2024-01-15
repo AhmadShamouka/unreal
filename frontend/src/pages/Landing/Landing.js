@@ -220,7 +220,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="button-temp flex center">
-          <Link>
+          <Link to="/signin">
             <Button text="See More" bgColor="white-bg" textColor="blue-text" />
           </Link>
         </div>

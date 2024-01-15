@@ -168,7 +168,7 @@ const Occasion = () => {
           <hr className="hr-line" />
           <div className="switchable-container flex center">
             <div
-              className={`switchable-div ${
+              className={`card card-color-0 ${
                 activeDiv === 0
                   ? "active-switch"
                   : activeDiv === 1
@@ -177,11 +177,12 @@ const Occasion = () => {
               }`}
               onClick={() => handleSwitch(1, "casual")}
             >
+              <div className="border"></div>
               <img src={stylish} alt="" />
-              <h3>Casual</h3>
+              <h2>Casual</h2>
             </div>
             <div
-              className={`switchable-div ${
+              className={`card card-color-0 ${
                 activeDiv === 0
                   ? "active-switch"
                   : activeDiv === 2
@@ -190,11 +191,13 @@ const Occasion = () => {
               }`}
               onClick={() => handleSwitch(2, "formal")}
             >
+              <div className="border"></div>
               <img src={formal} alt="" />
-              <h3>Formal</h3>
+              <h2>Formal</h2>
             </div>
+
             <div
-              className={`switchable-div ${
+              className={`card card-color-0 ${
                 activeDiv === 0
                   ? "active-switch"
                   : activeDiv === 3
@@ -203,8 +206,9 @@ const Occasion = () => {
               }`}
               onClick={() => handleSwitch(3, "classic")}
             >
+              <div className="border"></div>
               <img src={classic} alt="" />
-              <h3>Classic</h3>
+              <h2>Classic</h2>
             </div>
           </div>
         </section>
