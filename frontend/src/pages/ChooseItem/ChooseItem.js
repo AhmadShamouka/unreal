@@ -52,6 +52,7 @@ const ChooseItem = () => {
         <div className="choose-label">
           <h1>Choose Your Item to Try Them On Camera</h1>
         </div>
+        <hr className="hr-line" />
         <div className="choose-items">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
