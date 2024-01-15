@@ -91,16 +91,24 @@ const ChooseItem = () => {
             navigation
             pagination={{ clickable: true }}
           >
-            <SwiperSlide onClick={handleSubmit}>
-              <img
-                type="file"
-                id="imageInput"
-                src={wedding}
-                alt="Wedding"
-                className="swiper-image"
-                loading="lazy"
-              />
-            </SwiperSlide>
+            <div>
+              {products.map((product, index) => (
+                <SwiperSlide onClick={handleSubmit}>
+                  <div key={index}>
+                    <h3>{product.name}</h3>
+                    <p>Price: ${product.price}</p>
+                    <img
+                      type="file"
+                      id="imageInput"
+                      src={product.image}
+                      alt={product.name}
+                      className="swiper-image"
+                      loading="lazy"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </div>
           </Swiper>
         </div>
       </div>
