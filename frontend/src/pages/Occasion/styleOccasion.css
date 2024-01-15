@@ -123,6 +123,12 @@ select option:checked {
     margin: 10px 0;
     width: 80%;
   }
+  .card {
+    width: 65%;
+  }
+  .card img {
+    width: 80%;
+  }
 }
 .personal-info hr {
   width: 70%;
