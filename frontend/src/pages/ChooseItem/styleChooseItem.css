@@ -18,8 +18,15 @@
   background-color: white;
 }
 .choose-label {
+  text-align: center;
+  width: 100%;
   margin: 10px 0;
   color: #1789c9;
+}
+.hr-line-find {
+  margin: 0 14rem;
+  background-color: #1789c9;
+  height: 2px;
 }
 .swiper-button-prev,
 .swiper-button-next {

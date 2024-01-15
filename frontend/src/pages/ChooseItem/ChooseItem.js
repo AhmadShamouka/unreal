@@ -50,7 +50,8 @@ const ChooseItem = () => {
       <UserNavbar />
       <div className="choose-container flex center">
         <div className="choose-label">
-          <h1>Choose Your Item to Try Them On Camera</h1>
+          <h1>Click on Item to Try Them On Camera</h1>
+          <hr className="hr-line-find" />
         </div>
         <hr className="hr-line" />
         <div className="choose-items">
