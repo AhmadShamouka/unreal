@@ -23,10 +23,6 @@ import axios from "axios";
 import OpenAI from "openai";
 
 const Occasion = () => {
-  const openai = new OpenAI({
-    apiKey: "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",
-    dangerouslyAllowBrowser: true,
-  });
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
@@ -58,10 +54,29 @@ const Occasion = () => {
       setFormData({ ...formData, [name]: value });
     }
   };
-
+  const openai = new OpenAI({
+    apiKey: "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",
+    dangerouslyAllowBrowser: true,
+  });
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
+    try {
+      const chatCompletion = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [
+          {
+            role: "user",
+            content: "hello",
+          },
+        ],
+        max_tokens: 100,
+      });
+
+      console.log(chatCompletion.choices[0].message);
+    } catch (error) {
+      console.log(error);
+    }
 
     if (formData.occasion_type === "" || formData.style === "") {
       setActive("errorMsg-display");
