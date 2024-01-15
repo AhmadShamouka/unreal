@@ -5,10 +5,10 @@ import Button from "../../common/base/button/Button";
 import about from "../../common/images/about.jpg";
 import mission from "../../common/images/mission.jpeg";
 import formal from "../../common/images/aa.jpeg";
-import dress from "../../common/images/dress1.jpg";
+import dress from "../../common/images/dress.jpeg";
 import wedding from "../../common/images/dress2.jpeg";
 import swim from "../../common/images/swim.jpeg";
-import sleepover from "../../common/images/pijamas.webp";
+import sleepover from "../../common/images/pijamas.jpeg";
 import coat from "../../common/images/coats.jpg";
 import traditional from "../../common/images/tradi.jpeg";
 import sport from "../../common/images/sp.webp";
@@ -18,7 +18,7 @@ import arrow2 from "../../common/images/arrow2.png";
 import arrow3 from "../../common/images/arrow3.png";
 import arrow4 from "../../common/images/arrow4.png";
 import "./styleLanding.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Landing = () => {
   const navigate = useNavigate();
   const [reveal, setReveal] = useState(false);
@@ -220,7 +220,9 @@ const Landing = () => {
           </div>
         </div>
         <div className="button-temp flex center">
-          <Button text="See More" bgColor="white-bg" textColor="blue-text" />
+          <Link>
+            <Button text="See More" bgColor="white-bg" textColor="blue-text" />
+          </Link>
         </div>
       </section>
       <Footer />
