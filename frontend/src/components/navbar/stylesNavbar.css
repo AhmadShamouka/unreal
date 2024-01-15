@@ -130,10 +130,10 @@ button {
 }
 .nav__x {
   position: fixed;
-  transition: 0.7s ease-in;
+  transition: 0.5s ease-in-out;
   right: 45.5%;
   background: url("../../common/images/x.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   z-index: 2013;
   width: 2rem;
