@@ -28,7 +28,7 @@ const Navbar = () => {
     } else setActive("nav__menu");
 
     if (icon === "nav__toggler") {
-      setIcon("nav__toggler toggle");
+      setIcon("nav__x toggle");
     } else setIcon("nav__toggler");
   };
 
