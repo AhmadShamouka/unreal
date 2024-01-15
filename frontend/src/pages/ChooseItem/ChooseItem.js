@@ -45,6 +45,35 @@ const ChooseItem = () => {
       console.error(error);
     }
   };
+
+  const products = [
+    {
+      name: "Product1",
+      price: 25,
+      image: "image1.jpg",
+    },
+    {
+      name: "Product2",
+      price: 35,
+      image: "image2.jpg",
+    },
+    {
+      name: "Product3",
+      price: 20,
+      image: "image3.jpg",
+    },
+    {
+      name: "Product4",
+      price: 50,
+      image: "image4.jpg",
+    },
+    {
+      name: "Product5",
+      price: 30,
+      image: "image5.jpg",
+    },
+  ];
+
   return (
     <div>
       <UserNavbar />
