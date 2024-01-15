@@ -13,7 +13,7 @@ import party from "../../common/images/party.jpeg";
 import wedding from "../../common/images/wedding.jpeg";
 import Graduation from "../../common/images/graduation.jpeg";
 import classic from "../../common/images/classic.jpeg";
-import stylish from "../../common/images/Athleisure-Style.jpeg";
+import stylish from "../../common/images/casualwomen.jpeg";
 import formal from "../../common/images/aa.jpeg";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";

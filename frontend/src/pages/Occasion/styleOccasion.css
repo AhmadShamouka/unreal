@@ -25,11 +25,7 @@
 
 .switchable-container {
   gap: 100px;
-}
-.switchable-div img {
-  border-radius: 20px;
-  height: 100%;
-  width: 100%;
+  padding: 0 20%;
 }
 .active-switch {
   background-color: #ccc;
@@ -43,16 +39,7 @@
 .switchable h1 {
   padding: 7rem 0 0 0;
 }
-@media screen and (max-width: 768px) {
-  .switchable-div {
-    width: 30%;
-    height: 250px;
-    border-radius: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-}
+
 .personal-info {
   position: relative;
   padding-bottom: 20px;
@@ -128,8 +115,9 @@ select option:checked {
     flex-direction: column;
   }
   .switchable-container {
+    flex-direction: column;
     gap: 40px;
-    padding: 0 40px;
+    padding: 0 20%;
   }
   .label-select {
     margin: 10px 0;
