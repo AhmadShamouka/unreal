@@ -28,7 +28,7 @@ const UserNavbar = () => {
     } else setIcon("nav__toggler");
   };
   return (
-    <nav className="nav">
+    <nav>
       <div className={active}>
         <div className="logo-nav-user" href="/"></div>
         <ul className="links_user flex center">
@@ -49,7 +49,9 @@ const UserNavbar = () => {
           </li>
         </ul>
         <div>
-          <h3>UserName</h3>
+          <div className="buttons">
+            <h3>UserName</h3>
+          </div>
         </div>
       </div>
       <div onClick={navToggle} className={icon}>

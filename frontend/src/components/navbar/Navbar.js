@@ -35,31 +35,33 @@ const Navbar = () => {
   return (
     <nav>
       <div className={active}>
-        <div className="logo-nav" href="/"></div>
-        <ul className="links flex center">
-          <li className="nav__item">
-            <a href="/" className="nav__link">
-              Home
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="/" className="nav__link">
-              About
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="/" className="nav__link">
-              Template
-            </a>
-          </li>
-        </ul>
-        <div className="buttons">
-          <Link to="/signin">
-            <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
-          </Link>
-          <Link to="/signup">
-            <Button text="Sign Up" />
-          </Link>
+        <div className="navbar_landing flex">
+          <div className="logo-nav" href="/"></div>
+          <ul className="links flex center">
+            <li className="nav__item">
+              <a href="/" className="nav__link">
+                Home
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="/" className="nav__link">
+                About
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="/" className="nav__link">
+                Template
+              </a>
+            </li>
+          </ul>
+          <div className="buttons">
+            <Link to="/signin">
+              <Button text="Sign In" bgColor="white-bg" textColor="blue-text" />
+            </Link>
+            <Link to="/signup">
+              <Button text="Sign Up" />
+            </Link>
+          </div>
         </div>
       </div>
       <div onClick={navToggle} className={icon}>
