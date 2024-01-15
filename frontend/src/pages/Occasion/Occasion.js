@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styleOccasion.css";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Hexagon from "../../common/base/hexagon/Hexagon";
 import Outdoor from "../../common/images/Outdoor-Adventure.jpeg";
 import beach from "../../common/images/Beach-Vacation.jpeg";
@@ -20,6 +20,8 @@ import Footer from "../../components/footer/Footer";
 import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
+import OpenAI from "openai";
+
 const Occasion = () => {
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
@@ -69,7 +71,6 @@ const Occasion = () => {
             },
           }
         );
-        console.log(response.data);
         if (response.data.status === "success") {
           navigate("/find");
         }
