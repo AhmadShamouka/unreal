@@ -39,8 +39,9 @@ li {
 .logo-nav {
   background-image: url("../../common/base/logo/image/logo-text.png");
   background-position: center;
-  background-size: cover;
-  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90px;
   width: 90px;
 }
 
@@ -69,7 +70,7 @@ button {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 808px) {
   .nav__active {
     border-radius: 0;
     width: 100vh;

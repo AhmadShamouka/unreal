@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className={active}>
-        <div className="navbar_landing flex">
+        <div className="navbar_landing flex center">
           <div className="logo-nav" href="/"></div>
           <ul className="links flex center">
             <li className="nav__item">

@@ -42,7 +42,7 @@
   color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 808px) {
   .nav__active {
     border-radius: 0;
     width: 100vh;
@@ -104,4 +104,11 @@
 
 .nav__active {
   transform: translateX(0%);
+}
+@media screen and (max-width: 568px) {
+  .nav__x {
+    position: fixed;
+    transition: 0.5s ease-in-out;
+    right: 44%;
+  }
 }
