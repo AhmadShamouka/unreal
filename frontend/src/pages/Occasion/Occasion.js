@@ -67,13 +67,13 @@ const Occasion = () => {
         messages: [
           {
             role: "user",
-            content: "hello",
+            content: `Suggest a stylish outfit for a ${formData.occasion_type} in ${formData.season}. My style is ${formData.style}, and I'll be wearing a hijab. My budget is ${formData.budget_range}.answer:suggestion with 3-5 words`,
           },
         ],
         max_tokens: 100,
       });
 
-      console.log(chatCompletion.choices[0].message);
+      console.log(chatCompletion.choices[0].message.content);
     } catch (error) {
       console.log(error);
     }
