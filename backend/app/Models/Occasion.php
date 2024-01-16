@@ -11,7 +11,6 @@ class Occasion extends Model
     protected $fillable = [
         'occasion_type',
         'style',
-        'hijab',
         'season',
         'budget_range',
         'user_id',
