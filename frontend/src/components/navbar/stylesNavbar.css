@@ -44,8 +44,13 @@ li {
   height: 90px;
   width: 90px;
 }
-
 .nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_landing {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

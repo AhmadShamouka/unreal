@@ -14,6 +14,21 @@
   margin: 100px 0;
 }
 
+.card-footer-find {
+  padding: 0 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: red;
+  display: grid;
+  gap: 0.5ch;
+  background: hsl(0 0% 100% / 0.5);
+  backdrop-filter: blur(var(--blur));
+  height: 20%;
+  align-content: center;
+}
+
 .swiper-pagination-bullet {
   background-color: white;
 }

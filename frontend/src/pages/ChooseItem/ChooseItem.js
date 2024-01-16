@@ -50,27 +50,27 @@ const ChooseItem = () => {
     {
       name: "Product1",
       price: 25,
-      image: "image1.jpg",
+      image: sp,
     },
     {
       name: "Product2",
       price: 35,
-      image: "image2.jpg",
+      image: sp,
     },
     {
       name: "Product3",
       price: 20,
-      image: "image3.jpg",
+      image: sp,
     },
     {
       name: "Product4",
       price: 50,
-      image: "image4.jpg",
+      image: sp,
     },
     {
       name: "Product5",
       price: 30,
-      image: "image5.jpg",
+      image: sp,
     },
   ];
 
@@ -95,16 +95,20 @@ const ChooseItem = () => {
               {products.map((product, index) => (
                 <SwiperSlide onClick={handleSubmit}>
                   <div key={index}>
-                    <h3>{product.name}</h3>
-                    <p>Price: ${product.price}</p>
-                    <img
-                      type="file"
-                      id="imageInput"
-                      src={product.image}
-                      alt={product.name}
-                      className="swiper-image"
-                      loading="lazy"
-                    />
+                    <div className="slide-container">
+                      <img
+                        type="file"
+                        id="imageInput"
+                        src={product.image}
+                        alt={product.name}
+                        className="swiper-image"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span className="card-footer-find">
+                      <span>{product.name}</span>
+                      <span>Price: ${product.price}</span>
+                    </span>
                   </div>
                 </SwiperSlide>
               ))}

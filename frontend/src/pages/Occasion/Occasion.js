@@ -54,10 +54,7 @@ const Occasion = () => {
       setFormData({ ...formData, [name]: value });
     }
   };
-  const openai = new OpenAI({
-    apiKey: "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",
-    dangerouslyAllowBrowser: true,
-  });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
