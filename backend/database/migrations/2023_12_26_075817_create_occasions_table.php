@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('occasions', function (Blueprint $table) {
             $table->id();
             $table->string('occasion_type');
-            $table->enum('style',['formal','casual','stylish']);
+            $table->string('style');
             $table->boolean('hijab')->default(false);
             $table->enum('season',['autumn ','spring','summer ','winter']);
             $table->enum('budget_range',['low','medium','high']);
