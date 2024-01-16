@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('occasion_type');
             $table->string('style');
             $table->string('season');
-            $table->enum('budget_range',['low','medium','high']);
+            $table->string('budget_range');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');            
             $table->timestamps();
