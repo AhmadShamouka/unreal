@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Occasion;
+use OpenAI\Laravel\Facades\OpenAI;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\QueryException;
@@ -31,11 +32,22 @@ class OccasionController extends Controller
                     'user_id' => $user->id,
                 ]);
 
+                $result = OpenAI::chat()->create([
+                    'model' => 'gpt-3.5-turbo',
+                    'messages' => [
+                        ['role' => 'user', 'content' => 'Hello!'],
+                    ],
+                    'max_tokens'=>30,
+                ]);
+                $result =$result['choices'][0]['message']['content'];
+                    
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Occasion created successfully',
                     'occasion' => $occasion,
+                    'openai'=>$result,
                 ]);
+                
             }
 
             return response()->json([
