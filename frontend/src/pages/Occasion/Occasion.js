@@ -58,18 +58,7 @@ const Occasion = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    try {
-      const chatCompletion = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
-        messages: [
-          {
-            role: "user",
-            content: `Suggest a stylish outfit for a ${formData.occasion_type} in ${formData.season}. My style is ${formData.style}, and I'll be wearing a hijab. My budget is ${formData.budget_range}.answer:suggestion with 3-5 words`,
-          },
-        ],
-        max_tokens: 100,
-      });
-
+  
       console.log(chatCompletion.choices[0].message.content);
     } catch (error) {
       console.log(error);
