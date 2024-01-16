@@ -32,7 +32,6 @@ const Occasion = () => {
   const [formData, setFormData] = useState({
     occasion_type: "",
     style: "",
-    hijab: null,
     season: "",
     budget_range: "",
   });
@@ -47,12 +46,7 @@ const Occasion = () => {
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const newValue = e.target.value === "true";
-    if (name === "hijab") {
-      setFormData({ ...formData, [name]: newValue });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
@@ -72,7 +66,7 @@ const Occasion = () => {
             },
           }
         );
-
+        console.log(response.data);
         if (response.data.status === "success") {
           navigate("/find");
         }
@@ -227,14 +221,6 @@ const Occasion = () => {
                 <SelectOption value="spring" text="Spring" />
                 <SelectOption value="summer" text="Summer" />
                 <SelectOption value="fall" text="Fall" />
-              </select>
-            </div>
-            <div className="label-select">
-              <h4>Do you Wear Hijab?</h4>
-              <select name="hijab" required onChange={handleChange}>
-                <SelectOption value="" text="Do you Wear Hijab?" hidden />
-                <SelectOption value="true" text="With Hijab" />
-                <SelectOption value="false" text="Without Hijab" />
               </select>
             </div>
             <div className="label-select">
