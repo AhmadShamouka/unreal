@@ -58,11 +58,6 @@ const Occasion = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-  
-      console.log(chatCompletion.choices[0].message.content);
-    } catch (error) {
-      console.log(error);
-    }
 
     if (formData.occasion_type === "" || formData.style === "") {
       setActive("errorMsg-display");
