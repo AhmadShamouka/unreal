@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('occasion_type');
             $table->string('style');
-            $table->boolean('hijab')->default(false);
             $table->enum('season',['autumn ','spring','summer ','winter']);
             $table->enum('budget_range',['low','medium','high']);
             $table->unsignedBigInteger('user_id');
