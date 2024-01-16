@@ -18,7 +18,6 @@ class OccasionController extends Controller
                 $request->validate([
                     'occasion_type' => 'required',
                     'style' => 'required',
-                    'hijab' => 'required|boolean',
                     'season' => 'required',
                     'budget_range' => 'required',
                 ]);
@@ -26,7 +25,6 @@ class OccasionController extends Controller
                 $occasion = Occasion::create([
                     'occasion_type' => $request->occasion_type,
                     'style' => $request->style,
-                    'hijab' => $request->hijab,
                     'season' => $request->season,
                     'budget_range' => $request->budget_range,
                     'user_id' => $user->id,
