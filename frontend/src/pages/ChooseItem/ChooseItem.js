@@ -105,9 +105,9 @@ const ChooseItem = () => {
                         loading="lazy"
                       />
                     </div>
-                    <span className="card-footer-find">
-                      <span>{product.name}</span>
-                      <span>Price: ${product.price}</span>
+                    <span className="card-footer-find flex center">
+                      <h3>{product.name}</h3>
+                      <h4>Price: ${product.price}</h4>
                     </span>
                   </div>
                 </SwiperSlide>
