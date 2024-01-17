@@ -16,11 +16,9 @@ a {
 li {
   list-style: none;
 }
-
 .logo-nav {
   cursor: pointer;
 }
-
 .links a {
   text-decoration: none;
   font-size: 18px;
