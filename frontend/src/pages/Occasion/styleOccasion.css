@@ -17,7 +17,7 @@
 
 .switchable-container {
   gap: 100px;
-  padding: 0 20%;
+  padding: 0 90px;
 }
 
 .card .border {
@@ -113,7 +113,7 @@ select option:checked {
   .switchable-container {
     flex-direction: column;
     gap: 40px;
-    padding: 0 20%;
+    padding: 0 100px;
   }
   .label-select {
     margin: 10px 0;
