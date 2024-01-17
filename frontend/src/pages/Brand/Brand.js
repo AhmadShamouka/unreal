@@ -7,7 +7,7 @@ import HM from "../../common/images/hm.png";
 import Zara from "../../common/images/zara.png";
 const Brand = () => {
   return (
-    <div>
+    <div className="brand-container">
       <UserNavbar />
       <div className="brand-label flex center">
         <h1>Choose Your Brand</h1>

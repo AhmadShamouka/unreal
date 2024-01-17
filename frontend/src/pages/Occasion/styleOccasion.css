@@ -21,10 +21,10 @@
 }
 
 .card .border {
-  background-color: #007bff;
+  background-color: #1789c9;
 }
 .active-switch {
-  background-color: #007bff;
+  background-color: #1789c9;
 }
 
 .blurred,
@@ -44,7 +44,7 @@
   justify-content: space-evenly;
 }
 .personal-info h1 {
-  color: #007bff;
+  color: #1789c9;
 }
 .personal-info-container select {
   height: 40px;
@@ -90,7 +90,7 @@ select option {
   border-bottom: 1px solid #ccc;
 }
 select option:checked {
-  background-color: #007bff;
+  background-color: #1789c9;
   color: #fff;
 }
 .find-btn {
@@ -130,6 +130,6 @@ select option:checked {
 .personal-info hr {
   width: 70%;
   margin: 0 auto;
-  height: 3px;
+  height: 2px;
   margin-bottom: 5rem;
 }

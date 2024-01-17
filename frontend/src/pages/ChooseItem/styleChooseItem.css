@@ -11,7 +11,7 @@
 }
 .choose-container {
   flex-direction: column;
-  margin: 100px 0;
+  margin: 0 0;
 }
 
 .card-footer-find {
@@ -47,4 +47,7 @@
 .swiper-button-next {
   width: 100px;
   color: #1789c9;
+}
+.choose-label {
+  margin-top: 112px;
 }

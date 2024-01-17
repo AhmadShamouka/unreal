@@ -11,12 +11,13 @@
   color: #1789c9;
   transform: translateZ(0);
 }
+
 .card-brand-container {
   justify-content: space-evenly;
 }
 .brand-label {
   color: #1789c9;
-  margin: 110px 0 0 0;
+  margin-top: 112px;
 }
 .hr-line {
   background-color: #1789c9;
