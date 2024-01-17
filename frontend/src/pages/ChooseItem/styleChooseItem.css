@@ -1,6 +1,6 @@
 .choose-items {
   width: 80%;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .swiper-image {
   border-radius: 30px;
@@ -13,7 +13,10 @@
   flex-direction: column;
   margin: 0 0;
 }
-
+.card-footer-find h3,
+h2 {
+  color: #000000;
+}
 .card-footer-find {
   padding: 0 1.5rem;
   position: absolute;

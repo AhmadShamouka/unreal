@@ -106,8 +106,8 @@ const ChooseItem = () => {
                       />
                     </div>
                     <span className="card-footer-find flex center">
-                      <h3>{product.name}</h3>
-                      <h4>Price: ${product.price}</h4>
+                      <h2>{product.name}</h2>
+                      <h3>Price: ${product.price}</h3>
                     </span>
                   </div>
                 </SwiperSlide>
