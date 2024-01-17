@@ -141,7 +141,7 @@ button {
 }
 .nav__x {
   position: fixed;
-  transition: 0.5s ease-in-out;
+
   right: 45.5%;
   background: url("../../common/images/x.png");
   background-size: contain;
@@ -157,7 +157,7 @@ button {
   }
   .nav__x {
     position: fixed;
-    transition: 0.5s ease-in-out;
+    transition: 1.5s ease;
     right: 42.5%;
   }
 }
