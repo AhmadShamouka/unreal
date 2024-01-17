@@ -11,7 +11,10 @@
   color: #1789c9;
   transform: translateZ(0);
 }
-
+.brand-container {
+  flex-direction: column;
+  margin: 0 0;
+}
 .card-brand-container {
   justify-content: space-evenly;
 }
@@ -58,4 +61,10 @@
 
 .card-brand:is(:hover, :focus-visible) {
   --hover: 1;
+}
+@media screen and (max-width: 968px) {
+  .card-brand-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
