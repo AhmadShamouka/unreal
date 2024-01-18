@@ -83,7 +83,24 @@ const ChooseItem = () => {
             navigation
             pagination={{ clickable: true }}
           >
-         
+            <div>
+              {images.map((image, index) => (
+                <SwiperSlide onClick={handleSubmit}>
+                  <div key={index}>
+                    <div className="slide-container">
+                      <img
+                        type="file"
+                        id="imageInput"
+                        src={image + 1}
+                        alt={`Product ${index + 1}`}
+                        className="swiper-image"
+                        loading="lazy"
+                      />
+                    </div>
+                    {/* <span className="card-footer-find flex center">
+                      <h2>{product.name}</h2>
+                      <h3>Price: ${product.price}</h3>
+                    </span> */}
                   </div>
                 </SwiperSlide>
               ))}
