@@ -99,7 +99,7 @@ const ChooseItem = () => {
                       />
                     </div>
                     <span className="card-footer-find flex center">
-                      <h2>{product.name}</h2>
+                      <h3>{product.name}</h3>
                       <h3>Price: ${product.price}</h3>
                     </span>
                   </div>
