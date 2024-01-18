@@ -1,26 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import UserNavbar from "../../components/UserNavbar/UserNavbar";
 import Footer from "../../components/footer/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import wedding from "../../common/images/dress2.jpeg";
-import sp from "../../common/images/sp.webp";
 import "./styleChooseItem.css";
-
+import cheerio from "cheerio";
 const ChooseItem = () => {
+  const [images, setImages] = useState([]);
   const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     name: "wedding",
     price: "2992",
     image: null,
   });
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          `https://api.allorigins.win/raw?url=https://www.azadea.com/en/women/clothing/dresses`
+        );
+      
+      } catch (e) {
+        console.log(e);
+        console.log("doesn't exist");
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const handleSubmit = async (e) => {
     const file = e.target.files;
     setFormData((prevData) => ({
@@ -46,34 +60,6 @@ const ChooseItem = () => {
     }
   };
 
-  const products = [
-    {
-      name: "Product1",
-      price: 25,
-      image: sp,
-    },
-    {
-      name: "Product2",
-      price: 35,
-      image: sp,
-    },
-    {
-      name: "Product3",
-      price: 20,
-      image: sp,
-    },
-    {
-      name: "Product4",
-      price: 50,
-      image: sp,
-    },
-    {
-      name: "Product5",
-      price: 30,
-      image: sp,
-    },
-  ];
-
   return (
     <div>
       <UserNavbar />
@@ -91,24 +77,7 @@ const ChooseItem = () => {
             navigation
             pagination={{ clickable: true }}
           >
-            <div>
-              {products.map((product, index) => (
-                <SwiperSlide onClick={handleSubmit}>
-                  <div key={index}>
-                    <div className="slide-container">
-                      <img
-                        type="file"
-                        id="imageInput"
-                        src={product.image}
-                        alt={product.name}
-                        className="swiper-image"
-                        loading="lazy"
-                      />
-                    </div>
-                    <span className="card-footer-find flex center">
-                      <h2>{product.name}</h2>
-                      <h3>Price: ${product.price}</h3>
-                    </span>
+         
                   </div>
                 </SwiperSlide>
               ))}

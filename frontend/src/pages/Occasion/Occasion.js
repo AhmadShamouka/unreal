@@ -20,7 +20,6 @@ import Footer from "../../components/footer/Footer";
 import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
-import OpenAI from "openai";
 
 const Occasion = () => {
   const [active, setActive] = useState("errorMsg");
