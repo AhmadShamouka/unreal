@@ -12,7 +12,7 @@ cap = cv2.VideoCapture(0)
 fixedRatio = 262 / 192
 while True:
     success, img = cap.read()
-    img = detector.findPose(img)
+    img = detector.findPose(img, draw=False)
     lmList, bboxInfo = detector.findPosition(img, draw=False, bboxWithHands=False)
     if lmList:
         lm11 = lmList[11][0:2]
