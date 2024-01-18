@@ -25,7 +25,13 @@ const ChooseItem = () => {
         const res = await axios.get(
           `https://api.allorigins.win/raw?url=https://www.azadea.com/en/women/clothing/dresses`
         );
-      
+        const $ = cheerio.load(res.data);
+        const imageElements = $(".lazyload");
+        const imageUrls = [];
+        imageElements.each((index, image) => {
+          imageUrls.push($(image).attr("data-lazysrc"));
+        });
+        setImages(imageUrls);
       } catch (e) {
         console.log(e);
         console.log("doesn't exist");
