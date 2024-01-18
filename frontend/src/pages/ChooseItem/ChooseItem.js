@@ -12,7 +12,6 @@ import "swiper/css/scrollbar";
 import "./styleChooseItem.css";
 import cheerio from "cheerio";
 const ChooseItem = () => {
-  const [images, setImages] = useState([]);
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [formData, setFormData] = useState();
@@ -20,7 +19,7 @@ const ChooseItem = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `https://api.allorigins.win/raw?url=https://www.azadea.com/en/women/clothing/dresses`
+          `https://api.allorigins.win/raw?url=https://www.azadea.com/en/mens`
         );
         const $ = cheerio.load(res.data);
         const productElements = $(".product");
@@ -79,7 +78,7 @@ const ChooseItem = () => {
         <div className="choose-items">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={0}
+            spaceBetween={10}
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
