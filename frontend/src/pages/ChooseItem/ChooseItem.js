@@ -14,11 +14,8 @@ import cheerio from "cheerio";
 const ChooseItem = () => {
   const [images, setImages] = useState([]);
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: "wedding",
-    price: "2992",
-    image: null,
-  });
+  const [products, setProducts] = useState([]);
+  const [formData, setFormData] = useState();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,12 +23,16 @@ const ChooseItem = () => {
           `https://api.allorigins.win/raw?url=https://www.azadea.com/en/women/clothing/dresses`
         );
         const $ = cheerio.load(res.data);
-        const imageElements = $(".lazyload");
-        const imageUrls = [];
-        imageElements.each((index, image) => {
-          imageUrls.push($(image).attr("data-lazysrc"));
+        const productElements = $(".product");
+        const productsArray = [];
+        productElements.each((index, product) => {
+          const imageUrl = $(product).find(".lazyload").attr("data-lazysrc");
+          const name = $(product).find(".link.js-producttile-link").text();
+          const price = $(product).find(".product-sales-price").text();
+          productsArray.push({ imageUrl, name, price });
         });
-        setImages(imageUrls);
+        setProducts(productsArray);
+        console.log(products);
       } catch (e) {
         console.log(e);
         console.log("doesn't exist");
@@ -84,23 +85,23 @@ const ChooseItem = () => {
             pagination={{ clickable: true }}
           >
             <div>
-              {images.map((image, index) => (
+              {products.map((product, index) => (
                 <SwiperSlide onClick={handleSubmit}>
                   <div key={index}>
                     <div className="slide-container">
                       <img
                         type="file"
                         id="imageInput"
-                        src={image + 1}
+                        src={product.imageUrl}
                         alt={`Product ${index + 1}`}
                         className="swiper-image"
                         loading="lazy"
                       />
                     </div>
-                    {/* <span className="card-footer-find flex center">
+                    <span className="card-footer-find flex center">
                       <h2>{product.name}</h2>
                       <h3>Price: ${product.price}</h3>
-                    </span> */}
+                    </span>
                   </div>
                 </SwiperSlide>
               ))}
