@@ -12,7 +12,7 @@ cap = cv2.VideoCapture(0)
 fixedRatio = 262 / 192
 while True:
     success, img = cap.read()
-    img = detector.findPose(img, draw=False)
+    img = detector.findPose(img)
     lmList, bboxInfo = detector.findPosition(img, draw=False, bboxWithHands=False)
     if lmList:
         lm11 = lmList[11][0:2]
@@ -20,7 +20,6 @@ while True:
     
     imgShirt = cv2.imread(os.path.join(shirtFolderPath, listShirts[1]), cv2.IMREAD_UNCHANGED)
     height, width, _ = imgShirt.shape
-    print(width,height)
     widthOfShirt = int((lm11[0] - lm12[0]) * fixedRatio)
     heightOfShirt = int(widthOfShirt * shirtRatioHeightWidth)
     currentScale=(lm11[0] - lm12[0])/190  
