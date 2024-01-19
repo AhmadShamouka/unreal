@@ -56,7 +56,8 @@ const ChooseItem = () => {
     setImage(imageFile);
   };
 
-
+  const handleSubmit = async () => {
+    console.log(image);
 
     // const file = e.target.files;
     // setFormData((prevData) => ({
