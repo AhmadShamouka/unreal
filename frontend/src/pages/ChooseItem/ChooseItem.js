@@ -58,6 +58,14 @@ const ChooseItem = () => {
 
   const handleSubmit = async () => {
     console.log(image);
+    try {
+      const formData = new FormData();
+      formData.append("image", image);
+
+      console.log(formData);
+    } catch (error) {
+      console.log(error);
+    }
 
     // const file = e.target.files;
     // setFormData((prevData) => ({
