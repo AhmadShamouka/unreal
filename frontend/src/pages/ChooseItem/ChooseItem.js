@@ -52,7 +52,6 @@ const ChooseItem = () => {
   const handleImageChange = async (selectedImageUrl) => {
     const imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
     setImage(imageFile);
-
   };
 
   const handleSubmit = async () => {
@@ -73,6 +72,20 @@ const ChooseItem = () => {
     }
     console.log(data);
     try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/add-clothes",
+        data,
+        {
+          headers: {
+            Authorization: authorization,
+          },
+        }
+      );
+
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
