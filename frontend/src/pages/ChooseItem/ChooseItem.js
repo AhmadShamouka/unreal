@@ -66,6 +66,9 @@ const ChooseItem = () => {
         formData
       );
       console.log(formData);
+      if (response.ok) {
+        console.log("Image uploaded successfully");
+      }
     } catch (error) {
       console.log(error);
     }
