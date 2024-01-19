@@ -16,7 +16,14 @@ const ChooseItem = () => {
   // const navigate = useNavigate();
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
-
+  const [data, setData] = useState({
+    name: "",
+    price: null,
+    image: null,
+  });
+  const [formData, setFormData] = useState({});
+  const token = localStorage.getItem("jwtToken");
+  const authorization = "Bearer " + token;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -75,6 +82,8 @@ const ChooseItem = () => {
     } catch (error) {
       console.log(error);
     }
+    console.log(authorization);
+
     console.log(data);
     try {
       const response = await axios.post(
