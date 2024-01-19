@@ -52,6 +52,11 @@ const ChooseItem = () => {
   const handleImageChange = async (selectedImageUrl) => {
     const imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
     setImage(imageFile);
+    setData({
+      name: "ahmad",
+      price: 12,
+      image: imageFile,
+    });
   };
 
   const handleSubmit = async () => {
