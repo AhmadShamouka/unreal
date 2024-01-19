@@ -112,7 +112,7 @@ const ChooseItem = () => {
       console.error(error);
     }
   };
-
+  const handleBuy = () => {};
   return (
     <div>
       <UserNavbar />
