@@ -14,7 +14,7 @@ import cheerio from "cheerio";
 
 const ChooseItem = () => {
   // const navigate = useNavigate();
-
+  const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
   const [formData, setFormData] = useState({});
   useEffect(() => {
@@ -41,7 +41,13 @@ const ChooseItem = () => {
 
     fetchData();
   }, []);
-
+  const urlToImageFile = async (url, filename) => {
+    const response = await fetch(url);
+    const data = await response.blob();
+    const metadata = { type: data.type };
+    const file = new File([data], filename, metadata);
+    return file;
+  };
 
 
 
