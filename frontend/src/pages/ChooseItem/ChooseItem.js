@@ -134,7 +134,7 @@ const ChooseItem = () => {
               {products.map((product, index) => (
                 <SwiperSlide>
                   <div key={index}>
-                    <div className="slide-container">
+                    <div className="slide-container flex center">
                       <img
                         type="file"
                         id="imageInput"
@@ -161,6 +161,9 @@ const ChooseItem = () => {
               ))}
             </div>
           </Swiper>
+          <div className="flex center">
+            <Button text="BUY IT" onClick={handleBuy} />
+          </div>
         </div>
       </div>
       <Footer />
