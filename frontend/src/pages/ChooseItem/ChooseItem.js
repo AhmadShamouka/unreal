@@ -125,6 +125,9 @@ const ChooseItem = () => {
                         alt={`Product ${index + 1}`}
                         className="swiper-image"
                         loading="lazy"
+                        onClick={() => {
+                          handleImageChange(product.imageUrl);
+                        }}
                       />
                     </div>
                     <span className="card-footer-find flex center">
