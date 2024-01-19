@@ -52,6 +52,8 @@ def clothes_TryOn():
             cv2.imshow("image", img)
             cv2.waitKey(1)
 
+    except Exception as e:
+        print( f"Error: {str(e)}")
 
 if __name__ == '__main__':
     app.run(port=5000)
