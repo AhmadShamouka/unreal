@@ -11,10 +11,12 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./styleChooseItem.css";
 import cheerio from "cheerio";
+
 const ChooseItem = () => {
   // const navigate = useNavigate();
+
   const [products, setProducts] = useState([]);
-  // const [formData, setFormData] = useState();
+  const [formData, setFormData] = useState({});
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -31,9 +33,8 @@ const ChooseItem = () => {
           productsArray.push({ imageUrl, name, price });
         });
         setProducts(productsArray);
-        console.log(products);
-      } catch (e) {
-        console.log(e);
+      } catch (error) {
+        console.log(error);
         console.log("doesn't exist");
       }
     };
@@ -41,15 +42,10 @@ const ChooseItem = () => {
     fetchData();
   }, []);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    try {
-      const response = await axios.get("http://localhost:4000/runPython");
-      console.log(response.data);
-    } catch (error) {
-      console.log(error);
-    }
+
+
+
     // const file = e.target.files;
     // setFormData((prevData) => ({
     //   ...prevData,
@@ -92,7 +88,7 @@ const ChooseItem = () => {
           >
             <div>
               {products.map((product, index) => (
-                <SwiperSlide onClick={handleSubmit}>
+                <SwiperSlide>
                   <div key={index}>
                     <div className="slide-container">
                       <img
