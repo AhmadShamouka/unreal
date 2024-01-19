@@ -14,7 +14,8 @@ def clothes_TryOn():
     print("Files: ", request.files)
     try:
         
-        
+        image = request.files['image']
+    
      
         
       
