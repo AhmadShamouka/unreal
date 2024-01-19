@@ -8,7 +8,11 @@ from pathlib import Path
 app = Flask(__name__)
 CORS(app)
 
-
+@app.route('/clothesTryOn', methods=['POST'])
+def clothes_TryOn():
+    print("Method: ", request.method)
+    print("Files: ", request.files)
+    try:
         
         
      
