@@ -16,8 +16,8 @@ def clothes_TryOn():
         
         image = request.files['image']
     
-     
-        
+        image_path = 'Resources/image.png'       
+        image.save(image_path)
       
        
         print("1")
