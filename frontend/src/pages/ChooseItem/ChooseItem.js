@@ -56,12 +56,12 @@ const ChooseItem = () => {
     return file;
   };
 
-  const handleImageChange = async (selectedImageUrl) => {
+  const handleImageChange = async (selectedImageUrl, name, price) => {
     const imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
     setImage(imageFile);
     setData({
-      name: "ahmad",
-      price: 12,
+      name: name,
+      price: price,
       image: imageFile,
     });
   };
@@ -132,7 +132,11 @@ const ChooseItem = () => {
                         className="swiper-image"
                         loading="lazy"
                         onClick={() => {
-                          handleImageChange(product.imageUrl);
+                          handleImageChange(
+                            product.imageUrl,
+                            product.name,
+                            product.price
+                          );
                           handleSubmit();
                         }}
                       />
