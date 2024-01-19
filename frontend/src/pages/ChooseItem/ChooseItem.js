@@ -92,6 +92,7 @@ const ChooseItem = () => {
     const formData = new FormData();
     formData.append("image", data.image);
     formData.append("name", data.name);
+    formData.append("price", data.price);
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/add-clothes",
