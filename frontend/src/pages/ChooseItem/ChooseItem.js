@@ -61,7 +61,10 @@ const ChooseItem = () => {
     try {
       const formData = new FormData();
       formData.append("image", image);
-
+      const response = await axios.post(
+        "http://localhost:5000/clothesTryOn",
+        formData
+      );
       console.log(formData);
     } catch (error) {
       console.log(error);
