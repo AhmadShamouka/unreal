@@ -21,7 +21,7 @@ const ChooseItem = () => {
     price: null,
     image: null,
   });
-  const [formData, setFormData] = useState({});
+
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   useEffect(() => {
@@ -55,13 +55,19 @@ const ChooseItem = () => {
     const file = new File([data], filename, metadata);
     return file;
   };
-
+  const changeFileName = (file, newFileName) => {
+    return new File([file], newFileName, {
+      type: file.type,
+      lastModified: new Date(),
+    });
+  };
   const handleImageChange = async (selectedImageUrl, name, price) => {
-    const imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
+    let imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
+    imageFile = changeFileName(imageFile, "newFileName.png");
     setImage(imageFile);
     setData({
       name: name,
-      price: price,
+      price: 12,
       image: imageFile,
     });
   };
@@ -69,11 +75,12 @@ const ChooseItem = () => {
   const handleSubmit = async () => {
     console.log(image);
     try {
-      const formData = new FormData();
-      formData.append("image", image);
+      const formDataImage = new FormData();
+      formDataImage.append("image", image);
+
       const response = await axios.post(
         "http://localhost:5000/clothesTryOn",
-        formData
+        formDataImage
       );
       console.log(formData);
       if (response.ok) {
@@ -82,13 +89,12 @@ const ChooseItem = () => {
     } catch (error) {
       console.log(error);
     }
-    console.log(authorization);
-
-    console.log(data);
+    const formData = new FormData();
+    formData.append("image", image);
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/add-clothes",
-        data,
+        formData,
         {
           headers: {
             Authorization: authorization,
