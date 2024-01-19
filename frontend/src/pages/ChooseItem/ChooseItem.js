@@ -48,7 +48,13 @@ const ChooseItem = () => {
     const file = new File([data], filename, metadata);
     return file;
   };
-
+  useEffect(() => {
+    handleSubmit();
+  }, [image]);
+  const handleImageChange = async (selectedImageUrl) => {
+    const imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
+    setImage(imageFile);
+  };
 
 
 
