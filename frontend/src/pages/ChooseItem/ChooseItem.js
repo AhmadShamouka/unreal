@@ -16,7 +16,7 @@ const ChooseItem = () => {
   // const navigate = useNavigate();
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
-  const [formData, setFormData] = useState({});
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -48,12 +48,11 @@ const ChooseItem = () => {
     const file = new File([data], filename, metadata);
     return file;
   };
-  useEffect(() => {
-    handleSubmit();
-  }, [image]);
+
   const handleImageChange = async (selectedImageUrl) => {
     const imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
     setImage(imageFile);
+
   };
 
   const handleSubmit = async () => {
@@ -72,28 +71,8 @@ const ChooseItem = () => {
     } catch (error) {
       console.log(error);
     }
-
-    // const file = e.target.files;
-    // setFormData((prevData) => ({
-    //   ...prevData,
-    //   image: file,
-    // }));
-
-    // const formDataToSend = new FormData();
-    // formDataToSend.append("name", formData.name);
-    // formDataToSend.append("price", formData.price);
-    // formDataToSend.append("image", formData.image);
-    // try {
-    //   const response = await axios.post(
-    //     "http://127.0.0.1:8000/api/add-clothes",
-    //     formDataToSend
-    //   );
-    //   const header = response.data.authorisation.token;
-    //   localStorage.setItem("jwtToken", header);
-    //   navigate("/");
-    // } catch (error) {
-    //   console.error(error);
-    // }
+    console.log(data);
+    try {
   };
 
   return (
@@ -127,6 +106,7 @@ const ChooseItem = () => {
                         loading="lazy"
                         onClick={() => {
                           handleImageChange(product.imageUrl);
+                          handleSubmit();
                         }}
                       />
                     </div>
