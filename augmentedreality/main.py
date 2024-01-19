@@ -18,8 +18,8 @@ def clothes_TryOn():
     
         image_path = 'Resources/image.png'       
         image.save(image_path)
-      
-       
+        image_path = 'Resources'
+        listShirts = os.listdir(image_path)
         print("1")
         detector = PoseDetector()
 
