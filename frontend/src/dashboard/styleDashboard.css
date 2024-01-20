@@ -9,6 +9,7 @@
   height: 400px;
 }
 .BarChart {
+  flex-direction: column;
   width: 50%;
   height: 400px;
 }

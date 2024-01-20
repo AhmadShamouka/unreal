@@ -79,14 +79,17 @@ const Dashboard = () => {
               <div className="home-users flex center">432 User</div>
             </div>
             <div className="home-users-container">
-              <div className="home-users flex center">432 Occasion</div>
+              <div className="home-users flex center">432 Occasions</div>
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">432 Trail</div>
             </div>
           </div>
           <div className="charts-container flex center">
-            <div className="BarChart flex center">{renderBarChart()}</div>
+            <div className="BarChart flex center">
+              <div>USERS</div>
+              <div>{renderBarChart()}</div>
+            </div>
             <div className="PieChart flex center">{renderPieChart()}</div>
           </div>
         </div>
