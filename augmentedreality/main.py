@@ -5,6 +5,7 @@ import cvzone
 import cv2
 from cvzone.PoseModule import PoseDetector
 from pathlib import Path
+
 app = Flask(__name__)
 CORS(app)
 
@@ -13,23 +14,27 @@ def clothes_TryOn():
     print("Method: ", request.method)
     print("Files: ", request.files)
     try:
-        
         image = request.files['image']
-    
         image_path = 'Resources/image.png'       
         image.save(image_path)
         image_path = 'Resources'
         listShirts = os.listdir(image_path)
-        print("1")
+       
         detector = PoseDetector()
 
         cap = cv2.VideoCapture(0)
 
         cv2.namedWindow("image", cv2.WINDOW_NORMAL)
+        
+
+        lm11 = [0, 0]
+        lm12 = [0, 0]
+
         while True:
             success, img = cap.read()
             img = detector.findPose(img, draw=False)
             lmList, bboxInfo = detector.findPosition(img, draw=False, bboxWithHands=False)
+            
             if lmList:
                 lm11 = lmList[11][0:2]
                 lm12 = lmList[12][0:2]
@@ -53,7 +58,7 @@ def clothes_TryOn():
             cv2.waitKey(1)
 
     except Exception as e:
-        print( f"Error: {str(e)}")
+        print(f"Error: {str(e)}")
 
 if __name__ == '__main__':
     app.run(port=5000)
