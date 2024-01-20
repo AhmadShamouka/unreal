@@ -23,8 +23,6 @@ const Dashboard = () => {
     { name: "Group E", value: 278 },
   ];
 
-  const COLORS = ["#ffff", "#132214", "#00C49F", "#FFBB28", "#FF8042"];
-
   const renderPieChart = () => (
     <ResponsiveContainer width="100%" height="100%">
       <PieChart>
@@ -58,24 +56,16 @@ const Dashboard = () => {
     <div className="dashboard flex">
       <div className="side-nav flex center">
         <div className="side-title flex center">
-          <div className="logo-nav" href="/"></div>
+          <div className="logo-nav"></div>
           <h1>UNREALFIT</h1>
           <hr className="dash-hr-line" />
         </div>
 
         <div className="side-links flex center">
-          <a href="/" onClick={() => handlePageChange("home")}>
-            Dashboard
-          </a>
-          <a href="/" onClick={() => handlePageChange("page1")}>
-            Users
-          </a>
-          <a href="/" onClick={() => handlePageChange("page2")}>
-            Clothes
-          </a>
-          <a href="/" onClick={() => handlePageChange("page3")}>
-            Trails
-          </a>
+          <a onClick={() => handlePageChange("home")}>Dashboard</a>
+          <a onClick={() => handlePageChange("page1")}>Users</a>
+          <a onClick={() => handlePageChange("page2")}>Clothes</a>
+          <a onClick={() => handlePageChange("page3")}>Trails</a>
         </div>
       </div>
 

@@ -30,7 +30,7 @@
   flex-direction: column;
 }
 .side-links a {
-  text-align: left;
+  text-align: center;
   height: 10%;
   width: 100%;
   color: #1789c9;

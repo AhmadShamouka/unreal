@@ -83,7 +83,6 @@ const ChooseItem = () => {
         "http://localhost:5000/clothesTryOn",
         formDataImage
       );
-      console.log(formData);
       if (response.ok) {
         console.log("Image uploaded successfully");
       }
