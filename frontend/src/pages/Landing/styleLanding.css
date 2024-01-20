@@ -44,11 +44,17 @@ section h1 {
 @media screen and (max-width: 1268px) {
   .landing {
     position: relative;
-    background-size: 100% 100vh;
+    background-size: 100% 60vh;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .landing h1 {
+    top: 120px;
+  }
+  .landing button {
+    top: 280px;
   }
 }
 .reveal-div {
