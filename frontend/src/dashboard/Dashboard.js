@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-
+import { FaUser } from "react-icons/fa";
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
@@ -65,30 +65,32 @@ const Dashboard = () => {
 
         <div className="side-links flex center">
           <a onClick={() => handlePageChange("home")}>Dashboard</a>
-          <a onClick={() => handlePageChange("page1")}>Users</a>
-          <a onClick={() => handlePageChange("page2")}>Clothes</a>
-          <a onClick={() => handlePageChange("page3")}>Trails</a>
+          <a onClick={() => handlePageChange("users")}>Users</a>
+          <a onClick={() => handlePageChange("occasions")}>Occasions</a>
+          <a onClick={() => handlePageChange("clothes")}>Clothes</a>
         </div>
       </div>
 
-      <div className="dashboard-container flex center">
-        <h2>Welcome to the Admin Dashboard!</h2>
-        <div className="home-container flex center">
-          <div className="home-users-container">
-            <div className="home-users flex center">432 User</div>
+      {currentPage === "home" && (
+        <div id="clothes" className="dashboard-container flex center">
+          <h2>Welcome to the Admin Dashboard!</h2>
+          <div className="home-container flex center">
+            <div className="home-users-container">
+              <div className="home-users flex center">432 User</div>
+            </div>
+            <div className="home-users-container">
+              <div className="home-users flex center">432 Occasions</div>
+            </div>
+            <div className="home-users-container">
+              <div className="home-users flex center">432 Trails</div>
+            </div>
           </div>
-          <div className="home-users-container">
-            <div className="home-users flex center">432 Occasions</div>
-          </div>
-          <div className="home-users-container">
-            <div className="home-users flex center">432 Trails</div>
+          <div className="charts-container flex center">
+            <div className="BarChart flex center">{renderBarChart()}</div>
+            <div className="PieChart flex center">{renderPieChart()}</div>
           </div>
         </div>
-        <div className="charts-container flex center">
-          <div className="BarChart flex center">{renderBarChart()}</div>
-          <div className="PieChart flex center">{renderPieChart()}</div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

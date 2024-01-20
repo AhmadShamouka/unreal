@@ -80,7 +80,7 @@ const ChooseItem = () => {
       formDataImage.append("image", image);
 
       const response = await axios.post(
-        "http://localhost:5000/clothesTryOn",
+        "http://localhost:5000/convert_to_png",
         formDataImage
       );
       if (response.ok) {
