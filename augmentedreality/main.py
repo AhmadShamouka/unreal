@@ -24,7 +24,7 @@ def convert_to_png():
     
     img = Image.open(image_data)
     img.save(output_path, 'PNG')
-    input_img = Image.open(input_path)
+    input_img = Image.open(output_path)
     output_img = remove(input_img)
     output_img.save(output_path)
     clothes_TryOn()
