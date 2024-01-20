@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
-import { PieChart, Pie, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -21,10 +21,10 @@ const Dashboard = () => {
     { name: "Group C", value: 300 },
     { name: "Group D", value: 200 },
     { name: "Group E", value: 278 },
-    { name: "Group F", value: 189 },
   ];
+
   const renderPieChart = () => (
-    <ResponsiveContainer width="100%" height={400}>
+    <ResponsiveContainer width="100%" height="100%">
       <PieChart>
         <Pie
           dataKey="value"
@@ -33,10 +33,8 @@ const Dashboard = () => {
           cx="50%"
           cy="50%"
           outerRadius={80}
-          fill="#ffff"
           label
-        />
-        <Tooltip />
+        ></Pie>
       </PieChart>
     </ResponsiveContainer>
   );
@@ -53,14 +51,13 @@ const Dashboard = () => {
   return (
     <div className="dashboard flex">
       <div className="side-nav flex center">
-        <div className="side-title">
-          <h1>Dashboard</h1>
-        </div>
+        <div className="side-title flex center"></div>
+
         <div className="side-links flex center">
-          <a onClick={() => handlePageChange("home")}>Home</a>
+          <a onClick={() => handlePageChange("home")}>Dashboard</a>
           <a onClick={() => handlePageChange("page1")}>Users</a>
-          <button onClick={() => handlePageChange("page2")}>Clothes</button>
-          <button onClick={() => handlePageChange("page3")}>Trails</button>
+          <a onClick={() => handlePageChange("page2")}>Clothes</a>
+          <a onClick={() => handlePageChange("page3")}>Trails</a>
         </div>
       </div>
 
@@ -68,15 +65,12 @@ const Dashboard = () => {
         <h2>Welcome to the Admin Dashboard!</h2>
         <div className="home-container flex center">
           <div className="home-users-container">
-            <label className="home-label flex center">Users</label>
             <div className="home-users flex center">432 User</div>
           </div>
           <div className="home-users-container">
-            <label className="home-label flex center">Occasions</label>
             <div className="home-users flex center">432 Occasions</div>
           </div>
           <div className="home-users-container">
-            <label className="home-label flex center">Trails</label>
             <div className="home-users flex center">432 Trails</div>
           </div>
         </div>
