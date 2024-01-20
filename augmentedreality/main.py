@@ -14,6 +14,21 @@ CORS(app)
 
     
 @app.route('/convert_to_png', methods=['POST'])
+
+
+def convert_to_png():
+
+
+
+    
+
+
+
+
+
+
+   
+
 def clothes_TryOn():
     try:
         image_path = 'Resources'
