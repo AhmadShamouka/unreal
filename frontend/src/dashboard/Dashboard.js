@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { FaUser } from "react-icons/fa";
+
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
@@ -89,6 +89,16 @@ const Dashboard = () => {
             <div className="BarChart flex center">{renderBarChart()}</div>
             <div className="PieChart flex center">{renderPieChart()}</div>
           </div>
+        </div>
+      )}
+
+      {currentPage === "users" && (
+        <div id="users" className="dashboard-container flex center"></div>
+      )}
+
+      {currentPage === "occasions" && (
+        <div id="occasions" className="dashboard-container flex center">
+          {/* Your occasions page content */}
         </div>
       )}
     </div>
