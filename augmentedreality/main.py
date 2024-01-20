@@ -23,7 +23,7 @@ def convert_to_png():
     image_data = BytesIO(image_file.read())
     
     img = Image.open(image_data)
-
+    img.save(output_path, 'PNG')
 
 
 
