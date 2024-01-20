@@ -20,7 +20,7 @@ def convert_to_png():
     image_file = request.files['image']
     output_path = "Resources/output.png"
 
-
+    image_data = BytesIO(image_file.read())
     
 
 
