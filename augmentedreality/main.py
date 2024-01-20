@@ -25,6 +25,7 @@ def convert_to_png():
     img = Image.open(image_data)
     img.save(output_path, 'PNG')
     input_img = Image.open(input_path)
+    output_img = remove(input_img)
 
    
 
