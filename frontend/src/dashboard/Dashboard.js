@@ -34,7 +34,11 @@ const Dashboard = () => {
           cy="50%"
           outerRadius={80}
           label
-        ></Pie>
+        >
+          {PieData.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
       </PieChart>
     </ResponsiveContainer>
   );
