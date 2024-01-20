@@ -51,7 +51,11 @@ const Dashboard = () => {
   return (
     <div className="dashboard flex">
       <div className="side-nav flex center">
-        <div className="side-title flex center"></div>
+        <div className="side-title flex center">
+          <div className="logo-nav" href="/"></div>
+          <h1>UNREALFIT</h1>
+          <hr className="dash-hr-line" />
+        </div>
 
         <div className="side-links flex center">
           <a href="/" onClick={() => handlePageChange("home")}>
