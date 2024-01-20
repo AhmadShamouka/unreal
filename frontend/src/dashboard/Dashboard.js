@@ -26,7 +26,7 @@ const Dashboard = () => {
   const COLORS = ["pink", "green", "lightblue", "yellow", "purple"];
 
   const renderPieChart = () => (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer width={500} height={300}>
       <PieChart>
         <Pie
           dataKey="value"
@@ -34,7 +34,7 @@ const Dashboard = () => {
           data={PieData}
           cx="50%"
           cy="50%"
-          outerRadius={80}
+          outerRadius={120}
           label
         >
           {PieData.map((entry, index) => (
@@ -45,7 +45,7 @@ const Dashboard = () => {
     </ResponsiveContainer>
   );
   const renderBarChart = () => (
-    <BarChart width={500} height={300} data={barChartData}>
+    <BarChart width={500} height={350} data={barChartData}>
       <XAxis dataKey="name" stroke="#ffff" />
       <YAxis stroke="#ffff" />
       <Tooltip />
@@ -73,7 +73,6 @@ const Dashboard = () => {
 
       {currentPage === "home" && (
         <div id="clothes" className="dashboard-container flex center">
-          <h2>Welcome to the Admin Dashboard!</h2>
           <div className="home-container flex center">
             <div className="home-users-container">
               <div className="home-users flex center">432 User</div>
@@ -86,11 +85,14 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="charts-container flex center">
-            <div className="BarChart flex center">
-              <div>USERS</div>
-              <div>{renderBarChart()}</div>
+            <div className="barChart-container flex center">
+              <h2>Users Style</h2>
+              <div className="BarChart flex center">{renderBarChart()}</div>
             </div>
-            <div className="PieChart flex center">{renderPieChart()}</div>
+            <div className="barChart-container flex center">
+              <h2>Users Occasions</h2>
+              <div className="PieChart flex center">{renderPieChart()}</div>
+            </div>
           </div>
         </div>
       )}
