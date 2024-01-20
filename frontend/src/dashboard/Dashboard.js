@@ -23,6 +23,8 @@ const Dashboard = () => {
     { name: "Group E", value: 278 },
   ];
 
+  const COLORS = ["pink", "green", "lightblue", "yellow", "purple"];
+
   const renderPieChart = () => (
     <ResponsiveContainer width="100%" height="100%">
       <PieChart>
