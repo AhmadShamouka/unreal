@@ -2,34 +2,25 @@ from flask import Flask, request
 from flask_cors import CORS
 import os
 import cvzone
+from io import BytesIO
 import cv2
 from cvzone.PoseModule import PoseDetector
 from pathlib import Path
-
+from rembg import remove
+from PIL import Image
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/clothesTryOn', methods=['POST'])
+
+    
+@app.route('/convert_to_png', methods=['POST'])
 def clothes_TryOn():
-    print("Method: ", request.method)
-    print("Files: ", request.files)
     try:
-        image = request.files['image']
-        image_path = 'Resources/image.png'       
-        image.save(image_path)
         image_path = 'Resources'
         listShirts = os.listdir(image_path)
-       
         detector = PoseDetector()
-
         cap = cv2.VideoCapture(0)
-
         cv2.namedWindow("image", cv2.WINDOW_NORMAL)
-        
-
-        lm11 = [0, 0]
-        lm12 = [0, 0]
-
         while True:
             success, img = cap.read()
             img = detector.findPose(img, draw=False)
