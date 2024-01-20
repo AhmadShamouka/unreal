@@ -64,12 +64,12 @@
 .home-container {
   height: 120px;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .home-users {
   font-size: 20px;
-
   margin-top: 10px;
+  text-align: center;
   color: #1789c9;
   height: 90px;
   width: 100%;
@@ -90,7 +90,7 @@
   text-align: center;
   color: #ffffff;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1070px) {
   .side-title h1 {
     color: #1789c9;
     font-size: medium;

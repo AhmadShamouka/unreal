@@ -64,10 +64,10 @@ const Dashboard = () => {
         </div>
 
         <div className="side-links flex center">
-          <a onClick={() => handlePageChange("home")}>Dashboard</a>
-          <a onClick={() => handlePageChange("users")}>Users</a>
-          <a onClick={() => handlePageChange("occasions")}>Occasions</a>
-          <a onClick={() => handlePageChange("clothes")}>Clothes</a>
+          <h3 onClick={() => handlePageChange("home")}>Dashboard</h3>
+          <h3 onClick={() => handlePageChange("users")}>Users</h3>
+          <h3 onClick={() => handlePageChange("occasions")}>Occasions</h3>
+          <h3 onClick={() => handlePageChange("clothes")}>Clothes</h3>
         </div>
       </div>
 
@@ -79,10 +79,10 @@ const Dashboard = () => {
               <div className="home-users flex center">432 User</div>
             </div>
             <div className="home-users-container">
-              <div className="home-users flex center">432 Occasions</div>
+              <div className="home-users flex center">432 Occasion</div>
             </div>
             <div className="home-users-container">
-              <div className="home-users flex center">432 Trails</div>
+              <div className="home-users flex center">432 Trail</div>
             </div>
           </div>
           <div className="charts-container flex center">
@@ -97,6 +97,11 @@ const Dashboard = () => {
       )}
 
       {currentPage === "occasions" && (
+        <div id="occasions" className="dashboard-container flex center">
+          {/* Your occasions page content */}
+        </div>
+      )}
+      {currentPage === "clothes" && (
         <div id="occasions" className="dashboard-container flex center">
           {/* Your occasions page content */}
         </div>
