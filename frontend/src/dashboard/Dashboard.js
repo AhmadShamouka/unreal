@@ -54,10 +54,18 @@ const Dashboard = () => {
         <div className="side-title flex center"></div>
 
         <div className="side-links flex center">
-          <a onClick={() => handlePageChange("home")}>Dashboard</a>
-          <a onClick={() => handlePageChange("page1")}>Users</a>
-          <a onClick={() => handlePageChange("page2")}>Clothes</a>
-          <a onClick={() => handlePageChange("page3")}>Trails</a>
+          <a href="/" onClick={() => handlePageChange("home")}>
+            Dashboard
+          </a>
+          <a href="/" onClick={() => handlePageChange("page1")}>
+            Users
+          </a>
+          <a href="/" onClick={() => handlePageChange("page2")}>
+            Clothes
+          </a>
+          <a href="/" onClick={() => handlePageChange("page3")}>
+            Trails
+          </a>
         </div>
       </div>
 
