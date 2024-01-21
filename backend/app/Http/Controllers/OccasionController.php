@@ -42,7 +42,7 @@ class OccasionController extends Controller
                 ]);
     
                 $azadeaLink = 'https://www.azadea.com/en/shop-by?q=';
-
+                $clothingSuggestions = $result['choices'][0]['message']['content'];
      
          
                 return response()->json([
