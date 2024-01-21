@@ -10,5 +10,9 @@ const loginSlice = createSlice({
       state.isAuthenticated = true;
       state.username = action.payload.username;
     },
+    logoutSuccess(state) {
+      state.isAuthenticated = false;
+      state.username = "";
+    },
   },
 });
