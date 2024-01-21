@@ -108,28 +108,28 @@ const Occasion = () => {
             <Hexagon
               value="meeting"
               bgImage={meeting}
-              hexaText=" business meeting"
+              hexaText="Business Meeting"
               onClick={() => handleHexagonClick(4, "meeting")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 4}
             />
             <Hexagon
               value="sleepover"
               bgImage={sleepover}
-              hexaText="sleepover"
+              hexaText="Sleepover"
               onClick={() => handleHexagonClick(5, "sleepover")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 5}
             />
             <Hexagon
               value="traditional"
               bgImage={Traditional}
-              hexaText="Traditional occastion"
+              hexaText="Traditional Occastion"
               onClick={() => handleHexagonClick(6, "traditional")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 6}
             />
             <Hexagon
               value="wedding"
               bgImage={wedding}
-              hexaText="wedding events"
+              hexaText="Wedding Events"
               onClick={() => handleHexagonClick(7, "wedding")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 7}
             />
@@ -145,7 +145,7 @@ const Occasion = () => {
             <Hexagon
               value="party"
               bgImage={party}
-              hexaText="party"
+              hexaText="Party"
               onClick={() => handleHexagonClick(9, "party")}
               isBlurred={blurredHexagon !== null && blurredHexagon !== 9}
             />

@@ -17,11 +17,16 @@ const Dashboard = () => {
     { name: "Stylish", uv: 100, pv: 200, amt: 2400 },
   ];
   const PieData = [
-    { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-    { name: "Group C", value: 300 },
-    { name: "Group D", value: 200 },
-    { name: "Group E", value: 278 },
+    { name: "OutDoor Activity", value: 400 },
+    { name: "Beach Vacation", value: 300 },
+    { name: "Athletic Activity", value: 300 },
+    { name: "Traditional Occastion", value: 200 },
+    { name: "Wedding Events", value: 278 },
+    { name: "Casual Outing", value: 400 },
+    { name: "Party", value: 300 },
+    { name: "Graduation Ceremony", value: 300 },
+    { name: "Business Meeting", value: 200 },
+    { name: "Sleepover", value: 278 },
   ];
 
   const COLORS = ["#5eb7eb", "#1789c9", "#608faa", "#5f717c", "#04395a"];
