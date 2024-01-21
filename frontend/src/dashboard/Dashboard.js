@@ -98,6 +98,7 @@ const Dashboard = () => {
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">
+                <FaTshirt />
                 <h4>432 Trail</h4>
               </div>
             </div>
