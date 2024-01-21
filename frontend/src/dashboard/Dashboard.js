@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { FaUser, FaTshirt, FaCalendar } from "react-icons/fa";
+import { FaUser, FaTshirt, FaCalendar, FaVideo } from "react-icons/fa";
 import Button from "../common/base/button/Button";
 import axios from "axios";
 
@@ -161,7 +161,13 @@ const Dashboard = () => {
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaTshirt />
-                <h4>&nbsp;432 Trail</h4>
+                <h4>&nbsp;{clothes?.count} Clothes</h4>
+              </div>
+            </div>
+            <div className="home-users-container">
+              <div className="home-users flex center">
+                <FaVideo />
+                <h4>&nbsp;{clothes?.count} Trails</h4>
               </div>
             </div>
           </div>
