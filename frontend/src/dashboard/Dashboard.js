@@ -135,7 +135,7 @@ const Dashboard = () => {
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaCalendar />
-                <h4>&nbsp;432 Occasion</h4>
+                <h4>&nbsp; {occasion?.count} Occasion</h4>
               </div>
             </div>
             <div className="home-users-container">
