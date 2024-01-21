@@ -48,7 +48,7 @@ const SignUp = () => {
       }
     } catch (error) {
       console.error(error.message);
-      if (error.message === "Request failed with status code 422") {
+      if (error.message == "Request failed with status code 422") {
         setActive("errorMsg-signup");
       }
     }
