@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { FaBeer } from "react-icons/fa";
+import { FaUser, FaTshirt, FaCalendar } from "react-icons/fa";
 import Button from "../common/base/button/Button";
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -86,9 +86,8 @@ const Dashboard = () => {
           <div className="home-container flex center">
             <div className="home-users-container">
               <div className="home-users flex center">
-                <h4>
-                  <FaBeer /> 432 User
-                </h4>
+                <FaUser />
+                <h4>432 User</h4>
               </div>
             </div>
             <div className="home-users-container">
