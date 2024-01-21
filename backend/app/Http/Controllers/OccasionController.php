@@ -35,7 +35,7 @@ class OccasionController extends Controller
                     'messages' => [
                         [
                             'role' => 'user',
-                            'content' => "I need clothes suggestions from this website https://www.azadea.com/en for an upcoming $request->occasion_type. I prefer a $request->style look for $request->season. My budget is $request->budget_range. - Give me suggestions for clothes, only 2 words as a response (no numbers). The name of the shirt and the name of pants or, if it is a dress, the name of the dress.",
+                            'content' => "I need clothes suggestions from this website https://www.azadea.com/en for an upcoming $request->occasion_type. I prefer a $request->style look for $request->season. My budget is $request->budget_range. - Give me suggestions for clothes, 3 words max,remark (the suggestion should be t-shirt or dress only)",
                         ],
                     ],
                     'max_tokens' => 15,
