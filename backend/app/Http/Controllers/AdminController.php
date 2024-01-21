@@ -58,11 +58,11 @@ class AdminController extends Controller
     public function getOccasions(){
             if(Auth::Check()){
                 $getallOccasions = Occasion::all();
-                $usersCount = User::count();
+                $occasionsCount = Occasions::count();
                 return response()->json([
                     'status' => 'success',
                     'response' => $getallOccasions,
-                    
+                    'count'=>$occasionsCount
                 ]);
             }
             return response()->json([
