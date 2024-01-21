@@ -1,16 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { FaUser, FaTshirt, FaCalendar } from "react-icons/fa";
 import Button from "../common/base/button/Button";
+import axios from "axios";
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-
+  useEffect(() => {
+    const handleSubmit = async (e) => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/admin/getusers"
+        );
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    handleSubmit();
+  }, []);
   const barChartData = [
     { name: "Formal", uv: 400, pv: 2400, amt: 2400 },
     { name: "Casual", uv: 300, pv: 2200, amt: 400 },

@@ -29,7 +29,7 @@ const Login = () => {
       localStorage.setItem("jwtToken", header);
       console.log(response.data);
       console.log(header);
-      navigate("/occasion");
+      navigate("/dashboard");
     } catch (error) {
       console.error("Error during form submission:", error);
       if (error.message == "Request failed with status code 401") {
