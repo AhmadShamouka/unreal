@@ -13,6 +13,7 @@ import Brand from "./pages/Brand/Brand";
 import Dashboard from "./dashboard/Dashboard";
 
 function App() {
+  const baseUrl = "/http://127.0.0.1:8000/api/";
   return (
     <div className="App">
       <BrowserRouter>

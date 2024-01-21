@@ -4,6 +4,7 @@ import Input from "../../common/base/inputs/Input";
 import Button from "../../common/base/button/Button";
 import "./styles.css";
 import axios from "axios";
+import baseUrl from "../../App.js";
 import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const [active, setActive] = useState("errorMsg");
@@ -18,7 +19,7 @@ const Login = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(baseUrl);
 
     try {
       const response = await axios.post(
