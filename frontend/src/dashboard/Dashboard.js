@@ -12,7 +12,8 @@ const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
   const [user, setUser] = useState();
   const [occasion, setOccasion] = useState();
-  const [clothes, setClothes] = useState();
+  const [clothe, setClothes] = useState();
+  const [trail, setTrails] = useState();
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -66,6 +67,25 @@ const Dashboard = () => {
           }
         );
         setClothes(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    handleLoadUsers();
+  }, []);
+  useEffect(() => {
+    const handleLoadUsers = async (e) => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/admin/gettrails",
+          {
+            headers: {
+              Authorization: authorization,
+            },
+          }
+        );
+        setTrails(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -161,13 +181,13 @@ const Dashboard = () => {
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaTshirt />
-                <h4>&nbsp;{clothes?.count} Clothes</h4>
+                <h4>&nbsp;{clothe?.count} Clothes</h4>
               </div>
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaVideo />
-                <h4>&nbsp;{clothes?.count} Trails</h4>
+                <h4>&nbsp;{trail?.count} Trails</h4>
               </div>
             </div>
           </div>
