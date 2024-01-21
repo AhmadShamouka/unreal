@@ -58,7 +58,7 @@ class AdminController extends Controller
     public function getOccasions(){
             if(Auth::Check()){
                 $getallOccasions = Occasion::all();
-                $occasionsCount = Occasions::count();
+                $occasionsCount = Occasion::count();
                 return response()->json([
                     'status' => 'success',
                     'response' => $getallOccasions,
@@ -90,9 +90,11 @@ class AdminController extends Controller
     public function getClothes(){
         if(Auth::Check()){
             $getallClothes = Clothes::all();
+            $clothessCount = Clothes::count();
             return response()->json([
                 'status' => 'success',
                 'response' => $getallClothes,
+                'count'=>$clothessCount
             ]);
         }
         return response()->json([
