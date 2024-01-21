@@ -40,6 +40,20 @@ class OccasionController extends Controller
                     ],
                     'max_tokens' => 15,
                 ]);
+                function extractSearchQuery($clothingSuggestions)
+                {
+                
+                    $words = explode(' ', $clothingSuggestions);
+                
+                    $filteredWords = array_filter($words, function ($word) {
+                
+                        return strlen($word) > 2 && !in_array(strtolower($word), ['and', 'or', 'the', 'for',"1","2","3"]);
+                    });
+                
+                    $searchQuery = implode(' ', $filteredWords);
+                
+                    return $searchQuery;
+                }
     
                 $azadeaLink = 'https://www.azadea.com/en/shop-by?q=';
                 $clothingSuggestions = $result['choices'][0]['message']['content'];
@@ -74,18 +88,5 @@ class OccasionController extends Controller
             ]);
         }
     }
-    function extractSearchQuery($clothingSuggestions)
-{
 
-    $words = explode(' ', $clothingSuggestions);
-
-    $filteredWords = array_filter($words, function ($word) {
-
-        return strlen($word) > 2 && !in_array(strtolower($word), ['and', 'or', 'the', 'for',"1","2","3"]);
-    });
-
-    $searchQuery = implode(' ', $filteredWords);
-
-    return $searchQuery;
-}
 }
