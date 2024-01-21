@@ -127,11 +127,13 @@ class AdminController extends Controller
                 return response()->json([
                     'status' => 'success',
                     'response' => $getallTrails,
+                    'count'=>$trailsCount
                 ]);
             }
             return response()->json([
                 'status' => 'failed',
                 'response' =>"Not Signed In",
+               
             ]);
             }
             public function getOneTrail(Request $request){
