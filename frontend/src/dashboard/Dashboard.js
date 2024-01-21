@@ -92,6 +92,7 @@ const Dashboard = () => {
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">
+                <FaCalendar />
                 <h4>432 Occasion</h4>
               </div>
             </div>
