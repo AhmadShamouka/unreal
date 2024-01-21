@@ -12,7 +12,7 @@ const Dashboard = () => {
     setCurrentPage(page);
   };
   useEffect(() => {
-    const handleSubmit = async (e) => {
+    const handleLoadUsers = async (e) => {
       try {
         const response = await axios.get(
           "http://127.0.0.1:8000/api/admin/getusers"
@@ -22,7 +22,7 @@ const Dashboard = () => {
         console.log(error);
       }
     };
-    handleSubmit();
+    handleLoadUsers();
   }, []);
   const barChartData = [
     { name: "Formal", uv: 400, pv: 2400, amt: 2400 },
