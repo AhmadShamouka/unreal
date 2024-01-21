@@ -12,9 +12,9 @@ const Dashboard = () => {
   };
 
   const barChartData = [
-    { name: "a", uv: 400, pv: 2400, amt: 2400 },
-    { name: "b", uv: 300, pv: 2200, amt: 400 },
-    { name: "b", uv: 100, pv: 200, amt: 2400 },
+    { name: "Formal", uv: 400, pv: 2400, amt: 2400 },
+    { name: "Casual", uv: 300, pv: 2200, amt: 400 },
+    { name: "Stylish", uv: 100, pv: 200, amt: 2400 },
   ];
   const PieData = [
     { name: "Group A", value: 400 },
