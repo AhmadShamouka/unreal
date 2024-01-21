@@ -16,3 +16,5 @@ const loginSlice = createSlice({
     },
   },
 });
+
+export const { loginSuccess, logoutSuccess } = loginSlice.actions;
