@@ -21,9 +21,12 @@ class AdminController extends Controller
     
     if(Auth::Check()){
         $getall = User::all();
+        $usersCount = User::count();
         return response()->json([
             'status' => 'success',
             'response' => $getall,
+            'count'=>$usersCount
+            
         ]);
     }
     return response()->json([
