@@ -3,17 +3,17 @@ import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { FaUser, FaTshirt, FaCalendar, FaVideo } from "react-icons/fa";
-import Button from "../common/base/button/Button";
+
 import axios from "axios";
 
 const Dashboard = () => {
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   const [currentPage, setCurrentPage] = useState("home");
-  const [user, setUser] = useState();
-  const [occasion, setOccasion] = useState();
-  const [clothe, setClothes] = useState();
-  const [trail, setTrails] = useState();
+  const [users, setUser] = useState();
+  const [occasions, setOccasion] = useState();
+  const [clothes, setClothes] = useState();
+  const [trails, setTrails] = useState();
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -28,6 +28,7 @@ const Dashboard = () => {
             },
           }
         );
+        console.log(response.data);
         setUser(response.data);
       } catch (error) {
         console.log(error);
@@ -47,6 +48,7 @@ const Dashboard = () => {
             },
           }
         );
+
         setOccasion(response.data);
       } catch (error) {
         console.log(error);
@@ -153,13 +155,10 @@ const Dashboard = () => {
         </div>
         <hr className="dash-hr-line" />
         <div className="side-links flex center">
-          <Button text="Home" onClick={() => handlePageChange("home")} />
-          <Button text="Users" onClick={() => handlePageChange("users")} />
-          <Button
-            text="Occasions"
-            onClick={() => handlePageChange("occasions")}
-          />
-          <Button text="Clothes" onClick={() => handlePageChange("clothes")} />
+          <a onClick={() => handlePageChange("home")}>Home</a>
+          <a onClick={() => handlePageChange("users")}>Users</a>
+          <a onClick={() => handlePageChange("occasions")}>Occasions</a>
+          <a onClick={() => handlePageChange("clothes")}>Clothes</a>
         </div>
       </div>
 
@@ -169,25 +168,25 @@ const Dashboard = () => {
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaUser />
-                <h4>&nbsp;{user?.count} User</h4>
+                <h4>&nbsp;{users?.count} User</h4>
               </div>
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaCalendar />
-                <h4>&nbsp; {occasion?.count} Occasion</h4>
+                <h4>&nbsp; {occasions?.count} Occasion</h4>
               </div>
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaTshirt />
-                <h4>&nbsp;{clothe?.count} Clothes</h4>
+                <h4>&nbsp;{clothes?.count} Clothes</h4>
               </div>
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaVideo />
-                <h4>&nbsp;{trail?.count} Trails</h4>
+                <h4>&nbsp;{trails?.count} Trails</h4>
               </div>
             </div>
           </div>
@@ -205,13 +204,30 @@ const Dashboard = () => {
       )}
 
       {currentPage === "users" && (
-        <div id="users" className="dashboard-container flex center"></div>
+        <div id="users" className="dashboard-container flex center">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users?.map((user) => (
+                <tr key={user.id}>
+                  <td>{user.id}</td>
+                  <td>{user.username}</td>
+                  <td>{user.email}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
 
       {currentPage === "occasions" && (
-        <div id="occasions" className="dashboard-container flex center">
-          {/* Your occasions page content */}
-        </div>
+        <div id="occasions" className="dashboard-container flex center"></div>
       )}
       {currentPage === "clothes" && (
         <div id="occasions" className="dashboard-container flex center">

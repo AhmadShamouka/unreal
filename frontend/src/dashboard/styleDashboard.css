@@ -17,6 +17,7 @@
   color: #1789c9;
   height: 40vh;
   width: 100%;
+  gap: 40px;
   font-size: 20px;
   flex-direction: column;
   cursor: pointer;
@@ -30,11 +31,9 @@
   width: 100%;
   flex-direction: column;
 }
-.side-links button {
-  box-shadow: none;
-  border: none;
-  background-color: #ffffff;
-  color: #1789c9;
+.side-links a {
+  font-size: 20px;
+  font-weight: 700;
 }
 .dashboard-container {
   gap: 40px;
