@@ -5,7 +5,10 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { FaUser, FaTshirt, FaCalendar } from "react-icons/fa";
 import Button from "../common/base/button/Button";
 import axios from "axios";
+
 const Dashboard = () => {
+  const token = localStorage.getItem("jwtToken");
+  const authorization = "Bearer " + token;
   const [currentPage, setCurrentPage] = useState("home");
 
   const handlePageChange = (page) => {
