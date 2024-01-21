@@ -4,6 +4,11 @@ const initialState = { username: "", isAuthenticated: false };
 
 const loginSlice = createSlice({
   name: "login",
-
-  reducers: {},
+  initialState,
+  reducers: {
+    loginSuccess(state, action) {
+      state.isAuthenticated = true;
+      state.username = action.payload.username;
+    },
+  },
 });
