@@ -14,7 +14,7 @@ import "./styleChooseItem.css";
 import cheerio from "cheerio";
 
 const ChooseItem = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
   const [data, setData] = useState({

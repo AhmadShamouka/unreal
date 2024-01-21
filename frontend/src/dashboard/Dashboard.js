@@ -18,7 +18,12 @@ const Dashboard = () => {
     const handleLoadUsers = async (e) => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/admin/getusers"
+          "http://127.0.0.1:8000/api/admin/getusers",
+          {
+            headers: {
+              Authorization: authorization,
+            },
+          }
         );
         console.log(response);
       } catch (error) {
@@ -103,7 +108,7 @@ const Dashboard = () => {
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaUser />
-                <h4>&nbsp;432 User</h4>
+                <h4>&nbsp; User</h4>
               </div>
             </div>
             <div className="home-users-container">
