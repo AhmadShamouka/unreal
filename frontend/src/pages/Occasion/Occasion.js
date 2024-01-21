@@ -65,7 +65,7 @@ const Occasion = () => {
             },
           }
         );
-        console.log(response.data);
+        const UrlLink = response.data.suggested_link;
 
         if (response.data.status === "success") {
         }
