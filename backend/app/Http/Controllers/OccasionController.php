@@ -44,7 +44,7 @@ class OccasionController extends Controller
                 $azadeaLink = 'https://www.azadea.com/en/shop-by?q=';
                 $clothingSuggestions = $result['choices'][0]['message']['content'];
                 $suggestedSearchQuery = extractSearchQuery($clothingSuggestions);
-         
+                $suggestedLink = $azadeaLink . urlencode($suggestedSearchQuery);
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Occasion created successfully',
