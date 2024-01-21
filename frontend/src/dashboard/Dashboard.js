@@ -11,6 +11,7 @@ const Dashboard = () => {
   const authorization = "Bearer " + token;
   const [currentPage, setCurrentPage] = useState("home");
   const [user, setUser] = useState();
+  const [occasion, setOccasion] = useState();
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -30,6 +31,26 @@ const Dashboard = () => {
         console.log(error);
       }
     };
+
+    handleLoadUsers();
+  }, []);
+  useEffect(() => {
+    const handleLoadUsers = async (e) => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/admin/getoccasions",
+          {
+            headers: {
+              Authorization: authorization,
+            },
+          }
+        );
+        setOccasion(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     handleLoadUsers();
   }, []);
   const barChartData = [
