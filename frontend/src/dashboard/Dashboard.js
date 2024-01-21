@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-
+import { FaBeer } from "react-icons/fa";
+import Button from "../common/base/button/Button";
 const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
@@ -11,9 +12,9 @@ const Dashboard = () => {
   };
 
   const barChartData = [
-    { name: "Page A", uv: 400, pv: 2400, amt: 2400 },
-    { name: "Page B", uv: 300, pv: 2200, amt: 400 },
-    { name: "Page c", uv: 100, pv: 200, amt: 2400 },
+    { name: "a", uv: 400, pv: 2400, amt: 2400 },
+    { name: "b", uv: 300, pv: 2200, amt: 400 },
+    { name: "b", uv: 100, pv: 200, amt: 2400 },
   ];
   const PieData = [
     { name: "Group A", value: 400 },
@@ -23,7 +24,7 @@ const Dashboard = () => {
     { name: "Group E", value: 278 },
   ];
 
-  const COLORS = ["pink", "green", "lightblue", "yellow", "purple"];
+  const COLORS = ["#5eb7eb", "#1789c9", "#608faa", "#5f717c", "#04395a"];
 
   const renderPieChart = () => (
     <ResponsiveContainer width={500} height={300}>
@@ -45,29 +46,33 @@ const Dashboard = () => {
     </ResponsiveContainer>
   );
   const renderBarChart = () => (
-    <BarChart width={500} height={350} data={barChartData}>
-      <XAxis dataKey="name" stroke="#ffff" />
-      <YAxis stroke="#ffff" />
-      <Tooltip />
-      <CartesianGrid stroke="#ffff" strokeDasharray="5 5" />
-      <Bar dataKey="uv" fill="#ffff" barSize={30} />
-    </BarChart>
+    <ResponsiveContainer width={500} height={300}>
+      <BarChart data={barChartData}>
+        <XAxis dataKey="name" stroke="#1789c9" />
+        <YAxis stroke="#1789c9" />
+        <Tooltip />
+        <CartesianGrid stroke="#1789c9" strokeDasharray="5 5" />
+        <Bar dataKey="uv" fill="#1789c9" barSize={30} />
+      </BarChart>
+    </ResponsiveContainer>
   );
 
   return (
     <div className="dashboard flex">
-      <div className="side-nav flex center">
+      <div className="side-nav ">
         <div className="side-title flex center">
           <div className="logo-nav"></div>
           <h1>UNREALFIT</h1>
-          <hr className="dash-hr-line" />
         </div>
-
+        <hr className="dash-hr-line" />
         <div className="side-links flex center">
-          <h3 onClick={() => handlePageChange("home")}>Dashboard</h3>
-          <h3 onClick={() => handlePageChange("users")}>Users</h3>
-          <h3 onClick={() => handlePageChange("occasions")}>Occasions</h3>
-          <h3 onClick={() => handlePageChange("clothes")}>Clothes</h3>
+          <Button text="Home" onClick={() => handlePageChange("home")} />
+          <Button text="Users" onClick={() => handlePageChange("users")} />
+          <Button
+            text="Occasions"
+            onClick={() => handlePageChange("occasions")}
+          />
+          <Button text="Clothes" onClick={() => handlePageChange("clothes")} />
         </div>
       </div>
 
@@ -75,13 +80,21 @@ const Dashboard = () => {
         <div id="clothes" className="dashboard-container flex center">
           <div className="home-container flex center">
             <div className="home-users-container">
-              <div className="home-users flex center">432 User</div>
+              <div className="home-users flex center">
+                <h4>
+                  <FaBeer /> 432 User
+                </h4>
+              </div>
             </div>
             <div className="home-users-container">
-              <div className="home-users flex center">432 Occasions</div>
+              <div className="home-users flex center">
+                <h4>432 Occasion</h4>
+              </div>
             </div>
             <div className="home-users-container">
-              <div className="home-users flex center">432 Trail</div>
+              <div className="home-users flex center">
+                <h4>432 Trail</h4>
+              </div>
             </div>
           </div>
           <div className="charts-container flex center">

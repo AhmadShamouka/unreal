@@ -4,18 +4,18 @@
   display: flex;
   flex-direction: column;
 }
-.PieChart {
-  width: 100%;
-  height: 250px;
+.side-nav {
+  border-right: 2px solid #1789c9;
 }
+.PieChart,
 .BarChart {
-  width: 100%;
+  width: 90%;
   height: 250px;
 }
 .side-links {
+  margin-top: 10px;
   color: #1789c9;
-  height: 100%;
-  gap: 50px;
+  height: 40vh;
   width: 100%;
   font-size: 20px;
   flex-direction: column;
@@ -25,21 +25,22 @@
   color: #1789c9;
 }
 .side-title {
+  padding: 10px;
   gap: 10px;
   width: 100%;
   flex-direction: column;
 }
-.side-links a {
-  text-align: center;
-  height: 10%;
-  width: 100%;
+.side-links button {
+  box-shadow: none;
+  border: none;
+  background-color: #ffffff;
   color: #1789c9;
 }
 .dashboard-container {
   gap: 40px;
   width: 100%;
   height: 100vh;
-  background-color: #1789c9;
+  background-color: #ffffff;
   flex-direction: column;
 }
 .dash-hr-line {
@@ -58,7 +59,7 @@
   width: 70px;
 }
 .dashboard-container h2 {
-  color: #ffffff;
+  color: #1789c9;
 }
 .home-container {
   height: 120px;
@@ -69,14 +70,14 @@
   font-size: 20px;
   margin-top: 10px;
   text-align: center;
-  color: #1789c9;
+  color: #ffffff;
   height: 90px;
   width: 100%;
-  background-color: white;
+  background-color: #1789c9;
   border-radius: 20px;
 }
 .charts-container {
-  box-shadow: 0 0 10px 4px white;
+  box-shadow: 0 0 10px 4px #1789c9;
   border-radius: 10px;
   width: 90%;
   height: 70%;
@@ -84,7 +85,7 @@
 .barChart-container {
   height: 100%;
   justify-content: space-around;
-  width: 50%;
+  width: 100%;
   flex-direction: column;
 }
 .home-users-container {
