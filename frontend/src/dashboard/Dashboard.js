@@ -10,7 +10,7 @@ const Dashboard = () => {
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   const [currentPage, setCurrentPage] = useState("home");
-
+  const [user, setUser] = useState();
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -25,7 +25,7 @@ const Dashboard = () => {
             },
           }
         );
-        console.log(response);
+        setUser(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -108,7 +108,7 @@ const Dashboard = () => {
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaUser />
-                <h4>&nbsp; User</h4>
+                <h4>&nbsp;{user?.count} User</h4>
               </div>
             </div>
             <div className="home-users-container">
