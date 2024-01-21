@@ -11,7 +11,7 @@ import Occasion from "./pages/Occasion/Occasion";
 import ChooseItem from "./pages/ChooseItem/ChooseItem";
 import Brand from "./pages/Brand/Brand";
 import Dashboard from "./dashboard/Dashboard";
-
+import store from "./core/store";
 function App() {
   const baseUrl = "/http://127.0.0.1:8000/api";
   return (
