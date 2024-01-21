@@ -87,19 +87,19 @@ const Dashboard = () => {
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaUser />
-                <h4>432 User</h4>
+                <h4>&nbsp;432 User</h4>
               </div>
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaCalendar />
-                <h4>432 Occasion</h4>
+                <h4>&nbsp;432 Occasion</h4>
               </div>
             </div>
             <div className="home-users-container">
               <div className="home-users flex center">
                 <FaTshirt />
-                <h4>432 Trail</h4>
+                <h4>&nbsp;432 Trail</h4>
               </div>
             </div>
           </div>
