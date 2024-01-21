@@ -68,7 +68,6 @@ const Occasion = () => {
         console.log(response.data);
 
         if (response.data.status === "success") {
-          navigate("/find");
         }
       } catch (error) {
         console.error(error);
