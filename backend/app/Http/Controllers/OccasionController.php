@@ -33,18 +33,25 @@ class OccasionController extends Controller
                 $result = OpenAI::chat()->create([
                     'model' => 'gpt-3.5-turbo',
                     'messages' => [
-                        ['role' => 'user', 'content' => 'Hello!'],
+                        [
+                            'role' => 'user',
+                           
+                        ],
                     ],
-                    'max_tokens'=>30,
+                    'max_tokens' => 15,
                 ]);
-                $result =$result['choices'][0]['message']['content'];
-                    
+
+
+     
+         
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Occasion created successfully',
                     'occasion' => $occasion,
-                    'openai'=>$result,
+                    'openai' => $result,
+                 
                 ]);
+                
                 
             }
 
@@ -66,4 +73,5 @@ class OccasionController extends Controller
             ]);
         }
     }
+
 }
