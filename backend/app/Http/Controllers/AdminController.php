@@ -123,6 +123,7 @@ class AdminController extends Controller
         public function getTrails(){
             if(Auth::Check()){
                 $getallTrails = Trail::all();
+                $trailsCount = Trail::count();
                 return response()->json([
                     'status' => 'success',
                     'response' => $getallTrails,
