@@ -82,7 +82,6 @@ const Occasion = () => {
 
           navigate("/find");
         }
-        console.log(store.getState());
       } catch (error) {
         console.error(error);
       }

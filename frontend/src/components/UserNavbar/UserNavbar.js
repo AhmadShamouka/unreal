@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./styleUserNavbar.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useStore } from "react-redux";
 const UserNavbar = () => {
+  const { username, sex, country, age, isAuthenticated } = useSelector(
+    (state) => state.login
+  );
+  const store = useStore();
+  const dispatch = useDispatch();
   const [active, setActive] = useState("nav__menu_user");
   const [icon, setIcon] = useState("nav__toggler");
   const closeMenuOnResize = () => {
@@ -9,7 +16,7 @@ const UserNavbar = () => {
       setIcon("nav__toggler");
     }
   };
-
+  const Username = username;
   useEffect(() => {
     window.addEventListener("resize", closeMenuOnResize);
 
@@ -50,7 +57,7 @@ const UserNavbar = () => {
         </ul>
         <div>
           <div className="buttons">
-            <h3>UserName</h3>
+            <h3>{Username}</h3>
           </div>
         </div>
       </div>
