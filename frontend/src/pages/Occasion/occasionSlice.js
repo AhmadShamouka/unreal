@@ -3,19 +3,18 @@ import { logoutSuccess } from "../Login/loginSlice";
 const initialState = {
   UrlLink: "",
 };
-
 const occasionSlice = createSlice({
   name: "occasion",
   initialState,
   reducers: {
     occasionCreated(state, action) {
-      state.UrlLink = action.payload.UrlLink;
+      state.UrlLink = action.payload;
     },
-    extraReducers: (builder) => {
-      builder.addCase(logoutSuccess, (state) => {
-        state.UrlLink = "";
-      });
-    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(logoutSuccess, (state) => {
+      state.UrlLink = "";
+    });
   },
 });
 

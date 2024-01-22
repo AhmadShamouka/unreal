@@ -21,7 +21,7 @@ import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import occasionCreated from "../Occasion/occasionSlice";
+import { occasionCreated } from "../Occasion/occasionSlice";
 import { useStore } from "react-redux";
 const Occasion = () => {
   const [active, setActive] = useState("errorMsg");
@@ -78,6 +78,8 @@ const Occasion = () => {
         );
 
         if (response.data.status === "success") {
+          dispatch(occasionCreated(response.data.suggested_link));
+
           navigate("/find");
         }
         console.log(store.getState());
