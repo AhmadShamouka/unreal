@@ -139,23 +139,14 @@ button {
 }
 .nav__x {
   position: fixed;
-
-  right: 45.5%;
-  background: url("../../common/images/x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  left: 0;
   z-index: 2013;
-  width: 2rem;
-  height: 2rem;
+  width: 50%;
+  height: 100%;
 }
 
 @media screen and (max-width: 568px) {
   .navbar_landing {
     margin-right: 20rem;
-  }
-  .nav__x {
-    position: fixed;
-    transition: 1.5s ease;
-    right: 42.5%;
   }
 }

@@ -127,9 +127,3 @@
 .nav__active {
   transform: translateX(0%);
 }
-@media screen and (max-width: 568px) {
-  .nav__x {
-    position: fixed;
-    right: 44%;
-  }
-}
