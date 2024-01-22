@@ -36,7 +36,9 @@ const Navbar = () => {
     <nav>
       <div className={active}>
         <div className="navbar_landing flex center">
-          <div className="logo-nav" href="/"></div>
+          <Link to="/">
+            <div className="logo-nav"></div>
+          </Link>
           <ul className="links flex center">
             <li className="nav__item">
               <a href="/" className="nav__link">
