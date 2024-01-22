@@ -47,7 +47,15 @@
     border-radius: 0;
     width: 100vh;
   }
-
+  .edit__active {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    background-color: #1789c9;
+  }
+  .none {
+    display: none;
+  }
   .nav__toggler {
     z-index: 332;
     display: block;

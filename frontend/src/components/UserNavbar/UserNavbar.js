@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styleUserNavbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useStore } from "react-redux";
-import { FaUser, FaTshirt, FaCalendar, FaVideo } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 const UserNavbar = () => {
   const { username, sex, country, age, isAuthenticated } = useSelector(
     (state) => state.login
@@ -11,6 +11,7 @@ const UserNavbar = () => {
   const dispatch = useDispatch();
   const [active, setActive] = useState("nav__menu_user");
   const [icon, setIcon] = useState("nav__toggler");
+  const [edit, setEdit] = useState("none");
   const closeMenuOnResize = () => {
     if (window.innerWidth > 768) {
       setActive("nav__menu_user");
@@ -35,6 +36,10 @@ const UserNavbar = () => {
       setIcon("nav__x toggle");
     } else setIcon("nav__toggler");
   };
+  const editProfile = () => {
+    setEdit((prevEdit) => (prevEdit === "none" ? "edit__active" : "none"));
+    console.log(edit);
+  };
   return (
     <nav>
       <div className={active}>
@@ -58,8 +63,11 @@ const UserNavbar = () => {
         </ul>
         <div>
           <div className="buttons flex center">
-            <FaUser color="white" />
+            <FaUser color="white" onClick={editProfile} />
             <h3>{Username}</h3>
+          </div>
+          <div className={edit}>
+            <h2>HELLO</h2>
           </div>
         </div>
       </div>
