@@ -5,6 +5,8 @@ import Button from "../../common/base/button/Button";
 import "./styles.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginSuccess } from "./loginSlice";
 const Login = () => {
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
