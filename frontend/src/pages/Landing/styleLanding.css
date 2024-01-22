@@ -107,8 +107,8 @@ h2 {
 .about-landing {
   height: 100%;
   width: 100%;
-  gap: 2rem;
-  padding: 4rem;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 .landing-text {
