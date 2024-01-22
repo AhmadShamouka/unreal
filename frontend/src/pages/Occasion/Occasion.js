@@ -66,8 +66,9 @@ const Occasion = () => {
           }
         );
         const UrlLink = response.data.suggested_link;
-
+        console.log(UrlLink);
         if (response.data.status === "success") {
+          navigate("/find");
         }
       } catch (error) {
         console.error(error);

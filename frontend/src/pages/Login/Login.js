@@ -3,10 +3,11 @@ import logo from "../../common/base/logo/image/logo.png";
 import Input from "../../common/base/inputs/Input";
 import Button from "../../common/base/button/Button";
 import "./styles.css";
+import { useStore } from "react-redux";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { loginSuccess } from "./loginSlice/loginSlice";
+import { loginSuccess } from "../Login/loginSlice";
 const Login = () => {
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const store = useStore();
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -22,7 +24,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-
+    console.log(store.getState());
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/login",
@@ -35,9 +37,17 @@ const Login = () => {
       } else if (response.data.user.admin === 0) {
         navigate("/occasion");
       }
+      dispatch(
+        loginSuccess({
+          username: response.data.user.username,
+          age: response.data.user.age,
+          sex: response.data.user.sex,
+          country: response.data.user.country,
+        })
+      );
     } catch (error) {
       console.error("Error during form submission:", error);
-      if (error.message == "Request failed with status code 401") {
+      if (error.message === "Request failed with status code 401") {
         setActive("errorMsg-signup");
       }
     }
