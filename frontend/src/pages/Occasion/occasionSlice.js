@@ -7,7 +7,11 @@ const initialState = {
 const occasionSlice = createSlice({
   name: "occasion",
   initialState,
-  reducers: {},
+  reducers: {
+    occasionCreated(state, action) {
+      state.UrlLink = action.payload.UrlLink;
+    },
+  },
 });
 
 export const { loginSuccess, logoutSuccess } = occasionSlice.actions;
