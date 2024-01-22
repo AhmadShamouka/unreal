@@ -11,6 +11,11 @@ const occasionSlice = createSlice({
     occasionCreated(state, action) {
       state.UrlLink = action.payload.UrlLink;
     },
+    extraReducers: (builder) => {
+      builder.addCase(logoutSuccess, (state) => {
+        state.UrlLink = "";
+      });
+    },
   },
 });
 
