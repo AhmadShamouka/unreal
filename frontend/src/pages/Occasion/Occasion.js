@@ -20,13 +20,18 @@ import Footer from "../../components/footer/Footer";
 import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
-
+import { useDispatch, useSelector } from "react-redux";
+import { loginSuccess } from "../Login/loginSlice";
 const Occasion = () => {
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   const [activeDiv, setActiveDiv] = useState(0);
+  const dispatch = useDispatch();
+  const { username, sex, country, age, isAuthenticated } = useSelector(
+    (state) => state.login
+  );
   const [blurredHexagon, setBlurredHexagon] = useState(null);
   const [formData, setFormData] = useState({
     occasion_type: "",
@@ -34,6 +39,7 @@ const Occasion = () => {
     season: "",
     budget_range: "",
   });
+
   const handleHexagonClick = (hexagonNumber, value) => {
     setBlurredHexagon(hexagonNumber);
     setFormData({ ...formData, occasion_type: value });
