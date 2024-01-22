@@ -51,10 +51,10 @@ section h1 {
     justify-content: center;
   }
   .landing h1 {
-    top: 120px;
+    top: 10%;
   }
   .landing button {
-    top: 280px;
+    top: 40%;
   }
 }
 .reveal-div {
