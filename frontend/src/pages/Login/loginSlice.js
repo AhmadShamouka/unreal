@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { UseSelector } from "react-redux";
+
 const initialState = {
   username: "",
   age: "",
@@ -7,7 +7,6 @@ const initialState = {
   sex: "",
   isAuthenticated: false,
 };
-const { UrlLink } = useSelector((state) => state.occasion);
 
 const loginSlice = createSlice({
   name: "login",

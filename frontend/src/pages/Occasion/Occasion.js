@@ -21,17 +21,20 @@ import SelectOption from "../../common/base/select/SelectOption";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { loginSuccess } from "../Login/loginSlice";
+import occasionCreated from "../Occasion/occasionSlice";
+import { useStore } from "react-redux";
 const Occasion = () => {
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   const [activeDiv, setActiveDiv] = useState(0);
-  const dispatch = useDispatch();
+
   const { username, sex, country, age, isAuthenticated } = useSelector(
     (state) => state.login
   );
+  const store = useStore();
+  const dispatch = useDispatch();
   const [blurredHexagon, setBlurredHexagon] = useState(null);
   const [formData, setFormData] = useState({
     occasion_type: "",
@@ -59,7 +62,6 @@ const Occasion = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
 
     if (formData.occasion_type === "" || formData.style === "") {
       setActive("errorMsg-display");
@@ -74,11 +76,11 @@ const Occasion = () => {
             },
           }
         );
-        const UrlLink = response.data.suggested_link;
-        console.log(UrlLink);
+
         if (response.data.status === "success") {
           navigate("/find");
         }
+        console.log(store.getState());
       } catch (error) {
         console.error(error);
       }

@@ -19,6 +19,6 @@ const occasionSlice = createSlice({
   },
 });
 
-export const { loginSuccess, logoutSuccess } = occasionSlice.actions;
+export const { occasionCreated, extraReducers } = occasionSlice.actions;
 
 export default occasionSlice.reducer;
