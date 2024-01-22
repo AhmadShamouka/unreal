@@ -16,12 +16,15 @@
 }
 
 .switchable-container {
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 10%;
 }
 
 .card .border {
   background-color: #1789c9;
+}
+.switchable-container .card {
+  width: 25%;
 }
 .card img {
   width: 70%;
