@@ -6,7 +6,7 @@ import "./styles.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { loginSuccess } from "./loginSlice";
+import { loginSuccess } from "./loginSlice/loginSlice";
 const Login = () => {
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
@@ -14,6 +14,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
