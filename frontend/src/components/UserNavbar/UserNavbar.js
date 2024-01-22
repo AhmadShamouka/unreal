@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styleUserNavbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useStore } from "react-redux";
+import { FaUser, FaTshirt, FaCalendar, FaVideo } from "react-icons/fa";
 const UserNavbar = () => {
   const { username, sex, country, age, isAuthenticated } = useSelector(
     (state) => state.login
@@ -57,7 +58,9 @@ const UserNavbar = () => {
         </ul>
         <div>
           <div className="buttons">
-            <h3>{Username}</h3>
+            <h3>
+              <FaUser /> {Username}
+            </h3>
           </div>
         </div>
       </div>
