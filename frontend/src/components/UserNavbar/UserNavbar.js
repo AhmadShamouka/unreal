@@ -3,6 +3,7 @@ import "./styleUserNavbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useStore } from "react-redux";
 import { FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const UserNavbar = () => {
   const { username, sex, country, age, isAuthenticated } = useSelector(
     (state) => state.login
@@ -45,7 +46,10 @@ const UserNavbar = () => {
   return (
     <nav>
       <div className={active}>
-        <div className="logo-nav-user" href="/"></div>
+        <Link to="/">
+          <div className="logo-nav-user"></div>
+        </Link>
+
         <ul className="links_user flex center">
           <li className="nav__item">
             <a href="/" className="nav__link_user">
@@ -69,7 +73,10 @@ const UserNavbar = () => {
             <h3>{Username}</h3>
           </div>
           <div className={edit}>
-            <h2>HELLO</h2>
+            <div>
+              <h3>Edit profile</h3>
+              <h3>LogOut</h3>
+            </div>
           </div>
         </div>
       </div>

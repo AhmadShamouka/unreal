@@ -29,18 +29,10 @@ const ChooseItem = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `https://api.allorigins.win/raw?url=https://www.azadea.com/en/mens`
+          "https://www.flickr.com/photos/199946451@N04/"
         );
-        const $ = cheerio.load(res.data);
-        const productElements = $(".product");
-        const productsArray = [];
-        productElements.each((index, product) => {
-          const imageUrl = $(product).find(".lazyload").attr("data-lazysrc");
-          const name = $(product).find(".link.js-producttile-link").text();
-          const price = $(product).find(".product-sales-price").text();
-          productsArray.push({ imageUrl, name, price });
-        });
-        setProducts(productsArray);
+
+        console.log(res.data);
       } catch (error) {
         console.log(error);
         console.log("doesn't exist");
@@ -49,6 +41,7 @@ const ChooseItem = () => {
 
     fetchData();
   }, []);
+
   const urlToImageFile = async (url, filename) => {
     const response = await fetch(url);
     const data = await response.blob();

@@ -15,15 +15,29 @@
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.25em);
 }
+/* Add these styles to your existing CSS */
+
 .edit__active {
   display: flex;
-  height: 50px;
-  width: 50px;
+  flex-direction: column;
+  position: absolute;
   background-color: #1789c9;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.edit__active h3 {
+  color: white;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
 .none {
   display: none;
 }
+
 .logo-nav-user {
   cursor: pointer;
   background-image: url("../../common/base/logo/image/logo-text-inv.png");
