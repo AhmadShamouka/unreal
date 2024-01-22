@@ -38,6 +38,9 @@ const Occasion = () => {
     style: "",
     season: "",
     budget_range: "",
+    sex: sex,
+    country: country,
+    age: age,
   });
 
   const handleHexagonClick = (hexagonNumber, value) => {
