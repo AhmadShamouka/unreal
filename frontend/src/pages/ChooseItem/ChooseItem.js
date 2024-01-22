@@ -171,3 +171,25 @@ const ChooseItem = () => {
 };
 
 export default ChooseItem;
+// useEffect(() => {
+//   const fetchData = async () => {
+//     try {
+//       const res = await axios.get(
+//         `https://api.allorigins.win/raw?url=https://www.bing.com/images/search?q=BLACK%20VELVET%20DRESs%20hd`
+//       );
+//       const $ = cheerio.load(res.data);
+//       const imageElements = $(".mimg");
+//       const productsArray = [];
+//       imageElements.each((index, image) => {
+//         const imageUrl = $(image).attr("src");
+//         productsArray.push({ imageUrl });
+//       });
+//       setProducts(productsArray);
+//     } catch (error) {
+//       console.log(error);
+//       console.log("doesn't exist");
+//     }
+//   };
+
+//   fetchData();
+// }, []);
