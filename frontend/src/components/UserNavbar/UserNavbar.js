@@ -37,7 +37,9 @@ const UserNavbar = () => {
     } else setIcon("nav__toggler");
   };
   const editProfile = () => {
-    setEdit((prevEdit) => (prevEdit === "none" ? "edit__active" : "none"));
+    if (edit === "none") {
+      setEdit("edit__active");
+    } else setEdit("none");
     console.log(edit);
   };
   return (
