@@ -57,10 +57,9 @@ const UserNavbar = () => {
           </li>
         </ul>
         <div>
-          <div className="buttons">
-            <h3>
-              <FaUser /> {Username}
-            </h3>
+          <div className="buttons flex center">
+            <FaUser color="white" />
+            <h3>{Username}</h3>
           </div>
         </div>
       </div>
