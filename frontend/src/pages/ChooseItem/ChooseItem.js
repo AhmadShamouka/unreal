@@ -122,7 +122,9 @@ const ChooseItem = () => {
           },
         }
       );
-
+      if (response.data.status === "success") {
+        navigate("/brand");
+      }
       console.log(response.data);
     } catch (error) {
       console.log(error);
