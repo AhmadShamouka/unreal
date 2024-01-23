@@ -153,6 +153,32 @@ const Dashboard = () => {
           </div>
         </div>
       )}
+      {currentPage === "users" && (
+        <div id="users" className="dashboard-container flex center">
+          {users.response && users.response.length > 0 ? (
+            <table className="user-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.response.map((user) => (
+                  <tr key={user.id}>
+                    <td>{user.id}</td>
+                    <td>{user.username}</td>
+                    <td>{user.email}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <p>No users found.</p>
+          )}
+        </div>
+      )}
 
       {currentPage === "occasions" && (
         <div id="occasions" className="dashboard-container flex center"></div>
