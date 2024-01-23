@@ -22,7 +22,6 @@ const loginSlice = createSlice({
     logoutSuccess(state) {
       state.isAuthenticated = false;
       state.username = "";
-      state.username = "";
       state.age = "";
       state.country = "";
       state.sex = "";

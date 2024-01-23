@@ -15,6 +15,7 @@ import cheerio from "cheerio";
 
 const ChooseItem = () => {
   const navigate = useNavigate();
+  const [images, setImages] = useState([]);
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
   const [trail, SetTrail] = useState({
@@ -28,27 +29,25 @@ const ChooseItem = () => {
 
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
+
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchImages = async () => {
       try {
-        const res = await axios.get(
-          `https://api.allorigins.win/raw?url=https://www.bing.com/images/search?q=BLACK`
+        const apiKey = "0dcb337f2a81a92587ce7e26593a35bb";
+        const userId = "199946451@N04";
+
+        const response = await fetch(
+          `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${apiKey}&user_id=${userId}&format=json&nojsoncallback=1`
         );
-        const $ = cheerio.load(res.data);
-        const imageElements = $(".mimg");
-        const productsArray = [];
-        imageElements.each((index, image) => {
-          const imageUrl = $(image).attr("src");
-          productsArray.push({ imageUrl });
-        });
-        setProducts(productsArray);
+
+        const data = await response.json();
+        setImages(data.photos.photo);
       } catch (error) {
-        console.log(error);
-        console.log("doesn't exist");
+        console.error("Error fetching images:", error);
       }
     };
 
-    fetchData();
+    fetchImages();
   }, []);
 
   const urlToImageFile = async (url, filename) => {
@@ -68,6 +67,7 @@ const ChooseItem = () => {
     let imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
     imageFile = changeFileName(imageFile, "newFileName.png");
     setImage(imageFile);
+    console.log(image);
     setData({
       name: name,
       price: 12,
@@ -93,21 +93,21 @@ const ChooseItem = () => {
     formData.append("price", data.price);
     formData.append("brand_id", 1);
     formData.append("category_id", 1);
-    try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/add-clothes",
-        formData,
-        {
-          headers: {
-            Authorization: authorization,
-          },
-        }
-      );
+    // try {
+    //   const response = await axios.post(
+    //     "http://127.0.0.1:8000/api/add-clothes",
+    //     formData,
+    //     {
+    //       headers: {
+    //         Authorization: authorization,
+    //       },
+    //     }
+    //   );
 
-      SetTrail({ id: response.data.Trails.id });
-    } catch (error) {
-      console.error(error);
-    }
+    //   SetTrail({ id: response.data.Trails.id });
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
 
   const handleBuy = async () => {
@@ -125,7 +125,6 @@ const ChooseItem = () => {
       if (response.data.status === "success") {
         navigate("/brand");
       }
-      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -148,30 +147,30 @@ const ChooseItem = () => {
             pagination={{ clickable: true }}
           >
             <div>
-              {products.map((product, index) => (
+              {images.map((image, index) => (
                 <SwiperSlide>
                   <div key={index}>
                     <div className="slide-container flex center">
                       <img
                         type="file"
                         id="imageInput"
-                        src={product.imageUrl}
-                        alt={`Product ${index + 1}`}
+                        src={`https://farm${image.farm}.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`}
+                        alt={image.title}
                         className="swiper-image"
                         loading="lazy"
                         onClick={() => {
                           handleImageChange(
-                            product.imageUrl,
-                            product.name,
-                            product.price
+                            `https://farm${image.farm}.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`,
+                            image.title,
+                            image.price
                           );
                           handleSubmit();
                         }}
                       />
                     </div>
                     <span className="card-footer-find flex center">
-                      <h3>{product.name}</h3>
-                      <h3>Price: ${product.price}</h3>
+                      <h3>{image.name}</h3>
+                      <h3>Price: ${image.price}</h3>
                     </span>
                   </div>
                 </SwiperSlide>
