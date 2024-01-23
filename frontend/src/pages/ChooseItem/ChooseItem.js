@@ -18,7 +18,7 @@ const ChooseItem = () => {
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
   const [trail, SetTrail] = useState({
-    id: 39,
+    id: null,
   });
   const [data, setData] = useState({
     name: "",
@@ -103,7 +103,8 @@ const ChooseItem = () => {
           },
         }
       );
-      console.log(response.data);
+
+      SetTrail({ id: response.data.Trails.id });
     } catch (error) {
       console.error(error);
     }
