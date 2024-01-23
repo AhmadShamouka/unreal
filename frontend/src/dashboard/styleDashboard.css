@@ -97,9 +97,10 @@
 }
 .user-table {
   width: 100%;
+
   border-collapse: collapse;
   text-align: start;
-  margin-top: 20px;
+  padding: 100px;
 }
 .user-table th,
 .user-table td {
@@ -125,5 +126,15 @@
   }
   .dashboard-container {
     height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .user-table {
+    font-size: 14px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 6px;
   }
 }
