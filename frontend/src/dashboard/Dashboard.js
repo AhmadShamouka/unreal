@@ -162,6 +162,7 @@ const Dashboard = () => {
                   <th>ID</th>
                   <th>Name</th>
                   <th>Email</th>
+                  <th>Country</th>
                 </tr>
               </thead>
               <tbody>
@@ -170,6 +171,7 @@ const Dashboard = () => {
                     <td>{user.id}</td>
                     <td>{user.username}</td>
                     <td>{user.email}</td>
+                    <td>{user.country}</td>
                   </tr>
                 ))}
               </tbody>
