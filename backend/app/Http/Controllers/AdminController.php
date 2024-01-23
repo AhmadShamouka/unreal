@@ -59,14 +59,18 @@ class AdminController extends Controller
             if(Auth::Check()){
                 $getallOccasions = Occasion::all();
                 $occasionsCount = Occasion::count();
-                $occasionCounts = Occasion::select('occasion_type', \DB::raw('COUNT(*) as count'))
+                $occasion_Type_Counts = Occasion::select('occasion_type', \DB::raw('COUNT(*) as count'))
                 ->groupBy('occasion_type')
+                ->get();
+                $occasion_style_Counts = Occasion::select('style', \DB::raw('COUNT(*) as count'))
+                ->groupBy('style')
                 ->get();
                 return response()->json([
                     'status' => 'success',
                     'response' => $getallOccasions,
                     'count'=>$occasionsCount,
-                    'occasionCounts'=>$occasionCounts
+                    'occasion_Type_Counts'=>$occasion_Type_Counts,
+                    'occasion_style_Counts'=>$occasion_style_Counts
                 ]);
             }
             return response()->json([
