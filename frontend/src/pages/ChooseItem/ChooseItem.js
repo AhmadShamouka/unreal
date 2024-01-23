@@ -112,7 +112,7 @@ const ChooseItem = () => {
 
   const handleBuy = async () => {
     try {
-      const response = await axios.post("http://localhost:8000:");
+      const response = await axios.post("http://localhost:8000/update-trail");
     } catch (error) {
       console.log(error);
     }
