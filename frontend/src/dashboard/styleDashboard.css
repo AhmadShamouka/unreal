@@ -98,7 +98,14 @@
 .user-table {
   width: 100%;
   border-collapse: collapse;
+  text-align: start;
   margin-top: 20px;
+}
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
 @media screen and (max-width: 1070px) {
