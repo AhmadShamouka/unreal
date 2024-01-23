@@ -107,6 +107,9 @@
   padding: 8px;
   text-align: left;
 }
+.user-table th {
+  background-color: #f2f2f2;
+}
 
 @media screen and (max-width: 1070px) {
   .side-title h1 {
