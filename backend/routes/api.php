@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClothesController;
 use App\Http\Controllers\OccasionController;
+use App\Http\Controllers\TrailController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -22,6 +23,7 @@ Route::controller(OccasionController::class)->group(function () {
 Route::controller(ClothesController::class)->group(function () {
     Route::post('add-clothes', 'createItem');
 });
+
 Route::middleware(['auth:api'])->group(function () {
     Route::get('/admin/getusers', [AdminController::class, 'getUser']);
     Route::post('/admin/getsingleuser', [AdminController::class, 'getOneUser']);

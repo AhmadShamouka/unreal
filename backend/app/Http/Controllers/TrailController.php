@@ -1,29 +1,33 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Trail;
+
+use App\Models\Trail;
 use Illuminate\Database\QueryException;
 
 class TrailController extends Controller
 {
-    public function updateTrail(Request $request)
-    {
+    public function updateTrail(Request $updateRequest)
+    {   
         try {
             if (Auth::check()) {
                 $user = Auth::user();
-              
-                $trail = $user->trail;
+                
+                $updateRequest->validate([
+                    'id' => 'required|integer',
+                ]);
+
+                $id = $updateRequest->id;
+                $trail = Trail::find($id);
+
 
                 if ($trail) {
-                    $request->validate([
-                        'choosen' => 'required',
-                    ]);
-
                     $trail->update([
-                        'choosen' => $request->choosen,
+                        'choosen' => 1,
                     ]);
 
                     return response()->json([
