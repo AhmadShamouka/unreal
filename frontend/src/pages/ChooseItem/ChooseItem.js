@@ -110,7 +110,13 @@ const ChooseItem = () => {
     }
   };
 
-  const handleBuy = () => {};
+  const handleBuy = async () => {
+    try {
+      const response = await axios.post("http://localhost:8000:");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
       <UserNavbar />
