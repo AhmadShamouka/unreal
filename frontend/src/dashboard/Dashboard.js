@@ -10,91 +10,42 @@ const Dashboard = () => {
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   const [currentPage, setCurrentPage] = useState("home");
-  const [users, setUser] = useState();
-  const [occasions, setOccasion] = useState();
+  const [users, setUsers] = useState();
+  const [occasions, setOccasions] = useState();
   const [clothes, setClothes] = useState();
   const [trails, setTrails] = useState();
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  const fetchData = async (url, setData) => {
+    try {
+      const response = await axios.get(url, {
+        headers: {
+          Authorization: authorization,
+        },
+      });
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    const handleLoadUsers = async (e) => {
-      try {
-        const response = await axios.get(
-          "http://127.0.0.1:8000/api/admin/getusers",
-          {
-            headers: {
-              Authorization: authorization,
-            },
-          }
-        );
-        console.log(response.data);
-        setUser(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    handleLoadUsers();
+    fetchData("http://127.0.0.1:8000/api/admin/getusers", setUsers);
   }, []);
+
   useEffect(() => {
-    const handleLoadUsers = async (e) => {
-      try {
-        const response = await axios.get(
-          "http://127.0.0.1:8000/api/admin/getoccasions",
-          {
-            headers: {
-              Authorization: authorization,
-            },
-          }
-        );
-
-        setOccasion(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    handleLoadUsers();
+    fetchData("http://127.0.0.1:8000/api/admin/getoccasions", setOccasions);
   }, []);
+
   useEffect(() => {
-    const handleLoadUsers = async (e) => {
-      try {
-        const response = await axios.get(
-          "http://127.0.0.1:8000/api/admin/getclothes",
-          {
-            headers: {
-              Authorization: authorization,
-            },
-          }
-        );
-        setClothes(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    handleLoadUsers();
+    fetchData("http://127.0.0.1:8000/api/admin/getclothes", setClothes);
   }, []);
+
   useEffect(() => {
-    const handleLoadUsers = async (e) => {
-      try {
-        const response = await axios.get(
-          "http://127.0.0.1:8000/api/admin/gettrails",
-          {
-            headers: {
-              Authorization: authorization,
-            },
-          }
-        );
-        setTrails(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    handleLoadUsers();
+    fetchData("http://127.0.0.1:8000/api/admin/gettrails", setTrails);
   }, []);
+
   const barChartData = [
     { name: "Formal", uv: 400, pv: 2400, amt: 2400 },
     { name: "Casual", uv: 300, pv: 2200, amt: 400 },
@@ -200,29 +151,6 @@ const Dashboard = () => {
               <div className="PieChart flex center">{renderPieChart()}</div>
             </div>
           </div>
-        </div>
-      )}
-
-      {currentPage === "users" && (
-        <div id="users" className="dashboard-container flex center">
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users?.map((user) => (
-                <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>{user.username}</td>
-                  <td>{user.email}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       )}
 
