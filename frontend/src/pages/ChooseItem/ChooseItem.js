@@ -18,7 +18,7 @@ const ChooseItem = () => {
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
   const [trail, SetTrail] = useState({
-    id: "",
+    id: 39,
   });
   const [data, setData] = useState({
     name: "",
@@ -32,7 +32,7 @@ const ChooseItem = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `https://api.allorigins.win/raw?url=https://www.bing.com/images/search?q=BLACK%20VELVET%20DRESs%20hd`
+          `https://api.allorigins.win/raw?url=https://www.bing.com/images/search?q=BLACK`
         );
         const $ = cheerio.load(res.data);
         const imageElements = $(".mimg");
@@ -103,19 +103,26 @@ const ChooseItem = () => {
           },
         }
       );
-
-      SetTrail(response.data.Trails.id);
+      console.log(response.data);
     } catch (error) {
       console.error(error);
     }
   };
 
   const handleBuy = async () => {
+    console.log(trail);
     try {
       const response = await axios.post(
-        "http://localhost:8000/update-trail",
-        trail
+        "http://127.0.0.1:8000/api/update-trail",
+        trail,
+        {
+          headers: {
+            Authorization: authorization,
+          },
+        }
       );
+
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
