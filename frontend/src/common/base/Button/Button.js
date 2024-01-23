@@ -4,7 +4,7 @@ import "./style.css";
 const Button = ({
   type,
   text,
-
+  onClick,
   bgColor = "blue-bg",
   textColor = "white-text",
 }) => {
@@ -12,6 +12,7 @@ const Button = ({
     <button
       className={`flex center  ${bgColor} ${textColor} base-button`}
       type={type}
+      onClick={onClick}
     >
       {text}
     </button>

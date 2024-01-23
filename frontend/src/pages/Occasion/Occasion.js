@@ -79,11 +79,11 @@ const Occasion = () => {
 
         if (response.data.status === "success") {
           dispatch(occasionCreated(response.data.suggested_link));
-
-          navigate("/find");
         }
+        navigate("/find");
       } catch (error) {
         console.error(error);
+        navigate("/find");
       }
     }
   };

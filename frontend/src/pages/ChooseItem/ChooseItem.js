@@ -17,6 +17,9 @@ const ChooseItem = () => {
   const navigate = useNavigate();
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
+  const [trail, SetTrail] = useState({
+    id: "",
+  });
   const [data, setData] = useState({
     name: "",
     price: null,
@@ -73,7 +76,6 @@ const ChooseItem = () => {
   };
 
   const handleSubmit = async () => {
-    console.log(image);
     try {
       const formDataImage = new FormData();
       formDataImage.append("image", image);
@@ -82,9 +84,6 @@ const ChooseItem = () => {
         "http://localhost:5000/convert_to_png",
         formDataImage
       );
-      if (response.ok) {
-        console.log("Image uploaded successfully");
-      }
     } catch (error) {
       console.log(error);
     }
@@ -105,11 +104,12 @@ const ChooseItem = () => {
         }
       );
 
-      console.log(response.data);
+      SetTrail(response.data.Trails.id);
     } catch (error) {
       console.error(error);
     }
   };
+
   const handleBuy = () => {};
   return (
     <div>
