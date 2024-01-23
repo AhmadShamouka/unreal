@@ -124,10 +124,12 @@ class AdminController extends Controller
             if(Auth::Check()){
                 $getallTrails = Trail::all();
                 $trailsCount = Trail::count();
+                $getChosenTrails = Trail::where('choosen', 1)->get();
                 return response()->json([
                     'status' => 'success',
                     'response' => $getallTrails,
-                    'count'=>$trailsCount
+                    'count'=>$trailsCount,
+                    'choosenTrails'=>$getChosenTrails
                 ]);
             }
             return response()->json([
@@ -139,6 +141,7 @@ class AdminController extends Controller
             public function getOneTrail(Request $request){
                 if (Auth::check()) {
                     $getSingleTrail = Trail::find($request->id);
+
                     if ($getSingleTrail) {
                         return response()->json([
                             'status' => 'success',
