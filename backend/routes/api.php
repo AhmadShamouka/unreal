@@ -23,7 +23,9 @@ Route::controller(OccasionController::class)->group(function () {
 Route::controller(ClothesController::class)->group(function () {
     Route::post('add-clothes', 'createItem');
 });
-
+Route::controller(TrailController::class)->group(function () {
+    Route::post('update-trail', 'updateTrail');
+});
 Route::middleware(['auth:api'])->group(function () {
     Route::get('/admin/getusers', [AdminController::class, 'getUser']);
     Route::post('/admin/getsingleuser', [AdminController::class, 'getOneUser']);
