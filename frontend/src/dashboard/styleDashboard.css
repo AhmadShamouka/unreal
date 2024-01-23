@@ -95,6 +95,12 @@
   text-align: center;
   color: #ffffff;
 }
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 1070px) {
   .side-title h1 {
     color: #1789c9;
