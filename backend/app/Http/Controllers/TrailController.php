@@ -23,9 +23,9 @@ class TrailController extends Controller
 
                 $id = $updateRequest->id;
                 $trail = Trail::find($id);
+                $findTrailUser = $trail && $trail->user_id === $user->id;
 
-
-                if ($trail) {
+                if ($findTrailUser) {
                     $trail->update([
                         'choosen' => 1,
                     ]);
