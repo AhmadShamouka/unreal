@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/navbar/Navbar";
 import Button from "../../common/base/button/Button";
 import about from "../../common/images/about.jpg";
 import mission from "../../common/images/mission.jpeg";
@@ -19,6 +19,7 @@ import arrow3 from "../../common/images/arrow3.png";
 import arrow4 from "../../common/images/arrow4.png";
 import "./styleLanding.css";
 import { Link, useNavigate } from "react-router-dom";
+
 const Landing = () => {
   const navigate = useNavigate();
   const [reveal, setReveal] = useState(false);
@@ -71,7 +72,7 @@ const Landing = () => {
 
   return (
     <div className="container-landing">
-      <NavBar />
+      <Navbar />
       <section>
         <div className="landing flex center">
           <h1>DIGITAL FASHION IS THE NEW CHAPTER</h1>

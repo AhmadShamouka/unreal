@@ -15,28 +15,6 @@
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.25em);
 }
-/* Add these styles to your existing CSS */
-
-.edit__active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background-color: #1789c9;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.edit__active h3 {
-  color: white;
-  margin: 15px 0;
-  cursor: pointer;
-}
-
-.none {
-  display: none;
-}
 
 .logo-nav-user {
   cursor: pointer;
@@ -55,6 +33,9 @@
   margin-left: 1rem;
   padding: 7px 19px;
 }
+li {
+  list-style: none;
+}
 .nav__menu_user {
   display: flex;
   align-items: center;
@@ -70,11 +51,6 @@
     width: 100vh;
   }
 
-  .nav__toggler {
-    z-index: 332;
-    display: block;
-    cursor: pointer;
-  }
   .logo-nav-user {
     cursor: pointer;
     background-image: url("../../common/base/logo/image/logo.png");
@@ -126,4 +102,69 @@
 
 .nav__active {
   transform: translateX(0%);
+}
+.edit__active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #1789c9;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit__active h3 {
+  color: white;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.none {
+  display: none;
+}
+li {
+  list-style: none;
+}
+
+.nav__toggler {
+  position: fixed;
+  right: 0;
+  display: none;
+}
+
+.nav__toggler div {
+  width: 2rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #68b1db;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 808px) {
+  .nav__toggler {
+    z-index: 332;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 5%;
+}
+
+.nav__active {
+  transform: translateX(0%);
+}
+.nav__x {
+  position: fixed;
+  left: 0;
+  z-index: 2013;
+  width: 50%;
+  height: 100%;
 }

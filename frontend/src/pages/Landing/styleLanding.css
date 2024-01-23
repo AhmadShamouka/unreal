@@ -107,11 +107,12 @@ h2 {
 .about-landing {
   height: 100%;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
   padding: 1rem 1.5rem;
 }
 
 .landing-text {
+  padding-top: 10px;
   width: 50%;
 }
 .landing-text h2 {
@@ -120,6 +121,7 @@ h2 {
   margin-bottom: 30px;
 }
 .landing-img {
+  padding-top: 10px;
   width: 50%;
 }
 .landing-img img {

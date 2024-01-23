@@ -10,10 +10,13 @@ const Dashboard = () => {
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   const [currentPage, setCurrentPage] = useState("home");
-  const [users, setUsers] = useState();
-  const [occasions, setOccasions] = useState();
-  const [clothes, setClothes] = useState();
-  const [trails, setTrails] = useState();
+  const [users, setUsers] = useState([]);
+  const [piedata, setPieData] = useState([]);
+  const [occasions, setOccasions] = useState({
+    occasion_Type_Counts: [],
+  });
+  const [clothes, setClothes] = useState([]);
+  const [trails, setTrails] = useState([]);
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -49,20 +52,18 @@ const Dashboard = () => {
   const barChartData = [
     { name: "Formal", uv: 400, pv: 2400, amt: 2400 },
     { name: "Casual", uv: 300, pv: 2200, amt: 400 },
-    { name: "Stylish", uv: 100, pv: 200, amt: 2400 },
+    { name: "Stylish", uv: 100, pv: 200, amt: 240 },
   ];
-  const PieData = [
-    { name: "OutDoor Activity", value: 400 },
-    { name: "Beach Vacation", value: 300 },
-    { name: "Athletic Activity", value: 300 },
-    { name: "Traditional Occastion", value: 200 },
-    { name: "Wedding Events", value: 278 },
-    { name: "Casual Outing", value: 400 },
-    { name: "Party", value: 300 },
-    { name: "Graduation Ceremony", value: 300 },
-    { name: "Business Meeting", value: 200 },
-    { name: "Sleepover", value: 278 },
-  ];
+  useEffect(() => {
+    console.log(occasions);
+    console.log(occasions.occasion_Type_Counts);
+    setPieData(
+      occasions.occasion_Type_Counts.map((occasion) => ({
+        name: occasion.occasion_type,
+        value: occasion.count,
+      }))
+    );
+  }, [occasions]);
 
   const COLORS = ["#5eb7eb", "#1789c9", "#608faa", "#5f717c", "#04395a"];
 
@@ -72,13 +73,13 @@ const Dashboard = () => {
         <Pie
           dataKey="value"
           isAnimationActive={false}
-          data={PieData}
+          data={piedata}
           cx="50%"
           cy="50%"
           outerRadius={120}
           label
         >
-          {PieData.map((entry, index) => (
+          {piedata.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
@@ -183,6 +184,7 @@ const Dashboard = () => {
           ) : (
             <p>No users found.</p>
           )}
+          <div className="PieChart flex center"></div>
         </div>
       )}
 
