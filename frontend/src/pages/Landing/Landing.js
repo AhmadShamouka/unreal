@@ -67,22 +67,34 @@ const Landing = () => {
     };
     window.addEventListener("scroll", ScrollHIW);
   }, []);
-  const handelRegister = () => {
-    navigate("/signup");
-  };
 
   return (
     <div className="container-landing">
       {token ? <UserNavbar /> : <Navbar />}
       <section>
         <div className="landing flex center">
-          <h1>DIGITAL FASHION IS THE NEW CHAPTER</h1>
-          <Button
-            text="Register"
-            bgColor="white-bg"
-            textColor="blue-text"
-            onClicked={handelRegister}
-          />
+          <div className="landing-h1">
+            <h1>DIGITAL FASHION IS THE NEW CHAPTER</h1>
+          </div>
+          <div className="landing-btn">
+            {token ? (
+              <Link to="/occasion">
+                <Button
+                  text="Create Occasion"
+                  bgColor="white-bg"
+                  textColor="blue-text"
+                />
+              </Link>
+            ) : (
+              <Link to="/signup">
+                <Button
+                  text="Register"
+                  bgColor="white-bg"
+                  textColor="blue-text"
+                />
+              </Link>
+            )}
+          </div>
         </div>
       </section>
       <section className="reveal-div">
