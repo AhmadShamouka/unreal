@@ -86,7 +86,9 @@ li {
 
 @media screen and (max-width: 568px) {
   .nav__toggler {
-    background-color: #acd9f3;
+    border-radius: 10px;
+    border: 2px solid #1789c9;
+    background-color: #ffffff;
   }
 
   .links li {
