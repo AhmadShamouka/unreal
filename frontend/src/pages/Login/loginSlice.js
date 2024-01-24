@@ -4,6 +4,7 @@ const initialState = {
   username: "",
   age: "",
   country: "",
+  admin: null,
   sex: "",
   isAuthenticated: false,
 };
@@ -16,6 +17,7 @@ const loginSlice = createSlice({
       state.isAuthenticated = true;
       state.username = action.payload.username;
       state.age = action.payload.age;
+      state.admin = action.payload.admin;
       state.country = action.payload.country;
       state.sex = action.payload.sex;
     },

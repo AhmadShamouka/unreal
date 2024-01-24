@@ -3,7 +3,7 @@ import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { FaUser, FaTshirt, FaCalendar, FaVideo } from "react-icons/fa";
-
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import LoadingSpinner from "../components/loading/Loading";
 
@@ -18,9 +18,13 @@ const Dashboard = () => {
   });
   const [clothes, setClothes] = useState([]);
   const [trails, setTrails] = useState([]);
+  const [loading, setLoading] = useState(false);
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  const { admin } = useSelector((state) => state.login);
+
+  const dispatch = useDispatch();
   const fetchData = async (url, setData) => {
     try {
       const response = await axios.get(url, {
@@ -33,6 +37,13 @@ const Dashboard = () => {
       console.log(error);
     }
   };
+  useEffect(() => {
+    const loading = () => {
+      if (admin === 1) {
+        setLoading(true);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     fetchData("http://127.0.0.1:8000/api/admin/getusers", setUsers);

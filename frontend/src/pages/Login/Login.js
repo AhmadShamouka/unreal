@@ -32,6 +32,7 @@ const Login = () => {
       );
       const header = response.data.authorisation.token;
       localStorage.setItem("jwtToken", header);
+      console.log(response.data);
       if (response.data.user.admin === 1) {
         navigate("/dashboard");
       } else if (response.data.user.admin === 0) {
@@ -41,6 +42,7 @@ const Login = () => {
         loginSuccess({
           username: response.data.user.username,
           age: response.data.user.age,
+          admin: response.data.user.admin,
           sex: response.data.user.sex,
           country: response.data.user.country,
         })
