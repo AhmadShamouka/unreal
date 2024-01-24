@@ -1,0 +1,8 @@
+.loading-spinner-container {
+  flex-direction: column;
+  margin-top: 20%;
+}
+
+.loading-spinner-container h1 {
+  color: #1789c9;
+}

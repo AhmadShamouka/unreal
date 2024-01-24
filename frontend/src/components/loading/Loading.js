@@ -1,10 +1,11 @@
 import React from "react";
-import { CircleLoader } from "react-spinners";
-
+import { BounceLoader } from "react-spinners";
+import "./styleLoading.css";
 const LoadingSpinner = ({ loading }) => {
   return (
-    <div className="loading-spinner-container">
-      <CircleLoader color={"#1789c9"} loading={loading} size={500} />
+    <div className="loading-spinner-container flex center">
+      <h1>Loading</h1>
+      <BounceLoader color={"#1789c9"} loading={loading} size={75} />
     </div>
   );
 };
