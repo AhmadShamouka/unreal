@@ -69,7 +69,6 @@ const Login = () => {
             text="Email"
             name="email"
             type="email"
-            bgColor="bg-blue"
             textColor="text-white"
             placeholder="Enter your Email"
           />
@@ -81,7 +80,6 @@ const Login = () => {
             type="password"
             placeholder="Enter your Password (min. 6 characters)"
             pattern=".{6,}"
-            bgColor="bg-blue"
             textColor="text-white"
           />
           <Button
@@ -93,7 +91,7 @@ const Login = () => {
           <div className={active}>
             <h5>Email address Does not exists!</h5>
           </div>
-          <a href="/signup">Don't have Account?Create One!</a>
+          <a href="/signup">Don't have Account? Create One</a>
         </form>
       </div>
     </div>

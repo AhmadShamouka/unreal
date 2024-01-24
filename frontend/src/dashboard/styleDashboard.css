@@ -10,24 +10,32 @@
 .PieChart,
 .BarChart {
   width: 90%;
-  height: 250px;
+  height: 60%;
 }
 .side-links {
+  text-align: start;
   margin-top: 10px;
   color: #1789c9;
   height: 40vh;
   width: 100%;
   gap: 40px;
   font-size: 20px;
+  align-items: start;
   flex-direction: column;
   cursor: pointer;
 }
-.side-title h1 {
+.side-links button {
+  border-radius: 5px;
+  height: 45px;
+  width: 90%;
+  font-size: 16px;
+}
+
+.side-title h2 {
   color: #1789c9;
 }
 .side-title {
-  padding: 10px;
-  gap: 10px;
+  padding-top: 5%;
   width: 100%;
   flex-direction: column;
 }
@@ -42,28 +50,23 @@
   background-color: #ffffff;
   flex-direction: column;
 }
-.dash-hr-line {
-  height: 1px;
-  width: 100%;
-  color: #1789c9;
-  margin-top: 10px;
-  background-color: #1789c9;
-}
+
 .side-title .logo-nav {
   background-image: url("../common/base/logo/image/logo.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 70px;
+  height: 70px;
+  width: 80px;
 }
 .dashboard-container h2 {
   color: #1789c9;
 }
 .home-container {
+  padding-top: 3%;
   height: 120px;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .home-users {
   font-size: 20px;
@@ -76,16 +79,25 @@
   border-radius: 20px;
 }
 .charts-container {
-  box-shadow: 0 0 10px 4px #1789c9;
+  gap: 5%;
+  justify-content: space-between;
   border-radius: 10px;
-  width: 90%;
-  height: 70%;
+  width: 100%;
+  padding: 2% 5%;
+  height: 80%;
 }
 .barChart-container {
-  height: 100%;
+  box-shadow: 0 0 10px 1px #d6d6d6;
+  height: 90%;
+  border-radius: 20px;
   justify-content: space-around;
   width: 100%;
   flex-direction: column;
+}
+.barChart-container h2 {
+  height: 20%;
+
+  padding: 2%;
 }
 .home-users-container {
   width: 20%;
@@ -95,12 +107,15 @@
   text-align: center;
   color: #ffffff;
 }
-.user-table {
-  width: 100%;
-
-  border-collapse: collapse;
+.dashboard-container h1 {
+  padding: 8% 5% 2% 5%;
   text-align: start;
-  padding: 100px;
+  color: #1789c9;
+}
+.user-table {
+  border-radius: 125px;
+  padding: 0 5%;
+  width: 100%;
 }
 .user-table th,
 .user-table td {
@@ -108,8 +123,11 @@
   padding: 8px;
   text-align: left;
 }
+
 .user-table th {
-  background-color: #f2f2f2;
+  background-color: #1789c9;
+  color: white;
+  padding: 1%;
 }
 
 @media screen and (max-width: 1070px) {
@@ -128,6 +146,7 @@
     height: 100%;
   }
 }
+
 @media (max-width: 768px) {
   .user-table {
     font-size: 14px;

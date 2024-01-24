@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { FaUser, FaTshirt, FaCalendar, FaVideo } from "react-icons/fa";
+import { FaUser, FaTshirt, FaCalendar, FaVideo, FaHome } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import LoadingSpinner from "../components/loading/Loading";
+import Button from "../common/base/button/Button";
 
 const Dashboard = () => {
   const token = localStorage.getItem("jwtToken");
@@ -118,7 +119,7 @@ const Dashboard = () => {
   if (loading === false) {
     return (
       <div className="flex center">
-        <LoadingSpinner />
+        <h1>GO HOME YOU ARE LOST!</h1>
       </div>
     );
   } else {
@@ -129,11 +130,17 @@ const Dashboard = () => {
             <div className="logo-nav"></div>
             <h1>UNREALFIT</h1>
           </div>
-          <hr className="dash-hr-line" />
+
           <div className="side-links flex center">
-            <a onClick={() => handlePageChange("home")}>Home</a>
+            <a onClick={() => handlePageChange("home")}>
+              <FaHome />
+              Home
+            </a>
             <a onClick={() => handlePageChange("users")}>Users</a>
-            <a onClick={() => handlePageChange("occasions")}>Occasions</a>
+            <Button
+              text="Occasion"
+              onClick={() => handlePageChange("occasions")}
+            />
             <a onClick={() => handlePageChange("clothes")}>Clothes</a>
           </div>
         </div>
@@ -179,7 +186,8 @@ const Dashboard = () => {
           </div>
         )}
         {currentPage === "users" && (
-          <div id="users" className="dashboard-container flex center">
+          <div id="users" className="dashboard-container ">
+            <h1>Users</h1>
             {users.response && users.response.length > 0 ? (
               <table className="user-table">
                 <thead>

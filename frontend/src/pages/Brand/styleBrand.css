@@ -1,5 +1,5 @@
 .card-brand {
-  box-shadow: 0 0 10px 1px #0074cc;
+  box-shadow: 0 0 10px 1px #d6d6d6;
   margin: 100px 0;
   --blur: 16px;
   --size: clamp(300px, 50vmin, 600px);
