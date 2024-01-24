@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useStore } from "react-redux";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Button from "../../common/base/button/Button";
 const UserNavbar = () => {
   const { username, sex, country, age, isAuthenticated } = useSelector(
     (state) => state.login
@@ -43,6 +44,8 @@ const UserNavbar = () => {
     } else setEdit("none");
     console.log(edit);
   };
+  const handleEditProfile = () => {};
+  const handleLogOut = () => {};
   return (
     <nav>
       <div className={active}>
@@ -74,8 +77,8 @@ const UserNavbar = () => {
           </div>
           <div className={edit}>
             <div>
-              <h3>Edit profile</h3>
-              <h3>LogOut</h3>
+              <Button text="Edit Profile" onClick={handleEditProfile} />
+              <Button text="Log Out" onClick={handleLogOut} />
             </div>
           </div>
         </div>
