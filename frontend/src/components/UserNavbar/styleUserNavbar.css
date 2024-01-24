@@ -86,7 +86,7 @@ li {
 
 @media screen and (max-width: 568px) {
   .nav__toggler {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid #1789c9;
     background-color: #ffffff;
   }
@@ -95,11 +95,6 @@ li {
     display: flex;
     margin-top: 20px;
   }
-}
-
-.buttons {
-  display: flex;
-  gap: 5%;
 }
 
 .nav__active {
@@ -157,7 +152,7 @@ button {
 
 .buttons {
   display: flex;
-  gap: 5%;
+  gap: 10px;
 }
 
 .nav__active {
