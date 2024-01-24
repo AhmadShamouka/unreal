@@ -43,6 +43,7 @@ const Dashboard = () => {
         setLoading(true);
       }
     };
+    loading();
   }, []);
 
   useEffect(() => {
@@ -107,110 +108,114 @@ const Dashboard = () => {
       </BarChart>
     </ResponsiveContainer>
   );
+  if (loading === false) {
+    return (
+      <div className="flex center">
+        <LoadingSpinner />
+      </div>
+    );
+  } else {
+    return (
+      <div className="dashboard flex">
+        <div className="side-nav ">
+          <div className="side-title flex center">
+            <div className="logo-nav"></div>
+            <h1>UNREALFIT</h1>
+          </div>
+          <hr className="dash-hr-line" />
+          <div className="side-links flex center">
+            <a onClick={() => handlePageChange("home")}>Home</a>
+            <a onClick={() => handlePageChange("users")}>Users</a>
+            <a onClick={() => handlePageChange("occasions")}>Occasions</a>
+            <a onClick={() => handlePageChange("clothes")}>Clothes</a>
+          </div>
+        </div>
 
-  return (
-    <div className="flex center">
-      <LoadingSpinner />
-    </div>
-    // <div className="dashboard flex">
-    //   <div className="side-nav ">
-    //     <div className="side-title flex center">
-    //       <div className="logo-nav"></div>
-    //       <h1>UNREALFIT</h1>
-    //     </div>
-    //     <hr className="dash-hr-line" />
-    //     <div className="side-links flex center">
-    //       <a onClick={() => handlePageChange("home")}>Home</a>
-    //       <a onClick={() => handlePageChange("users")}>Users</a>
-    //       <a onClick={() => handlePageChange("occasions")}>Occasions</a>
-    //       <a onClick={() => handlePageChange("clothes")}>Clothes</a>
-    //     </div>
-    //   </div>
+        {currentPage === "home" && (
+          <div id="clothes" className="dashboard-container flex center">
+            <div className="home-container flex center">
+              <div className="home-users-container">
+                <div className="home-users flex center">
+                  <FaUser />
+                  <h4>&nbsp;{users?.count} User</h4>
+                </div>
+              </div>
+              <div className="home-users-container">
+                <div className="home-users flex center">
+                  <FaCalendar />
+                  <h4>&nbsp; {occasions?.count} Occasion</h4>
+                </div>
+              </div>
+              <div className="home-users-container">
+                <div className="home-users flex center">
+                  <FaTshirt />
+                  <h4>&nbsp;{clothes?.count} Clothes</h4>
+                </div>
+              </div>
+              <div className="home-users-container">
+                <div className="home-users flex center">
+                  <FaVideo />
+                  <h4>&nbsp;{trails?.count} Trails</h4>
+                </div>
+              </div>
+            </div>
+            <div className="charts-container flex center">
+              <div className="barChart-container flex center">
+                <h2>Users Style</h2>
+                <div className="BarChart flex center">{renderBarChart()}</div>
+              </div>
+              <div className="barChart-container flex center">
+                <h2>Users Occasions</h2>
+                <div className="PieChart flex center">{renderPieChart()}</div>
+              </div>
+            </div>
+          </div>
+        )}
+        {currentPage === "users" && (
+          <div id="users" className="dashboard-container flex center">
+            {users.response && users.response.length > 0 ? (
+              <table className="user-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Country</th>
+                    <th>Age</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {users.response.map((user) => (
+                    <tr key={user.id}>
+                      <td>{user.id}</td>
+                      <td>{user.username}</td>
+                      <td>{user.email}</td>
+                      <td>{user.sex}</td>
+                      <td>{user.country}</td>
+                      <td>{user.age}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <p>No users found.</p>
+            )}
+            <div className="PieChart flex center"></div>
+          </div>
+        )}
 
-    //   {currentPage === "home" && (
-    //     <div id="clothes" className="dashboard-container flex center">
-    //       <div className="home-container flex center">
-    //         <div className="home-users-container">
-    //           <div className="home-users flex center">
-    //             <FaUser />
-    //             <h4>&nbsp;{users?.count} User</h4>
-    //           </div>
-    //         </div>
-    //         <div className="home-users-container">
-    //           <div className="home-users flex center">
-    //             <FaCalendar />
-    //             <h4>&nbsp; {occasions?.count} Occasion</h4>
-    //           </div>
-    //         </div>
-    //         <div className="home-users-container">
-    //           <div className="home-users flex center">
-    //             <FaTshirt />
-    //             <h4>&nbsp;{clothes?.count} Clothes</h4>
-    //           </div>
-    //         </div>
-    //         <div className="home-users-container">
-    //           <div className="home-users flex center">
-    //             <FaVideo />
-    //             <h4>&nbsp;{trails?.count} Trails</h4>
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <div className="charts-container flex center">
-    //         <div className="barChart-container flex center">
-    //           <h2>Users Style</h2>
-    //           <div className="BarChart flex center">{renderBarChart()}</div>
-    //         </div>
-    //         <div className="barChart-container flex center">
-    //           <h2>Users Occasions</h2>
-    //           <div className="PieChart flex center">{renderPieChart()}</div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   )}
-    //   {currentPage === "users" && (
-    //     <div id="users" className="dashboard-container flex center">
-    //       {users.response && users.response.length > 0 ? (
-    //         <table className="user-table">
-    //           <thead>
-    //             <tr>
-    //               <th>ID</th>
-    //               <th>Name</th>
-    //               <th>Email</th>
-    //               <th>Gender</th>
-    //               <th>Country</th>
-    //               <th>Age</th>
-    //             </tr>
-    //           </thead>
-    //           <tbody>
-    //             {users.response.map((user) => (
-    //               <tr key={user.id}>
-    //                 <td>{user.id}</td>
-    //                 <td>{user.username}</td>
-    //                 <td>{user.email}</td>
-    //                 <td>{user.sex}</td>
-    //                 <td>{user.country}</td>
-    //                 <td>{user.age}</td>
-    //               </tr>
-    //             ))}
-    //           </tbody>
-    //         </table>
-    //       ) : (
-    //         <p>No users found.</p>
-    //       )}
-    //       <div className="PieChart flex center"></div>
-    //     </div>
-    //   )}
-
-    //   {currentPage === "occasions" && (
-    //     <div id="occasions" className="dashboard-container flex center"></div>
-    //   )}
-    //   {currentPage === "clothes" && (
-    //     <div id="occasions" className="dashboard-container flex center">
-    //       {/* Your occasions page content */}
-    //     </div>
-    //   )}
-    // </div>
-  );
+        {currentPage === "occasions" && (
+          <div id="occasions" className="dashboard-container flex center"></div>
+        )}
+        {currentPage === "clothes" && (
+          <div id="occasions" className="dashboard-container flex center">
+            {/* Your occasions page content */}
+          </div>
+        )}
+      </div>
+    );
+  }
 };
 
 export default Dashboard;
