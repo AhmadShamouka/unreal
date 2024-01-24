@@ -47,6 +47,7 @@ const UserNavbar = () => {
   };
   const handleEditProfile = () => {};
   const handleLogOut = () => {
+    localStorage.clear();
     navigate("/");
   };
   return (
