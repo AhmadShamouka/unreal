@@ -65,6 +65,16 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
+    setBarData(
+      occasions.occasion_style_Counts.map((occasion_style) => ({
+        name: occasion_style.style,
+        uv: occasion_style.count,
+      }))
+    );
+    console.log(bardata);
+  }, [occasions]);
+
+  useEffect(() => {
     setPieData(
       occasions.occasion_Type_Counts.map((occasion) => ({
         name: occasion.occasion_type,
