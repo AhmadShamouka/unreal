@@ -76,7 +76,7 @@ def clothes_try_on():
             if key == 27: 
                 cap.release()
                 cv2.destroyAllWindows()
-                
+                return  True
 
     except Exception as e:
         print(f"Error: {str(e)}")
