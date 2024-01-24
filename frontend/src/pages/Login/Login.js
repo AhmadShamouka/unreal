@@ -31,7 +31,7 @@ const Login = () => {
       );
       const header = response.data.authorisation.token;
       localStorage.setItem("jwtToken", header);
-      console.log(response.data);
+
       if (response.data.user.admin === 1) {
         navigate("/dashboard");
       } else if (response.data.user.admin === 0) {
@@ -46,8 +46,6 @@ const Login = () => {
           country: response.data.user.country,
         })
       );
-      console.log(formData);
-      console.log(store.getState());
     } catch (error) {
       console.error("Error during form submission:", error);
       if (error.message === "Request failed with status code 401") {

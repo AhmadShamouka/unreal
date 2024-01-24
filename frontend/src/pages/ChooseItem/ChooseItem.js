@@ -64,7 +64,6 @@ const ChooseItem = () => {
     });
   };
   const handleImageChange = async (selectedImageUrl, name, price) => {
-    console.log(selectedImageUrl);
     let imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
     imageFile = changeFileName(imageFile, "newFileName.png");
     setImage(imageFile);
@@ -110,7 +109,7 @@ const ChooseItem = () => {
             },
           }
         );
-        console.log(response);
+
         SetTrail({ id: response.data.Trails.id });
       } catch (error) {
         console.error(error);
