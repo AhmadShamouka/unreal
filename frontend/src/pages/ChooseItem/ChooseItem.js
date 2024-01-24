@@ -93,21 +93,21 @@ const ChooseItem = () => {
     formData.append("price", data.price);
     formData.append("brand_id", 1);
     formData.append("category_id", 1);
-    // try {
-    //   const response = await axios.post(
-    //     "http://127.0.0.1:8000/api/add-clothes",
-    //     formData,
-    //     {
-    //       headers: {
-    //         Authorization: authorization,
-    //       },
-    //     }
-    //   );
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/add-clothes",
+        formData,
+        {
+          headers: {
+            Authorization: authorization,
+          },
+        }
+      );
 
-    //   SetTrail({ id: response.data.Trails.id });
-    // } catch (error) {
-    //   console.error(error);
-    // }
+      SetTrail({ id: response.data.Trails.id });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleBuy = async () => {
