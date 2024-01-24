@@ -46,6 +46,11 @@ li {
 }
 
 @media screen and (max-width: 808px) {
+  .nav__toggler {
+    border-radius: 5px;
+    border: 2px solid #1789c9;
+    background-color: #ffffff;
+  }
   .nav__active {
     border-radius: 0;
     width: 100vh;
@@ -85,12 +90,6 @@ li {
 }
 
 @media screen and (max-width: 568px) {
-  .nav__toggler {
-    border-radius: 5px;
-    border: 2px solid #1789c9;
-    background-color: #ffffff;
-  }
-
   .links li {
     display: flex;
     margin-top: 20px;
