@@ -50,7 +50,7 @@ const UserNavbar = () => {
     localStorage.clear();
     navigate("/");
   };
-  const handleFind = () => {};
+
   return (
     <nav>
       <div className={active}>
@@ -70,7 +70,7 @@ const UserNavbar = () => {
             </a>
           </li>
           <li className="nav__item">
-            <a href="/" className="nav__link_user" onClick={handleFind}>
+            <a href="/" className="nav__link_user">
               Find
             </a>
           </li>
