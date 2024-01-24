@@ -23,8 +23,7 @@ const Login = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    console.log(store.getState());
+
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/login",
@@ -47,6 +46,8 @@ const Login = () => {
           country: response.data.user.country,
         })
       );
+      console.log(formData);
+      console.log(store.getState());
     } catch (error) {
       console.error("Error during form submission:", error);
       if (error.message === "Request failed with status code 401") {

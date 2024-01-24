@@ -64,10 +64,10 @@ const ChooseItem = () => {
     });
   };
   const handleImageChange = async (selectedImageUrl, name, price) => {
+    console.log(selectedImageUrl);
     let imageFile = await urlToImageFile(selectedImageUrl, selectedImageUrl);
     imageFile = changeFileName(imageFile, "newFileName.png");
     setImage(imageFile);
-    console.log(image);
     setData({
       name: name,
       price: 12,
@@ -76,6 +76,7 @@ const ChooseItem = () => {
   };
 
   const handleSubmit = async () => {
+    let success = false;
     try {
       const formDataImage = new FormData();
       formDataImage.append("image", image);
@@ -84,34 +85,40 @@ const ChooseItem = () => {
         "http://localhost:5000/convert_to_png",
         formDataImage
       );
+
+      if (response.data.success == true) {
+        success = true;
+      }
     } catch (error) {
       console.log(error);
     }
+
     const formData = new FormData();
     formData.append("image", data.image);
     formData.append("name", data.name);
     formData.append("price", data.price);
     formData.append("brand_id", 1);
     formData.append("category_id", 1);
-    try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/add-clothes",
-        formData,
-        {
-          headers: {
-            Authorization: authorization,
-          },
-        }
-      );
-
-      SetTrail({ id: response.data.Trails.id });
-    } catch (error) {
-      console.error(error);
+    if (success === true) {
+      try {
+        const response = await axios.post(
+          "http://127.0.0.1:8000/api/add-clothes",
+          formData,
+          {
+            headers: {
+              Authorization: authorization,
+            },
+          }
+        );
+        console.log(response);
+        SetTrail({ id: response.data.Trails.id });
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 
   const handleBuy = async () => {
-    console.log(trail);
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/update-trail",
