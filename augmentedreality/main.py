@@ -7,9 +7,17 @@ import cvzone
 from cvzone.PoseModule import PoseDetector
 from rembg import remove
 from PIL import Image
+import threading
 
 app = Flask(__name__)
 CORS(app)
+server_thread = None
+
+def start_server():
+    app.run(port=5000)
+
+def stop_server():
+    os._exit(0)
 
 @app.route('/convert_to_png', methods=['POST'])
 def convert_to_png():
@@ -25,12 +33,12 @@ def convert_to_png():
         output_img = remove(input_img)
         output_img.save(output_path)
 
-        clothes_try_on()
+        success = clothes_try_on()
 
-
+        return {"success": success}
 
     except Exception as e:
-        return f"Error: {str(e)}", 500
+        return {"error": str(e)}, 500
 
 def clothes_try_on():
     try:
@@ -66,12 +74,15 @@ def clothes_try_on():
             key = cv2.waitKey(1)
             
             if key == 27: 
-                break
-
-        cap.release() 
+                cap.release()
+                cv2.destroyAllWindows()
+                
 
     except Exception as e:
         print(f"Error: {str(e)}")
+        return False
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    server_thread = threading.Thread(target=start_server)
+    server_thread.start()
+    server_thread.join()
