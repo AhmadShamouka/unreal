@@ -25,6 +25,11 @@ const Dashboard = () => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  const [selectedButton, setSelectedButton] = useState("home");
+
+  const handleButtonChange = (page) => {
+    setSelectedButton(page);
+  };
   const { admin } = useSelector((state) => state.login);
 
   const dispatch = useDispatch();
@@ -128,20 +133,40 @@ const Dashboard = () => {
         <div className="side-nav ">
           <div className="side-title flex center">
             <div className="logo-nav"></div>
-            <h1>UNREALFIT</h1>
+            <h2>UNREALFIT</h2>
           </div>
-
           <div className="side-links flex center">
-            <a onClick={() => handlePageChange("home")}>
-              <FaHome />
-              Home
-            </a>
-            <a onClick={() => handlePageChange("users")}>Users</a>
+            <Button
+              text="Home"
+              bgColor={selectedButton === "home" ? "blue-bg" : "white-bg"}
+              textColor={selectedButton === "home" ? "white-text" : "blue-text"}
+              onClick={() => {
+                handlePageChange("home");
+                handleButtonChange("home");
+              }}
+            />
+            <Button
+              text="Users"
+              bgColor={selectedButton === "users" ? "blue-bg" : "white-bg"}
+              textColor={
+                selectedButton === "users" ? "white-text" : "blue-text"
+              }
+              onClick={() => {
+                handlePageChange("users");
+                handleButtonChange("users");
+              }}
+            />
             <Button
               text="Occasion"
-              onClick={() => handlePageChange("occasions")}
+              bgColor={selectedButton === "occasions" ? "blue-bg" : "white-bg"}
+              textColor={
+                selectedButton === "occasions" ? "white-text" : "blue-text"
+              }
+              onClick={() => {
+                handlePageChange("occasions");
+                handleButtonChange("occasions");
+              }}
             />
-            <a onClick={() => handlePageChange("clothes")}>Clothes</a>
           </div>
         </div>
 
