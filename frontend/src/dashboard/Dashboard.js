@@ -13,8 +13,10 @@ const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState("home");
   const [users, setUsers] = useState([]);
   const [piedata, setPieData] = useState([]);
+  const [bardata, setBarData] = useState([]);
   const [occasions, setOccasions] = useState({
     occasion_Type_Counts: [],
+    occasion_style_Counts: [],
   });
   const [clothes, setClothes] = useState([]);
   const [trails, setTrails] = useState([]);
@@ -62,11 +64,6 @@ const Dashboard = () => {
     fetchData("http://127.0.0.1:8000/api/admin/gettrails", setTrails);
   }, []);
 
-  const barChartData = [
-    { name: "Formal", uv: 400, pv: 2400, amt: 2400 },
-    { name: "Casual", uv: 300, pv: 2200, amt: 400 },
-    { name: "Stylish", uv: 100, pv: 200, amt: 240 },
-  ];
   useEffect(() => {
     setPieData(
       occasions.occasion_Type_Counts.map((occasion) => ({
@@ -79,7 +76,7 @@ const Dashboard = () => {
   const COLORS = ["#5eb7eb", "#1789c9", "#608faa", "#5f717c", "#04395a"];
 
   const renderPieChart = () => (
-    <ResponsiveContainer width={500} height={300}>
+    <ResponsiveContainer>
       <PieChart>
         <Pie
           dataKey="value"
@@ -98,8 +95,8 @@ const Dashboard = () => {
     </ResponsiveContainer>
   );
   const renderBarChart = () => (
-    <ResponsiveContainer width={500} height={300}>
-      <BarChart data={barChartData}>
+    <ResponsiveContainer>
+      <BarChart data={bardata}>
         <XAxis dataKey="name" stroke="#1789c9" />
         <YAxis stroke="#1789c9" />
         <Tooltip />
