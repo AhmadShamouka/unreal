@@ -74,7 +74,9 @@ const Landing = () => {
       <section>
         <div className="landing flex center">
           <div className="landing-h1">
-            <h1>DIGITAL FASHION IS THE NEW CHAPTER</h1>
+            <h1>
+              DIGITAL FASHION IS THE NEW <br /> CHAPTER
+            </h1>
           </div>
           <div className="landing-btn">
             {token ? (
