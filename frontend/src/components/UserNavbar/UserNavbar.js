@@ -3,9 +3,10 @@ import "./styleUserNavbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useStore } from "react-redux";
 import { FaUser } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../common/base/button/Button";
 const UserNavbar = () => {
+  const navigate = useNavigate();
   const { username, sex, country, age, isAuthenticated } = useSelector(
     (state) => state.login
   );
@@ -45,7 +46,9 @@ const UserNavbar = () => {
     console.log(edit);
   };
   const handleEditProfile = () => {};
-  const handleLogOut = () => {};
+  const handleLogOut = () => {
+    navigate("/");
+  };
   return (
     <nav>
       <div className={active}>
