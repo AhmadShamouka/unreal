@@ -50,6 +50,7 @@ const UserNavbar = () => {
     localStorage.clear();
     navigate("/");
   };
+  const handleFind = () => {};
   return (
     <nav>
       <div className={active}>
@@ -64,13 +65,13 @@ const UserNavbar = () => {
             </a>
           </li>
           <li className="nav__item">
-            <a href="/" className="nav__link_user">
-              About
+            <a href="/occasion" className="nav__link_user">
+              Occasion
             </a>
           </li>
           <li className="nav__item">
-            <a href="/" className="nav__link_user">
-              Template
+            <a href="/" className="nav__link_user" onClick={handleFind}>
+              Find
             </a>
           </li>
         </ul>
