@@ -40,7 +40,7 @@
   width: 100%;
   background: red;
   display: grid;
-  gap: 0.5ch;
+  gap: 0.5rem;
   background: hsl(0 0% 100% / 0.5);
   backdrop-filter: blur(var(--blur));
   height: 30%;
@@ -58,9 +58,15 @@
 .card-brand:is(:hover, :focus-visible) {
   --hover: 1;
 }
-@media screen and (max-width: 968px) {
+
+@media screen and (max-width: 768px) {
   .card-brand-container {
     flex-direction: column;
-    justify-content: space-evenly;
+  }
+  .card-brand {
+    margin: 50px 0;
+  }
+  .brand-label {
+    margin-top: 10px;
   }
 }
