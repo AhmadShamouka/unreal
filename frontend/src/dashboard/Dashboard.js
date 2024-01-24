@@ -248,11 +248,6 @@ const Dashboard = () => {
         {currentPage === "occasions" && (
           <div id="occasions" className="dashboard-container flex center"></div>
         )}
-        {currentPage === "clothes" && (
-          <div id="occasions" className="dashboard-container flex center">
-            {/* Your occasions page content */}
-          </div>
-        )}
       </div>
     );
   }
