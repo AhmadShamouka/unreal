@@ -131,6 +131,7 @@ const Dashboard = () => {
   if (loading === false) {
     return (
       <div className="forbidden flex center">
+        <FaBacterium size={100} />
         <h1>GO HOME YOU ARE LOST!</h1>
       </div>
     );
