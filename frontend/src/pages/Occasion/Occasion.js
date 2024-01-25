@@ -80,7 +80,6 @@ const Occasion = () => {
         if (response.data.status === "success") {
           dispatch(occasionCreated(response.data.suggested_link));
         }
-        console.log(formData);
         console.log(store.getState());
         navigate("/find");
       } catch (error) {

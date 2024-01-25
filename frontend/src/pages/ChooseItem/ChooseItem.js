@@ -11,8 +11,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./styleChooseItem.css";
-import cheerio from "cheerio";
 
+import { useDispatch, useSelector } from "react-redux";
 const ChooseItem = () => {
   const navigate = useNavigate();
   const [images, setImages] = useState([]);
@@ -26,6 +26,8 @@ const ChooseItem = () => {
     price: null,
     image: null,
   });
+  const { UrlLink } = useSelector((state) => state.occasion);
+  const url = UrlLink;
 
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
@@ -33,15 +35,11 @@ const ChooseItem = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const apiKey = "0dcb337f2a81a92587ce7e26593a35bb";
-        const userId = "199946451@N04";
-
-        const response = await fetch(
-          `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${apiKey}&user_id=${userId}&format=json&nojsoncallback=1`
-        );
+        const response = await fetch(url);
 
         const data = await response.json();
-        setImages(data.photos.photo);
+
+        setImages(data.photoset.photo);
       } catch (error) {
         console.error("Error fetching images:", error);
       }
