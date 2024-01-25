@@ -46,32 +46,70 @@ class OccasionController extends Controller
                 
                 $response = $result['choices'][0]['message']['content'];
                  
-                
-                function extractSearchQuery($clothingSuggestions)
-                {
-                
-                    $words = explode(' ', $clothingSuggestions);
-                
-                    $filteredWords = array_filter($words, function ($word) {
-                
-                        return strlen($word) > 2 && !in_array(strtolower($word), ['and', 'or', 'the', 'for',"1","2","3"]);
-                    });
-                
-                    $searchQuery = implode(' ', $filteredWords);
-                
-                    return $searchQuery;
+                switch ($response) {
+                    case 'men summer shirts':
+                       $link="72177720314279320";
+                        break;
+                    case 'women summer shirts':
+                        $link="72177720314290573";
+                        break;
+                    case 'men winter shirts':
+                        $link="72177720314306941";
+                        break;
+                    case 'women winter shirts':
+                        $link="";
+                        break;
+                    case 'men suits':
+                        $link="72177720314302809";
+                        break;
+                    case 'women suits':
+                        $link="";
+                        break;
+                    case 'man pijamas':
+                        $link="72177720314302774";
+                        break;
+                    case 'women pijamas':
+                        $link="72177720314290513";
+                        break;
+                    case 'women swimwear':
+                        $link="72177720314276462";
+                        break;
+                    case 'man swimwear':
+                        $link="";
+                        break;
+                    case 'women wedding':
+                        $link="";
+                        break;
+                    case 'man sports':
+                        $link="";
+                        break;
+                    case 'women sports':
+                        $link="";
+                        break;
+                    case 'women winter dress':
+                        $link="72177720314274755";
+                        break;
+                    case 'women summer dress':
+                        $link="72177720314280926";
+                        break;
+                    default:
+                        $link="72177720314280926";
                 }
-    
-                $link = 'https://www.flickr.com/photos/199946451@N04/albums/';
-                $clothingSuggestions = $result['choices'][0]['message']['content'];
-                $suggestedSearchQuery = extractSearchQuery($clothingSuggestions);
-                $suggestedLink = $link . urlencode($suggestedSearchQuery);
+                
+        
+                 $apiKey = "0dcb337f2a81a92587ce7e26593a35bb";
+                 $userId = "199946451@N04";
+                 $album = $link;
+          
+                $link = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key={$apiKey}&photoset_id={$album}&user_id={$userId}&format=json&nojsoncallback=1`;
+                
+                
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Occasion created successfully',
                     'occasion' => $occasion,
                     'openai' => $result,
-                    'suggested_link' => $response,
+                    'suggested_link' => $link,
                 ]);
                 
                 
