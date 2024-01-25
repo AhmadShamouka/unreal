@@ -140,7 +140,7 @@
     font-size: medium;
   }
   .side-nav {
-    display: none;
+    width: 30%;
   }
   .charts-container {
     height: 100vh;
@@ -159,5 +159,11 @@
   .user-table th,
   .user-table td {
     padding: 6px;
+  }
+}
+@media (max-width: 968px) {
+  .home-users {
+    flex-direction: column;
+    font-size: 14px;
   }
 }
