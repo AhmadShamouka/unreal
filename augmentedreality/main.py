@@ -65,7 +65,7 @@ def clothes_try_on():
                 img_shirt = cv2.resize(img_shirt, (width_of_shirt, height_of_shirt))
 
                 x_offset = int(width_of_shirt * -0.23)  
-                y_offset = int(height_of_shirt * -0.13)  
+                y_offset = int(height_of_shirt * -0.1)  
                 top_left = (min(lm11[0], lm12[0]) + x_offset, min(lm11[1], lm12[1]) + y_offset)
 
                 img = cvzone.overlayPNG(img, img_shirt, top_left)
