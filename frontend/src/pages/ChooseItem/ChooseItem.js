@@ -27,9 +27,9 @@ const ChooseItem = () => {
     image: null,
   });
   const { UrlLink } = useSelector((state) => state.occasion);
+
   const url = UrlLink;
 
-  const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
 
   useEffect(() => {
@@ -40,6 +40,7 @@ const ChooseItem = () => {
         const data = await response.json();
 
         setImages(data.photoset.photo);
+        console.log(images);
       } catch (error) {
         console.error("Error fetching images:", error);
       }
@@ -166,15 +167,14 @@ const ChooseItem = () => {
                           handleImageChange(
                             `https://farm${image.farm}.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`,
                             image.title,
-                            image.price
+                            image.desprition
                           );
                           handleSubmit();
                         }}
                       />
                     </div>
                     <span className="card-footer-find flex center">
-                      <h3>{image.name}</h3>
-                      <h3>Price: ${image.price}</h3>
+                      <h3>{image.title}</h3>
                     </span>
                   </div>
                 </SwiperSlide>
