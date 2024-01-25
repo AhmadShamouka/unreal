@@ -138,7 +138,7 @@ const Dashboard = () => {
   } else {
     return (
       <div className="dashboard flex">
-        <div className="side-nav ">
+        <div className="side-nav">
           <div className="side-title flex center">
             <div className="logo-nav"></div>
             <h2>UNREALFIT</h2>
@@ -164,6 +164,9 @@ const Dashboard = () => {
                 handleButtonChange("users");
               }}
             />
+          </div>
+          <div className="logout-dash">
+            <Button text="Log Out" bgColor="white-bg" textColor="blue-text" />
           </div>
         </div>
 

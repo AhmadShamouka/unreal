@@ -167,3 +167,11 @@
     font-size: 14px;
   }
 }
+.logout-dash {
+  position: absolute;
+  left: 10;
+  bottom: 0;
+}
+.logout-dash button {
+  width: 100%;
+}
