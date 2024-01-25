@@ -46,6 +46,9 @@ class OccasionController extends Controller
                 
                 $response = $result['choices'][0]['message']['content'];
                  
+         
+              
+                                 
                 switch ($response) {
                     case 'men summer shirts':
                        $link="72177720314279320";
@@ -57,13 +60,13 @@ class OccasionController extends Controller
                         $link="72177720314306941";
                         break;
                     case 'women winter shirts':
-                        $link="";
+                        $link="72177720314307020";
                         break;
                     case 'men suits':
                         $link="72177720314302809";
                         break;
                     case 'women suits':
-                        $link="";
+                        $link="72177720314307020";
                         break;
                     case 'man pijamas':
                         $link="72177720314302774";
@@ -75,16 +78,16 @@ class OccasionController extends Controller
                         $link="72177720314276462";
                         break;
                     case 'man swimwear':
-                        $link="";
+                        $link="72177720314352759";
                         break;
                     case 'women wedding':
-                        $link="";
+                        $link="72177720314331661";
                         break;
                     case 'man sports':
-                        $link="";
+                        $link="72177720314307030";
                         break;
                     case 'women sports':
-                        $link="";
+                        $link="72177720314307030";
                         break;
                     case 'women winter dress':
                         $link="72177720314274755";
@@ -92,8 +95,6 @@ class OccasionController extends Controller
                     case 'women summer dress':
                         $link="72177720314280926";
                         break;
-                    default:
-                        $link="72177720314280926";
                 }
                 
         
@@ -101,14 +102,14 @@ class OccasionController extends Controller
                  $userId = "199946451@N04";
                  $album = $link;
           
-                $link = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key={$apiKey}&photoset_id={$album}&user_id={$userId}&format=json&nojsoncallback=1`;
+                $link = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key={$apiKey}&photoset_id={$album}&user_id={$userId}&format=json&nojsoncallback=1";
                 
                 
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Occasion created successfully',
                     'occasion' => $occasion,
-                    'openai' => $result,
+                    'openai' => $response,
                     'suggested_link' => $link,
                 ]);
                 
