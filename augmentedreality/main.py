@@ -24,9 +24,9 @@ def convert_to_png():
     try:
         image_file = request.files['image']
         output_path = "Resources/output.png"
-
-        image_data = BytesIO(image_file.read())
-
+        
+        image_data = BytesIO(image_file.read())       
+         
         img = Image.open(image_data)
         img.save(output_path, 'PNG')
         input_img = Image.open(output_path)
