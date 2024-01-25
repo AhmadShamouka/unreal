@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import LoadingSpinner from "../components/loading/Loading";
 import Button from "../common/base/button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const token = localStorage.getItem("jwtToken");
@@ -26,6 +27,7 @@ const Dashboard = () => {
     occasion_Type_Counts: [],
     occasion_style_Counts: [],
   });
+  const navigate = useNavigate();
   const [clothes, setClothes] = useState([]);
   const [trails, setTrails] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -117,6 +119,9 @@ const Dashboard = () => {
       </PieChart>
     </ResponsiveContainer>
   );
+  const handleLogOut = () => {
+    navigate("/");
+  };
   const renderBarChart = () => (
     <ResponsiveContainer>
       <BarChart data={bardata}>
@@ -166,7 +171,14 @@ const Dashboard = () => {
             />
           </div>
           <div className="logout-dash">
-            <Button text="Log Out" bgColor="white-bg" textColor="blue-text" />
+            <Button
+              text="Log Out"
+              bgColor="white-bg"
+              textColor="blue-text"
+              onClick={() => {
+                handleLogOut();
+              }}
+            />
           </div>
         </div>
 
