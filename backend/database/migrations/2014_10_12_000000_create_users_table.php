@@ -20,8 +20,10 @@ return new class extends Migration
             $table->string('country');
             $table->enum('sex', ['female', 'male']);
             $table->integer('age');
+            $table->softDeletes();
+      
             $table->timestamps();
-            $table->softDeleted();
+         
         });
     }
 

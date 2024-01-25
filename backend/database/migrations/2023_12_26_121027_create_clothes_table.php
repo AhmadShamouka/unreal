@@ -23,7 +23,8 @@ return new class extends Migration
             $table->unsignedBigInteger('brand_id');
             $table->foreign('brand_id')->references('id')->on('brands');    
             $table->timestamps();
-            $table->softDeleted();
+            $table->softDeletes();
+           
         });
     }
 

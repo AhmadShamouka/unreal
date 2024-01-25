@@ -4,9 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\softDeletes;
 class Trail extends Model
-{
+{   
+    use softDeletes;
     protected $fillable = ['choosen', 'user_id', 'clothes_id'];
 
 
