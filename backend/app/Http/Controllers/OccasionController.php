@@ -35,7 +35,7 @@ class OccasionController extends Controller
                     'messages' => [
                         [
                             'role' => 'user',
-                            'content' => " I am $request->sex am I need clothes suggestions from this website https://www.azadea.com/en for an upcoming $request->occasion_type. I prefer a $request->style look for $request->season. My budget is $request->budget_range. - Give me suggestions for clothes, 3 words max,remark (the suggestion should be t-shirt or dress only)",
+                            'content' => " I am $request->sex am I need clothes suggestions for an upcoming $request->occasion_type. I prefer a $request->style look for $request->season. My budget is $request->budget_range. - Give me suggestions for clothes, 3 words max,remark (the suggestion should be t-shirt or dresses only)",
                         ],
                     ],
                     'max_tokens' => 15,
@@ -55,10 +55,10 @@ class OccasionController extends Controller
                     return $searchQuery;
                 }
     
-                $azadeaLink = 'https://www.azadea.com/en/shop-by?q=';
+                $link = 'https://www.flickr.com/photos/199946451@N04/albums/';
                 $clothingSuggestions = $result['choices'][0]['message']['content'];
                 $suggestedSearchQuery = extractSearchQuery($clothingSuggestions);
-                $suggestedLink = $azadeaLink . urlencode($suggestedSearchQuery);
+                $suggestedLink = $link . urlencode($suggestedSearchQuery);
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Occasion created successfully',

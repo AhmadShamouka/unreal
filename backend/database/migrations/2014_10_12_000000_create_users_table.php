@@ -21,6 +21,7 @@ return new class extends Migration
             $table->enum('sex', ['female', 'male']);
             $table->integer('age');
             $table->timestamps();
+            $table->softDeleted();
         });
     }
 
