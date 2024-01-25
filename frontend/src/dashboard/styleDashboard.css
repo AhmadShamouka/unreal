@@ -30,7 +30,11 @@
   width: 90%;
   font-size: 16px;
 }
-
+.forbidden {
+  flex-direction: column;
+  color: #1789c9;
+  margin-top: 15%;
+}
 .side-title h2 {
   color: #1789c9;
 }

@@ -2,7 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { FaUser, FaTshirt, FaCalendar, FaVideo, FaHome } from "react-icons/fa";
+import {
+  FaUser,
+  FaTshirt,
+  FaCalendar,
+  FaVideo,
+  FaHome,
+  FaBacterium,
+} from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import LoadingSpinner from "../components/loading/Loading";
@@ -123,7 +130,7 @@ const Dashboard = () => {
   );
   if (loading === false) {
     return (
-      <div className="flex center">
+      <div className="forbidden flex center">
         <h1>GO HOME YOU ARE LOST!</h1>
       </div>
     );
