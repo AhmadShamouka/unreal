@@ -11,8 +11,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./styleChooseItem.css";
-
+import { useStore } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
+import { ItemChoosen } from "./ChooseItemSlice";
 const ChooseItem = () => {
   const navigate = useNavigate();
   const [images, setImages] = useState([]);
@@ -26,21 +27,20 @@ const ChooseItem = () => {
     price: null,
     image: null,
   });
+  const store = useStore();
+  const dispatch = useDispatch();
   const { UrlLink } = useSelector((state) => state.occasion);
 
   const url = UrlLink;
-
+  const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const response = await fetch(url);
-
         const data = await response.json();
-
         setImages(data.photoset.photo);
-        console.log(images);
       } catch (error) {
         console.error("Error fetching images:", error);
       }
@@ -128,7 +128,13 @@ const ChooseItem = () => {
         }
       );
       if (response.data.status === "success") {
+        dispatch(
+          ItemChoosen({
+            ItemName: images,
+          })
+        );
         navigate("/brand");
+        console.log(images);
       }
     } catch (error) {
       console.log(error);
