@@ -29,17 +29,24 @@ class OccasionController extends Controller
                     'budget_range' => $request->budget_range,
                     'user_id' => $user->id,
                 ]);
+             
 
+                $prompt = "I am {$request->sex} and I need clothes suggestions for an upcoming {$request->occasion_type}. I prefer a {$request->style} look for {$request->season}. My budget is {$request->budget_range}. - Give me suggestions for clothes, 3 words max, remark (you should pick one of the [`men summer shirts`, 'women summer shirts', `men winter shirts`, 'women winter shirts', 'men suits', 'women suits', 'man pijamas', 'women pijamas', 'women swimwear', 'man swimwear', 'women wedding', 'man sports', 'women sports', 'women winter dress', 'women summer dress'])";
+                
                 $result = OpenAI::chat()->create([
                     'model' => 'gpt-3.5-turbo',
                     'messages' => [
                         [
                             'role' => 'user',
-                            'content' => " I am $request->sex am I need clothes suggestions for an upcoming $request->occasion_type. I prefer a $request->style look for $request->season. My budget is $request->budget_range. - Give me suggestions for clothes, 3 words max,remark (the suggestion should be t-shirt or dresses only)",
+                            'content' => $prompt,
                         ],
                     ],
                     'max_tokens' => 15,
                 ]);
+                
+                $response = $result['choices'][0]['message']['content'];
+                 
+                
                 function extractSearchQuery($clothingSuggestions)
                 {
                 
@@ -64,7 +71,7 @@ class OccasionController extends Controller
                     'message' => 'Occasion created successfully',
                     'occasion' => $occasion,
                     'openai' => $result,
-                    'suggested_link' => $suggestedLink,
+                    'suggested_link' => $response,
                 ]);
                 
                 
