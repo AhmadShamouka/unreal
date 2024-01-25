@@ -8,7 +8,7 @@ import {
   FaCalendar,
   FaVideo,
   FaHome,
-  FaBacterium,
+  FaBacteria,
 } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
@@ -131,7 +131,7 @@ const Dashboard = () => {
   if (loading === false) {
     return (
       <div className="forbidden flex center">
-        <FaBacterium size={100} />
+        <FaBacteria size={100} />
         <h1>GO HOME YOU ARE LOST!</h1>
       </div>
     );
@@ -162,17 +162,6 @@ const Dashboard = () => {
               onClick={() => {
                 handlePageChange("users");
                 handleButtonChange("users");
-              }}
-            />
-            <Button
-              text="Occasion"
-              bgColor={selectedButton === "occasions" ? "blue-bg" : "white-bg"}
-              textColor={
-                selectedButton === "occasions" ? "white-text" : "blue-text"
-              }
-              onClick={() => {
-                handlePageChange("occasions");
-                handleButtonChange("occasions");
               }}
             />
           </div>
@@ -251,10 +240,6 @@ const Dashboard = () => {
             )}
             <div className="PieChart flex center"></div>
           </div>
-        )}
-
-        {currentPage === "occasions" && (
-          <div id="occasions" className="dashboard-container flex center"></div>
         )}
       </div>
     );
