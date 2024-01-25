@@ -93,7 +93,7 @@ const Login = () => {
           </div>
           <div className="flex center">
             <a> Don't have Account?</a>
-            <Link to="/signin">
+            <Link to="/signup">
               <h4>Create One</h4>
             </Link>
           </div>

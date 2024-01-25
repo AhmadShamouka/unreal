@@ -22,18 +22,14 @@ import Button from "../../common/base/button/Button";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { occasionCreated } from "../Occasion/occasionSlice";
-import { useStore } from "react-redux";
+
 const Occasion = () => {
   const [active, setActive] = useState("errorMsg");
   const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
   const [activeDiv, setActiveDiv] = useState(0);
-
-  const { username, sex, country, age, isAuthenticated } = useSelector(
-    (state) => state.login
-  );
-  const store = useStore();
+  const { sex, country, age } = useSelector((state) => state.login);
   const dispatch = useDispatch();
   const [blurredHexagon, setBlurredHexagon] = useState(null);
   const [formData, setFormData] = useState({
@@ -80,12 +76,8 @@ const Occasion = () => {
         if (response.data.status === "success") {
           dispatch(occasionCreated(response.data.suggested_link));
         }
-        console.log(store.getState());
         navigate("/find");
-      } catch (error) {
-        console.error(error);
-        navigate("/find");
-      }
+      } catch (error) {}
     }
   };
   return (

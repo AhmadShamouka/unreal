@@ -18,7 +18,6 @@ const ChooseItem = () => {
   const navigate = useNavigate();
   const [images, setImages] = useState([]);
   const [image, setImage] = useState(null);
-  const [products, setProducts] = useState([]);
   const [trail, SetTrail] = useState({
     id: null,
   });
@@ -31,19 +30,16 @@ const ChooseItem = () => {
   const dispatch = useDispatch();
   const { UrlLink } = useSelector((state) => state.occasion);
 
-  const url = UrlLink;
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(UrlLink);
         const data = await response.json();
         setImages(data.photoset.photo);
-      } catch (error) {
-        console.error("Error fetching images:", error);
-      }
+      } catch (error) {}
     };
 
     fetchImages();
@@ -84,12 +80,10 @@ const ChooseItem = () => {
         formDataImage
       );
 
-      if (response.data.success == true) {
+      if (response.data.success === true) {
         success = true;
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
 
     const formData = new FormData();
     formData.append("image", data.image);
@@ -110,9 +104,7 @@ const ChooseItem = () => {
         );
 
         SetTrail({ id: response.data.Trails.id });
-      } catch (error) {
-        console.error(error);
-      }
+      } catch (error) {}
     }
   };
 
@@ -130,15 +122,12 @@ const ChooseItem = () => {
       if (response.data.status === "success") {
         dispatch(
           ItemChoosen({
-            ItemName: images,
+            ItemName: data.name,
           })
         );
         navigate("/brand");
-        console.log(images);
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
   return (
     <div>

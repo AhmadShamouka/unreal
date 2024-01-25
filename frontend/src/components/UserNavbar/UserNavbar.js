@@ -82,7 +82,6 @@ const UserNavbar = () => {
           </div>
           <div className={edit}>
             <div>
-              <Button text="Edit Profile" onClick={handleEditProfile} />
               <Button text="Log Out" onClick={handleLogOut} />
             </div>
           </div>

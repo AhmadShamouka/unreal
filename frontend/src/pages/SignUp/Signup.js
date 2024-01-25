@@ -35,13 +35,13 @@ const SignUp = () => {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
+
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/register",
         formData
       );
-      console.log(response.data);
+
       navigate("/signin");
       if (response.data.message === "The email has already been taken.") {
         setActive("errorMsg-signup");
