@@ -91,7 +91,12 @@ const Login = () => {
           <div className={active}>
             <h5>Email address Does not exists!</h5>
           </div>
-          <a href="/signup">Don't have Account? Create One</a>
+          <div className="flex center">
+            <a> Don't have Account?</a>
+            <Link to="/signin">
+              <h4>Create One</h4>
+            </Link>
+          </div>
         </form>
       </div>
     </div>

@@ -146,9 +146,11 @@ const SignUp = () => {
           <div className={active}>
             <h5>Email address already exists!</h5>
           </div>
-          <div className="signup-text">
-            <a href="/signin">Already Have an account?</a>
-            <h4>Log In</h4>
+          <div className="signup-text flex center">
+            <a>Already Have an account?</a>
+            <Link to="/signin">
+              <h4>Log In</h4>
+            </Link>
           </div>
         </form>
       </div>
