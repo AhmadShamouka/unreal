@@ -98,9 +98,9 @@ class OccasionController extends Controller
                 }
                 
         
-                 $apiKey = "0dcb337f2a81a92587ce7e26593a35bb";
-                 $userId = "199946451@N04";
-                 $album = $link;
+                $apiKey = config('flickr.api_key');
+                $userId = config('flickr.user_id');
+                $album = $link;
           
                 $link = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key={$apiKey}&photoset_id={$album}&user_id={$userId}&format=json&nojsoncallback=1";
                 
