@@ -86,7 +86,6 @@ const Dashboard = () => {
         uv: occasion_style.count,
       }))
     );
-    console.log(bardata);
   }, [occasions]);
 
   useEffect(() => {
@@ -170,7 +169,7 @@ const Dashboard = () => {
               }}
             />
           </div>
-          <div className="logout-dash">
+          <div className="side-links logout-btn flex center">
             <Button
               text="Log Out"
               bgColor="white-bg"
@@ -188,25 +187,25 @@ const Dashboard = () => {
               <div className="home-users-container">
                 <div className="home-users flex center">
                   <FaUser />
-                  <h4>&nbsp;{users?.count} User</h4>
+                  <h4>{users?.count} User</h4>
                 </div>
               </div>
               <div className="home-users-container">
                 <div className="home-users flex center">
                   <FaCalendar />
-                  <h4>&nbsp; {occasions?.count} Occasion</h4>
+                  <h4> {occasions?.count} Occasion</h4>
                 </div>
               </div>
               <div className="home-users-container">
                 <div className="home-users flex center">
                   <FaTshirt />
-                  <h4>&nbsp;{clothes?.count} Clothes</h4>
+                  <h4>{clothes?.count} Clothes</h4>
                 </div>
               </div>
               <div className="home-users-container">
                 <div className="home-users flex center">
                   <FaVideo />
-                  <h4>&nbsp;{trails?.count} Trails</h4>
+                  <h4>{trails?.count} Trails</h4>
                 </div>
               </div>
             </div>

@@ -10,15 +10,14 @@
 .PieChart,
 .BarChart {
   width: 90%;
-  height: 60%;
+  height: 80%;
 }
 .side-links {
   text-align: start;
   margin-top: 10px;
   color: #1789c9;
-  height: 40vh;
+  height: 100%;
   width: 100%;
-
   font-size: 20px;
   align-items: start;
   flex-direction: column;
@@ -74,7 +73,8 @@
 }
 .home-users {
   font-size: 20px;
-  margin-top: 10px;
+  margin: 5px;
+  gap: 2px;
   text-align: center;
   color: #ffffff;
   height: 90px;
@@ -88,7 +88,7 @@
   border-radius: 10px;
   width: 100%;
   padding: 2% 5%;
-  height: 80%;
+  height: 60%;
 }
 .barChart-container {
   box-shadow: 0 0 10px 1px #d6d6d6;
@@ -100,7 +100,6 @@
 }
 .barChart-container h2 {
   height: 20%;
-
   padding: 2%;
 }
 .home-users-container {
@@ -143,7 +142,7 @@
     width: 30%;
   }
   .charts-container {
-    height: 100vh;
+    height: 50%;
     flex-direction: column;
   }
   .dashboard-container {
@@ -167,11 +166,6 @@
     font-size: 14px;
   }
 }
-.logout-dash {
-  position: absolute;
-  left: 10;
-  bottom: 0;
-}
-.logout-dash button {
-  width: 100%;
+.logout-btn {
+  justify-content: end;
 }

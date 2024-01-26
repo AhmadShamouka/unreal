@@ -108,9 +108,7 @@ select option:checked {
   width: 150px;
   height: 50px;
 }
-.find-btn button:hover {
-  box-shadow: 0 0 20px #ffffff;
-}
+
 @media screen and (max-width: 768px) {
   .personal-info-container {
     display: flex;
@@ -134,4 +132,51 @@ select option:checked {
   margin: 0 auto;
   height: 2px;
   margin-bottom: 5rem;
+}
+.costum {
+  background-color: #aed6ee;
+  display: flex;
+
+  z-index: 213;
+  height: 100%;
+}
+.display-costum {
+  display: none;
+  margin-top: 20px;
+}
+
+.display-costum h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.text-area-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.text-area-box textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: none;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+.text-area-box-footer {
+  margin-top: 10px;
+}
+
+.text-area-box-footer button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-area-box-footer button:hover {
+  background-color: #0056b3;
 }
