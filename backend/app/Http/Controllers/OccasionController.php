@@ -47,8 +47,9 @@ class OccasionController extends Controller
 
                 $link = $this->mapFlickrAlbum($response);
 
-                $apiKey = config('flickr.api_key');
-                $userId = config('flickr.user_id');
+                $apiKey = env('FLICKR_API_KEY');
+                $userId = env('FLICKR_USER_ID');
+                
                 $album = $link;
                 $link = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key={$apiKey}&photoset_id={$album}&user_id={$userId}&format=json&nojsoncallback=1";
 
