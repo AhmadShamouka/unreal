@@ -87,6 +87,13 @@ const Occasion = () => {
         <section className="hexagons-temp">
           <h1>Click to Choose Your Occasion</h1>
           <hr className="hr-line" />
+          <div className="cutom">
+            <Button
+              text="Custom Occasion"
+              bgColor="blue-bg"
+              textColor="white-text"
+            />
+          </div>
           <div name="occasion_type" className="hexa3 flex center">
             <Hexagon
               value="outdoor activity"
