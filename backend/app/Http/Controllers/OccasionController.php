@@ -29,10 +29,9 @@ class OccasionController extends Controller
                     'budget_range' => $request->budget_range,
                     'user_id' => $user->id,
                 ]);
-             
 
                 $prompt = "I am {$request->sex} and I need clothes suggestions for an upcoming {$request->occasion_type}. I prefer a {$request->style} look for {$request->season}. My budget is {$request->budget_range}. - Give me suggestions for clothes, 3 words max, remark (you should pick one of the [`men summer shirts`, 'women summer shirts', `men winter shirts`, 'women winter shirts', 'men suits', 'women suits', 'man pijamas', 'women pijamas', 'women swimwear', 'man swimwear', 'women wedding', 'man sports', 'women sports', 'women winter dress', 'women summer dress'])";
-                
+
                 $result = OpenAI::chat()->create([
                     'model' => 'gpt-3.5-turbo',
                     'messages' => [
@@ -43,68 +42,16 @@ class OccasionController extends Controller
                     ],
                     'max_tokens' => 15,
                 ]);
-                
+
                 $response = $result['choices'][0]['message']['content'];
-                 
-         
-              
-                                 
-                switch ($response) {
-                    case 'men summer shirts':
-                       $link="72177720314279320";
-                        break;
-                    case 'women summer shirts':
-                        $link="72177720314290573";
-                        break;
-                    case 'men winter shirts':
-                        $link="72177720314306941";
-                        break;
-                    case 'women winter shirts':
-                        $link="72177720314307020";
-                        break;
-                    case 'men suits':
-                        $link="72177720314302809";
-                        break;
-                    case 'women suits':
-                        $link="72177720314307020";
-                        break;
-                    case 'man pijamas':
-                        $link="72177720314302774";
-                        break;
-                    case 'women pijamas':
-                        $link="72177720314290513";
-                        break;
-                    case 'women swimwear':
-                        $link="72177720314276462";
-                        break;
-                    case 'man swimwear':
-                        $link="72177720314352759";
-                        break;
-                    case 'women wedding':
-                        $link="72177720314331661";
-                        break;
-                    case 'man sports':
-                        $link="72177720314307030";
-                        break;
-                    case 'women sports':
-                        $link="72177720314307030";
-                        break;
-                    case 'women winter dress':
-                        $link="72177720314274755";
-                        break;
-                    case 'women summer dress':
-                        $link="72177720314280926";
-                        break;
-                }
-                
-        
+
+                $link = $this->mapFlickrAlbum($response);
+
                 $apiKey = config('flickr.api_key');
                 $userId = config('flickr.user_id');
                 $album = $link;
-          
                 $link = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key={$apiKey}&photoset_id={$album}&user_id={$userId}&format=json&nojsoncallback=1";
-                
-                
+
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Occasion created successfully',
@@ -112,8 +59,6 @@ class OccasionController extends Controller
                     'openai' => $response,
                     'suggested_link' => $link,
                 ]);
-                
-                
             }
 
             return response()->json([
@@ -121,13 +66,11 @@ class OccasionController extends Controller
                 'message' => 'You need permission',
             ]);
         } catch (QueryException $e) {
-          
             return response()->json([
                 'status' => 'failed',
                 'message' => 'Database error: ' . $e->getMessage(),
             ]);
         } catch (\Exception $e) {
-      
             return response()->json([
                 'status' => 'failed',
                 'message' => 'An error occurred: ' . $e->getMessage(),
@@ -135,4 +78,41 @@ class OccasionController extends Controller
         }
     }
 
+    private function mapFlickrAlbum($response)
+    {
+        switch ($response) {
+            case 'men summer shirts':
+                return "72177720314279320";
+            case 'women summer shirts':
+                return "72177720314290573";
+            case 'men winter shirts':
+                return "72177720314306941";
+            case 'women winter shirts':
+                return "72177720314307020";
+            case 'men suits':
+                return "72177720314302809";
+            case 'women suits':
+                return "72177720314307020";
+            case 'man pijamas':
+                return "72177720314302774";
+            case 'women pijamas':
+                return "72177720314290513";
+            case 'women swimwear':
+                return "72177720314276462";
+            case 'man swimwear':
+                return "72177720314352759";
+            case 'women wedding':
+                return "72177720314331661";
+            case 'man sports':
+                return "72177720314307030";
+            case 'women sports':
+                return "72177720314307030";
+            case 'women winter dress':
+                return "72177720314274755";
+            case 'women summer dress':
+                return "72177720314280926";
+            default:
+                return null;
+        }
+    }
 }
