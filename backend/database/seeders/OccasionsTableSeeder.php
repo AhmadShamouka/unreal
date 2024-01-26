@@ -24,7 +24,7 @@ class OccasionsTableSeeder extends Seeder
             ],
             [
                 'occasion_type' => 'sport',
-                'style' => 'athletic',
+                'style' => 'classic',
                 'season' => 'spring',
                 'budget_range' => 'medium',
                 'user_id' => 3, 
