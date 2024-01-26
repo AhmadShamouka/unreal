@@ -32,7 +32,8 @@ class ClothesController extends Controller
                     'user_id' => $user->id,
                 ]);
 
-                $request->file('image')->storeAs('public/images/', $imageName);
+                $imageName = $user->id . '_' . time() . '_' . $request->file('image')->getClientOriginalName();
+
                 
                 
                 $ARtryOn=Trail::create([
