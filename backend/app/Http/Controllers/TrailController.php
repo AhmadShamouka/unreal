@@ -23,12 +23,14 @@ class TrailController extends Controller
 
                 $id = $updateRequest->id;
                 $trail = Trail::find($id);
-                $findTrailUser = $trail && $trail->user_id === $user->id;
 
-                if ($findTrailUser) {
+                
+                if ($trail && $trail->user_id === $user->id) {
+                    
                     $trail->update([
                         'choosen' => 1,
                     ]);
+
 
                     return response()->json([
                         'status' => 'success',
@@ -39,19 +41,19 @@ class TrailController extends Controller
                     return response()->json([
                         'status' => 'failed',
                         'message' => 'Trail not found for the authenticated user',
-                    ]);
+                    ],404);
                 }
             } else {
                 return response()->json([
                     'status' => 'failed',
                     'message' => 'User not authenticated',
-                ]);
+                ],401);
             }
         } catch (QueryException $e) {
             return response()->json([
                 'status' => 'failed',
                 'message' => 'Database error: ' . $e->getMessage(),
-            ]);
+            ],500);
         }
     }
 }
