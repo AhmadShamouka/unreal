@@ -120,6 +120,7 @@ const Dashboard = () => {
     </ResponsiveContainer>
   );
   const handleLogOut = () => {
+    localStorage.clear();
     navigate("/");
   };
   const renderBarChart = () => (

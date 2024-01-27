@@ -8,7 +8,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "../Login/loginSlice";
-import { GoogleLogin } from "react-google-login";
+import { GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
   const [active, setActive] = useState("errorMsg");
@@ -93,6 +93,15 @@ const Login = () => {
           <div className={active}>
             <h5>Email address Does not exists!</h5>
           </div>
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              navigate("/occasion");
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
+          ;
           <div className="flex center">
             <a> Don't have Account?</a>
             <Link to="/signup">

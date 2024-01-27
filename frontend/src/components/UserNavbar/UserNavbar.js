@@ -43,9 +43,8 @@ const UserNavbar = () => {
     if (edit === "none") {
       setEdit("edit__active");
     } else setEdit("none");
-    console.log(edit);
   };
-  const handleEditProfile = () => {};
+
   const handleLogOut = () => {
     localStorage.clear();
     navigate("/");
