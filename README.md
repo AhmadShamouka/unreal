@@ -10,25 +10,11 @@ UnrealFit is a web-based wardrobe assistance platform that utilizes augmented re
 
 User:
 
--As a user, I want to easily register for an account, providing necessary details such as username, email, and password.
+-As a user, I want to easily register for an account, providing necessary details such as username, email, password, age, country and gender.
 
--As a user, I want a secure sign-in process to access my account.
+-As a user, I want to create new occasions, providing details such as the type of occasion, style, season and budget ramge.
 
--As a user, I want to create new occasions, providing details such as the type of occasion, date, and location.
-
--As a user, I want to add descriptions or notes to my occasions, helping me remember specific details or requirements.
-
--As a user, I want to browse and select costumes associated with each occasion.
-
--As a user, I want the ability to view costume details, including images, sizes, and prices.
-
--As a user, I want to use augmented reality (AR) to virtually try on selected costumes.
-
--As a user, I want the option to share my virtual try-on images with friends for feedback.
-
--As a user, I want to choose a location to purchase the selected costumes.
-
--As a user, I want information about nearby stores or online options where I can buy the chosen costumes.
+-As a user, I want to select one of the suggested clothes and virtually try-on the cloth using Augmented Reality(AR), I can buy one of the clothes.
 
 Admin:
 
@@ -36,11 +22,7 @@ Admin:
 
 -As an admin, I want to view a list of all users, including their registration details and activity history.
 
--As an admin, I want to search for specific users and filter user data based on criteria such as registration date.
-
 -As an admin, I want to see a list of all occasions created by users, including details like occasion type, date, and associated costumes.
-
--As an admin, I want the ability to edit or remove occasions if needed.
 
 <br><br>
 
@@ -87,13 +69,10 @@ Admin:
 <!-- Tech stack -->
 <img src="./Readme/title5.svg"/>
 
-### Coffee Express is built using the following technologies:
+### Unrealfit is built using the following technologies:
 
-- This project uses the [Flutter app development framework](https://flutter.dev/). Flutter is a cross-platform hybrid app development platform which allows us to use a single codebase for apps on mobile, desktop, and the web.
-- For persistent storage (database), the app uses the [Hive](https://hivedb.dev/) package which allows the app to create a custom storage schema and save it to a local database.
-- To send local push notifications, the app uses the [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) package which supports Android, iOS, and macOS.
-  - 🚨 Currently, notifications aren't working on macOS. This is a known issue that we are working to resolve!
-- The app uses the font ["Work Sans"](https://fonts.google.com/specimen/Work+Sans) as its main font, and the design of the app adheres to the material design guidelines.
+- This project uses the [React web development library](https://react.dev/). React is a JavaScript library for building user interfaces, known for its component-based architecture and efficient rendering using a virtual DOM.
+- For persistent storage (database), the app uses the [MySQL](https://www.mysql.com/) MySQL is an open-source relational database management system (RDBMS) that uses SQL for querying, managing, and storing structured data efficiently.
 
 <br><br>
 
