@@ -29,6 +29,7 @@ const Dashboard = () => {
   });
   const navigate = useNavigate();
   const [clothes, setClothes] = useState([]);
+  const [active, setActive] = useState("");
   const [trails, setTrails] = useState([]);
   const [loading, setLoading] = useState(false);
   const handlePageChange = (page) => {
@@ -147,7 +148,7 @@ const Dashboard = () => {
             <div className="logo-nav"></div>
             <h2>UNREALFIT</h2>
           </div>
-          <div className="side-links flex center">
+          <div className="side-links link-btn flex center">
             <Button
               text="Home"
               bgColor={selectedButton === "home" ? "blue-bg" : "white-bg"}
@@ -180,7 +181,6 @@ const Dashboard = () => {
             />
           </div>
         </div>
-
         {currentPage === "home" && (
           <div id="clothes" className="dashboard-container flex center">
             <div className="home-container flex center">

@@ -41,13 +41,7 @@ const Occasion = () => {
     country: country,
     age: age,
   });
-  const [costum, setCustom] = useState("costum");
 
-  const [text, setText] = useState("");
-
-  const handleCustom = (event) => {
-    setText(event.target.value);
-  };
   const handleHexagonClick = (hexagonNumber, value) => {
     setBlurredHexagon(hexagonNumber);
     setFormData({ ...formData, occasion_type: value });
@@ -86,13 +80,7 @@ const Occasion = () => {
       } catch (error) {}
     }
   };
-  const handleTextArea = () => {
-    if (costum == "costum") {
-      setCustom("display-costum");
-    } else {
-      setCustom("costum");
-    }
-  };
+
   return (
     <div className="occasion">
       <UserNavbar />
@@ -265,25 +253,7 @@ const Occasion = () => {
           </div>
         </section>
       </form>
-      <Button
-        text="Custom Occasion"
-        bgColor="blue-bg"
-        textColor="white-text"
-        onClick={handleTextArea}
-      />
-      <div className={costum}>
-        <h2>Write something:</h2>
-        <div className="text-area-box">
-          <textarea
-            value={text}
-            onChange={handleCustom}
-            placeholder="Type here..."
-          />
-        </div>
-        <div className="text-area-box-footer">
-          <Button text="Submit" />
-        </div>
-      </div>
+
       <Footer />
     </div>
   );
