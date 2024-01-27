@@ -75,10 +75,18 @@ Admin:
 - For persistent storage (database), the app uses the [MySQL](https://www.mysql.com/) MySQL is an open-source relational database management system (RDBMS) that uses SQL for querying, managing, and storing structured data efficiently.
 
 <br><br>
-
-<!-- How to run -->
 <img src="./Readme/title6.svg"/>
 
+<br><br>
+
+<!-- How to run -->
+<img src="./Readme/title7.svg"/>
+<br><br>
+<img src="./Readme/title8.svg"/>
+<br><br>
+<img src="./Readme/title9.svg"/>
+<br><br>
+<img src="./Readme/title10.svg"/>
 > To set up Coffee Express locally, follow these steps:
 
 ### Prerequisites
