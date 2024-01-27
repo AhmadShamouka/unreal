@@ -30,7 +30,7 @@ class OccasionController extends Controller
                     'user_id' => $user->id,
                 ]);
 
-                $prompt = "I am {$request->sex} and I need clothes suggestions for an upcoming {$request->occasion_type}. I prefer a {$request->style} look for {$request->season}. My budget is {$request->budget_range}. - Give me suggestions for clothes, 3 words max, remark (you should pick one of the [`men summer shirts`, 'women summer shirts', `men winter shirts`, 'women winter shirts', 'men suits', 'women suits', 'man pijamas', 'women pijamas', 'women swimwear', 'man swimwear', 'women wedding', 'man sports', 'women sports', 'women winter dress', 'women summer dress'])";
+                $prompt = "I need clothes suggestions for an upcoming {$request->occasion_type}. I prefer a {$request->style} look for {$request->season}. My budget is {$request->budget_range}. - Give me suggestions for clothes, 3 words max, remark (you should pick one of the [`men summer shirts`, 'women summer shirts', `men winter shirts`, 'women winter shirts', 'men suits', 'women suits', 'man pijamas', 'women pijamas', 'women swimwear', 'man swimwear', 'women wedding', 'man sports', 'women sports', 'women winter dress', 'women summer dress'])";
 
                 $result = OpenAI::chat()->create([
                     'model' => 'gpt-3.5-turbo',
@@ -60,12 +60,12 @@ class OccasionController extends Controller
                     'openai' => $response,
                     'suggested_link' => $link,
                 ]);
-            }
-
+            }else {
             return response()->json([
                 'status' => 'failed',
-                'message' => 'You need permission',
+                'message' => 'Authentication failed',
             ]);
+        }
         } catch (QueryException $e) {
             return response()->json([
                 'status' => 'failed',

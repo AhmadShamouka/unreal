@@ -16,10 +16,10 @@ return new class extends Migration
             $table->tinyInteger('admin')->default(0);
             $table->string('username');
             $table->string('email')->unique();
-            $table->string('password');
-            $table->string('country');
-            $table->enum('sex', ['female', 'male']);
-            $table->integer('age');
+            $table->string('password')->nullable();
+            $table->string('country')->nullable();
+            $table->string('sex')->nullable();
+            $table->integer('age')->nullable();
             $table->softDeletes();
       
             $table->timestamps();
