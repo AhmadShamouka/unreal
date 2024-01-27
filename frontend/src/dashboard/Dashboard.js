@@ -170,6 +170,17 @@ const Dashboard = () => {
                 handleButtonChange("users");
               }}
             />
+            <Button
+              text="Occasions"
+              bgColor={selectedButton === "occasions" ? "blue-bg" : "white-bg"}
+              textColor={
+                selectedButton === "occasions" ? "white-text" : "blue-text"
+              }
+              onClick={() => {
+                handlePageChange("occasions");
+                handleButtonChange("occasions");
+              }}
+            />
           </div>
           <div className="side-links logout-btn flex center">
             <Button
@@ -246,6 +257,38 @@ const Dashboard = () => {
                       <td>{user.sex}</td>
                       <td>{user.country}</td>
                       <td>{user.age}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <p>No users found.</p>
+            )}
+            <div className="PieChart flex center"></div>
+          </div>
+        )}
+        {currentPage === "occasions" && (
+          <div id="users" className="dashboard-container ">
+            <h1>Occasions</h1>
+            {occasions.response && occasions.response.length > 0 ? (
+              <table className="user-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Occasion Type</th>
+                    <th>User</th>
+                    <th>Style</th>
+                    <th>Budget Range</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {occasions.response.map((occasion) => (
+                    <tr key={occasion.id}>
+                      <td>{occasion.id}</td>
+                      <td>{occasion.occasion_type}</td>
+                      <td>{occasion.user_id}</td>
+                      <td>{occasion.style}</td>
+                      <td>{occasion.budget_range}</td>
                     </tr>
                   ))}
                 </tbody>
