@@ -8,6 +8,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "../Login/loginSlice";
+import { jwtDecode } from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
@@ -22,6 +23,27 @@ const Login = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleGoogle = (credentialResponse) => {
+    if (credentialResponse && credentialResponse.credential) {
+      const decodedToken = jwtDecode(credentialResponse.credential);
+      const header = credentialResponse.credential;
+      localStorage.setItem("jwtToken", header);
+      console.log(localStorage);
+      dispatch(
+        loginSuccess({
+          username: decodedToken.name,
+        })
+      );
+
+      navigate("/occasion");
+    } else {
+      console.log("Login Failed: No credential response");
+    }
+  };
+
+  const handleError = () => {
+    console.log("Login Failed");
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,15 +115,7 @@ const Login = () => {
           <div className={active}>
             <h5>Email address Does not exists!</h5>
           </div>
-          <GoogleLogin
-            onSuccess={(credentialResponse) => {
-              navigate("/occasion");
-            }}
-            onError={() => {
-              console.log("Login Failed");
-            }}
-          />
-          ;
+          <GoogleLogin onSuccess={handleGoogle} onError={handleError} />
           <div className="flex center">
             <a> Don't have Account?</a>
             <Link to="/signup">

@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+import { GoogleLogin } from "@react-oauth/google";
 const SignUp = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState("errorMsg");
@@ -33,6 +35,40 @@ const SignUp = () => {
   const handleSelectChange = (name, selectedOption) => {
     setFormData({ ...formData, [name]: selectedOption.value });
   };
+
+  const handleGoogle = async (credentialResponse) => {
+    if (credentialResponse && credentialResponse.credential) {
+      const decodedToken = jwtDecode(credentialResponse.credential);
+      console.log("Decoded Token: ", decodedToken);
+
+      const userData = {
+        username: decodedToken.name,
+        email: decodedToken.email,
+      };
+      console.log(userData);
+      try {
+        const response = await axios.post(
+          "http://127.0.0.1:8000/api/register",
+          userData
+        );
+        console.log(response);
+        navigate("/signin");
+      } catch (error) {
+        console.log(error);
+        if (error.message === "Request failed with status code 422") {
+          setActive("errorMsg-signup");
+        }
+      }
+    } else {
+      console.log("Registration Failed: No credential response");
+    }
+  };
+  const handleError = (error) => {
+    if (error) {
+      setActive("errorMsg-signup");
+    }
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -142,6 +178,12 @@ const SignUp = () => {
             text="Sign Up"
             bgColor="white-bg"
             textColor="blue-text"
+          />
+          <GoogleLogin
+            clientId="YOUR_CLIENT_ID"
+            buttonText="Register with Google"
+            onSuccess={handleGoogle}
+            onFailure={handleError}
           />
           <div className={active}>
             <h5>Email address already exists!</h5>

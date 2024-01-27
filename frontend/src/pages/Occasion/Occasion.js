@@ -72,12 +72,15 @@ const Occasion = () => {
             },
           }
         );
-
+        console.log(localStorage);
+        console.log(response.data);
         if (response.data.status === "success") {
           dispatch(occasionCreated(response.data.suggested_link));
+          navigate("/find");
         }
-        navigate("/find");
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
