@@ -67,7 +67,7 @@ Admin:
 <br><br>
 <img src="./Readme/title6.svg"/>
 
-> Using the wireframes and mockups as a guide, we implemented the Coffee Express app with the following features:
+> Using the wireframes and mockups as a guide, we implemented the UNREALFIT website with the following features:
 
 ### User Screens (web)
 
