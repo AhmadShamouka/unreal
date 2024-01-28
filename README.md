@@ -43,9 +43,9 @@ Admin:
 
 ### Mockups
 
-| Home screen                | Occasion Screen                     |
-| -------------------------- | ----------------------------------- |
-| ![Landing](./readme/a.png) | ![Occasion](./readme/LoginMock.png) |
+| Home screen                          | Occasion Screen                     |
+| ------------------------------------ | ----------------------------------- |
+| ![Landing](./readme/LandingMock.png) | ![Occasion](./readme/LoginMock.png) |
 
 | Home screen                       | Occasion Screen                        |
 | --------------------------------- | -------------------------------------- |
