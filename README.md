@@ -79,9 +79,9 @@ Admin:
 | ----------------------------- | ------------------------------ |
 | ![Brand](./Readme/Brands.png) | ![Clothes](./Readme/items.png) |
 
-| Sign In Screen                 | SignUp (Google) Screen                 |
-| ------------------------------ | -------------------------------------- |
-| ![Sign In](./Readme/Login.png) | ![Occasion](./Readme/OccasionPage.gif) |
+| Sign In Screen                 | SignUp (Google) Screen                     |
+| ------------------------------ | ------------------------------------------ |
+| ![Sign In](./Readme/Login.png) | ![Occasion](./Readme/SignUpWithGoogle.png) |
 
 | Sign In Error Screen                   | Create Occasion Error Screen                 |
 | -------------------------------------- | -------------------------------------------- |
