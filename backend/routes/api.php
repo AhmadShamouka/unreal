@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\Admin\AdminController;
-
+use App\Http\Controllers\GeneralController;
 
 Route::middleware(['admin:api'])->group(function () {
     Route::get('/admin/getusers', [AdminController::class, 'getUser']);
@@ -36,3 +36,6 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('add-clothes', [ClothesController::class, 'createItem']);
     Route::post('update-trail', [TrailController::class, 'updateTrail']);
     });
+
+
+Route::get('/healthy',[GeneralController::class,"checkServerStatus"])->name("server.status");
