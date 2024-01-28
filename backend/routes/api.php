@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\GeneralController;
 
 Route::middleware(['admin:api'])->group(function () {
-    Route::get('/admin/getusers', [AdminController::class, 'getUser']);
+    Route::get('/admin/getusers', [AdminController::class, 'getUsers']);
     Route::post('/admin/getsingleuser', [AdminController::class, 'getOneUser']);
 
     Route::get('/admin/getoccasions', [AdminController::class, 'getOccasions']);

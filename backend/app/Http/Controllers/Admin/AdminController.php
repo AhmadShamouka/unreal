@@ -16,7 +16,7 @@ class AdminController extends Controller
         $this->middleware('admin');
     }
 
-    public function getUser()
+    public function getUsers()
     {
         if (Auth::Check()) {
             $getall = User::all();
