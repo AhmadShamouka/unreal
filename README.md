@@ -29,32 +29,54 @@ Admin:
 <!-- Prototyping -->
 <img src="./Readme/title3.svg"/>
 
-### Wireframes
+### Unrealfit is built using the following technologies:
 
-| Login screen                            | Register screen                       | Landing screen                        |
-| --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+- This project uses the [React web development library](https://react.dev/) for frontend. React is a JavaScript library for building user interfaces, known for its component-based architecture and efficient rendering using a virtual DOM.
+- This Project uses [Laravel framework](https://laravel.com/)for backend,Laravel serves as a backend framework for PHP web development, offering features and tools that streamline backend processes, such as routing, database management, authentication, and API development, empowering developers to build robust and scalable server-side applications efficiently.
+- For persistent storage (database), the app uses the [MySQL](https://www.mysql.com/) MySQL is an open-source relational database management system (RDBMS) that uses SQL for querying, managing, and storing structured data efficiently.
+
+<img src="./Readme/title4.svg"/>
+
+### I designed UNREALFIT using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
+
+<li>Project Figma Design <a href="https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/UNREALFIT?type=design&node-id=394%3A41&mode=design&t=5YXJMx6uLUv3qrA1-1">Figma</a></li>
 
 ### Mockups
 
-| Home screen                             | Occasion Screen                       | Virtual try-on Screen                 |
-| --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| Home screen                      | Occasion Screen                    | Choose Item                            |
+| -------------------------------- | ---------------------------------- | -------------------------------------- |
+| ![Landing](./readme/Landing.svg) | ![Occasion](./readme/Occasion.svg) | ![Choose Item](./readme/SETTINGUP.svg) |
+
+| Sign Up                         | Sign In                         | Brands                         |
+| ------------------------------- | ------------------------------- | ------------------------------ |
+| ![Sign Up](./readme/SignUP.svg) | ![Sign In](./readme/SignIn.svg) | ![Brands](./readme/Brands.svg) |
 
 <br><br>
 
 <!-- Implementation -->
-<img src="./Readme/title4.svg"/>
+
+<br><br>
+
+<!-- Tech stack -->
+<img src="./Readme/title5.svg"/>
+
+### Database Schema
+
+<img src="./readme/DatabaseSchema.png">
+<br><br>
+<br><br>
+<img src="./Readme/title6.svg"/>
 
 > Using the wireframes and mockups as a guide, we implemented the Coffee Express app with the following features:
 
-### User Screens (Mobile)
+### User Screens (web)
 
-| Login screen                              | Register screen                         | Landing screen                          | Loading screen                          |
-| ----------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
-| ![Landing](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) |
-| Home screen                               | Menu Screen                             | Order Screen                            | Checkout Screen                         |
-| ![Landing](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) |
+| Home screen                             | Occasion Screen                           | Choose Item                             |
+| --------------------------------------- | ----------------------------------------- | --------------------------------------- |
+| ![Landing](./readme/LandingPageGiF.gif) | ![Occasion](./readme/OccasionPageGif.gif) | ![Choose Item](./readme/ItemsPage.jpeg) |
+| Sign In                                 | Brands                                    |
+| ------------------------------          | ------------------------------            |
+| ![Sign In](./readme/LoginPage.png)      | ![Brands](./readme/BrandPage.jpeg)        |
 
 ### Admin Screens (Web)
 
@@ -66,19 +88,6 @@ Admin:
 
 <br><br>
 
-<!-- Tech stack -->
-<img src="./Readme/title5.svg"/>
-
-### Unrealfit is built using the following technologies:
-
-- This project uses the [React web development library](https://react.dev/). React is a JavaScript library for building user interfaces, known for its component-based architecture and efficient rendering using a virtual DOM.
-- For persistent storage (database), the app uses the [MySQL](https://www.mysql.com/) MySQL is an open-source relational database management system (RDBMS) that uses SQL for querying, managing, and storing structured data efficiently.
-
-<br><br>
-<img src="./Readme/title6.svg"/>
-
-<br><br>
-
 <!-- How to run -->
 <img src="./Readme/title7.svg"/>
 <br><br>
@@ -87,33 +96,43 @@ Admin:
 <img src="./Readme/title9.svg"/>
 <br><br>
 <img src="./Readme/title10.svg"/>
-> To set up Coffee Express locally, follow these steps:
+> To set up UNREALFIT locally, follow these steps:
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_Below is an example of how you can instruct your audience on installing and setting up your Website. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/AhmadShamouka/unreal.git
    ```
-3. Install NPM packages
+2. Install NPM packages
+
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+
+3. Install XAMP
+
+   [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html)
+
+4. Install composer for Laravel
+
    ```js
-   const API_KEY = "ENTER YOUR API";
+   composer install
+   ```
+
+5. Install Python version 3.8.10
+   [https://www.python.org/downloads/release/python-3810](https://www.python.org/downloads/release/python-3810/)
+
+6. Install cvzone
+
+   ```sh
+   pip install opencv-python
    ```
 
 Now, you should be able to run Coffee Express locally and explore its features.

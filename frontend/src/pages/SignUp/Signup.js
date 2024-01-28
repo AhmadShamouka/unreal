@@ -180,7 +180,6 @@ const SignUp = () => {
             textColor="blue-text"
           />
           <GoogleLogin
-            clientId="YOUR_CLIENT_ID"
             buttonText="Register with Google"
             onSuccess={handleGoogle}
             onFailure={handleError}

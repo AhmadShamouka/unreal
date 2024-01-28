@@ -5,7 +5,7 @@
   overflow: hidden;
 }
 .container-login {
-  padding: 20px;
+  padding: 10px;
 }
 img {
   cursor: pointer;
@@ -16,8 +16,11 @@ img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 95vh;
+  height: 97vh;
   width: 50%;
+}
+.google {
+  margin: 1% 0;
 }
 .signup-text h4 {
   cursor: pointer;
@@ -69,7 +72,7 @@ img {
   background-image: linear-gradient(to top, #1789c9, #eeeeee);
   border-radius: 0 10px 10px 0;
 
-  height: 95vh;
+  height: 97vh;
   width: 50%;
   flex-direction: column;
   padding-bottom: 10px;
