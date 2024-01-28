@@ -124,7 +124,7 @@ select option:checked {
     width: 80%;
   }
   .switchable-container .card {
-    width: 80%;
+    width: 45%;
   }
 }
 .personal-info hr {
