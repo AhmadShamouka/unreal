@@ -71,9 +71,9 @@ Admin:
 
 ### User Screens (web)
 
-| Home screen                           | Occasion Screen                         |
-| ------------------------------------- | --------------------------------------- |
-| ![Landing](./Readme/Landing.page.gif) | ![Occasion](./Readme/Occasion.page.gif) |
+| Home screen                           | Occasion Screen                        |
+| ------------------------------------- | -------------------------------------- |
+| ![Landing](./Readme/Landing.page.gif) | ![Occasion](./Readme/OccasionPage.gif) |
 
 | Brand screen                  | Clothes Screen                 | Sign In                        |
 | ----------------------------- | ------------------------------ | ------------------------------ |
