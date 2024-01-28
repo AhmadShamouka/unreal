@@ -43,13 +43,13 @@ Admin:
 
 ### Mockups
 
-| Home screen                      | Occasion Screen                    | Choose Item                            |
-| -------------------------------- | ---------------------------------- | -------------------------------------- |
-| ![Landing](./readme/Landing.svg) | ![Occasion](./readme/Occasion.svg) | ![Choose Item](./readme/SETTINGUP.svg) |
+| Home screen                | Occasion Screen                     |
+| -------------------------- | ----------------------------------- |
+| ![Landing](./readme/a.png) | ![Occasion](./readme/LoginMock.png) |
 
-| Sign Up                         | Sign In                         | Brands                         |
-| ------------------------------- | ------------------------------- | ------------------------------ |
-| ![Sign Up](./readme/SignUP.svg) | ![Sign In](./readme/SignIn.svg) | ![Brands](./readme/Brands.svg) |
+| Home screen                       | Occasion Screen                        |
+| --------------------------------- | -------------------------------------- |
+| ![Landing](./readme/ItemMock.png) | ![Occasion](./readme/OccasionMock.png) |
 
 <br><br>
 
@@ -71,20 +71,31 @@ Admin:
 
 ### User Screens (web)
 
-| Home screen                             | Occasion Screen                           | Choose Item                             |
-| --------------------------------------- | ----------------------------------------- | --------------------------------------- |
-| ![Landing](./readme/LandingPageGiF.gif) | ![Occasion](./readme/OccasionPageGif.gif) | ![Choose Item](./readme/ItemsPage.jpeg) |
-| Sign In                                 | Brands                                    |
-| ------------------------------          | ------------------------------            |
-| ![Sign In](./readme/LoginPage.png)      | ![Brands](./readme/BrandPage.jpeg)        |
+| Home screen                | Occasion Screen             |
+| -------------------------- | --------------------------- |
+| ![Landing](./readme/a.png) | ![Occasion](./readme/a.png) |
+
+| Home screen                | Occasion Screen                    |
+| -------------------------- | ---------------------------------- |
+| ![Landing](./readme/a.png) | ![Occasion](./readme/Occasion.svg) |
+
+| Sign Up                         | Sign In                         |
+| ------------------------------- | ------------------------------- |
+| ![Sign Up](./readme/SignUP.svg) | ![Sign In](./readme/SignIn.svg) |
 
 ### Admin Screens (Web)
 
-| Login screen                            | Register screen                       | Landing screen                        |
-| --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
-| Home screen                             | Menu Screen                           | Order Screen                          |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| Home screen                | Occasion Screen             |
+| -------------------------- | --------------------------- |
+| ![Landing](./readme/a.png) | ![Occasion](./readme/a.png) |
+
+| Home screen                | Occasion Screen                    |
+| -------------------------- | ---------------------------------- |
+| ![Landing](./readme/a.png) | ![Occasion](./readme/Occasion.svg) |
+
+| Sign Up                         | Sign In                         |
+| ------------------------------- | ------------------------------- |
+| ![Sign Up](./readme/SignUP.svg) | ![Sign In](./readme/SignIn.svg) |
 
 <br><br>
 
