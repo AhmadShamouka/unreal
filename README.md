@@ -43,13 +43,13 @@ Admin:
 
 ### Mockups
 
-| Home screen                | Occasion Screen                     |
-| -------------------------- | ----------------------------------- |
-| ![Landing](./readme/a.png) | ![Occasion](./readme/LoginMock.png) |
+| Home screen                          | Occasion Screen                     |
+| ------------------------------------ | ----------------------------------- |
+| ![Landing](./Readme/LandingMock.png) | ![Occasion](./Readme/LoginMock.png) |
 
 | Home screen                       | Occasion Screen                        |
 | --------------------------------- | -------------------------------------- |
-| ![Landing](./readme/ItemMock.png) | ![Occasion](./readme/OccasionMock.png) |
+| ![Landing](./Readme/ItemMock.png) | ![Occasion](./Readme/OccasionMock.png) |
 
 <br><br>
 
@@ -73,7 +73,7 @@ Admin:
 
 | Home screen                | Occasion Screen             |
 | -------------------------- | --------------------------- |
-| ![Landing](./readme/a.png) | ![Occasion](./readme/a.png) |
+| ![Landing](./Readme/a.png) | ![Occasion](./Readme/a.png) |
 
 | Home screen                | Occasion Screen                    |
 | -------------------------- | ---------------------------------- |
