@@ -43,11 +43,11 @@ Admin:
 
 ### Mockups
 
-| Home screen                          | Occasion Screen                     |
+| Home screen                          | Login Screen                        |
 | ------------------------------------ | ----------------------------------- |
 | ![Landing](./Readme/LandingMock.png) | ![Occasion](./Readme/LoginMock.png) |
 
-| Home screen                       | Occasion Screen                        |
+| Clothes screen                    | Occasion Screen                        |
 | --------------------------------- | -------------------------------------- |
 | ![Landing](./Readme/ItemMock.png) | ![Occasion](./Readme/OccasionMock.png) |
 
@@ -119,13 +119,25 @@ This initiative utilizes advanced prompt engineering methodologies to enhance in
 
 This project embraces meticulous unit testing strategies to uphold the dependability and precision of code modules. Through methodical examination of discrete units within the software, we establish a resilient framework, detecting and rectifying potential issues at an early stage of development.
 
-| Login Feature Testing                      | Create Occasion Feature Testing                                |
-| ------------------------------------------ | -------------------------------------------------------------- |
-| ![Login](./Readme/LoginFeaturetesting.png) | ![LCreate Occasion](./Readme/CreateOccasionFeatureTesting.png) |
+| Login Feature Testing                         | Logout Feature Testing                           |
+| --------------------------------------------- | ------------------------------------------------ |
+| ![Login](./Readme/AuthLoginFetureTesting.png) | ![Logout](./Readme/AuthLogoutFeatureTesting.png) |
 
-| Login Feature Testing                      | Create Occasion Feature Testing                                |
-| ------------------------------------------ | -------------------------------------------------------------- |
-| ![Login](./Readme/LoginFeaturetesting.png) | ![LCreate Occasion](./Readme/CreateOccasionFeatureTesting.png) |
+| Get Users Feature Testing                              | Get Occasions Feature Testing                                 |
+| ------------------------------------------------------ | ------------------------------------------------------------- |
+| ![Get Users](./Readme/AdminGetUsersFeatureTesting.png) | ![Get Occasion](./Readme/AdminGetOccasionsFeatureTesting.png) |
+
+| Get Single Feature Testing                                       | Get Trails Feature Testing                               |
+| ---------------------------------------------------------------- | -------------------------------------------------------- |
+| ![Get Single](./Readme/AdminGetSingleOccasionFeatureTesting.png) | ![Get Trails](./Readme/AdminGetTrailsFeatureTesting.png) |
+
+| Create Occasion Feature Testing                              | Register Feature Testing                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Create Occasion](./Readme/CreateOccasionFetureTesting.png) | ![Register Feature](./Readme/AuthRegisterFeatureTesting.png) |
+
+| Trail Update Feature Testing                            | Get Single User Feature Testing                                  |
+| ------------------------------------------------------- | ---------------------------------------------------------------- |
+| ![Trail Update](./Readme/TrailUpdateFeatureTesting.png) | ![Get Single User](./Readme/AdminGetSingleUserFetureTesting.png) |
 
 <br><br>
 <img src="./Readme/title10.svg"/>
