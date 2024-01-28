@@ -5,6 +5,8 @@ import { useStore } from "react-redux";
 import { FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../common/base/button/Button";
+import axios from "axios";
+import { loginSuccess, logoutSuccess } from "../../pages/Login/loginSlice";
 const UserNavbar = () => {
   const navigate = useNavigate();
   const { username, sex, country, age, isAuthenticated } = useSelector(
@@ -21,6 +23,7 @@ const UserNavbar = () => {
       setIcon("nav__toggler");
     }
   };
+
   const Username = username;
   useEffect(() => {
     window.addEventListener("resize", closeMenuOnResize);
@@ -50,6 +53,42 @@ const UserNavbar = () => {
     navigate("/");
   };
 
+  // useEffect(() => {
+  //   const token = localStorage.getItem("jwtToken");
+  //   const authorization = "Bearer " + token;
+  //   if (token) {
+  //     const getUser = async () => {
+  //       try {
+  //         const response = await axios.post(
+  //           "http://127.0.0.1:8000/api/refresh",
+  //           {},
+  //           {
+  //             headers: {
+  //               Authorization: authorization,
+  //             },
+  //           }
+  //         );
+  //         const header = response.data.authorisation.token;
+  //         localStorage.setItem("jwtToken", header);
+
+  //         dispatch(
+  //           loginSuccess({
+  //             username: response.data.user.username,
+  //             age: response.data.user.age,
+  //             admin: response.data.user.admin,
+  //             sex: response.data.user.sex,
+  //             country: response.data.user.country,
+  //           })
+  //         );
+  //       } catch (error) {
+  //         console.log(error.response.data.message);
+  //         localStorage.clear();
+  //         navigate("/signin");
+  //       }
+  //     };
+  //     getUser();
+  //   }
+  // }, [dispatch]);
   return (
     <nav>
       <div className={active}>
@@ -77,7 +116,7 @@ const UserNavbar = () => {
         <div>
           <div className="buttons flex center">
             <FaUser color="white" onClick={editProfile} />
-            <h3>{Username}</h3>
+            <h3>ahmadshamouka</h3>
           </div>
           <div className={edit}>
             <div>

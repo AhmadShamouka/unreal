@@ -75,27 +75,15 @@ Admin:
 | ------------------------------------- | --------------------------------------- |
 | ![Landing](./Readme/Landing.page.gif) | ![Occasion](./Readme/Occasion.page.gif) |
 
-| Home screen                | Occasion Screen                    |
-| -------------------------- | ---------------------------------- |
-| ![Landing](./Readme/a.png) | ![Occasion](./Readme/Occasion.svg) |
-
-| Sign Up                         | Sign In                         |
-| ------------------------------- | ------------------------------- |
-| ![Sign Up](./Readme/SignUP.svg) | ![Sign In](./Readme/SignIn.svg) |
+| Brand screen                  | Clothes Screen                 | Sign In                        |
+| ----------------------------- | ------------------------------ | ------------------------------ |
+| ![Brand](./Readme/Brands.png) | ![Clothes](./Readme/items.png) | ![Sign In](./Readme/Login.png) |
 
 ### Admin Screens (Web)
 
-| Home screen                | Occasion Screen             |
-| -------------------------- | --------------------------- |
-| ![Landing](./readme/a.png) | ![Occasion](./readme/a.png) |
-
-| Home screen                | Occasion Screen                    |
-| -------------------------- | ---------------------------------- |
-| ![Landing](./readme/a.png) | ![Occasion](./readme/Occasion.svg) |
-
-| Sign Up                         | Sign In                         |
-| ------------------------------- | ------------------------------- |
-| ![Sign Up](./readme/SignUP.svg) | ![Sign In](./readme/SignIn.svg) |
+| DashboardHome screen            | DashboardOccasion Screen                    |
+| ------------------------------- | ------------------------------------------- |
+| ![Home](./Readme/Dashboard.png) | ![Occasion](./Readme/DashboardOccasion.png) |
 
 <br><br>
 
@@ -105,8 +93,10 @@ Admin:
 <img src="./Readme/title8.svg"/>
 <br><br>
 <img src="./Readme/title9.svg"/>
+
 <br><br>
 <img src="./Readme/title10.svg"/>
+
 > To set up UNREALFIT locally, follow these steps:
 
 ### Prerequisites

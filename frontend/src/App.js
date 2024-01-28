@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import "./styles/App.css";
 import "./styles/index.css";
+import axios from "axios";
 import "./styles/colors.css";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/Signup";
@@ -16,17 +17,6 @@ import { loginSuccess, logoutSuccess } from "./pages/Login/loginSlice";
 import EditProfile from "./pages/EditProfile/EditProfile";
 
 function App() {
-  const dispatch = useDispatch();
-  const token = localStorage.getItem("jwtToken");
-
-  // useEffect(() => {
-  //   if (token) {
-  //     dispatch(loginSuccess());
-  //   } else {
-  //     dispatch(logoutSuccess());
-  //   }
-  // }, [dispatch, token]);
-
   return (
     <div className="App">
       <BrowserRouter>
