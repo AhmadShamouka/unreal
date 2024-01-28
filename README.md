@@ -46,9 +46,6 @@ Admin:
 | Home screen                          | Occasion Screen                     |
 | ------------------------------------ | ----------------------------------- |
 | ![Landing](./Readme/LandingMock.png) | ![Occasion](./Readme/LoginMock.png) |
-| Home screen                          | Occasion Screen                     |
-| ------------------------------------ | ----------------------------------- |
-| ![Landing](./readme/LandingMock.png) | ![Occasion](./readme/LoginMock.png) |
 
 | Home screen                       | Occasion Screen                        |
 | --------------------------------- | -------------------------------------- |
@@ -74,9 +71,9 @@ Admin:
 
 ### User Screens (web)
 
-| Home screen                | Occasion Screen             |
-| -------------------------- | --------------------------- |
-| ![Landing](./Readme/a.png) | ![Occasion](./Readme/a.png) |
+| Home screen                           | Occasion Screen                         |
+| ------------------------------------- | --------------------------------------- |
+| ![Landing](./Readme/Landing.page.gif) | ![Occasion](./Readme/Occasion.page.gif) |
 
 | Home screen                | Occasion Screen                    |
 | -------------------------- | ---------------------------------- |
