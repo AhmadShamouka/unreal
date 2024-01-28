@@ -73,15 +73,15 @@ Admin:
 
 | Home screen                | Occasion Screen             |
 | -------------------------- | --------------------------- |
-| ![Landing](./readme/a.png) | ![Occasion](./readme/a.png) |
+| ![Landing](./Readme/a.png) | ![Occasion](./Readme/a.png) |
 
 | Home screen                | Occasion Screen                    |
 | -------------------------- | ---------------------------------- |
-| ![Landing](./readme/a.png) | ![Occasion](./readme/Occasion.svg) |
+| ![Landing](./Readme/a.png) | ![Occasion](./Readme/Occasion.svg) |
 
 | Sign Up                         | Sign In                         |
 | ------------------------------- | ------------------------------- |
-| ![Sign Up](./readme/SignUP.svg) | ![Sign In](./readme/SignIn.svg) |
+| ![Sign Up](./Readme/SignUP.svg) | ![Sign In](./Readme/SignIn.svg) |
 
 ### Admin Screens (Web)
 
