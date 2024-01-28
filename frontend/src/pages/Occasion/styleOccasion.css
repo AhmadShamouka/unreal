@@ -119,12 +119,15 @@ select option:checked {
     gap: 40px;
     padding: 0 100px;
   }
+  .hexagons-temp h1 {
+    padding: 2rem 0 0 0;
+  }
   .label-select {
     margin: 10px 0;
     width: 80%;
   }
   .switchable-container .card {
-    width: 45%;
+    width: 75%;
   }
 }
 .personal-info hr {
