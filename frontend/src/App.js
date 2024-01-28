@@ -13,6 +13,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google"; // Import GoogleOAuth
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess, logoutSuccess } from "./pages/Login/loginSlice";
+import EditProfile from "./pages/EditProfile/EditProfile";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function App() {
         <GoogleOAuthProvider clientId="214860979641-6s3sn25vii3ng4oq8hc944f9s0cou2qj.apps.googleusercontent.com">
           <Routes>
             <Route path="/" element={<Landing />} />
+            <Route path="/profile" element={<EditProfile />} />
             <Route path="/signin" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/find" element={<ChooseItem />} />

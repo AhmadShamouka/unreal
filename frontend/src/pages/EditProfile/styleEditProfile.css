@@ -1,0 +1,9 @@
+.edit-profile {
+  background-color: lightblue;
+  box-shadow: 0 0 10px 1px rgb(131, 130, 130);
+  height: 90vh;
+  width: 80%;
+}
+.edit-profile-container {
+  padding: 2%;
+}
