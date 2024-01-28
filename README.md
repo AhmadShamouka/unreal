@@ -89,6 +89,15 @@ Admin:
 
 <!-- How to run -->
 <img src="./Readme/title7.svg"/>
+
+### Unlocking AI Interaction Mastery: Revealing the Potential of Prompt Engineering:
+
+This initiative utilizes advanced prompt engineering methodologies to enhance interactions with natural language processing models. By meticulously crafting input instructions, we sculpt the models' responses to achieve precise and seamless language comprehension and generation, catering adeptly to a spectrum of tasks and user preferences.
+
+| OpenAi prompt screen               |
+| ---------------------------------- |
+| ![Home](./Readme/OpenAIprompt.png) |
+
 <br><br>
 <img src="./Readme/title8.svg"/>
 <br><br>
@@ -98,9 +107,13 @@ Admin:
 
 This project embraces meticulous unit testing strategies to uphold the dependability and precision of code modules. Through methodical examination of discrete units within the software, we establish a resilient framework, detecting and rectifying potential issues at an early stage of development.
 
-| Login Feature Testing                      |
-| ------------------------------------------ |
-| ![Login](./Readme/LoginFeaturetesting.png) |
+| Login Feature Testing                      | Create Occasion Feature Testing                                |
+| ------------------------------------------ | -------------------------------------------------------------- |
+| ![Login](./Readme/LoginFeaturetesting.png) | ![LCreate Occasion](./Readme/CreateOccasionFeatureTesting.png) |
+
+| Login Feature Testing                      | Create Occasion Feature Testing                                |
+| ------------------------------------------ | -------------------------------------------------------------- |
+| ![Login](./Readme/LoginFeaturetesting.png) | ![LCreate Occasion](./Readme/CreateOccasionFeatureTesting.png) |
 
 <br><br>
 <img src="./Readme/title10.svg"/>
