@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\User;
+use App\Http\Controllers\Controller;
 use App\Models\Occasion;
 use OpenAI\Laravel\Facades\OpenAI;
 use Illuminate\Http\Request;

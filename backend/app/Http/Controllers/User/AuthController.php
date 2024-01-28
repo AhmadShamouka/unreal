@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +30,7 @@ class AuthController extends Controller
                 'message' => 'Unauthorized',
             ], 401);
         }
-
+   
         $user = Auth::user();
         return response()->json([
                 'status' => 'success',
@@ -39,9 +40,15 @@ class AuthController extends Controller
                     'type' => 'bearer',
                 ]
             ]);
-
+  
     }
-
+          
+    public function get_user(){
+        $user = Auth::user();
+        return response()->json([
+            'user' => $user,
+        ]);
+    }
     public function register(Request $request)
     {
         $request->validate([
