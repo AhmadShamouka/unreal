@@ -13,3 +13,11 @@
   color: white;
   margin-left: 5px;
 }
+@media screen and (max-width: 768px) {
+  .input-common {
+    font-size: 14px;
+    height: 2rem;
+    padding: 8px;
+    width: 15rem;
+  }
+}
