@@ -62,7 +62,7 @@ Admin:
 
 ### Database Schema
 
-<img src="./readme/DatabaseSchema.png">
+<img src="./Readme/DatabaseSchema.png">
 <br><br>
 <br><br>
 <img src="./Readme/title6.svg"/>
