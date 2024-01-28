@@ -31,12 +31,8 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 
-Route::controller(OccasionController::class)->group(function () {
-    Route::post('occasion', 'createOccasion');
-});
-Route::controller(ClothesController::class)->group(function () {
-    Route::post('add-clothes', 'createItem');
-});
-Route::controller(TrailController::class)->group(function () {
-    Route::post('update-trail', 'updateTrail');
-});
+Route::middleware(['auth:api'])->group(function () {
+    Route::post('occasion', [OccasionController::class, 'createOccasion']);
+    Route::post('add-clothes', [ClothesController::class, 'createItem']);
+    Route::post('update-trail', [TrailController::class, 'updateTrail']);
+    });
