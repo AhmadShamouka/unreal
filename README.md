@@ -10,19 +10,19 @@ UnrealFit is a web-based wardrobe assistance platform that utilizes augmented re
 
 User:
 
--As a user, I want to easily register for an account, providing necessary details such as username, email, password, age, country and gender.
+> As a user, I want to easily register for an account, providing necessary details such as username, email, password, age, country and gender.
 
--As a user, I want to create new occasions, providing details such as the type of occasion, style, season and budget ramge.
+> As a user, I want to create new occasions, providing details such as the type of occasion, style, season and budget ramge.
 
--As a user, I want to select one of the suggested clothes and virtually try-on the cloth using Augmented Reality(AR), I can buy one of the clothes.
+> As a user, I want to select one of the suggested clothes and virtually try-on the cloth using Augmented Reality(AR), I can buy one of the clothes.
 
 Admin:
 
--As an admin, I want a comprehensive dashboard overview displaying key metrics, user statistics, and recent activities.
+> As an admin, I want a comprehensive dashboard overview displaying key metrics, user statistics, and recent activities.
 
--As an admin, I want to view a list of all users, including their registration details and activity history.
+> As an admin, I want to view a list of all users, including their registration details and activity history.
 
--As an admin, I want to see a list of all occasions created by users, including details like occasion type, date, and associated costumes.
+> As an admin, I want to see a list of all occasions created by users, including details like occasion type, date, and associated costumes.
 
 <br><br>
 
@@ -75,15 +75,27 @@ Admin:
 | ------------------------------------- | -------------------------------------- |
 | ![Landing](./Readme/Landing.page.gif) | ![Occasion](./Readme/OccasionPage.gif) |
 
-| Brand screen                  | Clothes Screen                 | Sign In                        |
-| ----------------------------- | ------------------------------ | ------------------------------ |
-| ![Brand](./Readme/Brands.png) | ![Clothes](./Readme/items.png) | ![Sign In](./Readme/Login.png) |
+| Brand screen                  | Clothes Screen                 |
+| ----------------------------- | ------------------------------ |
+| ![Brand](./Readme/Brands.png) | ![Clothes](./Readme/items.png) |
+
+| Sign In Screen                 | SignUp (Google) Screen                 |
+| ------------------------------ | -------------------------------------- |
+| ![Sign In](./Readme/Login.png) | ![Occasion](./Readme/OccasionPage.gif) |
+
+| Sign In Error Screen                   | Create Occasion Error Screen                 |
+| -------------------------------------- | -------------------------------------------- |
+| ![LoginError](./Readme/LoginError.png) | ![Clothes](./Readme/CreateOccasionError.png) |
 
 ### Admin Screens (Web)
 
 | DashboardHome screen            | DashboardOccasion Screen                    |
 | ------------------------------- | ------------------------------------------- |
 | ![Home](./Readme/Dashboard.png) | ![Occasion](./Readme/DashboardOccasion.png) |
+
+| DashboardUsers screen                 | DashboardError Screen                 |
+| ------------------------------------- | ------------------------------------- |
+| ![Users](./Readme/DashboardUsers.png) | ![Error](./Readme/DashboardError.png) |
 
 <br><br>
 
