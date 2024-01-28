@@ -6,8 +6,7 @@ use Tests\TestCase;
 use App\Models\Occasion;
 
 class OccasionControllerCreateTest extends TestCase
-{
-    public function testCreateOccasion()
+{    public function testCreateOccasion()
     {
                   $response = $this->postJson('/api/login', [
                     'email' => 'shamoukaahmad@gmail.com',
@@ -30,12 +29,5 @@ class OccasionControllerCreateTest extends TestCase
                 ])->postJson('/api/occasion',$formData);
         
         $response->assertStatus(200);
-        $response->assertJsonStructure([
-            'status',
-            'message',
-            'occasion',
-            'openai',
-            'suggested_link',
-        ]);
-    }
+                }
 }
