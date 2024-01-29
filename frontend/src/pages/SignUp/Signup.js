@@ -9,6 +9,7 @@ import countryList from "react-select-country-list";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
+import base_url from "../../common/base/config";
 const SignUp = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState("errorMsg");
@@ -47,10 +48,7 @@ const SignUp = () => {
       };
       console.log(userData);
       try {
-        const response = await axios.post(
-          "http://127.0.0.1:8000/api/register",
-          userData
-        );
+        const response = await axios.post(`${base_url}api/register`, userData);
         console.log(response);
         navigate("/profile");
       } catch (error) {
@@ -73,10 +71,7 @@ const SignUp = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/register",
-        formData
-      );
+      const response = await axios.post(`${base_url}api/register`, formData);
 
       navigate("/signin");
       if (response.data.message === "The email has already been taken.") {

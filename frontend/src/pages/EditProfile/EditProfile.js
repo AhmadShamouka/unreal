@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import Input from "../../common/base/inputs/Input";
 import { useNavigate } from "react-router-dom";
+import base_url from "../../common/base/config";
 import Button from "../../common/base/button/Button";
 import Select from "react-select";
 import countryList from "react-select-country-list";
@@ -49,7 +50,7 @@ const EditProfile = () => {
 
       try {
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/editProfile",
+          `${base_url}api/editProfile`,
           formData,
           {
             headers: {

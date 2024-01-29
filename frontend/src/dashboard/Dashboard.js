@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import base_url from "../common/base/config";
 import "./styleDashboard.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
@@ -65,19 +66,19 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    fetchData("http://127.0.0.1:8000/api/admin/getusers", setUsers);
+    fetchData(`${base_url}api/admin/getusers`, setUsers);
   }, []);
 
   useEffect(() => {
-    fetchData("http://127.0.0.1:8000/api/admin/getoccasions", setOccasions);
+    fetchData(`${base_url}api/admin/getoccasions`, setOccasions);
   }, []);
 
   useEffect(() => {
-    fetchData("http://127.0.0.1:8000/api/admin/getclothes", setClothes);
+    fetchData(`${base_url}api/admin/getclothes`, setClothes);
   }, []);
 
   useEffect(() => {
-    fetchData("http://127.0.0.1:8000/api/admin/gettrails", setTrails);
+    fetchData(`${base_url}api/admin/gettrails`, setTrails);
   }, []);
 
   useEffect(() => {

@@ -38,7 +38,7 @@ const Brand = () => {
             </div>
           </Link>
           <Link
-            to={`https://www2.hm.com/en_gb/search-results.html?q=men%20black%20blazerhttps://www2.hm.com/en_gb/search-results.html?q=men%20black%20blazer`}
+            to={`https://www2.hm.com/en_gb/search-results.html?q=${search}`}
           >
             <div className="card-brand">
               <img

@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { loginSuccess } from "../Login/loginSlice";
 import { jwtDecode } from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
-
+import base_url from "../../common/base/config";
 const Login = () => {
   const [wrong, setWrong] = useState("errorMsg");
   const navigate = useNavigate();
@@ -49,10 +49,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/login",
-        formData
-      );
+      const response = await axios.post(`${base_url}api/login`, formData);
       const header = response.data.authorisation.token;
       localStorage.setItem("jwtToken", header);
 

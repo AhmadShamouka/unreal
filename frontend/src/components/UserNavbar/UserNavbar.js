@@ -116,7 +116,7 @@ const UserNavbar = () => {
         <div>
           <div className="buttons flex center">
             <FaUser color="white" onClick={editProfile} />
-            <h3>ahmadshamouka</h3>
+            <h3>{Username}</h3>
           </div>
           <div className={edit}>
             <div>

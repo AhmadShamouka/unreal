@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import base_url from "../../common/base/config";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import Button from "../../common/base/button/Button";

@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import base_url from "../../common/base/config";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -95,7 +96,7 @@ const ChooseItem = () => {
     if (success === true) {
       try {
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/add-clothes",
+          `${base_url}api/add-clothes`,
           formData,
           {
             headers: {
@@ -116,7 +117,7 @@ const ChooseItem = () => {
       setRequired("errorMsg");
       try {
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/update-trail",
+          `${base_url}api/update-trail`,
           trail,
           {
             headers: {

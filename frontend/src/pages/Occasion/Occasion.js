@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import base_url from "../../common/base/config";
 import "./styleOccasion.css";
 import { useNavigate } from "react-router-dom";
 import Hexagon from "../../common/base/hexagon/Hexagon";
@@ -64,15 +65,11 @@ const Occasion = () => {
       setActive("errorMsg-display");
     } else {
       try {
-        const response = await axios.post(
-          "http://127.0.0.1:8000/api/occasion",
-          formData,
-          {
-            headers: {
-              Authorization: authorization,
-            },
-          }
-        );
+        const response = await axios.post(`${base_url}api/occasion`, formData, {
+          headers: {
+            Authorization: authorization,
+          },
+        });
 
         console.log(response.data);
         if (response.data.status === "success") {
