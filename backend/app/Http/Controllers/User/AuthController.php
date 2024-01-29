@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-
+use Illuminate\Database\QueryException;
 class AuthController extends Controller
 {
 
@@ -112,5 +112,43 @@ class AuthController extends Controller
             ]
         ]);
     }
-
+    public function updateProfile(Request $request)
+    {
+        try {
+            $user = Auth::user();
+            
+            if (!$user) {
+                return response()->json([
+                    'status' => 'failed',
+                    'message' => 'User not authenticated',
+                ], 401);
+            }
+    
+            $request->validate([
+                'password' => 'required|string|min:6',
+                'age' => 'required|integer',
+                'country' => 'required|string',
+                'sex' => 'required|string'
+            ]);
+    
+            // Update user information
+            $user->password = Hash::make($request->password);
+            $user->age = $request->age;
+            $user->country = $request->country;
+            $user->sex = $request->sex;
+            $user->save();
+    
+            return response()->json([
+                'status' => 'success',
+                'message' => 'User profile updated successfully',
+                'user' => $user,
+            ]);
+        } catch (QueryException $e) {
+            return response()->json([
+                'status' => 'failed',
+                'message' => 'Database error: ' . $e->getMessage(),
+            ]);
+        }
+    }
+    
 }
