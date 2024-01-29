@@ -44,10 +44,26 @@ class AuthController extends Controller
     }
           
     public function get_user(){
-        $user = Auth::user();
-        return response()->json([
-            'user' => $user,
-        ]);
+        try {
+            $user = Auth::user();
+            
+            if (!$user) {
+                return response()->json([
+                    'status' => 'failed',
+                    'message' => 'User not authenticated',
+                ], 401);
+            }
+            $user = Auth::user();
+            return response()->json([
+                'user' => $user,
+            ]);
+        }
+            catch (QueryException $e) {
+                return response()->json([
+                    'status' => 'failed',
+                    'message' => 'Database error: ' . $e->getMessage(),
+                ]);
+            }
     }
     public function register(Request $request)
     {
@@ -131,7 +147,6 @@ class AuthController extends Controller
                 'sex' => 'required|string'
             ]);
     
-            // Update user information
             $user->password = Hash::make($request->password);
             $user->age = $request->age;
             $user->country = $request->country;
