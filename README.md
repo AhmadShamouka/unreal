@@ -180,9 +180,9 @@ _Below is an example of how you can instruct your audience on installing and set
 
 2. Frontend: Install NPM packages
 
-```sh
-npm install
-```
+   ```sh
+   npm install
+   ```
 
 3. run your React library
 
@@ -230,26 +230,26 @@ npm install
    php artisan serve --host <YOUR_LOCAL_IPv4@> --port 8000
    ```
 
-9.Augmented Reality: Install Python version 3.8.10
+9. Augmented Reality: Install Python version 3.8.10
 
-[https://www.python.org/downloads/release/python-3810](https://www.python.org/downloads/release/python-3810/)
+   [https://www.python.org/downloads/release/python-3810](https://www.python.org/downloads/release/python-3810/)
 
 10. Install cvzone
 
-```sh
-pip install opencv-python
-```
+    ```sh
+    pip install opencv-python
+    ```
 
 11. Install flask server
 
-```sh
-pip install Flask
-```
+    ```sh
+    pip install Flask
+    ```
 
 12. run your python file
 
-```sh
-python main.py
-```
+    ```sh
+    python main.py
+    ```
 
 Now, you should be able to run Coffee Express locally and explore its features.
