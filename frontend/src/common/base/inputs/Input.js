@@ -16,7 +16,8 @@ const Input = ({
     <div className="container-common-input">
       <label className="label-common">{text}</label>
       <input
-        required
+        disabled={disabled}
+        required={required}
         id={text}
         className={`flex center ${type} ${bgColor} ${textColor} input-common`}
         type={type}
