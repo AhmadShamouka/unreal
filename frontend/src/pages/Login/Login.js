@@ -116,7 +116,7 @@ const Login = () => {
           <div className={wrong}>
             <h5>Check your Email and Password</h5>
           </div>
-          <GoogleLogin onSuccess={handleGoogle} onError={handleError} />
+          <GoogleLogin onSuccess={handleGoogle} />
           <div className="flex center">
             <a> Don't have Account?</a>
             <Link to="/signup">

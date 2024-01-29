@@ -3,10 +3,12 @@ import "./styleUserNavbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useStore } from "react-redux";
 import { FaUser } from "react-icons/fa";
+import store from "../../core/store";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../common/base/button/Button";
 import axios from "axios";
 import { loginSuccess, logoutSuccess } from "../../pages/Login/loginSlice";
+import base_url from "../../common/base/config";
 const UserNavbar = () => {
   const navigate = useNavigate();
   const { username, sex, country, age, isAuthenticated } = useSelector(
@@ -52,43 +54,40 @@ const UserNavbar = () => {
     localStorage.clear();
     navigate("/");
   };
-
-  // useEffect(() => {
-  //   const token = localStorage.getItem("jwtToken");
-  //   const authorization = "Bearer " + token;
-  //   if (token) {
-  //     const getUser = async () => {
-  //       try {
-  //         const response = await axios.post(
-  //           "http://127.0.0.1:8000/api/refresh",
-  //           {},
-  //           {
-  //             headers: {
-  //               Authorization: authorization,
-  //             },
-  //           }
-  //         );
-  //         const header = response.data.authorisation.token;
-  //         localStorage.setItem("jwtToken", header);
-
-  //         dispatch(
-  //           loginSuccess({
-  //             username: response.data.user.username,
-  //             age: response.data.user.age,
-  //             admin: response.data.user.admin,
-  //             sex: response.data.user.sex,
-  //             country: response.data.user.country,
-  //           })
-  //         );
-  //       } catch (error) {
-  //         console.log(error.response.data.message);
-  //         localStorage.clear();
-  //         navigate("/signin");
-  //       }
-  //     };
-  //     getUser();
-  //   }
-  // }, [dispatch]);
+  useEffect(() => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      const authorization = "Bearer " + token;
+      const getUser = async () => {
+        try {
+          const response = await axios.get(`${base_url}api/user`, {
+            headers: {
+              Authorization: authorization,
+            },
+          });
+          const userData = response.data.user;
+          dispatch(
+            loginSuccess({
+              username: userData.username,
+              age: userData.age,
+              admin: userData.admin,
+              sex: userData.sex,
+              country: userData.country,
+            })
+          );
+          console.log(store.getState());
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+          // Handle error more gracefully, e.g., display a message to the user
+        }
+      };
+      getUser();
+    } else {
+      // Token doesn't exist, handle accordingly (e.g., navigate to sign-in page)
+      localStorage.clear();
+      navigate("/signin");
+    }
+  }, [dispatch, base_url, navigate]);
   return (
     <nav>
       <div className={active}>
