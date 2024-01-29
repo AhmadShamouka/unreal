@@ -52,7 +52,7 @@ const SignUp = () => {
           userData
         );
         console.log(response);
-        navigate("/signin");
+        navigate("/profile");
       } catch (error) {
         console.log(error);
         if (error.message === "Request failed with status code 422") {
