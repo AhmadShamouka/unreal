@@ -173,32 +173,83 @@ This is an example of how to list things you need to use the software and how to
 _Below is an example of how you can instruct your audience on installing and setting up your Website. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/AhmadShamouka/unreal.git
    ```
-2. Install NPM packages
+
+2. Frontend: Install NPM packages
+
+```sh
+npm install
+```
+
+3. run your React library
 
    ```sh
-   npm install
+   npm start
    ```
 
-3. Install XAMP
+4. Install XAMP
 
    [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html)
 
-4. Install composer for Laravel
+5. run Apache and MySQL
+
+6. Backend: Install composer for Laravel
 
    ```js
    composer install
    ```
 
-5. Install Python version 3.8.10
-   [https://www.python.org/downloads/release/python-3810](https://www.python.org/downloads/release/python-3810/)
+7. Copy .env.example file and rename it .env you can run
 
-6. Install cvzone
-
-   ```sh
-   pip install opencv-python
+   ```js
+   cp.env.example.env;
    ```
+
+8. Open your .env file and change the database name (DB_DATABASE) to whatever you need or to idonate_db, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration if you configured them.
+
+   ```js
+   php artisan key:generate;
+   ```
+
+   ```js
+   php artisan jwt:secret
+   ```
+
+   ```js
+   php artisan migrate
+   ```
+
+   ```js
+   php artisan storage:link
+   ```
+
+   ```js
+   php artisan serve --host <YOUR_LOCAL_IPv4@> --port 8000
+   ```
+
+9.Augmented Reality: Install Python version 3.8.10
+
+[https://www.python.org/downloads/release/python-3810](https://www.python.org/downloads/release/python-3810/)
+
+10. Install cvzone
+
+```sh
+pip install opencv-python
+```
+
+11. Install flask server
+
+```sh
+pip install Flask
+```
+
+12. run your python file
+
+```sh
+python main.py
+```
 
 Now, you should be able to run Coffee Express locally and explore its features.
