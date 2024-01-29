@@ -12,7 +12,7 @@ class AuthControllerRegisterTest extends TestCase
               
                 $formData = [
                     'username' => 'ahmad',
-                    'email' => 'a-shamouka@gmail.com',
+                    'email' => 'ahmad-shamouka1@gmail.com',
                     'password' => '70938737',
                     'age'=>'25',
                     'country'=>'Lebanon',

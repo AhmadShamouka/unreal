@@ -7,7 +7,7 @@ use App\Models\Occasion;
 
 class TrailControllerUpdateTest extends TestCase
 {
-    public function testCreateOccasion()
+    public function testTrailUpdate()
     {
                   $response = $this->postJson('/api/login', [
                     'email' => 'shamoukaahmad@gmail.com',

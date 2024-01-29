@@ -39,17 +39,11 @@ Admin:
 
 ### I designed UNREALFIT using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
-<li>Project Figma Design <a href="https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/UNREALFIT?type=design&node-id=394%3A41&mode=design&t=5YXJMx6uLUv3qrA1-1">Figma</a></li>
-
 ### Mockups Examples
 
-| Home screen                          | Login Screen                        |
-| ------------------------------------ | ----------------------------------- |
-| ![Landing](./Readme/LandingMock.png) | ![Occasion](./Readme/LoginMock.png) |
-
-| Clothes screen                    | Occasion Screen                        |
-| --------------------------------- | -------------------------------------- |
-| ![Landing](./Readme/ItemMock.png) | ![Occasion](./Readme/OccasionMock.png) |
+| Home screen                          | Login Screen                        | Clothes screen                    | Occasion Screen                        |
+| ------------------------------------ | ----------------------------------- | --------------------------------- | -------------------------------------- |
+| ![Landing](./Readme/LandingMock.png) | ![Occasion](./Readme/LoginMock.png) | ![Landing](./Readme/ItemMock.png) | ![Occasion](./Readme/OccasionMock.png) |
 
 Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/UNREALFIT?type=design&node-id=394%3A41&mode=design&t=5YXJMx6uLUv3qrA1-1)
 <br><br>
@@ -105,9 +99,9 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 
 This initiative utilizes advanced prompt engineering methodologies to enhance interactions with natural language processing models. By meticulously crafting input instructions, we sculpt the models' responses to achieve precise and seamless language comprehension and generation, catering adeptly to a spectrum of tasks and user preferences.
 
-| OpenAi prompt screen               |
-| ---------------------------------- |
-| ![Home](./Readme/OpenAIprompt.png) |
+| OpenAi prompt screen         |
+| ---------------------------- |
+| ![Home](./Readme/OpenAi.png) |
 
 <br><br>
 <img src="./Readme/title8.svg"/>
@@ -134,25 +128,13 @@ By following these steps, we deployed the backend to Amazon Linux 2023.
 
 This project embraces meticulous unit testing strategies to uphold the dependability and precision of code modules. Through methodical examination of discrete units within the software, we establish a resilient framework, detecting and rectifying potential issues at an early stage of development.
 
-| Login Feature Testing                         | Logout Feature Testing                           |
-| --------------------------------------------- | ------------------------------------------------ |
-| ![Login](./Readme/AuthLoginFetureTesting.png) | ![Logout](./Readme/AuthLogoutFeatureTesting.png) |
+| Create Occasion Feature Testing                              | Get Occasions Feature Testing                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| ![Create Occasion](./Readme/CreateOccasionFetureTesting.png) | ![Get Occasion](./Readme/AdminGetOccasionsFeatureTesting.png) |
 
-| Get Users Feature Testing                              | Get Occasions Feature Testing                                 |
-| ------------------------------------------------------ | ------------------------------------------------------------- |
-| ![Get Users](./Readme/AdminGetUsersFeatureTesting.png) | ![Get Occasion](./Readme/AdminGetOccasionsFeatureTesting.png) |
-
-| Get Single Feature Testing                                       | Get Trails Feature Testing                               |
-| ---------------------------------------------------------------- | -------------------------------------------------------- |
-| ![Get Single](./Readme/AdminGetSingleOccasionFeatureTesting.png) | ![Get Trails](./Readme/AdminGetTrailsFeatureTesting.png) |
-
-| Create Occasion Feature Testing                              | Register Feature Testing                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Create Occasion](./Readme/CreateOccasionFetureTesting.png) | ![Register Feature](./Readme/AuthRegisterFeatureTesting.png) |
-
-| Trail Update Feature Testing                            | Get Single User Feature Testing                                  |
-| ------------------------------------------------------- | ---------------------------------------------------------------- |
-| ![Trail Update](./Readme/TrailUpdateFeatureTesting.png) | ![Get Single User](./Readme/AdminGetSingleUserFetureTesting.png) |
+| 8 More Feature Testing                    |
+| ----------------------------------------- |
+| ![Get Users](./Readme/FeatureTesting.png) |
 
 <br><br>
 <img src="./Readme/title10.svg"/>
