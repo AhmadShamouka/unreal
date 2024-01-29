@@ -26,6 +26,7 @@ const ChooseItem = () => {
     price: null,
     image: null,
   });
+  const [required, setRequired] = useState("errorMsg");
   const store = useStore();
   const dispatch = useDispatch();
   const { UrlLink } = useSelector((state) => state.occasion);
@@ -109,25 +110,30 @@ const ChooseItem = () => {
   };
 
   const handleBuy = async () => {
-    try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/update-trail",
-        trail,
-        {
-          headers: {
-            Authorization: authorization,
-          },
-        }
-      );
-      if (response.data.status === "success") {
-        dispatch(
-          ItemChoosen({
-            ItemName: data.name,
-          })
+    if (trail.id == null) {
+      setRequired("errorMsg-signup");
+    } else {
+      setRequired("errorMsg");
+      try {
+        const response = await axios.post(
+          "http://127.0.0.1:8000/api/update-trail",
+          trail,
+          {
+            headers: {
+              Authorization: authorization,
+            },
+          }
         );
-        navigate("/brand");
-      }
-    } catch (error) {}
+        if (response.data.status === "success") {
+          dispatch(
+            ItemChoosen({
+              ItemName: data.name,
+            })
+          );
+          navigate("/brand");
+        }
+      } catch (error) {}
+    }
   };
   return (
     <div>
@@ -178,6 +184,9 @@ const ChooseItem = () => {
           </Swiper>
           <div className="flex center">
             <Button text="BUY IT" onClick={handleBuy} />
+          </div>
+          <div className={required}>
+            <h5>You need To Try Clothes Before You buy them</h5>
           </div>
         </div>
       </div>

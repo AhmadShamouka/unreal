@@ -3,6 +3,7 @@ import "./style.css";
 
 const Button = ({
   type,
+  disabled,
   text,
   onClick,
   bgColor = "blue-bg",

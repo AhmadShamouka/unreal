@@ -12,7 +12,7 @@ import { jwtDecode } from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
-  const [active, setActive] = useState("errorMsg");
+  const [wrong, setWrong] = useState("errorMsg");
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -29,7 +29,7 @@ const Login = () => {
       const decodedToken = jwtDecode(credentialResponse.credential);
       const header = credentialResponse.credential;
       localStorage.setItem("jwtToken", header);
-      console.log(localStorage);
+
       dispatch(
         loginSuccess({
           username: decodedToken.name,
@@ -60,6 +60,8 @@ const Login = () => {
         navigate("/dashboard");
       } else if (response.data.user.admin === 0) {
         navigate("/occasion");
+      } else if (response.data.message === "Unauthorized") {
+        setWrong("errorMsg-signup");
       }
       dispatch(
         loginSuccess({
@@ -71,9 +73,9 @@ const Login = () => {
         })
       );
     } catch (error) {
-      console.error("Error during form submission:", error);
+      console.log("Error during form submission:", error.data);
       if (error.message === "Request failed with status code 401") {
-        setActive("errorMsg-signup");
+        setWrong("errorMsg-signup");
       }
     }
   };
@@ -112,8 +114,9 @@ const Login = () => {
             bgColor="white-bg"
             textColor="blue-text"
           />
-          <div className={active}>
-            <h5>Email address Does not exists!</h5>
+
+          <div className={wrong}>
+            <h5>Check your Email and Password</h5>
           </div>
           <GoogleLogin onSuccess={handleGoogle} onError={handleError} />
           <div className="flex center">
