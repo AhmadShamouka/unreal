@@ -102,6 +102,33 @@ class AdminController extends Controller
         ], 401);
     }
 
+    public function destroy(Request $request)
+    {   if (Auth::check()) {
+        $user = User::find($requset->id);
+        if($user){
+        $user->delete();
+
+        
+        return response()->json([
+            'status' => 'success',
+            'response' => "Deleted Succesfully",
+        ]);
+        }else{
+            return response()->json([
+                'status' => 'failed',
+                'response' => "User not found",
+            ]);
+        }
+        }
+        return response()->json([
+            'status' => 'failed',
+            'message' => "User not authenticated",
+        ], 401);
+    }
+
+
+
+
     public function getClothes()
     {
         if (Auth::Check()) {
