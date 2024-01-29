@@ -59,6 +59,13 @@ const Login = () => {
         navigate("/occasion");
       } else if (response.data.message === "Unauthorized") {
         setWrong("errorMsg-signup");
+      } else if (
+        response.data.user.sex == "" ||
+        response.data.user.country == "" ||
+        response.data.user.password == "" ||
+        response.data.user.age == ""
+      ) {
+        navigate("/profile");
       }
       dispatch(
         loginSuccess({

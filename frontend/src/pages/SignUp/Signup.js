@@ -50,7 +50,7 @@ const SignUp = () => {
       try {
         const response = await axios.post(`${base_url}api/register`, userData);
         console.log(response);
-        navigate("/profile");
+        navigate("/signin");
       } catch (error) {
         console.log(error);
         if (error.message === "Request failed with status code 422") {

@@ -142,6 +142,8 @@ const Dashboard = () => {
         <h1>GO HOME YOU ARE LOST!</h1>
       </div>
     );
+  } else if (Object.keys(users).length === 0) {
+    <LoadingSpinner />;
   } else {
     return (
       <div className="dashboard flex">

@@ -9,6 +9,7 @@ import axios from "axios";
 import "./styleEditProfile.css";
 import logo from "../../common/base/logo/image/logo.png";
 import { Link } from "react-router-dom";
+import LoadingSpinner from "../../components/loading/Loading";
 const EditProfile = () => {
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
@@ -88,7 +89,7 @@ const EditProfile = () => {
     fetchData();
   }, []);
   if (Object.keys(user).length === 0) {
-    return <h1>Loading...</h1>;
+    <LoadingSpinner />;
   } else {
     return (
       <div className="edit-profile-container flex center">
