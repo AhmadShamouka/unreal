@@ -12,6 +12,8 @@ use App\Http\Controllers\GeneralController;
 Route::middleware(['admin:api'])->group(function () {
     Route::get('/admin/getusers', [AdminController::class, 'getUsers']);
     Route::post('/admin/getsingleuser', [AdminController::class, 'getOneUser']);
+    Route::delete('/admin/deleteUser', [AdminController::class, 'destroy']);
+
 
     Route::get('/admin/getoccasions', [AdminController::class, 'getOccasions']);
     Route::post('/admin/getsingleoccasion', [AdminController::class, 'getOneOccasion']);
@@ -21,6 +23,7 @@ Route::middleware(['admin:api'])->group(function () {
 
     Route::get('/admin/gettrails', [AdminController::class, 'getTrails']);
     Route::post('/admin/getsingletrail', [AdminController::class, 'getOneTrail']);
+    
 });
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
