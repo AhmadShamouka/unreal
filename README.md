@@ -41,7 +41,7 @@ Admin:
 
 <li>Project Figma Design <a href="https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/UNREALFIT?type=design&node-id=394%3A41&mode=design&t=5YXJMx6uLUv3qrA1-1">Figma</a></li>
 
-### Mockups
+### Mockups Examples
 
 | Home screen                          | Login Screen                        |
 | ------------------------------------ | ----------------------------------- |
@@ -51,6 +51,7 @@ Admin:
 | --------------------------------- | -------------------------------------- |
 | ![Landing](./Readme/ItemMock.png) | ![Occasion](./Readme/OccasionMock.png) |
 
+Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/UNREALFIT?type=design&node-id=394%3A41&mode=design&t=5YXJMx6uLUv3qrA1-1)
 <br><br>
 
 <!-- Implementation -->
@@ -102,8 +103,6 @@ Admin:
 <!-- How to run -->
 <img src="./Readme/title7.svg"/>
 
-### Unlocking AI Interaction Mastery: Revealing the Potential of Prompt Engineering:
-
 This initiative utilizes advanced prompt engineering methodologies to enhance interactions with natural language processing models. By meticulously crafting input instructions, we sculpt the models' responses to achieve precise and seamless language comprehension and generation, catering adeptly to a spectrum of tasks and user preferences.
 
 | OpenAi prompt screen               |
@@ -112,8 +111,6 @@ This initiative utilizes advanced prompt engineering methodologies to enhance in
 
 <br><br>
 <img src="./Readme/title8.svg"/>
-
-### Efficient AI Deployment: Unleashing the Potential with AWS Integration:
 
 - This project leverages AWS deployment strategies to seamlessly integrate and deploy
   natural language processing models. With a focus on scalability, reliability, and
@@ -134,8 +131,6 @@ By following these steps, we deployed the backend to Amazon Linux 2023.
 10. Get the Laravel demo page
     <br><br>
     <img src="./Readme/title9.svg"/>
-
-### Precision in Development: Leveraging the Strength of Unit Testing:
 
 This project embraces meticulous unit testing strategies to uphold the dependability and precision of code modules. Through methodical examination of discrete units within the software, we establish a resilient framework, detecting and rectifying potential issues at an early stage of development.
 
