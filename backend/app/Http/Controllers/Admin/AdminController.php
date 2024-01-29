@@ -103,8 +103,10 @@ class AdminController extends Controller
     }
 
     public function destroy(Request $request)
-    {   if (Auth::check()) {
-        $user = User::find($requset->id);
+    
+    {   
+        if (Auth::check()) {
+        $user = User::find($request->id);
         if($user){
         $user->delete();
 
@@ -119,12 +121,13 @@ class AdminController extends Controller
                 'response' => "User not found",
             ]);
         }
-        }
+        }else{
         return response()->json([
             'status' => 'failed',
             'message' => "User not authenticated",
         ], 401);
     }
+}
 
 
 
