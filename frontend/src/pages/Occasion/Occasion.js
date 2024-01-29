@@ -25,6 +25,7 @@ import { occasionCreated } from "../Occasion/occasionSlice";
 
 const Occasion = () => {
   const [active, setActive] = useState("errorMsg");
+  const [wrong, setWrong] = useState("errorMsg");
   const navigate = useNavigate();
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
@@ -72,15 +73,19 @@ const Occasion = () => {
             },
           }
         );
-        console.log(localStorage);
+
         console.log(response.data);
         if (response.data.status === "success") {
           dispatch(occasionCreated(response.data.suggested_link));
           navigate("/find");
         }
-      } catch (error) {
-        console.log(error);
-      }
+        if (
+          response.data.message ===
+          "An error occurred: cURL error 6: Could not resolve host: api.openai.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.openai.com/v1/chat/completions"
+        ) {
+          setWrong("errorMsg-display");
+        }
+      } catch (error) {}
     }
   };
 
@@ -253,6 +258,9 @@ const Occasion = () => {
           </div>
           <div className={active}>
             <h5>Please Select Occasion and Style!</h5>
+          </div>
+          <div className={wrong}>
+            <h5>Please Connect to the Internet</h5>
           </div>
         </section>
       </form>
