@@ -112,8 +112,28 @@ This initiative utilizes advanced prompt engineering methodologies to enhance in
 
 <br><br>
 <img src="./Readme/title8.svg"/>
-<br><br>
-<img src="./Readme/title9.svg"/>
+
+### Efficient AI Deployment: Unleashing the Potential with AWS Integration:
+
+- This project leverages AWS deployment strategies to seamlessly integrate and deploy
+  natural language processing models. With a focus on scalability, reliability, and
+  performance, we ensure that AI applications powered by these models deliver robust and
+  responsive solutions for diverse use cases.
+
+By following these steps, we deployed the backend to Amazon Linux 2023.
+
+1. Update Amazon Linux 2023 Packages
+2. Install LAMP Stack
+3. Start and enable the Apache and MariaDB services
+4. Create Database
+5. Install PHP Composer for Laravel on on.Linux 2023
+6. Download the Laravel framework project
+7. Install Laravel on Amazon Linux 2023
+8. Create the Laravel environment configuration file
+9. Apache Configuration for PHP Laravel App
+10. Get the Laravel demo page
+    <br><br>
+    <img src="./Readme/title9.svg"/>
 
 ### Precision in Development: Leveraging the Strength of Unit Testing:
 
