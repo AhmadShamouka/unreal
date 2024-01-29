@@ -137,6 +137,20 @@
   color: white;
   padding: 1%;
 }
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 6px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
 
 @media screen and (max-width: 1070px) {
   .side-title h1 {

@@ -135,6 +135,21 @@ const Dashboard = () => {
       </BarChart>
     </ResponsiveContainer>
   );
+  const handleDelete = async (userId) => {
+    try {
+      const response = await axios.delete(`${base_url}api/admin/destroy`, {
+        data: {
+          id: userId,
+        },
+        headers: {
+          Authorization: authorization,
+        },
+      });
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   if (loading === false) {
     return (
       <div className="forbidden flex center">
@@ -249,6 +264,7 @@ const Dashboard = () => {
                     <th>Gender</th>
                     <th>Country</th>
                     <th>Age</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -260,6 +276,14 @@ const Dashboard = () => {
                       <td>{user.sex}</td>
                       <td>{user.country}</td>
                       <td>{user.age}</td>
+                      <td>
+                        <button
+                          onClick={() => handleDelete(user.id)}
+                          className="delete-btn"
+                        >
+                          Delete User
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
