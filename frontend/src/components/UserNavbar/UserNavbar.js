@@ -75,19 +75,14 @@ const UserNavbar = () => {
               country: userData.country,
             })
           );
-          console.log(store.getState());
-        } catch (error) {
-          console.error("Error fetching user data:", error);
-          // Handle error more gracefully, e.g., display a message to the user
-        }
+        } catch (error) {}
       };
       getUser();
     } else {
-      // Token doesn't exist, handle accordingly (e.g., navigate to sign-in page)
       localStorage.clear();
       navigate("/signin");
     }
-  }, [dispatch, base_url, navigate]);
+  }, [dispatch]);
   return (
     <nav>
       <div className={active}>
