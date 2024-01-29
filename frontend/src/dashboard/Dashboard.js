@@ -52,9 +52,7 @@ const Dashboard = () => {
         },
       });
       setData(response.data);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
   useEffect(() => {
     const loading = () => {
@@ -146,9 +144,7 @@ const Dashboard = () => {
         },
       });
       fetchData();
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
   if (loading === false) {
     return (

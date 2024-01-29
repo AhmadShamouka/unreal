@@ -71,7 +71,6 @@ const Occasion = () => {
           },
         });
 
-        console.log(response.data);
         if (response.data.status === "success") {
           dispatch(occasionCreated(response.data.suggested_link));
           navigate("/find");

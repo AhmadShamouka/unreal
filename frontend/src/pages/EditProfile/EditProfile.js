@@ -60,10 +60,9 @@ const EditProfile = () => {
             },
           }
         );
-        console.log(response.data);
+
         navigate("/signin");
       } catch (error) {
-        console.error(error.message);
         if (error.message === "Request failed with status code 422") {
           setActive("errorMsg-signup");
         }
@@ -80,10 +79,7 @@ const EditProfile = () => {
         });
 
         setUser(response.data);
-        console.log(user);
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
 
     fetchData();

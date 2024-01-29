@@ -40,25 +40,22 @@ const SignUp = () => {
   const handleGoogle = async (credentialResponse) => {
     if (credentialResponse && credentialResponse.credential) {
       const decodedToken = jwtDecode(credentialResponse.credential);
-      console.log("Decoded Token: ", decodedToken);
 
       const userData = {
         username: decodedToken.name,
         email: decodedToken.email,
       };
-      console.log(userData);
+
       try {
         const response = await axios.post(`${base_url}api/register`, userData);
-        console.log(response);
+
         navigate("/signin");
       } catch (error) {
-        console.log(error);
         if (error.message === "Request failed with status code 422") {
           setActive("errorMsg-signup");
         }
       }
     } else {
-      console.log("Registration Failed: No credential response");
     }
   };
   const handleError = (error) => {
@@ -78,7 +75,6 @@ const SignUp = () => {
         setActive("errorMsg-signup");
       }
     } catch (error) {
-      console.error(error.message);
       if (error.message === "Request failed with status code 422") {
         setActive("errorMsg-signup");
       }

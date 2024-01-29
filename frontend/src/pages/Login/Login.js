@@ -37,14 +37,9 @@ const Login = () => {
       );
 
       navigate("/occasion");
-    } else {
-      console.log("Login Failed: No credential response");
     }
   };
 
-  const handleError = () => {
-    console.log("Login Failed");
-  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -77,7 +72,6 @@ const Login = () => {
         })
       );
     } catch (error) {
-      console.log("Error during form submission:", error.data);
       if (error.message === "Request failed with status code 401") {
         setWrong("errorMsg-signup");
       }
