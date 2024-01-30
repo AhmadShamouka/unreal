@@ -97,7 +97,7 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 | ---------------------------------------------- | ---------------------------------------------- |
 | ![DashbaordUsers](./Readme/DashboardUsers.png) | ![DashboardError](./Readme/DashboardError.png) |
 
-<video src="readme/Flow.mp4" controls title="Title"></video>
+<video src="Readme/Flow.mp4" controls title="Title"></video>
 
 <br><br>
 
