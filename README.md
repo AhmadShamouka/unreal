@@ -115,9 +115,11 @@ This code segment orchestrates the generation of clothing suggestions based on u
 
 Leveraging OpenAI's GPT-3.5 Turbo model, it constructs a prompt based on user preferences and budget, generating concise responses for clothing suggestions within a defined token limit.
 
+### Open Ai Prompt
+
 | OpenAI                         |
 | ------------------------------ |
-| ![OpenAI](./Readme/OpenAI.png) |
+| ![OpenAI](./Readme/Openai.png) |
 
 <br><br>
 <img src="./Readme/title8.svg"/>
