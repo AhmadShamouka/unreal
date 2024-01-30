@@ -10,19 +10,19 @@ UnrealFit is a web-based wardrobe assistance platform that utilizes augmented re
 
 User:
 
-> As a user, I want to easily register for an account, providing necessary details such as username, email, password, age, country and gender.
+- As a user, I want to easily register for an account, providing necessary details such as username, email, password, age, country and gender.
 
-> As a user, I want to create new occasions, providing details such as the type of occasion, style, season and budget ramge.
+- As a user, I want to create new occasions, providing details such as the type of occasion, style, season and budget ramge.
 
-> As a user, I want to select one of the suggested clothes and virtually try-on the cloth using Augmented Reality(AR), I can buy one of the clothes.
+- As a user, I want to select one of the suggested clothes and virtually try-on the cloth using Augmented Reality(AR), I can buy one of the clothes.
 
 Admin:
 
-> As an admin, I want a comprehensive dashboard overview displaying key metrics, user statistics, and recent activities.
+- As an admin, I want a comprehensive dashboard overview displaying key metrics, user statistics, and recent activities.
 
-> As an admin, I want to view a list of all users, including their registration details and activity history.
+- As an admin, I want to view a list of all users, including their registration details and activity history.
 
-> As an admin, I want to see a list of all occasions created by users, including details like occasion type, date, and associated costumes.
+- As an admin, I want to see a list of all occasions created by users, including details like occasion type, date, and associated costumes.
 
 <br><br>
 
@@ -32,7 +32,7 @@ Admin:
 ### Unrealfit is built using the following technologies:
 
 - This project uses the [React web development library](https://react.dev/) for frontend. React is a JavaScript library for building user interfaces, known for its component-based architecture and efficient rendering using a virtual DOM.
-- This Project uses [Laravel framework](https://laravel.com/)for backend,Laravel serves as a backend framework for PHP web development, offering features and tools that streamline backend processes, such as routing, database management, authentication, and API development, empowering developers to build robust and scalable server-side applications efficiently.
+- This Project uses [Laravel framework](https://laravel.com/) for backend,Laravel serves as a backend framework for PHP web development, offering features and tools that streamline backend processes, such as routing, database management, authentication, and API development, empowering developers to build robust and scalable server-side applications efficiently.
 - For persistent storage (database), the app uses the [MySQL](https://www.mysql.com/) MySQL is an open-source relational database management system (RDBMS) that uses SQL for querying, managing, and storing structured data efficiently.
 
 <img src="./Readme/title4.svg"/>
@@ -69,6 +69,10 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 | Home screen                           | Occasion Screen                        |
 | ------------------------------------- | -------------------------------------- |
 | ![Landing](./Readme/Landing.page.gif) | ![Occasion](./Readme/OccasionPage.gif) |
+
+| Augmented Reality Clothes-TryOn Screen |
+| -------------------------------------- |
+| ![AR](./Readme/AR_.gif)                |
 
 | Brand screen                  | Clothes Screen                 |
 | ----------------------------- | ------------------------------ |
@@ -123,8 +127,10 @@ By following these steps, we deployed the backend to Amazon Linux 2023.
 8. Create the Laravel environment configuration file
 9. Apache Configuration for PHP Laravel App
 10. Get the Laravel demo page
-    <br><br>
-    <img src="./Readme/title9.svg"/>
+
+<br><br>
+
+<img src="./Readme/title9.svg"/>
 
 This project embraces meticulous unit testing strategies to uphold the dependability and precision of code modules. Through methodical examination of discrete units within the software, we establish a resilient framework, detecting and rectifying potential issues at an early stage of development.
 
@@ -146,8 +152,6 @@ This project embraces meticulous unit testing strategies to uphold the dependabi
 This is an example of how to list things you need to use the software and how to install them.
 
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your Website. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
 
