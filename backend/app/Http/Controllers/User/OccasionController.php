@@ -123,7 +123,7 @@ switch ($response) {
     case 'women summer dress':
         return "72177720314280926";
     default:
-        return null;
+        return "72177720314448995";
 }
 }
 
