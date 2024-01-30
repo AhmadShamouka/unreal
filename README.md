@@ -70,9 +70,9 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 | ------------------------------------- | -------------------------------------- |
 | ![Landing](./Readme/Landing.page.gif) | ![Occasion](./Readme/OccasionPage.gif) |
 
-| Augmented Reality Clothes-TryOn Screen |
-| -------------------------------------- |
-| ![AR](./Readme/AR_.gif)                |
+| Augmented Reality Clothes-TryOn Screen | Edit Profile Screen             |
+| -------------------------------------- | ------------------------------- |
+| ![AR](./Readme/AR.gif)                 | ![AR](./Readme/EditPRofile.png) |
 
 | Brand screen                  | Clothes Screen                 |
 | ----------------------------- | ------------------------------ |
