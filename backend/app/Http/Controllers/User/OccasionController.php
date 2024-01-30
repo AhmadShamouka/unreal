@@ -29,12 +29,15 @@ class OccasionController extends Controller
                     'budget_range' => $request->budget_range,
                     'user_id' => $user->id,
                 ]);
-               
+                //Craeting variable to get the user gender
+               $gender=$user->sex;
 // The prompt message that will be sent to OpenAI
-$prompt = "I am {$user->sex} need clothes suggestions for an upcoming {$request->occasion_type}. I prefer a {$request->style} look for {$request->season}.
-My budget is {$request->budget_range}. - Give me suggestions for clothes,3 words max, remark (you should pick one of the [`men summer shirts`, 'women summer shirts',
-`men winter shirts`, 'women winter shirts', 'men suits', 'women suits', 'man pijamas', 'women pijamas',
-'women swimwear', 'man swimwear', 'women wedding', 'man sports', 'women sports', 'women winter dress','women summer dress'])";
+$prompt = "I am {$gender} need clothes suggestions for an upcoming {$request->occasion_type}. I prefer a {$request->style} look for {$request->season}.
+My budget is {$request->budget_range}. - Give me suggestions for clothes,3 words max, Remark: You should pick one and only one of these options: 
+    [`man summer shirts`, 'woman summer shirts', `man winter shirts`, 'woman winter shirts', 
+    'man suits', 'woman suits', 'man pajamas', 'woman pajamas', 
+    'woman swimwear', 'man swimwear', 'woman wedding attire', 
+    'man sports attire', 'woman sports attire', 'woman winter dress', 'woman summer dress']";
 
 // Sending prompt to OpenAI and getting response
 $result = OpenAI::chat()->create([
@@ -42,14 +45,14 @@ $result = OpenAI::chat()->create([
     'messages' => [
         ['role' => 'user', 'content' => $prompt,],
     ],
-    'max_tokens' => 15,
+    'max_tokens' => 3700,
 ]);
 // Extracting response from OpenAI
 $response = $result['choices'][0]['message']['content'];
 // Mapping response to Flickr album
 $link = $this->mapFlickrAlbum($response);
 
-// Retrieving Flickr API key and user ID from environment variables
+// Retrieving Flickr API key and user ID from environmant variables
 $apiKey = env('FLICKR_API_KEY');
 $userId = env('FLICKR_USER_ID');
 
@@ -92,35 +95,35 @@ private function mapFlickrAlbum($response)
 {
 // Mapping response to Flickr album ID based on clothing type
 switch ($response) {
-    case 'men summer shirts':
+    case 'man summer shirts':
         return "72177720314279320";
-    case 'women summer shirts':
+    case 'woman summer shirts':
         return "72177720314290573";
-    case 'men winter shirts':
-        return "72177720314306941";
-    case 'women winter shirts':
+    case 'man winter shirts':
+        return "72177720314309206";
+    case 'woman winter shirts':
         return "72177720314307020";
-    case 'men suits':
+    case 'man suits':
         return "72177720314302809";
-    case 'women suits':
+    case 'woman suits':
         return "72177720314307020";
     case 'man pijamas':
         return "72177720314302774";
-    case 'women pijamas':
+    case 'woman pijamas':
         return "72177720314290513";
-    case 'women swimwear':
+    case 'woman swimwear':
         return "72177720314276462";
     case 'man swimwear':
         return "72177720314352759";
-    case 'women wedding':
+    case 'woman wedding':
         return "72177720314331661";
     case 'man sports':
         return "72177720314307030";
-    case 'women sports':
+    case 'woman sports':
         return "72177720314307030";
-    case 'women winter dress':
+    case 'woman winter dress':
         return "72177720314274755";
-    case 'women summer dress':
+    case 'woman summer dress':
         return "72177720314280926";
     default:
         return "72177720314448995";
