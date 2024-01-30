@@ -97,7 +97,6 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 | ---------------------------------------------- | ---------------------------------------------- |
 | ![DashbaordUsers](./Readme/DashboardUsers.png) | ![DashboardError](./Readme/DashboardError.png) |
 
-<div>
 <table>
   <tr>
     <td align="center">
@@ -106,7 +105,7 @@ https://github.com/AhmadShamouka/unreal/blob/main/Flow.mp4
 </td>
 
 </table>
-</div>
+
 <br><br>
 
 <!-- How to run -->
@@ -147,9 +146,9 @@ By following these steps, we deployed the backend to Amazon Linux 2023.
 
 This project embraces meticulous unit testing strategies to uphold the dependability and precision of code modules. Through methodical examination of discrete units within the software, we establish a resilient framework, detecting and rectifying potential issues at an early stage of development.
 
-| Create Occasion Feature Testing                              | Get Occasions Feature Testing                     |
-| ------------------------------------------------------------ | ------------------------------------------------- |
-| ![Create Occasion](./Readme/CreateOccasionFetureTesting.png) | ![Get Occasion](./Readme/LoginFeatureTesting.png) |
+| Create Occasion Feature Testing                              | Get Occasions Feature Testing                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| ![Create Occasion](./Readme/CreateOccasionFetureTesting.png) | ![Get Occasion](./Readme/AdminGetOccasionsFeatureTesting.png) |
 
 | 8 More Feature Testing                    |
 | ----------------------------------------- |
