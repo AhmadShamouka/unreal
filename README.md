@@ -34,6 +34,7 @@ Admin:
 - This project uses the [React web development library](https://react.dev/) for frontend. React is a JavaScript library for building user interfaces, known for its component-based architecture and efficient rendering using a virtual DOM.
 - This Project uses [Laravel framework](https://laravel.com/) for backend,Laravel serves as a backend framework for PHP web development, offering features and tools that streamline backend processes, such as routing, database management, authentication, and API development, empowering developers to build robust and scalable server-side applications efficiently.
 - For persistent storage (database), the app uses the [MySQL](https://www.mysql.com/) MySQL is an open-source relational database management system (RDBMS) that uses SQL for querying, managing, and storing structured data efficiently.
+- For Augmented Reality(AR), the app uses [Pyhton](https://www.python.org/). Python have many libraries to use and one of them is Computer vision which is part of Augmented reality. Python is indeed used for Augmented Reality (AR) applications, and it offers a variety of libraries that support AR development. One prominent example is computer vision, which plays a crucial role in many AR applications. Libraries like OpenCV.
 
 <img src="./Readme/title4.svg"/>
 
@@ -88,13 +89,15 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 
 ### Admin Screens (Web)
 
-| DashboardHome screen            | DashboardOccasion Screen                    |
-| ------------------------------- | ------------------------------------------- |
-| ![Home](./Readme/Dashboard.png) | ![Occasion](./Readme/DashboardOccasion.png) |
+| DashboardHome screen                     | DashboardOccasion Screen                             |
+| ---------------------------------------- | ---------------------------------------------------- |
+| ![DashboardHome](./Readme/Dashboard.png) | ![DashboardOccasion](./Readme/DashboardOccasion.png) |
 
-| DashboardUsers screen                 | DashboardError Screen                 |
-| ------------------------------------- | ------------------------------------- |
-| ![Users](./Readme/DashboardUsers.png) | ![Error](./Readme/DashboardError.png) |
+| DashboardUsers screen                          | DashboardError Screen                          |
+| ---------------------------------------------- | ---------------------------------------------- |
+| ![DashbaordUsers](./Readme/DashboardUsers.png) | ![DashboardError](./Readme/DashboardError.png) |
+
+<video src="readme/assets/Flow.mp4" controls title="Title"></video>
 
 <br><br>
 
@@ -107,7 +110,7 @@ Leveraging OpenAI's GPT-3.5 Turbo model, it constructs a prompt based on user pr
 
 | OpenAi prompt screen         |
 | ---------------------------- |
-| ![Home](./Readme/OpenAi.png) |
+| ![Home](./Readme/OpenAI.png) |
 
 <br><br>
 <img src="./Readme/title8.svg"/>
