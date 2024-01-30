@@ -97,7 +97,7 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 | ---------------------------------------------- | ---------------------------------------------- |
 | ![DashbaordUsers](./Readme/DashboardUsers.png) | ![DashboardError](./Readme/DashboardError.png) |
 
-<video src="readme/assets/Flow.mp4" controls title="Title"></video>
+<video src="readme/Flow.mp4" controls title="Title"></video>
 
 <br><br>
 
@@ -108,9 +108,9 @@ This code segment orchestrates the generation of clothing suggestions based on u
 
 Leveraging OpenAI's GPT-3.5 Turbo model, it constructs a prompt based on user preferences and budget, generating concise responses for clothing suggestions within a defined token limit.
 
-| OpenAi prompt screen         |
-| ---------------------------- |
-| ![Home](./Readme/OpenAI.png) |
+| OpenAi prompt screen           |
+| ------------------------------ |
+| ![OpenAI](./Readme/OpenAI.png) |
 
 <br><br>
 <img src="./Readme/title8.svg"/>
