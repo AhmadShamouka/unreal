@@ -146,7 +146,7 @@ const Dashboard = () => {
       fetchData();
     } catch (error) {}
   };
-  if (loading === false) {
+  if ({ loading } == false) {
     return (
       <div className="forbidden flex center">
         <FaBacteria size={100} />
@@ -154,7 +154,7 @@ const Dashboard = () => {
       </div>
     );
   } else if (Object.keys(users).length === 0) {
-    <LoadingSpinner />;
+    return <LoadingSpinner />;
   } else {
     return (
       <div className="dashboard flex">

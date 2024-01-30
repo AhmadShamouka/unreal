@@ -101,7 +101,9 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 <!-- How to run -->
 <img src="./Readme/title7.svg"/>
 
-This initiative utilizes advanced prompt engineering methodologies to enhance interactions with natural language processing models. By meticulously crafting input instructions, we sculpt the models' responses to achieve precise and seamless language comprehension and generation, catering adeptly to a spectrum of tasks and user preferences.
+This code segment orchestrates the generation of clothing suggestions based on user input and maps them to corresponding Flickr albums for visual reference.
+
+Leveraging OpenAI's GPT-3.5 Turbo model, it constructs a prompt based on user preferences and budget, generating concise responses for clothing suggestions within a defined token limit.
 
 | OpenAi prompt screen         |
 | ---------------------------- |
@@ -110,10 +112,10 @@ This initiative utilizes advanced prompt engineering methodologies to enhance in
 <br><br>
 <img src="./Readme/title8.svg"/>
 
-- This project leverages AWS deployment strategies to seamlessly integrate and deploy
-  natural language processing models. With a focus on scalability, reliability, and
-  performance, we ensure that AI applications powered by these models deliver robust and
-  responsive solutions for diverse use cases.
+This project leverages AWS deployment strategies to seamlessly integrate and deploy
+natural language processing models. With a focus on scalability, reliability, and
+performance, we ensure that AI applications powered by these models deliver robust and
+responsive solutions for diverse use cases.
 
 By following these steps, we deployed the backend to Amazon Linux 2023.
 

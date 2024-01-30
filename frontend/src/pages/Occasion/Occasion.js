@@ -75,10 +75,8 @@ const Occasion = () => {
           dispatch(occasionCreated(response.data.suggested_link));
           navigate("/find");
         }
-        if (
-          response.data.message ===
-          "An error occurred: cURL error 6: Could not resolve host: api.openai.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.openai.com/v1/chat/completions"
-        ) {
+
+        if (response.data.message === "An error occurred: ") {
           setWrong("errorMsg-display");
         }
       } catch (error) {}

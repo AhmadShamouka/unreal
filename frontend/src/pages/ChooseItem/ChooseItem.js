@@ -15,6 +15,7 @@ import "./styleChooseItem.css";
 import { useStore } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
 import { ItemChoosen } from "./ChooseItemSlice";
+import LoadingSpinner from "../../components/loading/Loading";
 const ChooseItem = () => {
   const navigate = useNavigate();
   const [images, setImages] = useState([]);
@@ -136,6 +137,9 @@ const ChooseItem = () => {
       } catch (error) {}
     }
   };
+  if (Object.keys(images).length === 0) {
+    return <LoadingSpinner />;
+  }
   return (
     <div>
       <UserNavbar />
