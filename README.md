@@ -97,15 +97,16 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 | ---------------------------------------------- | ---------------------------------------------- |
 | ![DashbaordUsers](./Readme/DashboardUsers.png) | ![DashboardError](./Readme/DashboardError.png) |
 
+<div>
 <table>
   <tr>
     <td align="center">
 https://github.com/AhmadShamouka/unreal/blob/main/Flow.mp4
 
 </td>
-</tr>
-</table>
 
+</table>
+</div>
 <br><br>
 
 <!-- How to run -->
