@@ -29,8 +29,9 @@ class OccasionController extends Controller
                     'budget_range' => $request->budget_range,
                     'user_id' => $user->id,
                 ]);
+               
 // The prompt message that will be sent to OpenAI
-$prompt = "I am {$request->sex} need clothes suggestions for an upcoming {$request->occasion_type}. I prefer a {$request->style} look for {$request->season}.
+$prompt = "I am {$user->sex} need clothes suggestions for an upcoming {$request->occasion_type}. I prefer a {$request->style} look for {$request->season}.
 My budget is {$request->budget_range}. - Give me suggestions for clothes,3 words max, remark (you should pick one of the [`men summer shirts`, 'women summer shirts',
 `men winter shirts`, 'women winter shirts', 'men suits', 'women suits', 'man pijamas', 'women pijamas',
 'women swimwear', 'man swimwear', 'women wedding', 'man sports', 'women sports', 'women winter dress','women summer dress'])";
@@ -81,7 +82,7 @@ return response()->json([
 // Handling general exception
 return response()->json([
     'status' => 'failed',
-    'message' => 'An error occurred: ' . $e->getMessage(),
+    'message' => $prompt,
 ]);
 }
 }
