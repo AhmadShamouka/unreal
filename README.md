@@ -100,7 +100,7 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 <table>
   <tr>
     <td align="center">
-https://github.com/AhmadShamouka/unreal/blob/main/Flow.mp4
+https://github.com/AhmadShamouka/unreal/blob/main/Flow
 
 </td>
 
@@ -119,7 +119,7 @@ Leveraging OpenAI's GPT-3.5 Turbo model, it constructs a prompt based on user pr
 
 | OpenAI                         |
 | ------------------------------ |
-| ![OpenAI](./Readme/Openai.png) |
+| ![OpenAI](./Readme/OpenAi.png) |
 
 <br><br>
 <img src="./Readme/title8.svg"/>
