@@ -21,7 +21,7 @@ const Brand = () => {
         <div className="brand-label flex center">
           <h1>Choose Your Brand</h1>
         </div>
-        <hr className="hr-line" />
+        <hr className="hr-line-brand" />
         <div className="card-brand-container flex center">
           <Link to={`https://www.zara.com/lb/en/search?searchTerm=${search}`}>
             <div className="card-brand">

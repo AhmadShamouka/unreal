@@ -8,7 +8,7 @@
 .hexagons-temp hr,
 .switchable hr {
   width: 70%;
-  margin: 0 auto;
+  margin: 1rem auto;
   margin-bottom: 7rem;
 }
 .switchable {
@@ -130,12 +130,7 @@ select option:checked {
     width: 75%;
   }
 }
-.personal-info hr {
-  width: 70%;
-  margin: 0 auto;
-  height: 2px;
-  margin-bottom: 5rem;
-}
+
 .costum {
   background-color: #aed6ee;
   display: flex;

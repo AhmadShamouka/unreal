@@ -42,9 +42,9 @@ h2 {
   color: #1789c9;
 }
 .hr-line-find {
-  margin: 0 14rem;
   background-color: #1789c9;
   height: 2px;
+  margin: 1rem 10%;
 }
 .swiper-button-prev,
 .swiper-button-next {
