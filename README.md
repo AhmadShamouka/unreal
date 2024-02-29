@@ -74,9 +74,9 @@ Check more Mockups on [Figma](https://www.figma.com/file/3pi5bFAbK9wTc0FP3Aibwd/
 | -------------------------------------- |
 | ![AR](./Readme/AR_.gif)                |
 
-| Brand screen                  | Clothes Screen                 |
-| ----------------------------- | ------------------------------ |
-| ![Brand](./Readme/Brands.png) | ![Clothes](./Readme/items.png) |
+| Brand screen                  | Clothes Screen                  |
+| ----------------------------- | ------------------------------- |
+| ![Brand](./Readme/Brands.png) | ![Clothes](./Readme/Items.jpeg) |
 
 | Sign In Screen                 | SignUp (Google) Screen                     |
 | ------------------------------ | ------------------------------------------ |
