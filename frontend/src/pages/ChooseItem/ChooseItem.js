@@ -35,11 +35,14 @@ const ChooseItem = () => {
 
   const token = localStorage.getItem("jwtToken");
   const authorization = "Bearer " + token;
-
+  const apiKey = "0dcb337f2a81a92587ce7e26593a35bb";
+  const userId = "199946451@N04";
+  const album = "72177720314280926";
+  const UrlLink1 = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${apiKey}&photoset_id=${album}&user_id=${userId}&format=json&nojsoncallback=1`;
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch(UrlLink);
+        const response = await fetch(UrlLink1);
         const data = await response.json();
         setImages(data.photoset.photo);
       } catch (error) {}

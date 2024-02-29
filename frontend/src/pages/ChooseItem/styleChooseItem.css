@@ -4,7 +4,7 @@
 }
 .swiper-image {
   border-radius: 30px;
-  width: 40%;
+  width: 35%;
   height: 60vh;
   display: block;
   margin: 0 auto;
@@ -44,7 +44,7 @@ h2 {
 .hr-line-find {
   background-color: #1789c9;
   height: 2px;
-  margin: 1rem 10%;
+  margin: 1rem 15%;
 }
 .swiper-button-prev,
 .swiper-button-next {
